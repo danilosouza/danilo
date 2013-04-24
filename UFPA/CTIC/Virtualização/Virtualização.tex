@@ -198,12 +198,34 @@
 		\end{frame}		
 \section{Virtualização}
 
+	\subsection{Histórico}
+		\begin{frame}{Histórico}
+			\begin{itemize}
+				\item Christopher Strachey
+				\item Multi-programação em tempo compartilhado
+				\item \alert{1960} IBM M44/44X
+				\item \alert{1998} Fundação da VMWare			
+				\item \alert{2003} Xen
+			\end{itemize}
+			\begin{multicols}{2}
+				\begin{figure}[htb]
+					\centering 
+					\includegraphics[scale=0.5]{./pictures/ibm44x.png}
+					\label{fig:ibm44x}			
+				\end{figure}
+				\begin{figure}[htb]
+					\centering 
+					\includegraphics[scale=0.3]{./pictures/christopher_strachey.png}
+					\label{fig:christopherstrachey}			
+				\end{figure}				
+			\end{multicols}
+		\end{frame}
 	\subsection{Simulação, Emulação e Virtualização}
 		\begin{frame}{Definições}
 			\begin{itemize}
 				\item Simulação
 					\begin{itemize}
-						\item `` \textit{É o ato de representar com semelhanças certos aspectos de; imitar 							ou fingir.} '' [Houassis]
+						\item `` \textit{É o ato de representar com semelhanças certos aspectos de; imitar ou fingir.} '' [Houassis]
 						\item Simulação computacional
 					\end{itemize}
 				\pause
@@ -216,8 +238,7 @@
 				\item Virtualização
 					\begin{itemize}
 						\item  `` \textit{Virtualização:
-							É um framework ou metodologia para dividir os recursos de um computador em 
-							múltiplos ambientes de execução, aplicando um, ou mais conceitos, e 										tecnologias como particionamento de software ou hardware, tempo compartilhado, 							simulação completa ou parcial da máquina, emulação e qualidade de serviços.} 								'' [Singh, 2008]
+							É um framework ou metodologia para dividir os recursos de um computador em 	múltiplos ambientes de execução, aplicando 								um, ou mais conceitos, e tecnologias como particionamento de software ou hardware, tempo compartilhado, simulação 									completa ou parcial da máquina, emulação e qualidade de serviços.} '' [Singh, 2008]
 					\end{itemize}
 			\end{itemize}
 		\end{frame}
@@ -225,7 +246,7 @@
 	\subsection{Virtualização Total X Paravirtualização}
 			\begin{frame}{Virtualização Total}
 				\begin{itemize}
-					\item Consiste em prover uma réplica do hardware original para a máquina hóspede, de 							tal forma que esta não saiba que está sendo virtualizada.
+					\item Consiste em prover uma réplica do hardware original para a máquina hóspede, de tal forma que 	esta não saiba que está 							sendo virtualizada.
 					\pause
 					\item Vantagens
 						\begin{itemize}
@@ -264,8 +285,8 @@
 	\subsection{Principais Soluções}
 		\begin{frame}{Soluções}
 			\begin{itemize}
-				\item  KVM
-				\item  {VmWare}
+				\item KVM
+				\item VmWare
 				\item Xen
 				\item VirtualBox (Oracle)
 				\item Hyper-V (Microsoft)
@@ -303,6 +324,13 @@
 \section{Ferramentas de Virtualização}
 
 	\subsection{KVM}
+		\begin{frame}{Histórico}
+			\begin{itemize}
+				\item \alert{2006} Anunciada
+				\item \alert{2007} Primeiro KVM Forum
+			\end{itemize}		
+		\end{frame}
+		
 		\begin{frame}{Introdução}
 			\begin{multicols}{2}
 				\begin{itemize}
@@ -374,6 +402,17 @@
 		\end{frame}
 		
 	\subsection{XEN}
+		\begin{frame}{Histórico}
+			\begin{itemize}
+				\item \alert{2001} Projeto Xeno Server
+				\item Computação Distribuída
+				\item \alert{2003} Apresentado ao Público
+				\item \alert{2004} Multiprocessamento e \textit{live migration}			
+				\item \alert{2006} Xen 3.0 - Virtualização total
+				\item \alert{2007} XenSource comprada pela Citrix
+			\end{itemize}	
+		\end{frame}
+		
 		\begin{frame}{Introdução}
 			\begin{itemize}
 				\item Utiliza paravirtualização
@@ -434,12 +473,35 @@
 		
 		\subsubsection{Soluções de Gerenciamento}
 			\begin{frame}{Principais soluções}
-				\begin{itemize}
-					\item oVirt (KVM)
-					\item OpenNebula
-					\item OpenQRM
-					\item OpenStack (Cloud OS)
-				\end{itemize}
+				\begin{multicols}{2}
+					\begin{itemize}
+						\item oVirt (KVM)
+						\item OpenNebula
+						\item OpenQRM
+						\item OpenStack (Cloud OS)
+					\end{itemize}
+					\begin{figure}[htb]
+							\centering 
+							\includegraphics[scale=0.3]{./pictures/OpenStack_logo.png}
+							\label{fig:openstack}			
+					\end{figure}
+					\begin{figure}[htb]
+							\centering 
+							\includegraphics[scale=0.4]{./pictures/OpenQrm_logo.png}
+							\label{fig:openqrm}			
+					\end{figure}
+					
+					\begin{figure}[htb]
+							\centering 
+							\includegraphics[scale=0.5]{./pictures/ovirt.png}
+							\label{fig:ovirt}	
+					\end{figure}
+				\end{multicols}
+				\begin{figure}[htb]
+							\centering 
+							\includegraphics[scale=0.5]{./pictures/opennebula_logo.png}
+							\label{fig:opennebula}
+				\end{figure}
 			\end{frame}	
 		\section{Referências}
 			\begin{frame}{Referências}
@@ -449,7 +511,7 @@
 				\item \url{http://www.gta.ufrj.br/ensino/CPE758/cpe758.html}
 				\item \url{http://www.gta.ufrj.br/grad/08_1/virtual/Virtualizaototalepara-virtualizao.html}
 				\item \url{http://www.ibm.com/developerworks/br/library/l-qemu}
+				\item \url{http://www.vmworld.com.br/br/index.php/component/content/article/50-virtualizacao/80-historia-conhecendo-a-origem-da-						virtualizacao.html}
 				\end{itemize}
 			\end{frame}					
 \end{document}
-			
