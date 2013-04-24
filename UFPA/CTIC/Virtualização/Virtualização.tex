@@ -23,6 +23,8 @@
 \usepackage{times}
 \usepackage[T1]{fontenc}
 \usepackage{multicol}
+\usepackage{amssymb}
+\usepackage{hyperref}
 %\usepackage[table]{xcolor}
  
 % Setup TikZ
@@ -81,7 +83,7 @@
 \institute[Universidade Federal do Para] % (optional, but mostly needed)
 {
   \inst{1}%
-  Universidade Federal do Par\'a \\
+  Universidade Federal do Pará \\
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 }
@@ -134,7 +136,7 @@
 			\begin{figure}[ht]
    				 \centering
    				 \includegraphics[scale=0.35]{./pictures/cloud_value.png}
-   				 \label{fig:cloudproscons}
+   				 \label{fig:cloudvalue}
  			 \end{figure}
 		\end{frame}
 
@@ -231,6 +233,7 @@
 							\item Suporte de hardware
 						\end{itemize}
 					\item Desvantangens
+					\pause
 						\begin{itemize}
 							\item Difícil suporte a grande variedade de dispositivos
 							\item Subutilização de recursos
@@ -301,32 +304,134 @@
 
 	\subsection{KVM}
 		\begin{frame}{Introdução}
-
+			\begin{multicols}{2}
+				\begin{itemize}
+					\item Utiliza virtualização total
+					\item Módulo do kernel do linux
+					\item Open Virtual Alliance (OVA)
+				\end{itemize}
+				\begin{figure}[htb]
+						\centering 
+						\includegraphics[scale=0.3]{./pictures/Intel_logo.png}
+						\label{fig:intel}	
+				\end{figure}
+				\begin{figure}[htb]
+						\centering 
+						\includegraphics[scale=0.3]{./pictures/red_hat_logo.png}
+						\label{fig:redhat}	
+				\end{figure}
+				\begin{figure}[htb]
+						\centering 
+						\includegraphics[scale=0.2]{./pictures/ibm_logo.png}
+						\label{fig:ibm}	
+				\end{figure}
+				\begin{figure}[htb]
+						\centering 
+						\includegraphics[scale=0.2]{./pictures/dell_logo.png}
+						\label{fig:dell}	
+				\end{figure}
+			\end{multicols}
 		\end{frame}
+		
 		\begin{frame}{Arquitetura}
-
-		\end{frame}
-		\begin{frame}{Vantagens e Desvantagens}
-
+			\begin{itemize}
+				\item Cada máquina virtual é um processo
+				\item Instruções traduzidas pelo VMM
+			\end{itemize}
+			\begin{figure}[htb]
+					\centering 
+					\includegraphics[scale=0.6]{./pictures/kvm.png}
+					\label{fig:kvmarq}	
+			\end{figure}
 		\end{frame}
 		\begin{frame}{Qemu}
-
+			\begin{itemize}
+				\item Responsável pelas operações de I/O
+				\item Suporte diversos periféricos
+					\begin{itemize}
+						\item VGA
+						\item PS/2
+						\item IDE (Hd e CD-ROM)
+						\item PCI
+						\item USB
+					\end{itemize}
+			\end{itemize}
+		\end{frame}		
+		
+		\begin{frame}{Vantagens e Desvantagens}
+			\begin{itemize}
+				\item Vantagens
+					\begin{itemize}
+					\item Bom desempenho em novos hardwares
+					\item Fácil instalação
+					\end{itemize}
+				\item Desvantagens
+					\begin{itemize}
+					\item Necessita de um hardware com suporte
+					\item Desempenho
+					\end{itemize}
+			\end{itemize}
 		\end{frame}
+		
 	\subsection{XEN}
 		\begin{frame}{Introdução}
-
+			\begin{itemize}
+				\item Utiliza paravirtualização
+				\item Também pode utilizar virtualização total ($\geqslant 3.0$)
+				\item Dois conceitos importantes
+					\begin{itemize}
+						\item Domínio(VM's)
+						\item \textit{Hypervisor} (controle de recursos)
+					\end{itemize}
+			\end{itemize}
 		\end{frame}
 		\begin{frame}{Arquitetura}
-
+			\begin{figure}[htb]
+					\centering 
+					\includegraphics[scale=0.75]{./pictures/xen_arq.png}
+					\label{fig:xenarq}	
+			\end{figure}
 		\end{frame}
 		\begin{frame}{Vantagens e Desvantagens}
-
+			\begin{itemize}
+				\item Vantagens
+					\begin{itemize}
+						\item Maior desempenho em hospedeiros sem suporte à virtualização
+					\end{itemize}
+				\item Desvantagens
+					\begin{itemize}
+					\item É necessário alteração nos SO's
+					\end{itemize}
+			\end{itemize}
 		\end{frame}
 		
 	\subsection{Gerenciamento de VM's}
-		\begin{frame}{Libvirt API}
-
+		\begin{frame}{Principais Ferramentas}
+			\begin{itemize}
+				\item Libvirt API
+					\begin{itemize}
+						\item Interface de gerenciamento
+						\item Comandos para facilitar o gerenciamento
+					\end{itemize}
+				\item Virt-Manager
+					\begin{itemize}
+						\item Interface Gráfica para LibVirt
+					\end{itemize}
+			\end{itemize}
+			\begin{multicols}{2}
+				\begin{figure}[htb]
+						\centering 
+						\includegraphics[scale=0.4]{./pictures/libvirt_logo.png}
+						\label{fig:libvirt}	
+				\end{figure}
+				\begin{figure}[htb]
+						\centering 
+						\includegraphics[scale=0.25]{./pictures/virtmanager.png}
+						\label{fig:virtmanager}	
+				\end{figure}
+			\end{multicols}				
 		\end{frame}
+		
 		\subsubsection{Soluções de Gerenciamento}
 			\begin{frame}{Principais soluções}
 				\begin{itemize}
@@ -335,6 +440,16 @@
 					\item OpenQRM
 					\item OpenStack (Cloud OS)
 				\end{itemize}
-			\end{frame}			
+			\end{frame}	
+		\section{Referências}
+			\begin{frame}{Referências}
+				\begin{itemize}
+				\item \url{http://www-03.ibm.com/systems/virtualization/infrastructure/server/index.html}
+				\item \url{http://www.openvirtualizationalliance.org/#whatis}
+				\item \url{http://www.gta.ufrj.br/ensino/CPE758/cpe758.html}
+				\item \url{http://www.gta.ufrj.br/grad/08_1/virtual/Virtualizaototalepara-virtualizao.html}
+				\item \url{http://www.ibm.com/developerworks/br/library/l-qemu}
+				\end{itemize}
+			\end{frame}					
 \end{document}
 			
