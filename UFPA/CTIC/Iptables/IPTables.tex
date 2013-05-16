@@ -43,6 +43,8 @@
 \usepackage{textcomp}
 \usepackage{graphics}
 \usepackage{graphicx}
+\usepackage{soul}
+\usepackage{textcomp}
 \usepackage{ragged2e} % Parágrafo justificado
 %\usepackage[table]{xcolor}
  
@@ -203,6 +205,19 @@
 				\end{itemize}
 		\end{itemize}
 	\end{frame}
+\begin{frame}{Proteção e Decisão}
+	\begin{figure}[htb]
+		\centering 
+		\includegraphics[scale=0.27]{./pictures/estaticoDinamico.png}
+		\label{fig:estaticoDinamico}			
+	\end{figure}
+	\begin{figure}[htb]
+		\centering 
+		\includegraphics[scale=0.3]{./pictures/firewallRedeHost.png}
+		\label{fig:firewallRedeHost}			
+	\end{figure}
+	
+\end{frame}
 	
 	\begin{frame}{Ciclo de Vida e Ganchos}
 		\begin{multicols}{2}
@@ -234,13 +249,129 @@
 
 \subsection{Estrutura}
 	\begin{frame}
-		
+		\item Atua sobre ganchos do \textit{netfilter}
+		\item Possui 3 tabelas
+			\begin{itemize}
+				\item \textit{Filter} - Filtros simples
+				\item Nat - Alterações nos cabeçalhos dos pacotes
+				\item Mangle - Alterações mais específicas (TTL, TOS)			
+			\end{itemize}
+			\item Cada tabela possui regras
+			\item Cada regra realiza uma ação
 	\end{frame}
 
 \subsubsection{Tabela Filter}
-
+	\begin{frame}
+		\begin{itemize}
+			\item Regras
+				\begin{itemize}
+					\item INPUT - Avalia pacotes destinados ao IP local.
+					\item FORWARD - Avalia os pacotes repassados pela máquina.
+					\item OUTPUT - Avalia os pacotes gerados localmente.
+					\item REDIRECT - Realiza o redirecionamento de portas.
+				\end{itemize}
+			\item Ações
+				\begin{itemize}
+					\item REJECT - Rejeita um pacote e informa ao remetente
+					\item DROP - Rejeita um pacote e não informa ao remetente
+					\item ACCEPT - Aceita um pacote
+					\item LOG - Realizar o log de um pacote (/var/log/syslog ou messages)
+				\end{itemize}
+		\end{itemize}
+	\end{frame}
 \subsubsection{Tabela Nat}
+	\begin{itemize}
+		\item Listas
+			\begin{itemize}
+				\item PREROUTING - Modifica o pacote \alert{antes} do roteamento
+				\item POSTROUTING - Modifica o pacote \alert{depois} do roteamento
+				\item OUTPUT -  Modifica o pacote originado localmente \alert{antes} do roteamento
+			\end{itemize}
+		\item Ações
+			\begin{itemize}
+				\item SNAT - Altera o endereço de 						origem do pacote \alert{POSTROUTING}
+				\item DNAT - Altera o endereço de 						destino do pacote \alert{PREROUTING}
+			\end{itemize}
+	\end{itemize}
 
 \section{Exemplos}
-						
+
+\begin{frame}{Opções}
+	\begin{block}{Regras}
+		Tabela + Opção + Regra + Dados + Ação
+	\end{block}
+	\begin{itemize}	
+		\item Ações	
+			\begin{enumerate}
+				\item -P = Define uma regra padrão.
+				\item -A = Adiciona uma nova regra as 					existentes. Esta tem prioridade sobre a 				-P.
+				\item -I = Insere uma nova regra.
+				\item -D = Apaga uma regra.
+				\item -C = Faz a checagem das regras 					existentes.
+				\item -X = Exclui uma regra específica 					pelo seu nome.
+		\end{enumerate}
+		\item Dados
+			\begin{enumerate}
+				\item -i = Define a interface de 						entrada
+				\item -o = Define a interface de saída
+				\item -p = Define o protocolo
+				\item -sport = Define a porta de origem
+				\item -dport = Define a porta de saída
+			\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\subsection{NetFilter}
+	\begin{frame}{Exemplos - Netfilter}
+		\begin{itemize}
+			\item iptables -t filter -A INPUT -p tcp -d 			192.168.0.0/24 -j ACCEPT
+			\item iptables -t filter -A OUTPUT -p tcp -				s 192.168.0.0/24 -j ACCEPT
+			\item iptables -t filter -A FORWARD -p udp 				-s 192.168.0.0/24 -s 192.168.1.0/24 -j 					ACCEPT
+			\item iptables -t filter -A INPUT -p udp 				-s\alert{!}192.168.1.1 -j ACCEPT    
+		\end{itemize}
+	\end{frame}
+	
+\subsection{Nat}
+	\begin{frame}{Exemplos - Nat}
+		\begin{itemize}
+			\item iptables -t nat -A PREROUTING -i eth0 			-p tcp ?dport 80 -j \alert{REDIRECT} ?to-				port 3128
+			\item  iptables -t nat -A PREROUTING -s 				200.200.100.100 -i eth0 -j DNAT?to 						192.168.0.50
+			\item ptables -t nat -A POSTROUTING -s 					192.168.0.50 -o eth0 -j SNAT ?to 						200.200.100.100
+		\end{itemize}
+	\end{frame}	
+	
+\subsection{Outros exemplos}	
+	\begin{frame}{Outros exemplos}
+		\begin{block}{Limpando regras}
+			iptables -F
+			
+			iptables -t nat -F
+			
+			iptables -X
+			
+			iptables -t nat -X
+			
+		\end{block}
+	\end{frame}								
+	\begin{frame}
+		\begin{block}{Monitorando trojan 						\textquotesingle s}
+     TROJAN\_PORTS=``12345 31336 31337 31338 3024 4092 		5714 5742 2583 8787 5556 5557''
+     	\linebreak
+     iptables -t filter -N trojans-in
+		\linebreak
+     for PORTA in \textdollar{TROJAN\_PORTS};do
+     	\linebreak
+      iptables -A trojans-in -p tcp --sport=1024: --dport=\textdollar{PORTA} -j LOG \\
+      	\linebreak
+      	       --log-prefix ``FIREWALL: Trojan \${PORTA}''
+       	\linebreak      
+      iptables -A trojans-in -p tcp --sport=1024: --dport= \${PORTA} -j DROP
+      	\linebreak
+     done
+     	\linebreak
+     iptables -t filter -A INPUT -i ppp0 -j trojans-in
+			
+		\end{block}
+	\end{frame}
+
 \end{document}
