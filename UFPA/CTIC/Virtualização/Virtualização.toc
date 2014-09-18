@@ -1,0 +1,16 @@
+\beamer@endinputifotherversion {3.26pt}
+\select@language {brazil}
+\beamer@sectionintoc {1}{Nuvem Computacional}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Por que virtualizar?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Servi\c cos de uma Nuvem}{8}{0}{1}
+\beamer@sectionintoc {2}{Virtualiza\c c\~ao}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Hist\'orico}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Simula\c c\~ao, Emula\c c\~ao e Virtualiza\c c\~ao}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Virtualiza\c c\~ao Total X Paravirtualiza\c c\~ao}{17}{0}{2}
+\beamer@subsectionintoc {2}{4}{Principais Solu\c c\~oes}{22}{0}{2}
+\beamer@sectionintoc {3}{Ferramentas de Virtualiza\c c\~ao}{23}{0}{3}
+\beamer@subsectionintoc {3}{1}{KVM}{23}{0}{3}
+\beamer@subsectionintoc {3}{2}{XEN}{29}{0}{3}
+\beamer@subsectionintoc {3}{3}{Gerenciamento de VM's}{34}{0}{3}
+\beamer@subsubsectionintoc {3}{3}{1}{Solu\c c\~oes de Gerenciamento}{37}{0}{3}
+\beamer@sectionintoc {4}{Refer\^encias}{38}{0}{4}

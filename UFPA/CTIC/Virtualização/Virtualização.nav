@@ -1,0 +1,74 @@
+\beamer@endinputifotherversion {3.26pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{Nuvem Computacional}{3}{Nuvem Computacional}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Por que virtualizar?}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/4}{Por que virtualizar?}{0}}
+\headcommand {\beamer@framepages {3}{4}}
+\headcommand {\slideentry {1}{1}{2}{5/7}{Por que virtualizar?}{0}}
+\headcommand {\beamer@framepages {5}{7}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{8}{Servi\c cos de uma Nuvem}}\headcommand {\beamer@subsectionpages {3}{7}}
+\headcommand {\slideentry {1}{2}{1}{8/11}{Servi\c cos de uma Nuvem}{0}}
+\headcommand {\beamer@framepages {8}{11}}
+\headcommand {\slideentry {1}{2}{2}{12/12}{Servi\c cos de uma Nuvem}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\sectionentry {2}{Virtualiza\c c\~ao}{13}{Virtualiza\c c\~ao}{0}}
+\headcommand {\beamer@sectionpages {3}{12}}
+\headcommand {\beamer@subsectionpages {8}{12}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{13}{Hist\'orico}}\headcommand {\beamer@subsectionpages {13}{12}}
+\headcommand {\slideentry {2}{1}{1}{13/13}{Hist\'orico}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{14}{Simula\c c\~ao, Emula\c c\~ao e Virtualiza\c c\~ao}}\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\slideentry {2}{2}{1}{14/16}{Simula\c c\~ao, Emula\c c\~ao e Virtualiza\c c\~ao}{0}}
+\headcommand {\beamer@framepages {14}{16}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{17}{Virtualiza\c c\~ao Total X Paravirtualiza\c c\~ao}}\headcommand {\beamer@subsectionpages {14}{16}}
+\headcommand {\slideentry {2}{3}{1}{17/19}{Virtualiza\c c\~ao Total X Paravirtualiza\c c\~ao}{0}}
+\headcommand {\beamer@framepages {17}{19}}
+\headcommand {\slideentry {2}{3}{2}{20/21}{Virtualiza\c c\~ao Total X Paravirtualiza\c c\~ao}{0}}
+\headcommand {\beamer@framepages {20}{21}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{22}{Principais Solu\c c\~oes}}\headcommand {\beamer@subsectionpages {17}{21}}
+\headcommand {\slideentry {2}{4}{1}{22/22}{Principais Solu\c c\~oes}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\sectionentry {3}{Ferramentas de Virtualiza\c c\~ao}{23}{Ferramentas de Virtualiza\c c\~ao}{0}}
+\headcommand {\beamer@sectionpages {13}{22}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{23}{KVM}}\headcommand {\beamer@subsectionpages {23}{22}}
+\headcommand {\slideentry {3}{1}{1}{23/23}{KVM}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {3}{1}{2}{24/24}{KVM}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {3}{1}{3}{25/25}{KVM}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\slideentry {3}{1}{4}{26/26}{KVM}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {3}{1}{5}{27/28}{KVM}{0}}
+\headcommand {\beamer@framepages {27}{28}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{29}{XEN}}\headcommand {\beamer@subsectionpages {23}{28}}
+\headcommand {\slideentry {3}{2}{1}{29/29}{XEN}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {3}{2}{2}{30/30}{XEN}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {3}{2}{3}{31/31}{XEN}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {3}{2}{4}{32/33}{XEN}{0}}
+\headcommand {\beamer@framepages {32}{33}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{34}{Gerenciamento de VM's}}\headcommand {\beamer@subsectionpages {29}{33}}
+\headcommand {\slideentry {3}{3}{1}{34/36}{Gerenciamento de VM's}{0}}
+\headcommand {\beamer@framepages {34}{36}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{3}{1}{37}{Solu\c c\~oes de Gerenciamento}}
+\headcommand {\slideentry {3}{3}{2}{37/37}{Gerenciamento de VM's}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\sectionentry {4}{Refer\^encias}{38}{Refer\^encias}{0}}
+\headcommand {\beamer@sectionpages {23}{37}}
+\headcommand {\beamer@subsectionpages {34}{37}}
+\headcommand {\slideentry {4}{0}{3}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@partpages {1}{38}}
+\headcommand {\beamer@subsectionpages {38}{38}}
+\headcommand {\beamer@sectionpages {38}{38}}
+\headcommand {\beamer@documentpages {38}}
+\headcommand {\def \inserttotalframenumber {23}}
