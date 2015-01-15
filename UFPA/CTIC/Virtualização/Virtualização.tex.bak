@@ -87,7 +87,7 @@
 
 
 
-\title{Virtualização}
+\title{Software Freedom Day \\ Virtualização, por que utilizar?}
 
 % A subtitle is optional and this may be deleted
 %\subtitle{Optional Subtitle}
@@ -100,7 +100,7 @@
 \institute[Universidade Federal do Para] % (optional, but mostly needed)
 {
   \inst{1}%
-  Divisão de Serviços de Internet \\
+  Divisão de Segurança \\
   Coordenadoria de Segurança e  Serviços de Internet \\
   Datacenter da UFPA \\
 % - Use the \inst command only if there are several affiliations.
@@ -136,6 +136,8 @@
 \begin{document}
 
 \begin{frame}
+
+
 	\begin{figure}[htb]
 		\centering 
 		\includegraphics[scale=0.6]{./pictures/ctic.png}
