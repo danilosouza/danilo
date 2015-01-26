@@ -1,7 +1,0 @@
-
-matting - seperação suave de fundo e frente da imagem
-distâncias ponderadas - são o centro do framework proposto
-
-As técnicas de segmentação citadas no texto são em sua maioria para imagens coloridas ou em níveis de cinza. Para alcaçar segmentação em imagens com textura o autor usa um conjunto adaptativo de filtros Gabor.
-
-A complexidade do algoritmo é linear em relação ao número de pixels

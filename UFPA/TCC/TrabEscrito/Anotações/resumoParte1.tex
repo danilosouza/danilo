@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol, blindtext}
+\usepackage[toc,page]{appendix}
+\usepackage[top=0.58in, bottom=0.9in, left=0.58in]{geometry}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{color}
+
+
+\title{	Resumo Artigo principal}
+
+\begin{document}
+
+\author{Danilo Souza - 201006840008}
+\maketitle
+
+
+\section{Passo a Passo}
+
+	O algortimo segue os passos abaixo:
+		\begin{itemize}
+			\item Definir os ``rabiscos'' (regiões de interesse)
+			\item Considera a imagem como um grafo
+				\begin{itemize}
+					\item Nós do grafo = pixels
+					\item Arestas = conectam os pixels usando distâncias ponderadas
+				\end{itemize}
+			\item Calcula a distância geodésica (custo das arestas) utilizando \ref{eq:distgeodesica} e \ref{distpixel}
+			\begin{itemize}
+				\item O autor utiliza outras funções peso para a equação \ref{eq:distgeodesica} que não a luminância da imagem. \textcolor{red}{essa parte será detalhada posteriormente}
+			\end{itemize}
+			\item Baseado no cálculo anterior, encontra-se a probabilidade de um determinado pixel pertencer a um dada região de interesse usando \ref{probabilidade}
+		\end{itemize}
+		
+		\begin{equation}
+			d(s,t) := min_{C_{s,t}} \int |\nabla Y \dot{C}_{s,t}(p)| dp
+			\label{eq:distgeodesica}		
+		\end{equation}
+		
+		\begin{equation}
+			d_{i}(t) = min_{s \in \Omega _{c}:label(s)=l_{i}}d(s,t)
+			\label{distpixel}
+		\end{equation}
+		\begin{equation}
+			Pr(t \in l_{i}) = \frac{d_{i}(t)^{-1}}{\sum _{j \in[1,N_{l}]} d_{j}(t)^{-1}} 
+			\label{probabilidade}  
+ 		\end{equation}
+
+\section{Anotações Gerais}
+
+matting - seperação suave de fundo e frente da imagem
+distâncias ponderadas - são o centro do framework proposto
+
+As técnicas de segmentação citadas no texto são em sua maioria para imagens coloridas ou em níveis de cinza, onde o gradiente da intensidade (ou da cor) é baixo na região de interesse e alto nas bordas, entretanto esta afirmação não é válida para imagens mais complexas (com texturas, por exemplo). Para alcaçar segmentação nessas imagens o autor usa um conjunto adaptativo de filtros Gabor e escolhe a função peso da distância geodésica de acordo com a imagem.
+
+A complexidade do algoritmo é linear em relação ao número de pixels graças ao uso da distância geodésica para o cálculo da probailidade de um pixel pertencer à uma região.
+
+A abordagem é interativa onde o objetivo principal é adicionar cor ( ou outro efeito) à uma imagem, no artigo tomado como base pelo autor são dados uma série de ``rabiscos'' (que marcam regiões de interesse na imagem) em uma imagem somente de luminância, e então é calculada a distância geodésica do mesmo canal de luminância para posteriormente calcular a probabilidade de um pixel pertencer a um dado ``rabisco'' . Sejam \textit{s} e \textit{t} dois pixels da imagem $\Omega$ e $C_{s,t}$ o caminho conectando esses pixels e Y sendo o canal de luminância dado, a distância geodésica é dada pela equação \ref{eq:distgeodesica}.
+	
+	
+	Onde $p$ é o arco euclidiano. Seja $\Omega _{c}$ um conjunto de pixels marcados, ou seja, as regiões de interesse dadas pelo usuário $l_{i}$, $i \in [1,N_{l}$, a distância de um pixel $t$ para uma única região $l_{i}$, $i \in [1,N_{l}$ é dada por:
+	
+	
+A probabilidade $ P(t \in l_{i} $ de um pixel ser associado à região $l_{i}$ é dada pela equação \ref{probabilidade}.
+
+
+ 	
+ 	O artigo propõe o uso de pesos diferentes para o calculo da distância geodésica e considera a imagem como um grafo onde os pixels são os nós e as distâncias geodésicas são os pesos das arestas ligando cada pixel aos seus vizinhos. 
+ 	
+ 	O valor dos pixels assinalados pelo usário bem como sua posição são utilizados pelo algoritmos afim de evitar quebras de segmentos de fundo e/ou frente (primeiro plano).
+ 	
+\bibliographystyle{plain}
+\bibliography{referencias}
+	
+\end{document}
