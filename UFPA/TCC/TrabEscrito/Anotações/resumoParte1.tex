@@ -27,7 +27,7 @@
 
 	O algortimo segue os passos abaixo:
 		\begin{itemize}
-			\item Definir os ``rabiscos'' (regiões de interesse)
+			\item Definir as (regiões de interesse)
 			\item Considera a imagem como um grafo
 				\begin{itemize}
 					\item Nós do grafo = pixels
@@ -35,8 +35,23 @@
 				\end{itemize}
 			\item Calcula a distância geodésica (custo das arestas) utilizando \ref{eq:distgeodesica} e \ref{distpixel}
 			\begin{itemize}
-				\item O autor utiliza outras funções peso para a equação \ref{eq:distgeodesica} que não a luminância da imagem. \textcolor{red}{essa parte será detalhada posteriormente}
-			\end{itemize}
+	 \item Cálculo dos pesos
+	 	\begin{itemize}
+	 		\item Definir um conjunto de imagens $F_{i}$ e escolher um subconjunto a partir dessas imagens
+	 		\item Definir pesos diferentes para cada canal $N_{c}$(19 canais foram utilizados). \textcolor{red}{Selecionar o número de canais é um ponto crítico pois um grande número é necessário para atender a um maior espectro de imagens, porém as informações mais importantes de uma dada imagem normalmente se concentram em poucos canais}
+	 		\item Selecionar os canais usando 16 filtros gabor mais 2 canais de crominância ($C_{b}$ e $C_{r})$ e um de luminância. \textcolor{red}{O framework foi projetado para ser utilizado com qualquer tipo de filtro}
+	 			\begin{itemize}
+	 				\item A saída dos filtros de Gabor são normalizadas devido ao ruído e complexidade presentes em imagens naturais. 
+	 			\end{itemize}
+	 		\item Calcular pesos diferentes para cada canal para da imagem. (\textcolor{red}{robustez do algoritmos, se adapta aos dados de entrada})
+	 		\item Dado um conjunto de pixels ($\Omega_{1}, \Omega_{2} $) correspondentes aos ``rabiscos'' $l_{1}, l_{2} $, a função densidade de probabilidade (FDP) é aproximada para uma gaussianda com $\Omega_{1},\Omega_{2} $.
+	 		\item Calcula-se a probabilidade de um pixel \textit{x} pertencer ao ``rabisco'' $l_{1}$ baseado no canal $F_{i}$
+	 		\item A probabilidade de um pixel \textit{x} pertencer a uma região $l_{i}$ é dada pelo somatório da probabilidade do mesmo pixel \textit{x} calculada para cada canal multiplicada pelo peso do mesmo canal.
+	 		\item Para a separação de múltiplipas regiões o cálculo é parecido, a diferença está no cálculo da função peso $W_{i}$, que é o somatório da função peso da região atual competindo com todas as outras regiões (essa comparação ocorre sempre aos pares) ($W_{ij}$)
+	 		\item O algoritmo assume que o usuário irá sempre marcar regiões da imagem que são diferentes e a informação contida nessas regiões poderá ser usada para separar as diferentes texturas.		
+	 		
+	 	\end{itemize}
+	\end{itemize}
 			\item Baseado no cálculo anterior, encontra-se a probabilidade de um determinado pixel pertencer a um dada região de interesse usando \ref{probabilidade}
 		\end{itemize}
 		
@@ -55,6 +70,8 @@
  		\end{equation}
 
 \section{Anotações Gerais}
+
+\subsection{Anotações introdutórias}
 
 matting - seperação suave de fundo e frente da imagem
 distâncias ponderadas - são o centro do framework proposto
@@ -77,6 +94,16 @@ A probabilidade $ P(t \in l_{i} $ de um pixel ser associado à região $l_{i}$ é d
  	
  	O valor dos pixels assinalados pelo usário bem como sua posição são utilizados pelo algoritmos afim de evitar quebras de segmentos de fundo e/ou frente (primeiro plano).
  	
+ 	
+\subsection{Anotações sobre os pesos}
+
+
+Cada ``rabisco'' possui uma função peso. As distâncias ponderadas devem ser calculadas para cada ``rabisco'', entretanto não precisam, necessariamente ser calculadas para toda a imagem (i.e, se um pixel já recebeu um valor baixo o suficiente pode-se assumir que esse pixel já pertence à uma dada região da imagem).
+
+
+Os canais são escolhidos baseados no conjunto de pixels $\Omega _{c}$ definido pelo usuário, assumido que o usuário irá sempre marcar  com \textit{labels} diferentes regiões que sejam de fato diferentes na imagem.	
+
+
 \bibliographystyle{plain}
 \bibliography{referencias}
 	
