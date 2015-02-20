@@ -13,7 +13,17 @@
 \usepackage{natbib}
 \usepackage{url}
 \usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
 
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=8.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=5cm, text width=5em,
+    minimum height=4em] 
 
 \title{	Resumo Artigo principal}
 
@@ -37,22 +47,28 @@
 			\begin{itemize}
 	 \item Cálculo dos pesos
 	 	\begin{itemize}
-	 		\item Definir um conjunto de imagens $F_{i}$ e escolher um subconjunto a partir dessas imagens
-	 		\item Definir pesos diferentes para cada canal $N_{c}$(19 canais foram utilizados). \textcolor{red}{Selecionar o número de canais é um ponto crítico pois um grande número é necessário para atender a um maior espectro de imagens, porém as informações mais importantes de uma dada imagem normalmente se concentram em poucos canais}
-	 		\item Selecionar os canais usando 16 filtros gabor mais 2 canais de crominância ($C_{b}$ e $C_{r})$ e um de luminância. \textcolor{red}{O framework foi projetado para ser utilizado com qualquer tipo de filtro}
+	 		\item Definir um conjunto de canais $F_{i}$.
+	 		\item Definir pesos diferentes para cada canal $F_{i}$ ($N_{c} = 19$ canais foram utilizados). \textcolor{red}{Selecionar o número de canais é um ponto crítico pois um grande número é necessário para atender a um maior espectro de imagens, porém as informações mais importantes de uma dada imagem normalmente se concentram em poucos canais}.
+	 		\item Selecionar os canais usando 16 filtros gabor mais 2 canais de crominância ($C_{b}$ e $C_{r})$ e um de luminância. \textcolor{red}{O framework foi projetado para ser utilizado com qualquer tipo de filtro}.
 	 			\begin{itemize}
-	 				\item A saída dos filtros de Gabor são normalizadas devido ao ruído e complexidade presentes em imagens naturais. 
+	 				\item A saída dos filtros de Gabor são normalizadas devido ao ruído e complexidade presentes em imagens naturais. Os filtros são aplicados em $Y$ (luminância da imagem) e sua saída é utilizada na equação \ref{eq:defcanal} para encontrar os valores para cada canal $F_{i}$, onde $i = 1,2,3\ \dots\ N_{c}) $.
 	 			\end{itemize}
-	 		\item Calcular pesos diferentes para cada canal para da imagem. (\textcolor{red}{robustez do algoritmos, se adapta aos dados de entrada})
-	 		\item Dado um conjunto de pixels ($\Omega_{1}, \Omega_{2} $) correspondentes aos ``rabiscos'' $l_{1}, l_{2} $, a função densidade de probabilidade (FDP) é aproximada para uma gaussianda com $\Omega_{1},\Omega_{2} $.
-	 		\item Calcula-se a probabilidade de um pixel \textit{x} pertencer ao ``rabisco'' $l_{1}$ baseado no canal $F_{i}$
-	 		\item A probabilidade de um pixel \textit{x} pertencer a uma região $l_{i}$ é dada pelo somatório da probabilidade do mesmo pixel \textit{x} calculada para cada canal multiplicada pelo peso do mesmo canal.
-	 		\item Para a separação de múltiplipas regiões o cálculo é parecido, a diferença está no cálculo da função peso $W_{i}$, que é o somatório da função peso da região atual competindo com todas as outras regiões (essa comparação ocorre sempre aos pares) ($W_{ij}$)
-	 		\item O algoritmo assume que o usuário irá sempre marcar regiões da imagem que são diferentes e a informação contida nessas regiões poderá ser usada para separar as diferentes texturas.		
+	 		\item Calcular pesos diferentes para cada canal para da imagem. (\textcolor{red}{robustez do algoritmos, se adapta aos dados de entrada}).
+	 		\begin{itemize}
+	 			\item O algoritmo assume que o usuário irá sempre marcar regiões da imagem que são diferentes e a informação contida nessas regiões poderá ser usada para separar as diferentes texturas.
+	 			\item Para calcular a relevância de cada canal assume-se que as FDP's (Função de Distribuição de Probabilidade) da imagem estão representadas pelas FDP's obtidas usando os pixel de $\Omega_{1}$, $\Omega_{2}\ \dots \Omega_{N_{l}}$ (regiões ``rabiscadas'').
+	 			\item A probabilidade de um pixel ser assinalado errôneamente, mostrada na quação \ref{eq:probpeso}, é avaliada como um função da FDP computada anteriormente. A partir disso é deduzido o peso de cada canal da imagem por meio da equação \ref{eq:pesocanal}.
+	 		\end{itemize}
+	 		\item Dado um conjunto de pixels ($\Omega_{1}, \Omega_{2} $) correspondentes aos ``rabiscos'' $l_{1}, l_{2} $, a função densidade de probabilidade (FDP) é aproximada para uma gaussiana.
+	 		\item A probabilidade de um pixel \textit{x} pertencer ao ``rabisco'' $l_{1}$ baseado no canal $F_{i}$ é dada pela equação \ref{eq:probpixel}.
+	 		\item A probabilidade de um pixel \textit{x} pertencer a uma região $l_{1}$ é dada pelo somatório da probabilidade do mesmo pixel \textit{x} mostrado na equação \ref{eq:probpixeltotal}.
+	 		\item O peso então assosiado à distância geodésica é dado por \ref{eq:pesogeodesica}
+	 		\item Para a separação de múltiplipas regiões o cálculo é parecido, a diferença está no cálculo da função peso $W_{i}$, que é o somatório da função peso da região atual competindo com todas as outras regiões (essa comparação ocorre sempre aos pares) ($W_{ij}$).
+	 				
 	 		
 	 	\end{itemize}
 	\end{itemize}
-			\item Baseado no cálculo anterior, encontra-se a probabilidade de um determinado pixel pertencer a um dada região de interesse usando \ref{probabilidade}
+			\item Baseado no cálculo anterior, encontra-se a probabilidade de um determinado pixel pertencer a um dada região de interesse usando \ref{eq:probabilidade}
 		\end{itemize}
 		
 		\begin{equation}
@@ -62,12 +78,68 @@
 		
 		\begin{equation}
 			d_{i}(t) = min_{s \in \Omega _{c}:label(s)=l_{i}}d(s,t)
-			\label{distpixel}
+			\label{eq:distpixel}
 		\end{equation}
 		\begin{equation}
 			Pr(t \in l_{i}) = \frac{d_{i}(t)^{-1}}{\sum _{j \in[1,N_{l}]} d_{j}(t)^{-1}} 
-			\label{probabilidade}  
+			\label{eq:probabilidade}  
  		\end{equation}
+ 		\begin{equation}
+ 			\forall (x,y) \in \Omega \ : F_{i}(x,y) =  \ \frac{1}{N^{2}} \int \int _{\Omega_{x,y}} \tanh \Bigg( \alpha \frac{G_{i}(u,v)}{\sigma(G_{i})} \Bigg) dudv,\ onde  \  \alpha = 0.25 \ e\   N = 5
+ 			\label{eq:defcanal}
+ 		\end{equation}
+ 		\begin{equation}
+ 			P_{i} = \frac{1}{2} \int_{-\infty} ^{\infty} min(p^{i} _{1}(x),p^{i} _{2}(x)) \ dx 							\label{eq:probpeso}
+ 		\end{equation}
+ 		\begin{equation}
+ 			\forall\  i = 1,2,3\ \dots\ N_{c}\ :\ \omega_{i} = \frac{(P_{i}^{-1})}{\sum_{k=1}^{N_{c}} (P_{k}^{-1})}
+ 			\label{eq:pesocanal}
+ 		\end{equation}
+ 		\begin{equation}
+ 			P^{i} _{1|2}(x) = \frac{p^{i} _{1}(F_{i}(x))}{p^{i} _{1}(F_{i}(x))\ +\ p^{i} _{2}(F_{i}(x))}
+ 			\label{eq:probpixel}
+ 		\end{equation}
+ 		
+ 		\begin{equation}
+ 			P_{1|2}(x)\ :=\ P_{r}(x \in l_{1}) = \sum_{i=1}^{N_{c}} \omega^{i}P^{i}_{1|2}(x)
+ 			\label{eq:probpixeltotal}
+ 		\end{equation}
+	
+		\begin{equation}
+			W_{1} = W_{12} = 1 - P_{1|2}
+			\label{eq:pesogeodesica}
+		\end{equation}
+		
+\subsection{Fluxograma}
+
+\begin{tikzpicture}[node distance = 4cm, auto]
+
+% Nós do fluxograma
+\node [cloud] (init) {Definir as regiões de interesse};
+\node [block, right of=init] (canais) {Calcular os canais usando eq. \ref{eq:defcanal}};
+\node [block, right of=canais] (calcProbPixelCanal) {Calcular probabilidade de um pixel baseado no canal $F_{i}$ usando eq. \ref{eq:probpeso}};
+%\node [decision, right of=calcProbPixelCanal] (canaisCalculados) {Todos os canais calculados?};
+\node [block, right of=calcProbPixelCanal] (calcularPesos) {Calcular peso $\omega_{i}$ do canal $F_{i}$ usando eq. \ref{eq:pesocanal}};
+\node [block, below of=calcularPesos] (calculoProbPixelRegiaoCanal) {Calcular probabilidade de um pixel \textit{x} pertencer à região $l_{i}$ usando eq. \ref{eq:probpixeltotal}};
+\node [block, left of=calculoProbPixelRegiaoCanal] (pesoDistGeo) {Encontrar o peso da distância geodésica usando eq. \ref{eq:pesogeodesica}};
+\node [block, left of=pesoDistGeo] (distgeo) {Calcular a distância geodésica do pixel \textit{t} para cada região definida na imagem usando eq. \ref{eq:distpixel}};
+\node [block, left of=distgeo] (probPixel) {Calcular a probabilidade do pixel \textit{t} pertencer a região $l_{i}$ usando eq. \ref{eq:probabilidade}};
+
+
+% Arestas do fluxograma
+
+\path [line]	(init) -- (canais);
+\path [line] 	(canais) -- (calcProbPixelCanal); 
+\path [line] 	(calcProbPixelCanal) -- (calcularPesos);
+%\path [line] 	(canaisCalculados) -- node {sim} (calcularPesos);
+%\path [line]	(canaisCalculados) -| node {não} (calcProbPixelCanal);
+\path [line] 	(calcularPesos) -- (calculoProbPixelRegiaoCanal);
+\path [line]	(calculoProbPixelRegiaoCanal) -- (pesoDistGeo);
+\path [line]	(pesoDistGeo) -- (distgeo);
+\path [line] 	(distgeo) -- (probPixel);
+\end{tikzpicture}
+
+
 
 \section{Anotações Gerais}
 
