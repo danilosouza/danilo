@@ -1,35 +1,48 @@
-function [ vetor, mat, count ] = getPixels(varargin)
+function [ img_scribbled ] = getPixels( imagem, num_scribbles, varargin)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 %Parâmetros da função getPixels( imagem, num_scribbles, imagem_scribbled)
 
-[N,M,~] = size(varargin{1});
+img = imread(imagem);
+[N,M,~] = size(img);
 % Matriz que vai armazenar cada imagem com os scribbles separados
 mat_img(N,M,varargin{2}) = 0;
-
-
+% Array que armazena temporariamente as imagens "rabiscadas"
+img_scribbled_temp = cell(1,0,nargin-2);
+% Matriz que armazena as imagens "rabiscadas" para comparação com a imagem
+% original
+img_scribbled(N,M,num_scribbles) = 0;
 %scb = imread(imagem_scribbled);
 
-for k=3:nargin
-    mat_img(:,:,k-2) = imread(varargin{k});
+% Armazena aas imagens "rabiscadas" em um vetor célula
+for k=1:nargin-2
+    img_scribbled_temp{k} = imread(varargin{k});
+    % Converte a imagem para escala de cinza para facilitar a transformação
+    % de array em matriz (para que a imagem não fique tri-dimensional)
+    img_scribbled_temp{k} = rgb2gray(img_scribbled_temp{k});
 end
 
-%vetor = 0;
-%mat(N,M) = 0;
+% Armazena as imagens na amtriz definitiva
+for k=1:nargin-2
+    img_scribbled(:,:,k) = img_scribbled_temp{k};
+end
+   
+vetor = 0;
 count = 0;
 
 %Compara a imagem original com a imagem "rabiscada" e armazena os pixels de
 %cada "rabisco" em um vetor
-for i=1:N
-    for j=1:M
-        if img(i,j) ~= scb(i,j);
-          count = count + 1;
-          vetor(count) = img(i,j);
-          mat(i,j) = img(i,j);
+for k=1:nargin
+    for i=1:N
+        for j=1:M
+            if img(i,j) ~= scb(i,j);
+                count = count + 1;
+                vetor(count) = img(i,j);
+                mat(i,j) = img(i,j);
+            end
         end
     end
 end
-
 %Adequa o vetor com os pixels de uma região de interesse para o cálculo da FDP
 %pd = fitdist(vetor','Normal');
 % Calcula a FDP dos pixels de uma região de interesse
