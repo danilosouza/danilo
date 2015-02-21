@@ -1,6 +1,13 @@
-function [ img_scribbled, mat_img, vetor ] = getPixels( imagem, num_scribbles, varargin)
-%UNTITLED2 Summary of this function goes here
+function [ img_scribbled, mat_img, vetor, y ] = getPixels( imagem, num_scribbles, varargin)
+%getPixels Função para recuperar os pixels marcados nas regiões de
+%interesse da imagem a ser segmentada
 %   Detailed explanation goes here
+%   Esta função recupera os pixels dos "rabiscos" das regiões de interesse
+%   de uma imagem. Para isso é necessário passar como parâmetro uma imagem
+%   com cada região de interesse marcada separadamente. Exemplo, se uma
+%   imagem possui 3 regiões de interesse, é necessário passar 3 imagens
+%   diferentes onde cada imagem possui uma marcação em cada uma das regiões
+%   de interesse.
 %Parâmetros da função getPixels( imagem, num_scribbles, imagem_scribbled)
 
 img = imread(imagem);
@@ -43,10 +50,14 @@ for k=1:nargin-2
         end
     end
 end
+
 %Adequa o vetor com os pixels de uma região de interesse para o cálculo da FDP
-%pd = fitdist(vetor','Normal');
-% Calcula a FDP dos pixels de uma região de interesse
-%y = pdf(pd,1:1:256);
+vetor = vetor';
+for k=1:nargin-2
+    pd = fitdist(vetor(:,k),'Normal');
+    % Calcula a FDP dos pixels de uma região de interesse
+    y(k,:) = pdf(pd,1:1:256);
+end
 %plot(1:1:256,y,'LineWidth',2);
 end
 
