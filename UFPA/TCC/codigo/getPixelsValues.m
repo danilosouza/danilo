@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_img, vetor, y ] = getPixels( imagem, num_scribbles, varargin)
+function [ img_scribbled, mat_img, vetor, y ] = getPixelsValues( imagem, num_scribbles, varargin)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
@@ -58,6 +58,6 @@ for k=1:nargin-2
     % Calcula a FDP dos pixels de uma região de interesse
     y(k,:) = pdf(pd,1:1:256);
 end
-%plot(1:1:256,y,'LineWidth',2);
+plot(1:1:256,y,'LineWidth',2);legend('p_{1}^{i}','p_{2}^{i}','p_{3}^{i}','p_{4}^{i}','p_{5}^{i}')
 end
 
