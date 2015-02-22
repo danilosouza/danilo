@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_img, vetor, y ] = getPixelsValues( imagem, num_scribbles, varargin)
+function [ img_scribbled, mat_img, vetor, y ] = getPixelsValues( imagem, varargin)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
@@ -7,22 +7,27 @@ function [ img_scribbled, mat_img, vetor, y ] = getPixelsValues( imagem, num_scr
 %   com cada região de interesse marcada separadamente. Exemplo, se uma
 %   imagem possui 3 regiões de interesse, é necessário passar 3 imagens
 %   diferentes onde cada imagem possui uma marcação em cada uma das regiões
-%   de interesse.
+%   de interesse. As imagens devem estar no formato ".png" para que não
+%   haja mudança nos valores dos pixels quando a imagem for salva.
 %Parâmetros da função getPixels( imagem, num_scribbles, imagem_scribbled)
 
 img = imread(imagem);
+
+if size(img,3) == 3
+    img = rgb2gray(img);
+end
 [N,M,~] = size(img);
 % Matriz que vai armazenar cada imagem com os scribbles separados
-mat_img(N,M,num_scribbles) = 0;
+mat_img(N,M,nargin-1) = 0;
 % Array que armazena temporariamente as imagens "rabiscadas"
-img_scribbled_temp = cell(1,0,nargin-2);
+img_scribbled_temp = cell(1,nargin-1);
 % Matriz que armazena as imagens "rabiscadas" para comparação com a imagem
 % original
-img_scribbled(N,M,num_scribbles) = 0;
+img_scribbled(N,M,nargin-1) = 0;
 %scb = imread(imagem_scribbled);
 
 % Armazena aas imagens "rabiscadas" em um vetor célula
-for k=1:nargin-2
+for k=1:nargin-1
     img_scribbled_temp{k} = imread(varargin{k});
     % Converte a imagem para escala de cinza para facilitar a transformação
     % de array em matriz (para que a imagem não fique tri-dimensional)
@@ -30,7 +35,7 @@ for k=1:nargin-2
 end
 
 % Armazena as imagens na amtriz definitiva
-for k=1:nargin-2
+for k=1:nargin-1
     img_scribbled(:,:,k) = img_scribbled_temp{k};
 end
    
@@ -38,7 +43,7 @@ vetor = 0;
 
 %Compara a imagem original com a imagem "rabiscada" e armazena os pixels de
 %cada "rabisco" em um vetor
-for k=1:nargin-2
+for k=1:nargin-1
     count = 0;
     for i=1:N
         for j=1:M
@@ -53,11 +58,13 @@ end
 
 %Adequa o vetor com os pixels de uma região de interesse para o cálculo da FDP
 vetor = vetor';
-for k=1:nargin-2
+x_values = 0:1:255;
+for k=1:nargin-1
     pd = fitdist(vetor(:,k),'Normal');
     % Calcula a FDP dos pixels de uma região de interesse
-    y(k,:) = pdf(pd,1:1:256);
+    y(k,:) = pdf(pd,x_values);
+    str(k,:) = sprintf('p_{%d}^{i}', k);
 end
-plot(1:1:256,y,'LineWidth',2);legend('p_{1}^{i}','p_{2}^{i}','p_{3}^{i}','p_{4}^{i}','p_{5}^{i}')
+plot(x_values,y,'LineWidth',2);legend(str);
 end
 
