@@ -59,6 +59,7 @@ end
 %Adequa o vetor com os pixels de uma região de interesse para o cálculo da FDP
 vetor = vetor';
 x_values = 0:1:255;
+%str(nargin-1,9) = 0;
 for k=1:nargin-1
     pd = fitdist(vetor(:,k),'Normal');
     % Calcula a FDP dos pixels de uma região de interesse
