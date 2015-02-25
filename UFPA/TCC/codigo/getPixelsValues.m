@@ -13,10 +13,12 @@ function [ img_scribbled, mat_img, vetor, y ] = getPixelsValues( imagem, varargi
 
 img = imread(imagem);
 
+%Verifica se a imagem está em RGB e se estiver converte para escala de
+%cinza
 if size(img,3) == 3
     img = rgb2gray(img);
 end
-[N,M,~] = size(img);
+[N,M] = size(img);
 % Matriz que vai armazenar cada imagem com os scribbles separados
 mat_img(N,M,nargin-1) = 0;
 % Array que armazena temporariamente as imagens "rabiscadas"

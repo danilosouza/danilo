@@ -1,0 +1,23 @@
+function [ gb ] = getChannels( imagem, largura, theta, omega )
+%UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
+%   No artigo principal (Sapiro) são utilizados 19 canais:
+%       16 filtros de gabor mais YCbCr
+
+img = imread(imagem);
+Nc = 19; % Número de canais
+bancoFiltros(largura(1,1),largura(1,2),Nc) = 0;;
+angulos = [0 pi/4 pi/2 3*pi/2];
+frequencias = [1/2 1/4 1/8 1/16];
+for k=1:Nc-3
+    for i=1:4
+        for j=1:4
+            bancoFiltros(:,:,k)  = gaborFilter(largura, angulos(i), frequencias(j), x, y );
+        end
+    end
+end
+
+
+
+
+end
+
