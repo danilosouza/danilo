@@ -56,10 +56,32 @@ for k=1:nargin-1
     end
 end
 
-%Adequa o vetorv com os pixels de uma região de interesse para o cálculo da FDP
+% ----- Cálculo da FDP sem usar a função "fitdist" -----
+ 
+[~, s] = size(vetor);
+p_temp(nargin-1,256) = 0; % vetor que armazena os valores da densidade de probabilidade
+%p_temp_norm(nargin-1,256) = 0; % vetor que armazena os valores normalizados da densidade de probabilidade
+p(nargin-1,256) = 0; % vetor que armazena os valores da distribuição gaussiana
+str(nargin-1
+for i=1:nargin-1
+    media = mean(vetor(i,:));
+    desvio = (sqrt(var(vetor(i,:))));
+    p_temp(i,:) = 0:1:255;
+    p(i,:) = pdf('Normal',p_temp(i,:),media,desvio);
+    str(i,:) = sprintf('p_{%d}^{i}', i);    
+end
+
+plot(0:1:255,p,'LineWidth',2);legend(str);
+figure;
+
+
+
+% ----- Cálculo da FDP usando a função "fitdist" -----
+%Adequa o vetor com os pixels de uma região de interesse para o cálculo da FDP
 vetor = vetor';
 x_values = 0:1:255;
 %str(nargin-1,9) = 0;
+y(nargin-1,256) = 0;   
 for k=1:nargin-1
     pd = fitdist(vetor(:,k),'Normal');
     % Calcula a FDP dos pixels de uma região de interesse
