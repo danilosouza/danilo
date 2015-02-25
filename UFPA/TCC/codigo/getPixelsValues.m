@@ -70,7 +70,7 @@ for i=1:nargin-1
     p(i,:) = pdf('Normal',p_temp(i,:),media,desvio);
     str1(i,:) = sprintf('p_{%d}^{i}', i);    
 end
-plot(0:1:255,p,'LineWidth',2);legend(str1);
+plot(0:1:255,p,'LineWidth',2);legend(str1);title('Cálculo da FDP sem o uso da função "fitdist"');
 figure;
 
 
@@ -87,6 +87,6 @@ for k=1:nargin-1
     y(k,:) = pdf(pd,x_values);
     str(k,:) = sprintf('p_{%d}^{i}', k);
 end
-plot(x_values,y,'LineWidth',2);legend(str);
+plot(x_values,y,'LineWidth',2);legend(str);title('Cálculo da FDP com o uso da função "fitdist"');
 end
 
