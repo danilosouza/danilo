@@ -9,14 +9,14 @@ sigma_y = largura(1,2);
 filtro(sigma_x,sigma_y) = 0;
 % Cálculo do filtro usando a fórmula descrita no artigo.
 gb1 = 2*pi*sigma_x*sigma_y;
-for i=1:sigma_x
+for k=1:sigma_x
     for j=1:sigma_y
-        X = i*cos(theta)+j*sin(theta);
-        Y = -i*sin(theta)+j*cos(theta);
+        X = k*cos(theta)+j*sin(theta);
+        Y = -k*sin(theta)+j*cos(theta);
         gb2 = -0.5*((X^2/sigma_x^2)+(Y^2/sigma_y^2)) + 2*pi*omega*1i*X;
         gb = exp(gb2)/gb1;
         gb = real(gb);
-        filtro(i,j) = gb;
+        filtro(k,j) = gb;
     end
 end
 

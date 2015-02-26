@@ -9,11 +9,16 @@ bancoFiltros(largura(1,1),largura(1,2),16) = 0;
 angulos = [0 pi/4 pi/2 3*pi/2];
 frequencias = [1/2 1/4 1/8 1/16];
 count = 0;
+% --- Cálculo do banco de filtros para a imagem ---
 for i=1:4
     for j=1:4
         count = count + 1;
-        bancoFiltros(:,:,count)  = gaborFilter(largura, angulos(i), frequencias(j));
+        bancoFiltros(:,:,count)  = gaborFilter(largura, angulos(j), frequencias(i));
     end
+end
+
+if size(img,3) == 3
+    img = rgb2gray(img);
 end
 
 
