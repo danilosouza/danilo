@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_img, vetor, y ] = getPixelsValues( imagem, varargin)
+function [ img_scribbled, mat_img, pixels_values, y ] = getPixelsValues( imagem, varargin)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
@@ -19,7 +19,8 @@ if size(img,3) == 3
     img = rgb2gray(img);
 end
 [N,M] = size(img);
-% Matriz que vai armazenar cada imagem com os scribbles separados
+
+% Matriz que vai armazenar a informação espacial dos scribbles para
 mat_img(N,M,nargin-1) = 0;
 % Array que armazena temporariamente as imagens "rabiscadas"
 img_scribbled_temp = cell(1,nargin-1);
@@ -40,8 +41,10 @@ end
 for k=1:nargin-1
     img_scribbled(:,:,k) = img_scribbled_temp{k};
 end
-   
-vetor = 0;
+ 
+% Matriz que armazena o valor dos pixels "rabiscados". Cada linha da matriz
+% representa uma região da imagem a ser segmenada.
+pixels_values = 0;
 
 %Compara a imagem original com a imagem "rabiscada" e armazena os pixels de
 %cada "rabisco" em um vetor
@@ -51,7 +54,7 @@ for k=1:nargin-1
         for j=1:M
             if img(i,j) ~= img_scribbled(i,j,k);
                 count = count + 1;
-                vetor(k,count) = img_scribbled(i,j,k);
+                pixels_values(k,count) = img_scribbled(i,j,k);
                 mat_img(i,j,k) = img_scribbled(i,j,k);
             end
         end
@@ -59,7 +62,7 @@ for k=1:nargin-1
 end
 
 % ----- Cálculo da FDP sem usar a função "fitdist" -----
- 
+%{
 [~, s] = size(vetor);
 p_temp(nargin-1,256) = 0; % vetor que armazena os valores da densidade de probabilidade
 %p_temp_norm(nargin-1,256) = 0; % vetor que armazena os valores normalizados da densidade de probabilidade
@@ -74,17 +77,16 @@ for i=1:nargin-1
 end
 plot(0:1:255,p,'LineWidth',2);legend(str1);title('Cálculo da FDP sem o uso da função "fitdist"');
 figure;
-
-
+%}
 
 % ----- Cálculo da FDP usando a função "fitdist" -----
 %Adequa o vetor com os pixels de uma região de interesse para o cálculo da FDP
-vetor = vetor';
+pixels_values = pixels_values';
 x_values = 0:1:255;
 %str(nargin-1,9) = 0;
 y(nargin-1,256) = 0;   
 for k=1:nargin-1
-    pd = fitdist(vetor(:,k),'Normal');
+    pd = fitdist(pixels_values(:,k),'Normal');
     % Calcula a FDP dos pixels de uma região de interesse
     y(k,:) = pdf(pd,x_values);
     str(k,:) = sprintf('p_{%d}^{i}', k);

@@ -24,6 +24,7 @@ for i=1:4
         % ângulos como parâmetro
         bancoFiltros(:,:,count)  = gaborFilter(largura, angulos(j), frequencias(i));
     end
+  % ----- Plot's das imagens -----    
     % Filtragem da imagem original usando os 4 filtros (com ângulos
     % diferentes) por frequência e armazena em imagens temporárias
     i1 = filter2(bancoFiltros(:,:,count-3),img);
@@ -44,6 +45,8 @@ for i=1:4
     subplot(3,2,5);imshow(i3);title(str_i3);
     subplot(3,2,6);imshow(i4);title(str_i4);
 end
+
+
 
 end
 
