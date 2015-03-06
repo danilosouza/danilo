@@ -1,4 +1,4 @@
-function [ bancoFiltros, bancoFDP, bancoCanais ] = getChannels( imagem, largura, arrayPosicao )
+function [ bancoFiltros, bancoFDP, respostaFiltros ] = getChannels( imagem, largura, arrayPosicao )
 %UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
 %   No artigo principal (Sapiro) são utilizados 19 canais:
 %       16 filtros de gabor mais os canais Y, Cb, Cr.
@@ -55,23 +55,36 @@ end
 
 % Criação do banco de imagens, resultado da filtragem da luminância da
 % imagem original usando os 16 filtros de Gabor.
+respostaFiltros(N,M,16) = 0;
+variancia(Nc,1) = 0;
+for k=1:Nc-3
+    respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),respostaFiltros(:,:,17));
+    respostaFiltros(:,:,k) = respostaFiltros(:,:,k)*255;
+    % Cálculando a variância da imagem
+    variancia(k,1) = var(var(respostaFiltros(:,:,k)));
+end
+
+% Cálculo dos canais
+bancoCanais(N,M,Nc) = 0;
+N = 5;
+alpha = 0.25;
+
+for k=1:Nc-3
+    for i=N:1
+        for j=1:M
+            bancoCanais(i,j,k) = 
+        end
+    end
+end
 
 % Inserindo os canais fixos no banco de Imagens (Luminância e 2 de
 % crominância).
-bancoCanais(N,M,Nc) = 0;
-YCBCR = rgb2hsv(img);
+YCBCR = rgb2ycbcr(img);
 bancoCanais(:,:,17) = YCBCR(:,:,1); % Canal de Luminância
 bancoCanais(:,:,18) = YCBCR(:,:,2); % Canal de Crominância
 bancoCanais(:,:,19) = YCBCR(:,:,3); % Canal de Crominância
 
-
-for k=1:Nc-3
-    bancoCanais(:,:,k) = filter2(bancoFiltros(:,:,k),bancoCanais(:,:,19));
-end
-
-
-%bancoFDP(t,count,Nc) = 0;
-
+% Cálculo
 for k=1:Nc
     bancoFDP(:,:,k) = getPixelsDist(arrayPosicao, bancoCanais(:,:,k));
 end
