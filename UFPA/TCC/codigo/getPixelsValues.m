@@ -91,6 +91,6 @@ for k=1:nargin-1
     y(k,:) = pdf(pd,x_values);
     str(k,:) = sprintf('p_{%d}^{i}', k);
 end
-plot(x_values,y,'LineWidth',2);legend(str);title('Cálculo da FDP com o uso da função "fitdist"');
+%plot(x_values,y,'LineWidth',2);legend(str);title('Cálculo da FDP com o uso da função "fitdist"');
 end
 

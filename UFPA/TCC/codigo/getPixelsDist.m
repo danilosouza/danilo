@@ -32,8 +32,5 @@ for k=1:t
     str(k,:) = sprintf('p_{%d}^{i}', k);
 end
 
-
-
-
 end
 
