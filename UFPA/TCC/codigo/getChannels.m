@@ -1,4 +1,4 @@
-function [ bancoFiltros, bancoFDP, respostaFiltros ] = getChannels( imagem, largura, arrayPosicao )
+function [ bancoFiltros, bancoFDP, respostaFiltros ] = getChannels( imagem, sigma, arrayPosicao, fator )
 %UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
 %   No artigo principal (Sapiro) são utilizados 19 canais:
 %       16 filtros de gabor mais os canais Y, Cb, Cr.
@@ -16,9 +16,9 @@ img = imread(imagem);
 
 [N, M, ~] = size(img);
 Nc = 19; % Número de canais
-bancoFiltros(largura(1,1),largura(1,2),16) = 0;
+bancoFiltros((sigma*fator*2)+1,(sigma*fator*2)+1,16) = 0;
 % Define os ângulos e frequências a serem utilizados
-angulos = [0 pi/4 pi/2 3*pi/2];
+angulos = [0 pi/4 pi/2 3*pi/4];
 frequencias = [1/2 1/4 1/8 1/16];
 count = 0;
 % --- Cálculo do banco de filtros para a imagem ---
@@ -27,7 +27,7 @@ for i=1:4
         count = count + 1;
         % Cria o banco de filtros passando a combinação de frequências e
         % ângulos como parâmetro
-        bancoFiltros(:,:,count)  = gaborFilter(largura, angulos(j), frequencias(i));
+        bancoFiltros(:,:,count)  = gaborFilter(sigma, angulos(j), frequencias(i), fator);
     end
     %{
     % ----- Plot's das imagens -----
@@ -53,36 +53,38 @@ for i=1:4
     %}
 end
 
+% Inserindo os canais fixos no banco de Imagens (Luminância e 2 de
+% crominância).
+YCBCR = rgb2ycbcr(im2double(img));
+bancoCanais(:,:,17) = YCBCR(:,:,1); % Canal de Luminância
+bancoCanais(:,:,18) = YCBCR(:,:,2); % Canal de Crominância
+bancoCanais(:,:,19) = YCBCR(:,:,3); % Canal de Crominância
+
+
 % Criação do banco de imagens, resultado da filtragem da luminância da
 % imagem original usando os 16 filtros de Gabor.
 respostaFiltros(N,M,16) = 0;
 variancia(Nc,1) = 0;
 for k=1:Nc-3
-    respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),respostaFiltros(:,:,17));
+    respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),bancoCanais(:,:,17));
     respostaFiltros(:,:,k) = respostaFiltros(:,:,k)*255;
-    % Cálculando a variância da imagem
+    % Cálculando a variância da resposta do filtro ao canal de luminância
     variancia(k,1) = var(var(respostaFiltros(:,:,k)));
 end
 
 % Cálculo dos canais
 bancoCanais(N,M,Nc) = 0;
-N = 5;
+janela = 5;
 alpha = 0.25;
 
+% Criação dos canais seguindo a fórmula apresentada no artigo.
 for k=1:Nc-3
     for i=N:1
         for j=1:M
-            bancoCanais(i,j,k) = 
+            %bancoCanais(i,j,k) = 
         end
     end
 end
-
-% Inserindo os canais fixos no banco de Imagens (Luminância e 2 de
-% crominância).
-YCBCR = rgb2ycbcr(img);
-bancoCanais(:,:,17) = YCBCR(:,:,1); % Canal de Luminância
-bancoCanais(:,:,18) = YCBCR(:,:,2); % Canal de Crominância
-bancoCanais(:,:,19) = YCBCR(:,:,3); % Canal de Crominância
 
 % Cálculo
 for k=1:Nc
