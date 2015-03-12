@@ -9,11 +9,12 @@ function [ filtro ] = gaborFilter(sigma, theta, omega, fator)
 % Fator que multiplica o desvio padrão e indica o tamanho da janela do
 % filtro
 % Declaração do filtro
-filtro((sigma*fator*2)+1,(sigma*fator*2)+1) = 0;
+largura = (sigma*fator*2)+1; 
+filtro(largura,largura) = 0;
 % Cálculo do filtro usando a fórmula descrita no artigo.
 gb1 = 2*pi*sigma*sigma;
-for k=1:(sigma*fator*2)+1
-    for j=1:(sigma*fator*2)+1
+for k=1:largura
+    for j=1:largura
         X = k*cos(theta)+j*sin(theta);
         Y = -k*sin(theta)+j*cos(theta);
         gb2 = -0.5*((X^2/sigma^2)+(Y^2/sigma^2)) + 2*pi*omega*1i*X;
