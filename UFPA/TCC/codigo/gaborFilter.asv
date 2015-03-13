@@ -1,18 +1,20 @@
-function [ filtro ] = gaborFilter(sigma, theta, omega, N)
+function [ filtro ] = gaborFilter(sigma, theta, omega, fator)
 %UNTITLED5 
 %   Função que calcula os valores do filtro da Gabor sobre os 
 %   parâmetros de entradade entrada
 %   Seus parâmetros de entrada são: o desvio padrão,
-%   o ângulo e a frequência desejados e o fator 
+%   o ângulo e a frequência desejados e o fator que multiplica o desvio
+%   padrão para definir o tamanho da janela do filtro
 
 % Fator que multiplica o desvio padrão e indica o tamanho da janela do
 % filtro
 % Declaração do filtro
-filtro(sigma*N,sigma*N) = 0;
+largura = 
+filtro((sigma*fator*2)+1,(sigma*fator*2)+1) = 0;
 % Cálculo do filtro usando a fórmula descrita no artigo.
 gb1 = 2*pi*sigma*sigma;
-for k=1:sigma
-    for j=1:sigma
+for k=1:(sigma*fator*2)+1
+    for j=1:(sigma*fator*2)+1
         X = k*cos(theta)+j*sin(theta);
         Y = -k*sin(theta)+j*cos(theta);
         gb2 = -0.5*((X^2/sigma^2)+(Y^2/sigma^2)) + 2*pi*omega*1i*X;

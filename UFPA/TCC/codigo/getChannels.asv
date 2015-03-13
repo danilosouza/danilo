@@ -60,10 +60,10 @@ for i=1:ac
         f(:,count) = F;
     end
     % Plot das resposta em frequências combinados por direção
-    str_i1 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(1));
-    str_i2 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(2));
-    str_i3 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(3));
-    str_i4 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(4));
+    str_i1 = sprintf('Resposta em Frequência do filtro theta = %.4f rad e w = %.4f', angulos(i)*1, frequencias(1));
+    str_i2 = sprintf('Resposta em Frequência do filtro theta = %.4f rad e w = %.4f', angulos(i), frequencias(2));
+    str_i3 = sprintf('Resposta em Frequência do filtro theta = %.4f rad e w = %.4f', angulos(i), frequencias(3));
+    str_i4 = sprintf('Resposta em Frequência do filtro theta = %.4f rad e w = %.4f', angulos(i), frequencias(4));
     figure;
     % Plota as imagens com os 4 ângulos para cada frequência
     subplot(2,2,1);plot(f(:,count-3),10*log10(abs(a(count-3,:))));title(str_i1);
