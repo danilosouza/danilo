@@ -1,4 +1,4 @@
-function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais ] = getChannels( imagem, sigma, arrayPosicao, fator )
+function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais ] = getChannels( imagem, arrayPosicao, fator )
 %UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
 %   No artigo principal (Sapiro) são utilizados 19 canais:
 %       16 filtros de gabor mais os canais Y, Cb, Cr.
@@ -17,7 +17,7 @@ img = imread(imagem);
 [N, M, ~] = size(img);
 % Define os ângulos e frequências a serem utilizados
 angulos = [0 pi/4 pi/2 3*pi/4];
-frequencias = [ 1/2 1/4 1/8 1/16];
+frequencias = [1/2 1/4 1/8 1/16];
 % Guarda o número de frequências e ângulos. As matrizes criadas
 % posteriormente terão suas dimensões em função desses valores para
 % facilitar a adição de ângulos e/ou frequências nas análises
@@ -25,7 +25,15 @@ frequencias = [ 1/2 1/4 1/8 1/16];
 [fl, fc] = size(frequencias);
 Nc = (ac*fc)+3; % Número de canais
 count = 0;
-bancoFiltros((sigma*fator*2)+1,(sigma*fator*2)+1,fc*ac) = 0;
+% Define um impulso unitátio com origem o centro da matriz [delta(0,0) = 1]
+    T = 257; % Tamanho total do impulso
+    imp = zeros(T,T);
+    imp(round(T/2),round(T/2)) = 1;
+
+% Variáveis relacionadas ao cálculo dos canais
+janela = 5;
+s = floor(janela/2);
+alpha = 0.25;
 bancoCanais(N,M,Nc) = 0;
 
 % Definindo o impulso
@@ -41,36 +49,56 @@ bancoCanais(:,:,Nc-2) = YCBCR(:,:,1)*255; % Canal de Luminância
 bancoCanais(:,:,Nc-1) = YCBCR(:,:,2)*255; % Canal de Crominância
 bancoCanais(:,:,Nc) = YCBCR(:,:,3)*255; % Canal de Crominância
 
-a(16,128) = 0;
-f(128,16) = 0;
+
+resolucao = 256;
+%a(ac*fc,resolucao) = 0;
+%f(resolucao,ac*fc) = 0;
+
+
+% ----- Calculando as variáveis sigma_x e sigma_y ----- 
+S = numel(frequencias); % Número de escalas diferentes
+K = numel(angulos); % Número de direções
+a = (max(frequencias)/min(frequencias))^(1/(S-1));
+sigma_u = ((a-1)*max(frequencias))/((a+1)*sqrt(2*log(2)));
+sigma_v = (tan(pi/(2*K))*(max(frequencias) - 2*log((2*(sigma_u^2))/max(frequencias))))/sqrt(2*log(2) - (((2*log(2))^2)*sigma_u^2)/max(frequencias)^2);
+sigma_x = 1/(2*pi*sigma_u);
+sigma_y = 1/(2*pi*sigma_v);
+%}
+bancoFiltros((ceil(sigma_x)*fator*2)+1,(ceil(sigma_y)*fator*2)+1,fc*ac) = 0;
+%bancoFiltros((sigma*fator*2)+1,(sigma*fator*2)+1,fc*ac) = 0;
 % ### Criação do banco de filtros para a imagem ###
 for i=1:ac
     for j=1:fc
         count = count + 1;
         % Cria o banco de filtros passando a combinação de frequências e
         % ângulos como parâmetro
-        bancoFiltros(:,:,count)  = gaborFilter(sigma, angulos(i), frequencias(j), fator);
+        %bancoFiltros(:,:,count)  = gaborFilter(sigma, angulos(i), frequencias(j), fator);
+        bancoFiltros(:,:,count)  = gaborFilter(ceil(sigma_x), ceil(sigma_y), a, angulos(i), frequencias(j), fator, j);
+        
         % --- Plots das respostas em frequências dos filtros ---
+        %{
         h = conv2(bancoFiltros(:,:,count),imp);
-        % Calcula a transformada de Fourier de h(x,y) = H(u,v) (Resposta em
-        % frequência do filtro
-        H = fftshift(h,128);
-        [A, F] = freqz2(H,[1 128]);
+         Calcula a transformada de Fourier de h(x,y) = H(u,v) (Resposta em
+         frequência do filtro
+        H = fftshift(h,resolucao);
+        [A, F] = freqz2(H,[1 resolucao]);
         a(count,:) = real(A);
         f(:,count) = F;
+        %}
     end
+    %{
     % Plot das resposta em frequências combinados por direção
-    str_i1 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(1));
-    str_i2 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(2));
-    str_i3 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(3));
-    str_i4 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº rad e w = %.4f', angulos(i)*180/pi, frequencias(4));
+    str_i1 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(1));
+    str_i2 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(2));
+    str_i3 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(3));
+    str_i4 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(4));
     figure;
     % Plota as imagens com os 4 ângulos para cada frequência
     subplot(2,2,1);plot(f(:,count-3),10*log10(abs(a(count-3,:))));title(str_i1);
     subplot(2,2,2);plot(f(:,count-2),10*log10(abs(a(count-2,:))));title(str_i2);
     subplot(2,2,3);plot(f(:,count-1),10*log10(abs(a(count-1,:))));title(str_i3);
     subplot(2,2,4);plot(f(:,count),10*log10(abs(a(count,:))));title(str_i4);
-
+    %}
     %{
     % ----- Plot's das imagens -----
     % Filtragem da imagem original usando os 4 filtros (com ângulos
@@ -96,31 +124,21 @@ for i=1:ac
 end
 
 
-
-
-
-
-
-
 % Criação do banco de imagens, resultado da filtragem da luminância da
 % imagem original usando os 16 filtros de Gabor.
 respostaFiltros(N,M,Nc) = 0;
 variancia(Nc,1) = 0;
 for k=1:Nc-3
     respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),bancoCanais(:,:,Nc-2));
-    %respostaFiltros(:,:,k) = respostaFiltros(:,:,k)*255;
-    % Cálculando a variância da resposta do filtro ao canal de luminância
+    %respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),-respostaFiltros(:,:,k));
+    respostaFiltros(:,:,k) = respostaFiltros(:,:,k)*255;
+    % Cálculando a variância da resposta do filtro de gabor
     variancia(k,1) = var(var(respostaFiltros(:,:,k)));
 end
 
-% Cálculo dos canais
-janela = 5;
-s = floor(janela/2);
-alpha = 0.25;
-
 % ### Criação dos canais seguindo a fórmula apresentada no artigo. ###
 for k=1:Nc-3
-    respostaFiltros(:,:,k) = tanh((respostaFiltros(:,:,k)/sqrt(variancia(k,1)))*alpha);
+    respostaFiltros(:,:,k) = 255*tanh((respostaFiltros(:,:,k)/sqrt(variancia(k,1)))*alpha);
     for i=1+s:N-s
         for j=1+s:M-s
             % Loop para percorrer a janela NxN a cada novo pixel da imagem
@@ -130,9 +148,10 @@ for k=1:Nc-3
                     soma = soma + respostaFiltros(n,m,k);
                 end
             end
-            bancoCanais(i,j,k) = (soma/(janela^2))*255;
+            bancoCanais(i,j,k) = (soma/(janela^2));
         end
     end
+    bancoCanais(:,:,k) = ((bancoCanais(:,:,k)-min(min(bancoCanais(:,:,k))))/(max(max(bancoCanais(:,:,k)))-min(min(bancoCanais(:,:,k))))) * 255;
 end
 
 % ### Cálculo da FPD dos pixels marcados para cada canal ###
@@ -141,7 +160,7 @@ bancoFDP(t,256,Nc) = 0;
 for k=1:Nc
     bancoFDP(:,:,k) = getPixelsDist(arrayPosicao, bancoCanais(:,:,k));
 end
-
+%}
 
 end
 
