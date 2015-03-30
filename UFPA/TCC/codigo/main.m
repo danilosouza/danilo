@@ -1,0 +1,50 @@
+function [ canais, fdp, P_min, peso_canal ] = main( imagem, varargin )
+%Main: Função principal que recebe a imagem original e as imagens marcadas
+%e retorna as regiões desejadas
+%   Essa função apenas chama as outras funções, logo ela não deve ter
+%   operações matemáticas nem de busca.
+
+% Variáveis globais (constantes durante todo o algortimo)
+Nc = 19;
+fator = 3;
+% Calculando a FDP dos pixels das regiões de interesse
+% Esta função retorna:
+    % Uma matriz com as imagens marcadas
+    % Uma matriz com a informação espacial dos pixels das regiões de interesse
+    % Uma matriz com os valores dos pixels das regiões de interesse
+    % Uma matriz com a FDP das regiões de interesse
+    
+%regioes = cell2str(varargin); % COnverte a célula com os nomes das imagens rabiscadas em string
+[ ~, mat_posicao, ~, ~ ] = getPixelsValues(imagem, varargin);
+
+% Calculando os canais utilizados para separar as regiões de interesse
+% Esta função retorna:
+    % Uma matriz com os 16 filtros de Gabor
+    % Uma matriz com a FDP dos pixels da região de interesse para todos os
+    %canais
+    % Uma matriz com a saída da filtragem da Luminância utilizando os
+    %filtros calculados
+    % Uma matriz com todos os canais
+fator = 3; % Fator que determina quantos desvios padrões em torno da média utilizar para contruir os filtros
+[~, fdp, ~, canais] = getChannels(imagem,  mat_posicao, fator);
+
+% --- Encontrar o mínimo das FDP's de cada canal ---
+P_min(Nc,256) = 0; % Vetor que armazena o mínimo das FDP's de cada canal
+for i=1:Nc
+    for j=1:256
+        fdp_temp = fdp(:,:,i);
+        P_min(i,j) = min(fdp_temp(:,j));
+    end
+end
+
+% --- Cálculo do peso de cada canal
+
+peso_canal(1,Nc) = 0;
+soma = sum(sum(P_min));
+for i=1:Nc
+    peso_canal(1,i) = 0.5*(sum(P_min(i,:)))/soma;
+end
+
+
+end
+
