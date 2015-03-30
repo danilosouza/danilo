@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_img, pixels_values, y ] = getPixelsValues( imagem, varargin)
+function [ img_scribbled, mat_img, pixels_values, y ] = getPixelsValues( imagem, regioes)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
@@ -12,7 +12,7 @@ function [ img_scribbled, mat_img, pixels_values, y ] = getPixelsValues( imagem,
 %Parâmetros da função getPixels( imagem, num_scribbles, imagem_scribbled)
 
 img = imread(imagem);
-
+[~, q] = size(regioes); % Guarda o número de regiões de interesse
 %Verifica se a imagem está em RGB e se estiver converte para escala de
 %cinza
 if size(img,3) == 3
@@ -21,24 +21,24 @@ end
 [N,M] = size(img);
 
 % Matriz que vai armazenar a informação espacial dos scribbles para
-mat_img(N,M,nargin-1) = 0;
+mat_img(N,M,q) = 0;
 % Array que armazena temporariamente as imagens "rabiscadas"
-img_scribbled_temp = cell(1,nargin-1);
+img_scribbled_temp = cell(1,q);
 % Matriz que armazena as imagens "rabiscadas" para comparação com a imagem
 % original
-img_scribbled(N,M,nargin-1) = 0;
+img_scribbled(N,M,q) = 0;
 %scb = imread(imagem_scribbled);
 
 % Armazena aas imagens "rabiscadas" em um vetor célula
-for k=1:nargin-1
-    img_scribbled_temp{k} = imread(varargin{k});
+for k=1:q
+    img_scribbled_temp{k} = imread(regioes{k});
     % Converte a imagem para escala de cinza para facilitar a transformação
     % de array em matriz (para que a imagem não fique tri-dimensional)
     img_scribbled_temp{k} = rgb2gray(img_scribbled_temp{k});
 end
 
-% Armazena as imagens na amtriz definitiva
-for k=1:nargin-1
+% Armazena as imagens na matriz definitiva
+for k=1:q
     img_scribbled(:,:,k) = img_scribbled_temp{k};
 end
  
@@ -47,8 +47,8 @@ end
 pixels_values = 0;
 
 %Compara a imagem original com a imagem "rabiscada" e armazena os pixels de
-%cada "rabisco" em um vetor
-for k=1:nargin-1
+%cada "rabisco" em um vetor, bem como guarda a posição dos pixels
+for k=1:q
     count = 0;
     for i=1:N
         for j=1:M
