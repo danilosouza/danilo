@@ -13,7 +13,7 @@ function [ filtro ] = gaborFilter(sigma_x, sigma_y, a, theta, omega, fator,j) %(
 %filtro(largura,largura) = 0;
 filtro((ceil(sigma_x)*fator*2)+1,(ceil(sigma_y)*fator*2)+1) = 0;
 [N, M] = size(filtro);
-m = j;
+m = j-1;
 % Cálculo do filtro usando a fórmula descrita no artigo.
 %gb1 = 2*pi*sigma*sigma;
 gb1 = 2*pi*sigma_x*sigma_y;
