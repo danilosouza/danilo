@@ -1,4 +1,4 @@
-function [ canais, fdp ] = main( imagem, varargin )
+function [ canais, fdp, P_min, peso_canal ] = main( imagem, varargin )
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %e retorna as regiões desejadas
 %   Essa função apenas chama as outras funções, logo ela não deve ter
@@ -28,12 +28,26 @@ fator = 3;
 fator = 3; % Fator que determina quantos desvios padrões em torno da média utilizar para contruir os filtros
 [~, fdp, ~, canais] = getChannels(imagem,  mat_posicao, fator);
 
-P(Nc,256) = 0; % Vetor que armazena o mínimo das FDP's de cada canal
-
-for k=i:Nc
+% --- Encontrar o mínimo das FDP's de cada canal ---
+minimo(Nc,256) = 0; % Vetor que armazena o mínimo das FDP's de cada canal
+P_min(1,Nc) = 0;
+[r,~,~] = size(fdp);
+for i=1:Nc
     for j=1:256
-        P(i,j) = min(
+        fdp_temp = fdp(:,:,i);
+        minimo(i,j) = min(fdp_temp(:,j));
     end
+    P_min(1,i) = (1/r)*sum(minimo(i,:));
 end
+
+% --- Cálculo do peso de cada canal
+
+peso_canal(1,Nc) = 0;
+P_min_soma = sum(1./P_min);
+for i=1:Nc
+    peso_canal(1,i) = P(i,j)/P_minsoma;
+end
+
+
 end
 
