@@ -31,30 +31,30 @@ fator = 3; % Fator que determina quantos desvios padrões em torno da média utili
 
 % --- Econtrando o peso dos canais
 [r,~,~] = size(fdp); % guarda o número de regiões de interesse
-pesos_canal(r,r,Nc) = 0; % criar uma matriz para armazenar os pesos combinados 2 a 2 entre as regiões de interesse
+pesos_canal(r,r,Nc) = 0; % matriz para armazenar os pesos combinados 2 a 2 entre as regiões de interesse
 % matriz temporária para armazenar as 2 FDP's a serem usadas para o cálculo
 % do peso
+pesos_canal_final(1,Nc) = 0; % vetor que armazena o peso final de cada canal
 for k=1:Nc
     for i=1:r
         for j=1:r
-            soma = sum(sum(fdp(i,:,:))) + sum(sum(fdp(j,:,:)));
             if i==j
 
-            else
-                pesos_canal(i,j) = getWeight(vertcat(fdp(i,:,k),fdp(j,:,k)),Nc,soma);
+            else if
+                pesos_canal(i,j,k) = getWeight(vertcat(fdp(i,:,:),fdp(j,:,:)),Nc,k);
             end
         end
     end
+    pesos_canal(:,:,k) = tril(pesos_canal(:,:,k),-1);
 end
 
-
-% Passos:
-%   Pegar a FDP das regiões a serem calculadas para o canal atual
-%   Pegar a FDP das regiões a serem calculadas para todos os canais
-%peso_canal = getWeight(fdp,Nc);
+for i=1:Nc
+    pesos_canal_final(1,i) = sum(sum(pesos_canal(:,:,i)));
+end
 
 % --- Cálculo da probabilidade de um pixel pertencer a uma região de
 % interesse
+
 
 
 

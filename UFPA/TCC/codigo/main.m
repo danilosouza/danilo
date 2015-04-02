@@ -1,4 +1,4 @@
-function [ canais, fdp, pesos_canal ] = main( imagem, varargin )
+function [ canais, fdp, pesos_canal_final ] = main( imagem, varargin )
 
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %e retorna as regiões desejadas
@@ -34,18 +34,21 @@ fator = 3; % Fator que determina quantos desvios padrões em torno da média utili
 pesos_canal(r,r,Nc) = 0; % matriz para armazenar os pesos combinados 2 a 2 entre as regiões de interesse
 % matriz temporária para armazenar as 2 FDP's a serem usadas para o cálculo
 % do peso
-pesos_canal_final(1,Nc) = 0 % vetor que armazena o peso final de cada canal
+pesos_canal_final(1,Nc) = 0; % vetor que armazena o peso final de cada canal
 for k=1:Nc
     for i=1:r
         for j=1:r
             if i==j
-
-            else
+            % se i = j não faz nada
+            elseif pesos_canal(j,i,k) == 0;
+                % Se i != j verifica se a posição (j,i) é diferente de
+                % zero, se for, então calcula o peso para (i,j)
                 pesos_canal(i,j,k) = getWeight(vertcat(fdp(i,:,:),fdp(j,:,:)),Nc,k);
+            else
+                
             end
         end
     end
-    pesos_canal(:,:,k) = tril(pesos_canal(:,:,k),-1);
 end
 
 for i=1:Nc
