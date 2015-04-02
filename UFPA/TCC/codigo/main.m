@@ -1,12 +1,13 @@
-function [ canais, fdp, peso_canal ] = main( imagem, varargin )
+function [ canais, fdp, pesos_canal ] = main( imagem, varargin )
+
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %e retorna as regiões desejadas
 %   Essa função apenas chama as outras funções, logo ela não deve ter
 %   operações matemáticas nem de busca.
 
 % Variáveis globais (constantes durante todo o algortimo)
-Nc = 19;
-fator = 3;
+Nc = 19; % número de canais
+fator = 3; % número de desvios padrões utiliados para construir o filtro    
 % Calculando a FDP dos pixels das regiões de interesse
 % Esta função retorna:
     % Uma matriz com as imagens marcadas
@@ -30,22 +31,30 @@ fator = 3; % Fator que determina quantos desvios padrões em torno da média utili
 
 % --- Econtrando o peso dos canais
 [r,~,~] = size(fdp); % guarda o número de regiões de interesse
-pesos_canal(r,r) = 0; % criar uma matriz para armazenar os pesos combinados 2 a 2 entre as regiões de interesse
+pesos_canal(r,r,Nc) = 0; % matriz para armazenar os pesos combinados 2 a 2 entre as regiões de interesse
+% matriz temporária para armazenar as 2 FDP's a serem usadas para o cálculo
+% do peso
+pesos_canal_final(1,Nc) = 0 % vetor que armazena o peso final de cada canal
+for k=1:Nc
+    for i=1:r
+        for j=1:r
+            if i==j
 
-for i=1:r
-    for j=1:r
-        if i==j
-            
-        else
-            fdp_temp = fdp()
-            pesos_canal(i,j) = getWeight(fdp_temp,Nc);
+            else
+                pesos_canal(i,j,k) = getWeight(vertcat(fdp(i,:,:),fdp(j,:,:)),Nc,k);
+            end
         end
     end
+    pesos_canal(:,:,k) = tril(pesos_canal(:,:,k),-1);
 end
-%peso_canal = getWeight(fdp,Nc);
+
+for i=1:Nc
+    pesos_canal_final(1,i) = sum(sum(pesos_canal(:,:,i)));
+end
 
 % --- Cálculo da probabilidade de um pixel pertencer a uma região de
 % interesse
+
 
 
 

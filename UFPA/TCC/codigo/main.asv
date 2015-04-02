@@ -1,12 +1,13 @@
-function [ canais, fdp, P_min, peso_canal ] = main( imagem, varargin )
+function [ canais, fdp, pesos_canal ] = main( imagem, varargin )
+
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %e retorna as regiões desejadas
 %   Essa função apenas chama as outras funções, logo ela não deve ter
 %   operações matemáticas nem de busca.
 
 % Variáveis globais (constantes durante todo o algortimo)
-Nc = 19;
-fator = 3;
+Nc = 19; % número de canais
+fator = 3; % número de desvios padrões utiliados para construir o filtro    
 % Calculando a FDP dos pixels das regiões de interesse
 % Esta função retorna:
     % Uma matriz com as imagens marcadas
@@ -28,25 +29,34 @@ fator = 3;
 fator = 3; % Fator que determina quantos desvios padrões em torno da média utilizar para contruir os filtros
 [~, fdp, ~, canais] = getChannels(imagem,  mat_posicao, fator);
 
-% --- Encontrar o mínimo das FDP's de cada canal ---
-minimo(Nc,256) = 0; % Vetor que armazena o mínimo das FDP's de cada canal
-P_min(1,Nc) = 0;
-[r,~,~] = size(fdp);
-for i=1:Nc
-    for j=1:256
-        fdp_temp = fdp(:,:,i);
-        minimo(i,j) = min(fdp_temp(:,j));
+% --- Econtrando o peso dos canais
+[r,~,~] = size(fdp); % guarda o número de regiões de interesse
+pesos_canal(r,r,Nc) = 0; % criar uma matriz para armazenar os pesos combinados 2 a 2 entre as regiões de interesse
+% matriz temporária para armazenar as 2 FDP's a serem usadas para o cálculo
+% do peso
+for k=1:Nc
+    for i=1:r
+        for j=1:r
+            soma = sum(sum(fdp(i,:,:))) + sum(sum(fdp(j,:,:)));
+            if i==j
+
+            else
+                pesos_canal(i,j) = getWeight(vertcat(fdp(i,:,k),fdp(j,:,k)),Nc,soma);
+            end
+        end
     end
-    P_min(1,i) = (1/r)*sum(minimo(i,:));
 end
 
-% --- Cálculo do peso de cada canal
 
-peso_canal(1,Nc) = 0;
-P_min_soma = sum(1./P_min);
-for i=1:Nc
-    peso_canal(1,i) = P(i,j)/P_minsoma;
-end
+% Passos:
+%   Pegar a FDP das regiões a serem calculadas para o canal atual
+%   Pegar a FDP das regiões a serem calculadas para todos os canais
+%peso_canal = getWeight(fdp,Nc);
+
+% --- Cálculo da probabilidade de um pixel pertencer a uma região de
+% interesse
+
+
 
 
 end
