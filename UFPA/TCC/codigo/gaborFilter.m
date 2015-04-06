@@ -31,7 +31,7 @@ for k=1:N
         %}
         gb = exp(gb2)/gb1;
         gb = real(gb);
-        filtro(k,j) = gb;
+        filtro(k,j) = a*gb;
     end
 end
 
