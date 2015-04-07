@@ -17,6 +17,8 @@ img = imread(imagem);
 %cinza
 if size(img,3) == 3
     img = rgb2gray(img);
+else 
+    % Se estiver em esccala da cinza não faz nada
 end
 [N,M] = size(img);
 
