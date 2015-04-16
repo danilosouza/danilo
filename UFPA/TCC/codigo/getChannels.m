@@ -1,4 +1,4 @@
-function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais ] = getChannels( imagem, arrayPosicao, fator )
+function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChannels( imagem, arrayPosicao, fator )
 %UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
 %   No artigo principal (Sapiro) são utilizados 19 canais:
 %       16 filtros de gabor mais os canais Y, Cb, Cr.

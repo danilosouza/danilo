@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_img, pixels_values, y ] = getPixelsValues( imagem, regioes)
+function [ img_scribbled, mat_img, pixels_values, y, img ] = getPixelsValues( imagem, regioes)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
@@ -22,7 +22,7 @@ else
 end
 [N,M] = size(img);
 
-% Matriz que vai armazenar a informação espacial dos scribbles para
+% Matriz que vai armazenar a informação espacial dos scribbles
 mat_img(N,M,q) = 0;
 % Array que armazena temporariamente as imagens "rabiscadas"
 img_scribbled_temp = cell(1,q);

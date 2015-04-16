@@ -20,11 +20,11 @@ end
 
 % --- Cálculo do peso de cada canal
 
-%peso_canal = 0;
+
 P_min_soma = sum(1./P_min);
-%for i=1:Nc
-    peso_canal = (1/P_min(1,canal))/P_min_soma;
-%end
+
+peso_canal = (1/P_min(1,canal))/P_min_soma;
+
 
 end
 
