@@ -1,4 +1,4 @@
-function [ canais, fdp, pesos_canal_final, img, pesos_geo_final, mat_posicao, dist_min, probabilidade] = main( imagem, varargin )
+function [ fdp, img, mat_posicao, resultado_final] = main( imagem, varargin )
 
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %e retorna as regiões desejadas
@@ -6,9 +6,6 @@ function [ canais, fdp, pesos_canal_final, img, pesos_geo_final, mat_posicao, di
 %   operações matemáticas nem de busca.
 
 % Variáveis globais (constantes durante todo o algortimo)
-Nc = 19; % número de canais
-fator = 3; % número de desvios padrões utiliados para construir o filtro 
-[N,M] = size(imagem);
 % Calculando a FDP dos pixels das regiões de interesse
 % Esta função retorna:
     % Uma matriz com as imagens marcadas
@@ -69,22 +66,30 @@ end
 [N,M,~] = size(mat_posicao);
 % Vetor que guarda a menor distância do pixel corrente para as regiões de
 % interesse
-dist_min(N,M,r) = 0;
+dist_min(1,r) = 0;
 % Variável que determina a probabilidade de um pixel pertencer a um região
 % de interesse
-probabilidade(N,M,r) = 0;
+probabilidade(1,r) = 0;
 
 % Matriz que vai armazenar os pixels segmentados de acordo com cada região
-resultado_final(N,M,r) = 0;
-
+resultado_final(N,M,3,r) = 0;
+img = imread(imagem);
 for i=1:N
     for j=1:M
         for k=1:r
-            dist_min(i,j,k) = getMinDistance(mat_posicao(:,:,r),[i j],pesos_geo_final(r,:,img(i,j)));
+            dist_min(1,k) = getMinDistance(mat_posicao(:,:,k),[i j],pesos_geo_final(k,:,img(i,j)+1));
         end
         for k=1:r
-            probabilidade(i,j,k) = (1/dist_min(i,j,k))/(sum(1/dist_min(i,j,:)));
+            if dist_min(1,k) == 0
+                probabilidade(1,k) = 1;
+            else
+                probabilidade(1,k) = (1/dist_min(1,k))/(sum(1./dist_min(1,:)));
+            end
         end
+        [~, index] = max(probabilidade(1,:));
+        resultado_final(i,j,1,index) = img(i,j,1);
+        resultado_final(i,j,2,index) = img(i,j,2);
+        resultado_final(i,j,3,index) = img(i,j,3);
     end
 end
 

@@ -1,4 +1,4 @@
-function [ canais, fdp, pesos_canal_final, img, pesos_geo_final, mat_posicao] = main( imagem, varargin )
+function [ fdp, img, mat_posicao, resultado_final] = main( imagem, varargin )
 
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %e retorna as regiões desejadas
@@ -8,7 +8,7 @@ function [ canais, fdp, pesos_canal_final, img, pesos_geo_final, mat_posicao] = 
 % Variáveis globais (constantes durante todo o algortimo)
 Nc = 19; % número de canais
 fator = 3; % número de desvios padrões utiliados para construir o filtro 
-[N,M] = size(imagem);
+rgb = imread(imagem);
 % Calculando a FDP dos pixels das regiões de interesse
 % Esta função retorna:
     % Uma matriz com as imagens marcadas
@@ -66,7 +66,7 @@ end
 % ----- Cálculo da distância geodésica entre os pixels da imagem e os
 % pixels das regiões de interesse.
 
-
+[N,M,~] = size(mat_posicao);
 % Vetor que guarda a menor distância do pixel corrente para as regiões de
 % interesse
 dist_min(1,r) = 0;
@@ -74,15 +74,24 @@ dist_min(1,r) = 0;
 % de interesse
 probabilidade(1,r) = 0;
 
+% Matriz que vai armazenar os pixels segmentados de acordo com cada região
+resultado_final(N,M,3,r) = 0;
+img = imread(imagem);
 for i=1:N
     for j=1:M
         for k=1:r
-            dist_min(1,k) = 
+            dist_min(1,k) = getMinDistance(mat_posicao(:,:,k),[i j],pesos_geo_final(k,:,img(i,j)+1));
         end
         for k=1:r
-            probabilidade(1,k) = (1/dist_min(1,k))/(sum(1/))
+            if dist_min(1,k) == 0
+                probabilidade(1,k) = 1;
+            else
+                probabilidade(1,k) = (1/dist_min(1,k))/(sum(1./dist_min(1,:)));
+            end
         end
-        
+        [~, index] = max(probabilidade(1,:));
+        resultado_final(i,j,1,index) = img(i,j,1);
+        resultado_final(i,j,1,index) = img(i,j,1);
     end
 end
 
