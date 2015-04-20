@@ -1,4 +1,4 @@
-function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChannels( imagem, arrayPosicao, fator )
+function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChannels( imagem, arrayPosicao, fator, n_sub_labels )
 %UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
 %   No artigo principal (Sapiro) são utilizados 19 canais:
 %       16 filtros de gabor mais os canais Y, Cb, Cr.
@@ -74,53 +74,7 @@ for i=1:ac
         % ângulos como parâmetro
         %bancoFiltros(:,:,count)  = gaborFilter(sigma, angulos(i), frequencias(j), fator);
         bancoFiltros(:,:,count)  = gaborFilter(ceil(sigma_x), ceil(sigma_y), a, angulos(i), frequencias(j), fator, j);
-        
-        % --- Plots das respostas em frequências dos filtros ---
-        %{
-        h = conv2(bancoFiltros(:,:,count),imp);
-         Calcula a transformada de Fourier de h(x,y) = H(u,v) (Resposta em
-         frequência do filtro
-        H = fftshift(h,resolucao);
-        [A, F] = freqz2(H,[1 resolucao]);
-        a(count,:) = real(A);
-        f(:,count) = F;
-        %}
     end
-    %{
-    % Plot das resposta em frequências combinados por direção
-    str_i1 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(1));
-    str_i2 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(2));
-    str_i3 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(3));
-    str_i4 = sprintf('Resposta em Frequência do filtro \\theta = %.1fº e w = %.4f', angulos(i)*180/pi, frequencias(4));
-    figure;
-    % Plota as imagens com os 4 ângulos para cada frequência
-    subplot(2,2,1);plot(f(:,count-3),10*log10(abs(a(count-3,:))));title(str_i1);
-    subplot(2,2,2);plot(f(:,count-2),10*log10(abs(a(count-2,:))));title(str_i2);
-    subplot(2,2,3);plot(f(:,count-1),10*log10(abs(a(count-1,:))));title(str_i3);
-    subplot(2,2,4);plot(f(:,count),10*log10(abs(a(count,:))));title(str_i4);
-    %}
-    %{
-    % ----- Plot's das imagens -----
-    % Filtragem da imagem original usando os 4 filtros (com ângulos
-    % diferentes) por frequência e armazena em imagens temporárias
-    i1 = filter2(bancoFiltros(:,:,count-3),rgb2gray(img));
-    str_i1 = sprintf('Imagem filtrada com theta = %.4f rad e w = %.4f', angulos(1), frequencias(i));
-    i2 = filter2(bancoFiltros(:,:,count-2),rgb2gray(img));
-    str_i2 = sprintf('Imagem filtrada com theta = %.4f rad e w = %.4f', angulos(2), frequencias(i));
-    i3 = filter2(bancoFiltros(:,:,count-1),rgb2gray(img));
-    str_i3 = sprintf('Imagem filtrada com theta = %.4f rad e w = %.4f', angulos(3), frequencias(i));
-    i4 = filter2(bancoFiltros(:,:,count),rgb2gray(img));
-    str_i4 = sprintf('Imagem filtrada com theta = %.4f rad e w = %.4f', angulos(4), frequencias(i));
-    figure;
-    % Plota as imagens com os 4 ângulos para cada frequência
-    subplot(3,2,1);imshow(img,[]);title('Imagem orginal');
-    str_soma = sprintf('Soma das 4 imagens filtradas com w = %.4f', frequencias(i));
-    subplot(3,2,2);imshow(i1+i2+i3+i4);title(str_soma);
-    subplot(3,2,3);imshow(i1);title(str_i1);
-    subplot(3,2,4);imshow(i2);title(str_i2);
-    subplot(3,2,5);imshow(i3);title(str_i3);
-    subplot(3,2,6);imshow(i4);title(str_i4);
-    %}
 end
 
 
@@ -155,10 +109,11 @@ for k=1:Nc-3
 end
 
 % ### Cálculo da FPD dos pixels marcados para cada canal ###
-[~,~,t] = size(arrayPosicao);
-bancoFDP(t,256,Nc) = 0;
+[~,~,~,~] = size(arrayPosicao);
+%bancoFDP(t,256,w,Nc) = 0;
+
 for k=1:Nc
-    bancoFDP(:,:,k) = getPixelsDist(arrayPosicao, bancoCanais(:,:,k));
+    bancoFDP(:,:,:,k) = getPixelsDist(arrayPosicao, bancoCanais(:,:,k), n_sub_labels);
 end
 %}
 
