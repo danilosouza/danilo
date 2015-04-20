@@ -13,7 +13,7 @@ function [ fdp, img, mat_posicao, resultado_final] = main( imagem, varargin )
     % Uma matriz com os valores dos pixels das regiões de interesse
     % Uma matriz com a FDP das regiões de interesse
 
-[ ~, mat_posicao, ~, ~, img ] = getPixelsValues(imagem, varargin);
+[ ~, mat_posicao, ~, ~, img, n_sub_labels ] = getPixelsValues(imagem, varargin);
 
 % Calculando os canais utilizados para separar as regiões de interesse
 % Esta função retorna:
@@ -24,7 +24,7 @@ function [ fdp, img, mat_posicao, resultado_final] = main( imagem, varargin )
     %filtros calculados
     % Uma matriz com todos os canais
 fator = 3; % Fator que determina quantos desvios padrões em torno da média utilizar para contruir os filtros
-[~, fdp, ~, canais, Nc] = getChannels(imagem,  mat_posicao, fator);
+[~, fdp, ~, canais, Nc] = getChannels(imagem,  mat_posicao, fator, n_sub_labels);
 
 % --- Econtrando o peso dos canais
 [r,~,~] = size(fdp); % guarda o número de regiões de interesse
