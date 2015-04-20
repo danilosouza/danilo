@@ -1,4 +1,4 @@
-function [ peso_canal ] = getWeight( fdp, Nc, canal )
+function [ peso_canal ] = getChannelWeight( fdp, Nc, canal )
 %getWeight Calcula o peso de cada canal
 %   Essa função recebe como parâmetro uma matriz com as FDP's de todos as
 %   regiões de interesse para cada canal e a partir desses valores
