@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_posicao_final, pixels_values, y, img, n_sub_labels ] = getPixelsValues( imagem, regioes)
+function [ img_scribbled, mat_posicao_final, pixels_values, y, img ] = getPixelsValues( imagem, regioes)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
@@ -113,11 +113,11 @@ x_values = 0:1:255;
 %str(nargin-1,9) = 0;
 %y(nargin-1,256) = 0;   
 
-for k=1:q
-    for h=1:n_sub_labels(1,k)
+for k=1:nargin-1
+    for h=1:n_sub_labels(1,g)
         pd = fitdist(pixels_values(:,h,k),'Normal');
         % Calcula a FDP dos pixels de uma região de interesse
-        y(h,:,k) = pdf(pd,x_values);
+        y(k,:) = pdf(pd,x_values);
         %str(k,:) = sprintf('p_{%d}^{i}', k);
     end
 end
