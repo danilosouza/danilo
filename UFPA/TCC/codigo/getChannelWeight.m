@@ -7,14 +7,30 @@ function [ peso_canal ] = getChannelWeight( fdp, Nc, canal )
 %   saber de qual canal deverá utilizar a FDP
 
 % --- Encontrar o mínimo das FDP's de cada canal ---
-minimo(Nc,256) = 0; % Vetor que armazena o mínimo das FDP's de cada canal
+[s,~,r,~] = size(fdp);
+% Vetor que armazena o mínimo das FDP's de cada canal
+minimo(Nc,256) = 0;
+% Vetor que armazena o mínimo das FDP's de cada região
+fdp_regiao(r,256) = 0;
+
 P_min(1,Nc) = 0;
-[r,~,~] = size(fdp);
+P_min_regiao(1,r) = 0;
+
 for i=1:Nc
-    for j=1:256
-        fdp_temp = fdp(:,:,i);
-        minimo(i,j) = min(fdp_temp(:,j));
+    for k=1:r
+        fdp_temp = fdp(:,:,k,i);
+        % Varifica quantas subregiões a região atual possui e elimina
+        % os zeros da matriz FDP
+        for b=1:s
+            if fdp_temp(b,:) == 0
+                fdp_temp(b,:) = [];
+            else
+
+            end   
+        end
+        fdp_regiao(k,:) = sum(fdp_temp(:,:));
     end
+    minimo(i,:) = min(fdp_regiao(:,:));
     P_min(1,i) = (1/r)*sum(minimo(i,:));
 end
 
