@@ -18,9 +18,8 @@ P_min_regiao(1,r) = 0;
 
 for i=1:Nc
     for k=1:r
-        fdp_temp(n_sub_labels(1,k),256) = 0;
         for l=1:n_sub_labels(1,k)
-            fdp_temp(l,:) = fdp(l,:,k,i);
+            fdp_temp = fdp(:,:,k,i);
         end
         % Varifica quantas subregiões a região atual possui e elimina
         % os zeros da matriz FDP
