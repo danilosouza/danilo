@@ -35,7 +35,7 @@ pesos_canal_final(1,Nc) = 0; % vetor que armazena o peso de cada canal
 % Calcula o peso de cada canal considerando o conjunto de FDP's, o número
 % de canais e o canal desejado
 for k=1:Nc
-    pesos_canal_final(1,k) = getChannelWeight(fdp,Nc,k);
+    pesos_canal_final(1,k) = getChannelWeight(fdp,Nc,k,n_sub_labels);
 end
 
 
