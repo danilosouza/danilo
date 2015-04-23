@@ -1,4 +1,4 @@
-function [ fdp, img, mat_posicao, resultado_final] = main( imagem, varargin )
+function [ fdp, img, mat_posicao, resultado_final] = segmenta( imagem, varargin )
 
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %e retorna as regiões desejadas
@@ -112,8 +112,9 @@ dist_min(r,s) = 0;
 probabilidade(r,s) = 0;
 
 % Matriz que vai armazenar os pixels segmentados de acordo com cada região
-resultado_final(N,M,3,s,r) = 0;
-img = imread(imagem);
+resultado_final(N,M,s,r) = 0;
+%resultado_final(N,M,3,s,r) = 0;
+%img = imread(imagem);
 for i=1:N
     for j=1:M
         for k=1:r
@@ -141,9 +142,10 @@ for i=1:N
         end
         [~, index_subregiao] = max(max(probabilidade,[],1));
         [~, index_regiao] = max(max(probabilidade,[],2));
-        resultado_final(i,j,1,index_subregiao,index_regiao) = img(i,j,1);
-        resultado_final(i,j,2,index_subregiao,index_regiao) = img(i,j,2);
-        resultado_final(i,j,3,index_subregiao,index_regiao) = img(i,j,3);
+        resultado_final(i,j,index_subregiao,index_regiao) = img(i,j,1);
+        %resultado_final(i,j,1,index_subregiao,index_regiao) = img(i,j,1);
+        %resultado_final(i,j,2,index_subregiao,index_regiao) = img(i,j,2);
+        %resultado_final(i,j,3,index_subregiao,index_regiao) = img(i,j,3);
     end
 end
 
