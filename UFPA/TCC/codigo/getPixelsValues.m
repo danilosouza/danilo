@@ -12,6 +12,9 @@ function [ img_scribbled, mat_posicao_final, pixels_values, y, img, n_sub_labels
 %Parâmetros da função getPixels( imagem, num_scribbles, imagem_scribbled)
 
 img = imread(imagem);
+% Quando a imagem passada como parâmetro não for mais um caminho, mas sim
+% uma matriz de uma das componentes RGB da imagem
+%img = imagem;
 [~, q] = size(regioes); % Guarda o número de regiões de interesse
 %Verifica se a imagem está em RGB e se estiver converte para escala de
 %cinza
@@ -34,9 +37,9 @@ img_scribbled(N,M,q) = 0;
 % Armazena aas imagens "rabiscadas" em um vetor célula
 for k=1:q
     img_scribbled_temp{k} = imread(regioes{k});
-    % Converte a imagem para escala de cinza para facilitar a transformação
-    % de array em matriz (para que a imagem não fique tri-dimensional)
     img_scribbled_temp{k} = rgb2gray(img_scribbled_temp{k});
+    % Pega a componente da imagem desejada (R,G ou B(
+    %img_scribbled_temp{k} = img_scribbled_temp{k}(:,:,componente);
 end
 
 % Armazena as imagens na matriz definitiva

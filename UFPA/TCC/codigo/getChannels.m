@@ -1,4 +1,4 @@
-function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChannels( imagem, arrayPosicao, fator, n_sub_labels )
+function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChannels( imagem, arrayPosicao, fator, n_sub_labels,YCBCR )
 %UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
 %   No artigo principal (Sapiro) são utilizados 19 canais:
 %       16 filtros de gabor mais os canais Y, Cb, Cr.
@@ -8,6 +8,7 @@ function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChann
 %   calcular a probabilidade
 
 img = imread(imagem);
+%img = imagem;
 %if size(img,3) == 3
 %    img = rgb2gray(img);
 %else
@@ -85,14 +86,14 @@ variancia(Nc,1) = 0;
 for k=1:Nc-3
     respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),bancoCanais(:,:,Nc-2));
     %respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),-respostaFiltros(:,:,k));
-    respostaFiltros(:,:,k) = respostaFiltros(:,:,k)*255;
+    %respostaFiltros(:,:,k) = respostaFiltros(:,:,k)*255;
     % Cálculando a variância da resposta do filtro de gabor
     variancia(k,1) = var(var(respostaFiltros(:,:,k)));
 end
 
 % ### Criação dos canais seguindo a fórmula apresentada no artigo. ###
 for k=1:Nc-3
-    respostaFiltros(:,:,k) = 255*tanh((respostaFiltros(:,:,k)/sqrt(variancia(k,1)))*alpha);
+    respostaFiltros(:,:,k) = tanh((respostaFiltros(:,:,k)/sqrt(variancia(k,1)))*alpha);
     for i=1+s:N-s
         for j=1+s:M-s
             % Loop para percorrer a janela NxN a cada novo pixel da imagem
