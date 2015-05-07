@@ -46,14 +46,14 @@ imp(round(T/2),round(T/2)) = 1;
 % Inserindo os canais fixos no banco de Imagens (Luminância e 2 de
 % crominância).
 YCBCR = rgb2ycbcr(im2double(img));
-bancoCanais(:,:,Nc-2) = YCBCR(:,:,1)*255; % Canal de Luminância
-bancoCanais(:,:,Nc-1) = YCBCR(:,:,2)*255; % Canal de Crominância
-bancoCanais(:,:,Nc) = YCBCR(:,:,3)*255; % Canal de Crominância
-
-
-resolucao = 256;
-%a(ac*fc,resolucao) = 0;
-%f(resolucao,ac*fc) = 0;
+[~,~,y] = size(YCBCR);
+for k=1:y
+    bancoCanais(:,:,Nc-(y-k)) = YCBCR(:,:,k);
+    bancoCanais(:,:,Nc-(y-k)) = (((bancoCanais(:,:,Nc-(y-k))-min(min(bancoCanais(:,:,Nc-(y-k)))))*255)/(max(max(bancoCanais(:,:,Nc-(y-k))))-min(min(bancoCanais(:,:,Nc-(y-k))))));
+end
+%bancoCanais(:,:,Nc-2) = YCBCR(:,:,1); % Canal de Luminância
+%bancoCanais(:,:,Nc-1) = YCBCR(:,:,2)*255; % Canal de Crominância
+%bancoCanais(:,:,Nc) = YCBCR(:,:,3)*255; % Canal de Crominância
 
 
 % ----- Calculando as variáveis sigma_x e sigma_y ----- 
@@ -67,6 +67,7 @@ sigma_y = 1/(2*pi*sigma_v);
 %}
 bancoFiltros((ceil(sigma_x)*fator*2)+1,(ceil(sigma_y)*fator*2)+1,fc*ac) = 0;
 %bancoFiltros((sigma*fator*2)+1,(sigma*fator*2)+1,fc*ac) = 0;
+
 % ### Criação do banco de filtros para a imagem ###
 for i=1:ac
     for j=1:fc
@@ -85,14 +86,14 @@ respostaFiltros(N,M,Nc) = 0;
 variancia(Nc,1) = 0;
 for k=1:Nc-3
     respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),bancoCanais(:,:,Nc-2));
-    %respostaFiltros(:,:,k) = filter2(bancoFiltros(:,:,k),-respostaFiltros(:,:,k));
-    %respostaFiltros(:,:,k) = respostaFiltros(:,:,k)*255;
+
     % Cálculando a variância da resposta do filtro de gabor
     variancia(k,1) = var(var(respostaFiltros(:,:,k)));
 end
 
 % ### Criação dos canais seguindo a fórmula apresentada no artigo. ###
 for k=1:Nc-3
+
     respostaFiltros(:,:,k) = tanh((respostaFiltros(:,:,k)/sqrt(variancia(k,1)))*alpha);
     for i=1+s:N-s
         for j=1+s:M-s
@@ -106,11 +107,11 @@ for k=1:Nc-3
             bancoCanais(i,j,k) = (soma/(janela^2));
         end
     end
-    bancoCanais(:,:,k) = ((bancoCanais(:,:,k)-min(min(bancoCanais(:,:,k))))/(max(max(bancoCanais(:,:,k)))-min(min(bancoCanais(:,:,k))))) * 255;
+    bancoCanais(:,:,k) = (((bancoCanais(:,:,k)-min(min(bancoCanais(:,:,k))))*255)/(max(max(bancoCanais(:,:,k)))-min(min(bancoCanais(:,:,k)))));
 end
 
 % ### Cálculo da FPD dos pixels marcados para cada canal ###
-[~,~,~,~] = size(arrayPosicao);
+%[~,~,~,~] = size(arrayPosicao);
 %bancoFDP(t,256,w,Nc) = 0;
 
 for k=1:Nc

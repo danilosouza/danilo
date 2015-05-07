@@ -39,7 +39,7 @@ for k=1:q
     img_scribbled_temp{k} = imread(regioes{k});
     img_scribbled_temp{k} = rgb2gray(img_scribbled_temp{k});
     % Pega a componente da imagem desejada (R,G ou B(
-    %img_scribbled_temp{k} = img_scribbled_temp{k}(:,:,componente);
+    %img_scribbled_temp{k} = img_scribbled_temp{k}(:,:,3);
 end
 
 % Armazena as imagens na matriz definitiva
