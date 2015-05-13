@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you give
+% someone the link to this page, they can edit at the same
+% time. See the help menu above for more info. Enjoy!
+%
+% Note: you can export the pdf to see the result at full
+% resolution.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{trees}
+%%%<
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{10pt}%
+%%%>
+
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+\tikzset{
+  basic/.style  = {draw,text width=5cm, drop shadow, rectangle,anchor=west},
+  type 1/.style   = {basic, rounded corners=6pt, thin,align=center, fill=green!60,
+                   text width=9em},                
+  type 2/.style = {basic, rounded corners=6pt, thin,align=center, fill=blue!60,
+                   text width=10em},
+  type 3/.style = {basic, thin, align=center, fill=pink!60, text width=9em, rounded corners=6pt},  
+  type 4/.style = {basic, thin, align=center, fill=orange!60, text width=9em, rounded corners=6pt},
+  type 5/.style = {basic, thin, align=center, fill=gray!60, text width=9em, rounded corners=6pt},
+  type 6/.style = {basic, thin, align=center, fill=red!60, text width=9em, rounded corners=6pt},
+}
+
+\begin{document}
+\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+\begin{tikzpicture}[%
+  grow via three points={one child at (0.5,-0.7) and
+  two children at (0.5,-0.7) and (0.5,-1.4)},
+  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+  \node [type 1] {segmenta}
+    child { node [type 5] {getPixelsPosition}}			
+	child { node [type 2] {getChannels}
+      	child { node [type 3] {gaborFilter}}  
+      	child { node [type 3] {getPixelsDist}}  	
+	}
+    child [missing] {}				
+    child [missing] {}				  	
+    child { node [type 4] {getChannelWeight}}
+    child { node [type 4] {getGeodesicWeight}}		
+    child { node [type 6] {getMinDistance}};
+\end{tikzpicture}
+\end{document}

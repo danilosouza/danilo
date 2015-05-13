@@ -1,0 +1,110 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you give
+% someone the link to this page, they can edit at the same
+% time. See the help menu above for more info. Enjoy!
+%
+% Note: you can export the pdf to see the result at full
+% resolution.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetikzlibrary{trees}
+%%%<
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{10pt}%
+%%%>
+
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+\tikzset{
+  basic/.style  = {draw,text width=5cm, drop shadow, ellipse,anchor=west},
+}
+
+
+\begin{document}
+% Define block styles
+
+\tikzstyle{block1} = [basic, rectangle, draw, fill=blue!60, 
+    text width=6em, text centered, rounded corners]
+\tikzstyle{block2} = [basic, rectangle, draw, fill=pink!60, 
+    text width=6em, text centered, rounded corners]
+\tikzstyle{block3} = [basic, rectangle, draw, fill=gray!60, 
+    text width=6em, text centered, rounded corners]
+\tikzstyle{block4} = [basic, rectangle, draw, fill=orange!60, 
+    text width=6em, text centered, rounded corners]
+\tikzstyle{block5} = [basic, rectangle, draw, fill=red!60, 
+    text width=6em, text centered, rounded corners]
+\tikzstyle{block6} = [basic, rectangle, draw, fill=green!60, 
+    text width=6em, text centered, rounded corners]
+
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [basic, rounded corners=6pt, thin,align=center, fill=green!60, text width=5em, node distance=5cm] 
+
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+\begin{tikzpicture}[node distance = 5cm, auto]
+
+% Nós do fluxograma
+\node [cloud] (init) {Definir as regiões de interesse};
+
+\node [block3, right of=init] (posicao) {Construir a matriz posição com os pixels marcados};
+
+\node [block2, below of=init] (filtros) {Criar um banco com os filtros};
+
+\node [block1, below of=filtros] (respostaFiltros) {Calcular a resposta dos filros à Luminância ($Y$)};
+
+\node [block1, below of=respostaFiltros] (canais) {Calcular os canais com base no resultado anterior};
+
+\node [block2, below of=canais] (normaliza) {Normaliza os $N_{c}$ canais no intervalo [0,255]};
+
+\node [block2, right of=normaliza] (fdps) {Calcular as FDP's das subregiões dos canais};
+
+\node [block4, right of=fdps] (pesocanal) {Calcuar o peso de cada canal baseado na FDP das regiões};
+
+\node [block4, right of=pesocanal] (pesogeo) {Calcuar o peso da distância geodésica por pixel para todas as subregiões};
+
+\node [block5, above of=pesogeo] (distancia) {Calcuar a menor distância de cada pixel para cada subregião};
+
+\node [block6, above of=distancia] (probabilidade) {Calcuar a probabilidade de cada pixel para cada subregião};
+
+\node [block6, above of=probabilidade] (segmentacao) {Define a que subregião o pixel pertence};
+
+
+
+% Arestas do fluxograma
+
+\path [line]	(init) -- (posicao) node [midway, above, sloped] (TextNode) {\color{red}{}} ;
+\path [line]	(posicao) -- (fdps) node [midway, above, sloped] (TextNode) {\color{red}{Posição}} ;
+\path [line] 	(init) -- (filtros); 
+\path [line] 	(filtros) -- (respostaFiltros);
+\path [line] 	(respostaFiltros) -- (canais);
+\path [line] 	(canais) -- (normaliza) node [midway, above, sloped] (TextNode) {\color{red}{Canais
+%$\{F_{1}, ..., F_{i}\},\ \forall\  i = 1,...,N_{c}$
+}};
+\path [line] 	(normaliza) -- (fdps) node [midway, above, sloped] (TextNode) {\color{red}{}};
+
+\path [line] 	(fdps) -- (pesocanal) node [midway, above, sloped] (TextNode) {\color{red}{FDP's}};
+
+\path [line] 	(pesocanal) -- (pesogeo) node [midway, above, sloped] (TextNode) {\color{red}{PesoCanal}};
+
+\path [line] 	(pesogeo) -- (distancia) node [midway, above, sloped] (TextNode) {\color{red}{PesoGeo}};
+
+\path [line] 	(pesogeo) -- (distancia) node [midway, above, sloped] (TextNode) {\color{red}{PesoGeo}};
+
+\path [line] 	(distancia) -- (probabilidade) node [midway, above, sloped] (TextNode) {\color{red}{MinDist}};
+
+\path [line] 	(probabilidade) -- (segmentacao) node [midway, above, sloped] (TextNode) {\color{red}{Probabilidade}};
+
+\end{tikzpicture}
+
+\end{document}

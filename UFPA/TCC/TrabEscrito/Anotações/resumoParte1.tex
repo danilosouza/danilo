@@ -14,6 +14,7 @@
 \usepackage{url}
 \usepackage{color}
 \usepackage{tikz}
+\usepackage{cite}
 \usetikzlibrary{shapes,arrows}
 
 % Define block styles
@@ -43,7 +44,7 @@
 					\item Nós do grafo = pixels
 					\item Arestas = conectam os pixels usando distâncias ponderadas
 				\end{itemize}
-			\item Calcula a distância geodésica (custo das arestas) utilizando \ref{eq:distgeodesica} e \ref{distpixel}
+			\item Calcula a distância geodésica (custo das arestas) utilizando \ref{eq:distgeodesica} e \ref{eq:distpixel}
 			\begin{itemize}
 	 \item Cálculo dos pesos
 	 	\begin{itemize}
@@ -158,7 +159,7 @@ A abordagem é interativa onde o objetivo principal é adicionar cor ( ou outro ef
 	Onde $p$ é o arco euclidiano. Seja $\Omega _{c}$ um conjunto de pixels marcados, ou seja, as regiões de interesse dadas pelo usuário $l_{i}$, $i \in [1,N_{l}$, a distância de um pixel $t$ para uma única região $l_{i}$, $i \in [1,N_{l}$ é dada por:
 	
 	
-A probabilidade $ P(t \in l_{i} $ de um pixel ser associado à região $l_{i}$ é dada pela equação \ref{probabilidade}.
+A probabilidade $ P(t \in l_{i} $ de um pixel ser associado à região $l_{i}$ é dada pela equação \ref{eq:probabilidade}.
 
 
  	
@@ -173,10 +174,12 @@ A probabilidade $ P(t \in l_{i} $ de um pixel ser associado à região $l_{i}$ é d
 Cada ``rabisco'' possui uma função peso. As distâncias ponderadas devem ser calculadas para cada ``rabisco'', entretanto não precisam, necessariamente ser calculadas para toda a imagem (i.e, se um pixel já recebeu um valor baixo o suficiente pode-se assumir que esse pixel já pertence à uma dada região da imagem).
 
 
-Os canais são escolhidos baseados no conjunto de pixels $\Omega _{c}$ definido pelo usuário, assumido que o usuário irá sempre marcar  com \textit{labels} diferentes regiões que sejam de fato diferentes na imagem.	
+Os canais são escolhidos baseados no conjunto de pixels $\Omega _{c}$ definido pelo usuário, assumido que o usuário irá sempre marcar  com \textit{labels} diferentes regiões que sejam de fato diferentes na imagem.	\nocite{*} %\citep{Protiere2007} \citep{onfast} \citep{colorization} 
 
+\section{Bibliografia}
 
-\bibliographystyle{plain}
-\bibliography{referencias}
+\bibliographystyle{ieeetr} 
+\bibliography{resumoParte1}
+
 	
 \end{document}
