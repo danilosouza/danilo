@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_posicao_final, pixels_values, y, img, n_sub_labels ] = getPixelsValues( imagem, regioes)
+function [ img_scribbled, mat_posicao_final, pixels_values, y, img, n_sub_labels ] = getPixelsPosition( imagem, regioes)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
