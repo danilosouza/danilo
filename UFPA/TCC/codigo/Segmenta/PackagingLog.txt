@@ -1,0 +1,10 @@
+ant:
+<ant>
+  <mkdir dir="C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\Segmenta\for_redistribution" />
+  <mkdir dir="C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\Segmenta\for_testing" />
+  <mkdir dir="C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\Segmenta\for_redistribution_files_only" />
+</ant>
+mcc -C -o Segmenta -W main:Segmenta -T link:exe -d C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\Segmenta\for_testing -v C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\segmenta.m -a C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\gaborFilter.m -a C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\getChannels.m -a C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\getChannelWeight.m -a C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\getGeodesicWeight.m -a C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\getMinDistance.m -a C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\getPixelsDist.m -a C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\codigo\getPixelsValues.m 
+Test checkout of feature 'Compiler' failed.
+
+mcc failed.
