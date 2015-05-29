@@ -15,6 +15,9 @@
 \usepackage{color}
 \usepackage{tikz}
 \usepackage{cite}
+\usepackage{makecell}
+\usepackage{slashbox}
+\usepackage{xcolor,colortbl}
 \usetikzlibrary{shapes,arrows}
 
 % Define block styles
@@ -174,11 +177,57 @@ A probabilidade $ P(t \in l_{i} $ de um pixel ser associado à região $l_{i}$ é d
 Cada ``rabisco'' possui uma função peso. As distâncias ponderadas devem ser calculadas para cada ``rabisco'', entretanto não precisam, necessariamente ser calculadas para toda a imagem (i.e, se um pixel já recebeu um valor baixo o suficiente pode-se assumir que esse pixel já pertence à uma dada região da imagem).
 
 
-Os canais são escolhidos baseados no conjunto de pixels $\Omega _{c}$ definido pelo usuário, assumido que o usuário irá sempre marcar  com \textit{labels} diferentes regiões que sejam de fato diferentes na imagem.	\nocite{*} %\citep{Protiere2007} \citep{onfast} \citep{colorization} 
+Os canais são escolhidos baseados no conjunto de pixels $\Omega _{c}$ definido pelo usuário, assumido que o usuário irá sempre marcar  com \textit{labels} diferentes regiões que sejam de fato diferentes na imagem.	\citep{Protiere2007} \citep{onfast} \citep{colorization} 
+
+\section{Primeiros Resultados}
+
+\newcolumntype{a}{>{\columncolor{gray}}c}
+\newcolumntype{b}{>{\columncolor{white}}c}
+\newcolumntype{d}{>{\columncolor{red}}c}
+\newcolumntype{e}{>{\columncolor{blue}}c}
+
+
+\begin{table}[!h]
+
+\begin{tabular}{|c|a|d|e|c|}
+\hline 
+\hline
+\rowcolor{white}
+\backslashbox{Imagens}{Métodos} & Full Set & 2 Desvios Padrões &  Seleção Aleatória ($10\%$) & Seleção Aleatória ($1\%$) \\ 
+\hline
+Imagem 1 & 546.230 & 279.630 & 348.7449 \\ 
+\hline 
+Imagem 10 & 546.230 & 461.553 & 454.6996 \\ 
+\hline 
+Imagem 11 & 301.113  & 219.401 & 209.2415 \\ 
+\hline 
+Imagem 12 & 992.162 & 831.112 & 766.2634 \\ 
+\hline 
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\begin{tabular}{|c|a|d|e|c|}
+\hline 
+\hline
+\rowcolor{white}
+\backslashbox{Imagens}{Métodos} & Full Set &  Seleção Aleatória ($10\%$) & Seleção Aleatória ($1\%$) & Seleção Aleatória ($0.5\%$) \\ 
+\hline
+Imagem 1 & 546.230 &  & 348.7449 & 244.1608 \\ 
+\hline 
+Imagem 10 & 546.230 &  & 454.6996 & 421.8717 \\ 
+\hline 
+Imagem 11 & 301.1131 &  & 209.2415 & 181.7101 \\ 
+\hline 
+Imagem 12 & 992.162 &  & 766.2634 & 736.9383 \\ 
+\hline 
+\end{tabular}
+\end{table}
+
 
 \section{Bibliografia}
 
-\bibliographystyle{ieeetr} 
+\bibliographystyle{plain} 
 \bibliography{resumoParte1}
 
 	
