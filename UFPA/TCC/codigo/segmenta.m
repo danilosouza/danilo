@@ -1,4 +1,4 @@
-function [ fdp, img, mat_posicao,resultado_final] = segmenta( imagem, varargin )
+function [ fdp, img, mat_posicao, mat_posicao_nova, resultado_final] = segmenta( imagem, varargin )
 
 %Main: Função principal que recebe a imagem original e as imagens marcadas
 %
@@ -16,9 +16,9 @@ function [ fdp, img, mat_posicao,resultado_final] = segmenta( imagem, varargin )
     % informação espacial destes
     % A imagem original
     % Um vetor que indica quantas subregiões existem em ccada região
-
+tic;
 [ ~, mat_posicao, ~, ~, img, n_sub_labels ] = getPixelsPosition(imagem, varargin);
-
+posicao_time = toc
 
 % ############################################################### %
 % #                                                             # %
@@ -30,9 +30,10 @@ function [ fdp, img, mat_posicao,resultado_final] = segmenta( imagem, varargin )
 % Esta função retorna:
     % Uma matriz com FDP dos pixels de cada subregião
     % O número total de canais
+    tic;
 fator = 3; % Fator que determina quantos desvios padrões em torno da média utilizar para contruir os filtros
 [~, fdp, ~, ~, Nc] = getChannels(imagem,  mat_posicao, fator, n_sub_labels);
-
+canal_time = toc
 % ############################################################### %
 % #                                                             # %
 % #  Encontrando o peso dos canais                              # %
@@ -48,10 +49,11 @@ pesos_canal_final(1,Nc) = 0;
 
 % Calcula o peso de cada canal considerando o conjunto de FDP's, o número
 % de canais e o canal desejado
+tic;
 for k=1:Nc
     pesos_canal_final(1,k) = getChannelWeight(fdp,Nc,k,n_sub_labels);
 end
-
+peso_canal_time = toc
 % ############################################################### %
 % #                                                             # %
 % #  Encontrando o peso da distância dos canais                 # %
@@ -60,7 +62,7 @@ end
 % Esta função retorna:
     % Uma matriz com os pesos para cada subregião por pixel no intervalo
     % [0,255]
-
+tic;
 % Matriz para indicar quais regiões e subregiões de fato existem na imagem,
 % uma vez que algumas regiões podem ter menos subregiões que outras
 indices(r,s,256) = 0;
@@ -115,8 +117,7 @@ for k=1:256
     end
     
 end
-
-
+peso_geo_time = toc
 % ############################################################### %
 % #                                                             # %
 % #  Segmentado a imagem (baseado na probabilidade)             # %
@@ -135,24 +136,45 @@ dist_min(r,s) = 0;
 % de interesse
 probabilidade(r,s) = 0;
 
-
+tic;
+% ########## Reamostrando os pixels marcados ##########
+mat_posicao_nova(N,M,s,r) = 0;
+for k=1:r
+    for l=1:s
+        mat_posicao_nova(:,:,l,k) = resampleMatrix(mat_posicao(:,:,l,k));
+    end
+end
+%}
+resample_time = toc
 img = imread(imagem);
 [~,~,C] = size(img);
 % Matriz que vai armazenar os pixels segmentados de acordo com cada região
 %resultado_final(N,M,s,r) = 0;
 resultado_final(N,M,C,s,r) = 0;
+
+% Variáveis para medição de tempo de execução (debug)
+tempo_distancia(N,M) = 0;
+tempo_prob(N,M) = 0;
+tempo_segmentacao(N,M) = 0;
+tempo_segmentacao_total = 0;
+tempo_distancia_total = 0;
+tempo_prob_total = 0;
 for i=1:N
     for j=1:M
+        tic
         for k=1:r
             for l=1:s
                 if indices(k,l,:) == 1
-                    dist_min(k,l) = getMinDistance(mat_posicao(:,:,l,k),[i j],pesos_geo_final(k,l,img(i,j)+1));
+                    [dist_min(k,l)] = getMinDistance(mat_posicao_nova(:,:,l,k),[i j],pesos_geo_final(k,l,img(i,j)+1));
                 else
                     % Se não há o conjunto região/subregião então não faz
                     % nada
                 end
             end
         end
+        tempo_distancia(i,j) = toc;
+        tempo_distancia_total = tempo_distancia_total + tempo_distancia(i,j);
+        tic;
         for k=1:r
             for l=1:s
                 if dist_min(k,l) == 0 && indices(k,l) == 1
@@ -166,16 +188,25 @@ for i=1:N
                 end
             end
         end
+        tempo_prob(i,j) = toc;
+        tempo_prob_total = tempo_prob_total + tempo_prob(i,j);
+        tic
         % Descobre a qual região/subregião o pixel atual tem maior
         % probabilidade de pertencer.
         [~, index_subregiao] = max(max(probabilidade,[],1));
         [~, index_regiao] = max(max(probabilidade,[],2));
         
-        % Armazena os valores da imagem RGB referentes a posição do pixel
+            % Armazena os valores da imagem RGB referentes a posição do pixel
         % atual de acordo com sua subregião
         resultado_final(i,j,:,index_subregiao,index_regiao) = img(i,j,:);
+        tempo_segmentacao(i,j) = toc;
+        tempo_segmentacao_total = tempo_segmentacao_total + tempo_segmentacao(i,j);
     end
 end
+
+tempo_segmentacao_total
+tempo_distancia_total
+tempo_prob_total
 
 end
 
