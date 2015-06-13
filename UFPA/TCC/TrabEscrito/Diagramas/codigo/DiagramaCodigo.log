@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  11 MAY 2015 23:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  1 JUN 2015 14:38
 entering extended mode
 **DiagramaCodigo.tex
 
@@ -794,7 +794,7 @@ LaTeX Font Info:    ... okay on input line 34.
 Preview: Fontsize 10pt
 Preview: PDFoutput 1
 
-Overfull \hbox (155.5933pt too wide) in paragraph at lines 108--108
+Overfull \hbox (155.5933pt too wide) in paragraph at lines 120--120
 [][] 
  []
 
@@ -803,17 +803,17 @@ Preview: Tightpage -655360 -655360 655360 655360
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\Diagramas\codigo\
 DiagramaCodigo.aux) ) 
 Here is how much of TeX's memory you used:
- 14484 strings out of 493921
- 313211 string characters out of 3147279
- 376983 words of memory out of 3000000
- 17519 multiletter control sequences out of 15000+200000
+ 14494 strings out of 493921
+ 313423 string characters out of 3147279
+ 380051 words of memory out of 3000000
+ 17529 multiletter control sequences out of 15000+200000
  4094 words of font info for 16 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,8n,82p,423b,746s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on DiagramaCodigo.pdf (1 page, 44656 bytes).
+Output written on DiagramaCodigo.pdf (1 page, 45349 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

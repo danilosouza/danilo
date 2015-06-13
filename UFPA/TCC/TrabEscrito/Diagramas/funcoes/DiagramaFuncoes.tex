@@ -32,6 +32,7 @@
   type 4/.style = {basic, thin, align=center, fill=orange!60, text width=9em, rounded corners=6pt},
   type 5/.style = {basic, thin, align=center, fill=gray!60, text width=9em, rounded corners=6pt},
   type 6/.style = {basic, thin, align=center, fill=red!60, text width=9em, rounded corners=6pt},
+  type 7/.style = {basic, thin, align=center, fill=purple!60, text width=9em, rounded corners=6pt},
 }
 
 \begin{document}
@@ -51,7 +52,8 @@
     child [missing] {}				
     child [missing] {}				  	
     child { node [type 4] {getChannelWeight}}
-    child { node [type 4] {getGeodesicWeight}}		
+    child { node [type 4] {getGeodesicWeight}}
+    child { node [type 7] {resampleMatrix}}		
     child { node [type 6] {getMinDistance}};
 \end{tikzpicture}
 \end{document}

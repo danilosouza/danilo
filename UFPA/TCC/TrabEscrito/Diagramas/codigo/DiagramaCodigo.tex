@@ -46,6 +46,8 @@
     text width=6em, text centered, rounded corners]
 \tikzstyle{block6} = [basic, rectangle, draw, fill=green!60, 
     text width=6em, text centered, rounded corners]
+\tikzstyle{block7} = [basic, rectangle, draw, fill=purple!60, 
+    text width=6.5em, text centered, rounded corners]    
 
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [basic, rounded corners=6pt, thin,align=center, fill=green!60, text width=5em, node distance=5cm] 
@@ -57,7 +59,9 @@
 % Nós do fluxograma
 \node [cloud] (init) {Definir as regiões de interesse};
 
-\node [block3, right of=init] (posicao) {Construir a matriz posição com os pixels marcados};
+\node [block3, right of=init] (posicao) {Construir a matriz posição com os pixels das regiões de interesse};
+
+\node [block7, right of=posicao] (reamostragem) {Reamostragem dos pixels das regiões de interesse};
 
 \node [block2, below of=init] (filtros) {Criar um banco com os filtros};
 
@@ -84,13 +88,21 @@
 % Arestas do fluxograma
 
 \path [line]	(init) -- (posicao) node [midway, above, sloped] (TextNode) {\color{red}{}} ;
-\path [line]	(posicao) -- (fdps) node [midway, above, sloped] (TextNode) {\color{red}{Posição}} ;
+
+\path [line]	(posicao) -- (fdps) node [midway, above, sloped] (TextNode) {\color{red}{Matriz Posição}} ;
+
+\path [line]	(posicao) -- (reamostragem) node [midway, above, sloped] (TextNode) {\color{red}{Matriz Posição}} ;
+
+\path [line]	(reamostragem) |-++ (3.8,-15) (distancia) node [midway, above, sloped] (TextNode) {\color{red}{Matriz Posição Reamostrada}} ;
+
 \path [line] 	(init) -- (filtros); 
+
 \path [line] 	(filtros) -- (respostaFiltros);
+
 \path [line] 	(respostaFiltros) -- (canais);
-\path [line] 	(canais) -- (normaliza) node [midway, above, sloped] (TextNode) {\color{red}{Canais
-%$\{F_{1}, ..., F_{i}\},\ \forall\  i = 1,...,N_{c}$
-}};
+
+\path [line] 	(canais) -- (normaliza) node [midway, above, sloped] (TextNode) {\color{red}{Canais}};
+
 \path [line] 	(normaliza) -- (fdps) node [midway, above, sloped] (TextNode) {\color{red}{}};
 
 \path [line] 	(fdps) -- (pesocanal) node [midway, above, sloped] (TextNode) {\color{red}{FDP's}};

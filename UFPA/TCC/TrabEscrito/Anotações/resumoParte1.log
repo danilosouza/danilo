@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  28 MAY 2015 18:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  13 JUN 2015 09:19
 entering extended mode
 **resumoParte1.tex
 
@@ -868,12 +868,20 @@ Package natbib Warning: Citation `colorization' on page 3 undefined on input li
 ne 180.
 
 
-Overfull \hbox (41.02036pt too wide) in paragraph at lines 192--207
+Overfull \hbox (41.02036pt too wide) in paragraph at lines 192--206
 [][] 
  []
 
 
-Overfull \hbox (76.27336pt too wide) in paragraph at lines 210--225
+Overfull \hbox (76.27336pt too wide) in paragraph at lines 209--223
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (92.69838pt too wide) in paragraph at lines 226--238
 [][] 
  []
 
@@ -890,7 +898,7 @@ oParte1.aux) )
 Here is how much of TeX's memory you used:
  16578 strings out of 493921
  339452 string characters out of 3147279
- 499868 words of memory out of 3000000
+ 502868 words of memory out of 3000000
  19543 multiletter control sequences out of 15000+200000
  12039 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -909,7 +917,7 @@ onts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on resumoParte1.pdf (4 pages, 164703 bytes).
+Output written on resumoParte1.pdf (4 pages, 165088 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
