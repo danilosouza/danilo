@@ -33,17 +33,24 @@ end
     % aleatória dentre todos os valores disponíveis. A quantidade de
     % valores que serão escolhidos é dada por "taxa".
 [r, c, v] = find(mat_posicao);
-taxa = 0.1;
+taxa = 1;
 %temp = horzcat(r,c,v);
 
-for i=1:round(size(v,1)*taxa) %round(size(temp,1)*taxa) 
-    index_temp = round(rand * size(v,1));
-    if index_temp == 0
-        index_temp = index_temp + 1;
-    else
-    end
-    matriz((r(index_temp,1)),(c(index_temp,1))) = v(index_temp,1);
+% Verifica o percental de pixels será utilizado e caso a taxa seja igual a
+% 100% não faz a remostragem, caso contrário a reamostragem é feita.
+if taxa == 1
+    matriz = mat_posicao;
+else
+    % adiciona 1 para corrigir os casos em que o número de pixels e a taxa 
+        % são pequenos e o round seria '0'.
+    for i=1:round(size(v,1)*taxa)
+        index_temp = round(rand * size(v,1));
+        if index_temp == 0
+            index_temp = index_temp + 1;
+        else
+        end
+        matriz((r(index_temp,1)),(c(index_temp,1))) = v(index_temp,1);
+    end    
 end
-
 end
 
