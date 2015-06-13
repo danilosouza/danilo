@@ -65,7 +65,7 @@ peso_canal_time = toc
 tic;
 % Matriz para indicar quais regiões e subregiões de fato existem na imagem,
 % uma vez que algumas regiões podem ter menos subregiões que outras
-indices(r,s,256) = 0;
+indices(r,s) = 0;
 % Matriz que armazena os pesos temporariamente
 pesos_geo(r,s,256) = 0;
 % Matriz que armazena o peso final de cada conjunto região/subregião
@@ -75,13 +75,13 @@ pesos_geo_final(r,s,256) = 0;
 % existem na imagem
 
 [~,reg] = size(n_sub_labels);
-for k=1:256
-    for i=1:reg
-        for j=1:n_sub_labels(1,i)
-            indices(i,j,k) = 1;
-        end
+for i=1:reg
+    for j=1:n_sub_labels(1,i)
+        indices(i,j) = 1;
     end
 end
+
+
 
 % ########## Cálculo do peso da distânia para todos os pixels no intervalo
 % [0,255] para cada subregião. ##########
@@ -91,7 +91,7 @@ for k=1:256
     for i=1:r
         for j=1:s
             % Verifica se o conjunto região/subregião é valido
-            if indices(i,j,k) == 1
+            if indices(i,j) == 1
                 % Percorre a matriz com os indices dos pesos novamente afim
                 % de fazer o cálculo do conjunto região/subregião atual em
                 % comparação 2 a 2 com as outras subregiões das outras
@@ -99,7 +99,7 @@ for k=1:256
                 % umas com as outras)
                 for a=1:r
                     for b=1:s
-                        if indices(a,b,k) == 1 && a ~= i
+                        if indices(a,b) == 1 && a ~= i
                             pesos_geo(a,b,k) = getGeodesicWeight(fdp,[i a],[j b], Nc,pesos_canal_final,k);
 
                             pesos_geo_final(i,j,k) = pesos_geo_final(i,j,k) + pesos_geo(a,b,k);
@@ -136,9 +136,12 @@ dist_min(r,s) = 0;
 % de interesse
 probabilidade(r,s) = 0;
 
-tic;
+
+
 % ########## Reamostrando os pixels marcados ##########
 mat_posicao_nova(N,M,s,r) = 0;
+
+tic;
 for k=1:r
     for l=1:s
         mat_posicao_nova(:,:,l,k) = resampleMatrix(mat_posicao(:,:,l,k));
@@ -146,6 +149,23 @@ for k=1:r
 end
 %}
 resample_time = toc
+
+% --- Laço para preencher com '1's as regiões e subregiões que de fato
+% existem na imagem após a reamostragem
+indices = [];
+indices(r,s) = 0;
+[~,reg] = size(n_sub_labels);
+for i=1:reg
+    for j=1:n_sub_labels(1,i)
+        [~, ~, v] = find(mat_posicao_nova(:,:,j,i));
+        if size(v,1) ~=0
+            indices(i,j) = 1;
+        else
+            
+        end
+    end
+end
+
 img = imread(imagem);
 [~,~,C] = size(img);
 % Matriz que vai armazenar os pixels segmentados de acordo com cada região
@@ -164,7 +184,7 @@ for i=1:N
         tic
         for k=1:r
             for l=1:s
-                if indices(k,l,:) == 1
+                if indices(k,l) == 1
                     [dist_min(k,l)] = getMinDistance(mat_posicao_nova(:,:,l,k),[i j],pesos_geo_final(k,l,img(i,j)+1));
                 else
                     % Se não há o conjunto região/subregião então não faz
