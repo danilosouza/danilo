@@ -1,4 +1,4 @@
-function [ matriz] = resampleMatrix( mat_posicao )
+function [ matriz, qtde] = resampleMatrix( mat_posicao, taxa )
 %resampleMatrix - Esta função faz a reamostragem dos pixels das subregiões
 %de interesse
 %   Essa função recebe a matriz original com a informação dos pixels das
@@ -33,8 +33,10 @@ end
     % aleatória dentre todos os valores disponíveis. A quantidade de
     % valores que serão escolhidos é dada por "taxa".
 [r, c, v] = find(mat_posicao);
-taxa = 1;
+%taxa = 0.1;
 %temp = horzcat(r,c,v);
+
+
 
 % Verifica o percental de pixels será utilizado e caso a taxa seja igual a
 % 100% não faz a remostragem, caso contrário a reamostragem é feita.
@@ -52,5 +54,12 @@ else
         matriz((r(index_temp,1)),(c(index_temp,1))) = v(index_temp,1);
     end    
 end
+
+[~, ~, v] = find(matriz);
+% Variável que guarda a quantidade total de pixels na região atual
+qtde = size(v,1); 
+
+
+
 end
 

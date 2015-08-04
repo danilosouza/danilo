@@ -1,4 +1,4 @@
-function [ img_scribbled, mat_posicao_final, pixels_values, y, img, n_sub_labels ] = getPixelsPosition( imagem, regioes)
+function [ img_scribbled, mat_posicao_final, pixels_values, y, img, n_sub_labels ] = getPixelsPosition(cor, imagem, regioes)
 %getPixels Função para recuperar os pixels marcados nas regiões de
 %interesse da imagem a ser segmentada
 %   Detailed explanation goes here
@@ -18,11 +18,22 @@ img = imread(imagem);
 [~, q] = size(regioes); % Guarda o número de regiões de interesse
 %Verifica se a imagem está em RGB e se estiver converte para escala de
 %cinza
-if size(img,3) == 3
+
+if cor == 'cinza'
     img = rgb2gray(img);
-else 
-    % Se estiver em esccala da cinza não faz nada
+    elseif cor == 'R'
+        img = img(:,:,1);
+        elseif cor == 'G'
+            img = img(:,:,2);
+            elseif cor == 'B'
+                img = img(:,:,3);
 end
+
+%if size(img,3) == 3
+%    img = rgb2gray(img);
+%else 
+    % Se estiver em esccala da cinza não faz nada
+%end
 [N,M] = size(img);
 
 % Matriz que vai armazenar a informação espacial dos scribbles
@@ -35,14 +46,34 @@ img_scribbled(N,M,q) = 0;
 %scb = imread(imagem_scribbled);
 
 % Armazena aas imagens "rabiscadas" em um vetor célula
-for k=1:q
-    img_scribbled_temp{k} = imread(regioes{k});
-    img_scribbled_temp{k} = rgb2gray(img_scribbled_temp{k});
-    % Pega a componente da imagem desejada (R,G ou B(
-    %img_scribbled_temp{k} = img_scribbled_temp{k}(:,:,3);
+
+
+if cor == 'cinza'
+    for k=1:q
+        img_scribbled_temp{k} = rgb2gray(imread(regioes{k}));
+    end
+    elseif cor == 'R'
+        for k=1:q
+            img_scribbled_temp{k} = imread(regioes{k});
+            % Pega a componente da imagem desejada (R,G ou B)
+            img_scribbled_temp{k} = img_scribbled_temp{k}(:,:,1);
+        end
+        elseif cor == 'G'
+            for k=1:q
+                img_scribbled_temp{k} = imread(regioes{k});
+                % Pega a componente da imagem desejada (R,G ou B)
+                img_scribbled_temp{k} = img_scribbled_temp{k}(:,:,2);
+            end
+            elseif cor == 'B'
+                for k=1:q
+                    img_scribbled_temp{k} = imread(regioes{k});
+                    % Pega a componente da imagem desejada (R,G ou )
+                    img_scribbled_temp{k} = img_scribbled_temp{k}(:,:,3);
+                end
 end
 
-% Armazena as imagens na matriz definitiva
+
+% Armazena as imagens "rabiscadas" na matriz definitiva
 for k=1:q
     img_scribbled(:,:,k) = img_scribbled_temp{k};
 end

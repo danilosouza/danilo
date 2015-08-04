@@ -1,4 +1,4 @@
-function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChannels( imagem, arrayPosicao, fator, n_sub_labels,YCBCR )
+function [ bancoFiltros, bancoFDP, respostaFiltros, bancoCanais, Nc ] = getChannels( imagem, arrayPosicao, fator, n_sub_labels )
 %UNTITLED4 Função para calcular e retornar os canais da imagem de entrada
 %   No artigo principal (Sapiro) são utilizados 19 canais:
 %       16 filtros de gabor mais os canais Y, Cb, Cr.
@@ -37,14 +37,8 @@ s = floor(janela/2);
 alpha = 0.25;
 bancoCanais(N,M,Nc) = 0;
 
-% Definindo o impulso
-T = 129; % Tamanho total do impulso
-imp = zeros(T,T);
-imp(round(T/2),round(T/2)) = 1;
-
-
 % Inserindo os canais fixos no banco de Imagens (Luminância e 2 de
-% crominância).
+% crominância) e normalizando os valores no intervalo [0,255].
 YCBCR = rgb2ycbcr(im2double(img));
 [~,~,y] = size(YCBCR);
 for k=1:y
@@ -113,7 +107,7 @@ end
 % ### Cálculo da FPD dos pixels marcados para cada canal ###
 %[~,~,~,~] = size(arrayPosicao);
 %bancoFDP(t,256,w,Nc) = 0;
-
+bancoCanais = round(bancoCanais);
 for k=1:Nc
     bancoFDP(:,:,:,k) = getPixelsDist(arrayPosicao, bancoCanais(:,:,k), n_sub_labels);
 end
