@@ -1,0 +1,1065 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DM - UFSCar
+% Arquivo de estilo para elaboracao de TCC (Trabalho de conclusao do Curso)
+% Autor: Sadao Massago
+% web: http://www.dm.ufscar.br/~sadao
+% data de ultima atualizacao: 02/07/2006
+% versao 0.3 (beta 3)
+%
+% Obs.: comandos que modificam o original foi baseado nos 
+%   comandos existentes no arquivo de formato do LaTeX 
+%   (latex.ltx) e da classe book (book.cls) 
+%   distribuidos pelo MikTeX maio/2004
+%   (versao LaTeX dezembro/2003).
+% TODO:
+%   1. Inserir campo de assinatura na contra-capa
+%   2. Consultar o Artur para ver se parindent pode ser diminuido (2.5cm para 1.2cm)
+%   3. OK: consultar o Artur, se o espaçamento de linha no 
+%      sumário, lista de figuras e lista de tabelas também
+%      devem ser simples.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREPARO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Qunado redefine as funcoes do arquivo interno do latex,
+% normalmente precisa compreender entre 
+% \makeatletter e \makeatother, pois funcoes internas podem
+% usar @, enquanto que no arquivo de texto nao e permitido. 
+% Assim, nao conseguiria redefinir fora do arquivo interno,
+% sem o uso de \makeatletter (permite usar @ como nome) 
+% e \makeatother (nao permite).
+%===================================================================% Como este arquivo e de estilo, e nao de tex, nao e necessario usar
+% \makeatletter aqui
+% \makeatletter
+%==================================================================
+\NeedsTeXFormat{LaTeX2e} 
+% o arquivo deve ser executado pelo LaTex
+% caso nao tenha, Alguem pode tentar executar
+% no TeX puro, por exemplo.
+\ProvidesFile{tcc_2_Adam.sty} 
+% nome do arquivo (nao e necessario)
+ [2006/07/02 v0.3b2 Estilo para TCC do DM-UFSCar (requer book ou report como classe de documento)]
+\typeout{dm-tcc 0.3b3 <Julho/2006>.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pacotes necessários 
+% somente os pacotes obrigatórios de qualquer distribuição LaTeX.
+%-----------------------------------------------------------------
+% somente portugues será usado.
+\RequirePackage[brazil]{babel}
+
+% para inserir logotipos
+\RequirePackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para evitar a tentativa de usar no modo de compatibilidade com
+% LaTeX antigo (documentstyle)
+%-----------------------------------------------------------------
+\if@compatibility % modo de compatibilidade com LaTeX antigo?
+  \PackageError{dm-tcc}{Not support older compatible mode (documentstyle)}
+     {Use documentclass instead of documentstyle}
+  \endinput
+\else
+  % OK
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% requer book, amsbook ou report como classe de documento
+%----------------------------------------------------------
+\@ifclassloaded{book}% Using book?
+  {}% YES (OK)
+  {\@ifclassloaded{amsbook}% No, but are using AMS book?
+    {}% YES (OK)
+    {\@ifclassloaded{report}% No, but are using report?
+      {}% YES (OK)
+      { % No! Then can'not apply this package
+        \PackageError{dm-tcc}{Requer book, amsbook ou
+           report como classe de documento}
+           {Use a classe de documento necessário}
+        %\endinput
+      }
+    }
+  }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comandos para capa/contra-capa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% valores do título
+% title, author e date ja estao definidas.
+% TODO: colocar parámetro opcional para poder colocar
+% em plural: autor->autores
+% informações do autor será colocado com \thanks
+% se for mais de um nome, separa com \and
+%
+
+% atalho em portugues
+\let\titulo\title
+\let\autor\author
+
+% autora (femenino)
+\newif\if@autor@femenino
+\@autor@femeninofalse % inicialmente false
+\def\autora#1{\@autor@femeninotrue\gdef\@author{#1}} % autora
+
+% autores/autoras (plural)
+% variavel booleana
+\newif\if@autor@plural
+\@autor@pluralfalse % inicialmente false
+% autores
+\def\autores#1{\@autor@pluraltrue\gdef\@author{#1}} % autores
+% autoras (plural)
+\def\autoras#1{\@autor@femeninotrue\@autor@pluraltrue\gdef\@author{#1}} % autoras
+
+
+\newif\if@orientador@plural
+\@orientador@pluralfalse % inicialmente false
+\newif\if@orientador@femenino
+\@orientador@femeninofalse % inicialmente false
+
+% orientador
+\def\orientador#1{\gdef\@orientador{#1}} % orientador
+% orientadora (femenino)
+\def\orientadora#1{\@orientador@femeninotrue\gdef\@orientador{#1}} % orientadores (plural)
+\def\orientadores#1{\@orientador@pluraltrue\gdef\@orientador{#1}} % orientador
+% orientadoras (femenino plural)
+\def\orientadoras#1{\@orientador@femeninotrue\@orientador@pluraltrue\gdef\@orientador{#1}}
+
+
+% coordenador
+\newif\if@coordenador@plural
+\@coordenador@pluralfalse % inicialmente, false
+\newif\if@coordenador@femenino
+\@coordenador@femeninofalse % inicialmente, false
+
+\def\coordenador#1{\gdef\@coordenador{#1}} % coordenador da disciplina
+\def\coordenadora#1{\@coordenador@femenino\gdef\@coordenador{#1}} % coordenador da disciplina
+\def\coordenadores#1{\@coordenador@pluraltrue\gdef\@coordenador{#1}}\def\coordenadoras#1{\@coordenador@femenino\@coordenador@pluraltrue\gdef\@coordenador{#1}} 
+
+\def\disciplina#1{\gdef\@disciplina{#1}} % disciplina
+
+
+% Informação adicional na contra-capa
+\newif\if@add@contracapainfo
+\@add@contracapainfofalse % inicialmente, false
+\newcommand{\contracapainfo}[2][0.66\textwidth]{\@add@contracapainfotrue%
+  \gdef\@contracapainfo{#2} \gdef\@contracapainfo@width{#1}} 
+
+
+% local é fixo. Não é necessário declarar
+% \def\local#1{\gdef\@local{#1}} % local
+
+% Valor padrão
+\def\@disciplina{Trabalho de Conclus\~{a}o de Curso}
+%\def\@coordenador{Artur Darezzo Filho}
+% \def\@local{São Carlos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% impressão do título (capa/contra-capa)
+% Baseado no maketile do book
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% maketitle redefinido
+\renewcommand{\maketitle}{%
+\begingroup
+  \def\and{%                  % \begin{tabular}
+    \end{tabular}%
+    \\%
+    & \begin{tabular}{l}%
+  }%   % \end{tabular}
+  % \def\thefootnote{\fnsymbol{footnote}} % usar simbolos
+  \def\thanks##1{}% desativando o thanks
+  \let\footnote\thanks % footnote será mesmo que thanks
+%  
+  \begin{titlepage}
+    \begin{center}
+      \fbox{% cabeçalho 
+        \hspace*{0.01\linewidth}
+        \includegraphics[width=0.17\textwidth]{./figuras/logo_ufpa/logo_ufpa2.pdf}
+        \hspace{0.1\linewidth}
+        \begin{minipage}[b]{0.65\linewidth}\linespread{1}\@currsize
+          \textbf{UNIVERSIDADE FEDERAL DO PARÁ}%Universidade Federal do Pará 
+          \\\\
+          \textbf{INSTITUTO DE TECNOLOGIA}%Instituto de Tecnologia
+          \\\\
+          \textbf{FACULDADE DE ENGENHARIA DA COMPUTAÇÃO E TELECOMUNICAÇÕES}%Faculdade de Engenharia da Computação e Telecomunicações
+        \end{minipage}%
+      } % fbox
+      \vfill%
+      {\LARGE \@title \par} \vfill\vfill\large% 
+      \begin{tabular}{l}%
+         \linespread{1}\@currsize
+         \begin{tabular}{ll}%
+            \if@autor@femenino
+              \if@autor@plural
+                \textbf{Autoras:}
+              \else
+                \textbf{Autora:}
+              \fi
+            \else % masculino
+              \if@autor@plural
+                \textbf{Autores:}
+              \else
+                \textbf{Autor:}
+              \fi
+            \fi
+              & \begin{tabular}{l} \@author \end{tabular}%
+         \end{tabular} \\
+         \linespread{1}\@currsize     
+         \begin{tabular}{ll}%
+            \if@orientador@femenino
+              \if@orientador@plural
+                \textbf{Orientadoras:}
+              \else
+                \textbf{Orientadora:}
+              \fi
+            \else % masculino
+              \if@orientador@plural
+                \textbf{Orientadores:}
+              \else
+                \textbf{Orientador:}
+              \fi              
+            \fi
+              & \begin{tabular}{l} \@orientador \end{tabular}%
+         \end{tabular} \\   
+         %\begin{tabular}{l}
+         %  \textbf{Disciplina:} \@disciplina\par%
+         %\end{tabular} \\ 
+         \linespread{1}\@currsize     
+         %\begin{tabular}{ll}%
+           % \if@coordenador@femenino
+             % \if@coordenador@plural
+              %  \textbf{Prof\underline{as} Responsáveis:}
+             % \else
+             %   \textbf{Prof\underline{a} Responsável:}
+            %  \fi
+           % \else % masculino
+             % \if@coordenador@plural
+               % \textbf{Prof\underline{s} Responsáveis:}
+              %\else
+             %   \textbf{Prof. Responsável:}
+            %  \fi
+           % \fi 
+          %    & \begin{tabular}{l} \@coordenador \end{tabular} \\%
+         %\end{tabular}
+      \end{tabular}%
+      \vfill\vfill \flushright%
+      Belém/PA, \@date.%
+    \end{center}%
+  \end{titlepage}
+\endgroup
+\global\let\maketitle\relax
+\global\let\@maketitle\relax
+\setcounter{footnote}{0}
+} % maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% contra-capa
+% \newcommand{\contracapa@overlinedtext}[1]{\ensuremath{\overline{\text{#1}}}}%
+
+%
+\newcommand{\contracapa}{%
+\begingroup
+  \def\and{%                  % \begin{tabular}
+    \end{tabular}%
+    \\%
+    & \begin{tabular}{l}%
+  }%   % \end{tabular}
+  \def\thefootnote{\fnsymbol{footnote}} % usar simbolos
+%  \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+%  \long\def\@makefntext##1{\parindent 1em% \noindent
+%      \linespread{1} \@currsize \noindent
+%      % \hb@xt@1.8em{%
+%      \hb@xt@0.45em{%
+%  \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
+  \let\footnote\thanks % footnote será thanks (thanks está definido em latex)
+  \begin{center}
+  %\ %
+  \fbox{% cabeçalho 
+        \hspace*{0.01\linewidth}
+        \includegraphics[width=0.17\textwidth]{./figuras/logo_ufpa/logo_ufpa2.pdf}
+        \hspace{0.1\linewidth}
+        \begin{minipage}[b]{0.65\linewidth}\linespread{1}\@currsize
+          \textbf{UNIVERSIDADE FEDERAL DO PARÁ}%Universidade Federal do Pará
+          \\\\
+          \textbf{INSTITUTO DE TECNOLOGIA}%Instituto de Tecnologia
+          \\\\
+          \textbf{FACULDADE DE ENGENHARIA DA COMPUTAÇÃO E TELECOMUNICAÇÕES}%Faculdade de Engenharia da Computação e Telecomunicações
+        \end{minipage}%
+  } % fbox
+  \vfill%
+  {\LARGE \@title \par} \vfill\large% 
+  \begin{tabular}{l}%
+     \linespread{1}\@currsize
+     \begin{tabular}{ll}%
+       \if@autor@femenino
+         \if@autor@plural
+           \textbf{Autoras:}
+         \else
+           \textbf{Autora:}
+         \fi
+       \else % masculino
+         \if@autor@plural
+           \textbf{Autores:}
+         \else
+           \textbf{Autor:}
+         \fi
+       \fi
+          & \begin{tabular}{l} \@author \end{tabular}%
+     \end{tabular} \\
+     \linespread{1}\@currsize     
+     \begin{tabular}{ll}%
+        \if@orientador@femenino
+          \if@orientador@plural
+            \textbf{Orientadoras:}
+          \else
+            \textbf{Orientadora:}
+          \fi
+        \else % masculino
+          \if@orientador@plural
+            \textbf{Orientadores:}
+          \else
+            \textbf{Orientador:}
+          \fi
+        \fi
+          & \begin{tabular}{l} \@orientador \end{tabular}%
+      \end{tabular} \\   
+      \begin{tabular}{l}
+        \textbf{Disciplina:} \@disciplina\par%
+      \end{tabular} \\ 
+      \linespread{1}\@currsize     
+      %\begin{tabular}{ll}%
+       %  \if@coordenador@femenino
+        %   \if@coordenador@plural
+         %    \textbf{Prof\underline{as} Responsáveis:}
+          % \else
+           %  \textbf{Prof\underline{a} Responsável:}
+          % \fi
+         %\else % masculino
+          % \if@coordenador@plural
+           %  \textbf{Prof\underline{s} Responsáveis:}
+          % \else
+           %  \textbf{Prof. Responsável:}
+          % \fi
+        % \fi
+         %  & \begin{tabular}{l} \@coordenador \end{tabular} \\%
+     % \end{tabular}
+    \end{tabular}%
+    \vfill 
+    \begin{flushright}%
+    \if@add@contracapainfo
+      \begin{minipage}{\@contracapainfo@width}
+        \@contracapainfo
+      \end{minipage}
+      \vfill
+    \fi 
+    Belém/PA, \today. 
+    \end{flushright}
+%    \vfill % \\ \ \\%
+    % asinaturas
+%    \def\and{\\ \ \\ \underline{\hspace*{0.9\textwidth}} \\}
+%    % autores
+%    \noindent
+%    \begin{minipage}[t]{0.49\textwidth}
+%    \center
+%    \linespread{1} \@currsize \noindent
+%    \underline{\hspace*{0.9\textwidth}} \\
+%    \@author
+%    \end{minipage}
+%    % orientadores
+%    \begin{minipage}[t]{0.49\textwidth}
+%    \center
+%    \linespread{1} \@currsize \noindent
+%    \underline{\hspace*{0.9\textwidth}} \\
+%    \@orientador
+%    \end{minipage}
+   % \def\and\expandafter{}\hfill\contracapa@overlinedtext{}%
+   %\mbox{} \hfill \begin{contracapa@overlinedtext}{\@author}\end{contracapa@ovelinedtext} \hfill%
+%   \contracapa@overlinedtext{\@orientador} \hfill\mbox{}%
+%
+%    \def\and{\end{contracapa@overlinedtext}\hfill\begin{contracapa@overlinedtext}}%
+% \mbox{} \hfill % \begin{contracapa@overlinedtext}\@author\end{contracapa@overlinedtext} \hfill%
+% \begin{contracapa@overlinedtext}\@orientador\end{contracapa@overlinedtext} \hfill\mbox{}%
+  % como footnote foi usado dentro do tabular, deverá colocar   
+  % \@thanks fora da tabela para ele colocar o rodapé
+  % tabular não suporta footnote (longtable suporta)
+\end{center}%
+  \@thanks 
+\clearpage   
+\endgroup
+\global\let\thanks\relax
+\global\let\contracapa\relax
+\global\let\@thanks\@empty
+\global\let\@author\@empty
+\global\let\@date\@empty
+\global\let\@title\@empty
+\global\let\title\relax
+\global\let\author\relax
+\global\let\date\relax
+\global\let\@autores\@empty
+\global\let\autores\relax
+\global\let\@orientador\@empty
+\global\let\orientador\relax
+\global\let\@orientadores\@empty
+\global\let\orientadores\relax
+\global\let\@disciplina\@empty
+\global\let\disciplina\relax
+\global\let\@coordenador\@empty
+\global\let\cooredenador\relax
+\global\let\@coordenadores\@empty
+\global\let\cooredenadores\relax
+\global\let\and\relax
+\setcounter{footnote}{0}
+} % contracapainfo
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% thanks definido em latex
+%
+%\def\thanks#1{\footnotemark
+%    \protected@xdef\@thanks{\@thanks
+%        \protect\footnotetext[\the\c@footnote]{#1}}%
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \and definido em latex
+%
+%\def\and{%                  % \begin{tabular}
+%  \end{tabular}%
+%  \hskip 1em \@plus.17fil%
+%  \begin{tabular}[t]{c}}%   % \end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fim: Comandos para capa/contra-capa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% notas de rodapé
+%========================================================
+% rodapé deve estar em espaçamento simples, independente 
+% do espaçamento no corpo de documento
+%========================================================
+% foi copiado do book e alterado
+\renewcommand\@makefntext[1]{%
+    \parindent 1em%
+% inicio da alteração    
+    % \noindent
+    \linespread{1} \@currsize \noindent
+    % \hb@xt@1.8em{\hss\@makefnmark}#1}
+    \hb@xt@0.45em{\hss\@makefnmark}#1}
+% fim da alteração
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% outra configuração do book
+%\renewcommand\footnoterule{%
+%  \kern-3\p@
+%  \hrule\@width.4\columnwidth
+%  \kern2.6\p@}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fim: notas de rodapé
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ajuste de alguns nomes de (titulos) de acordo com a exigencia do TG
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addto\extrasbrazil{
+    \def\figurename{FIGURA}%
+    \def\tablename{TABELA}%  
+    \def\proofname{Demonstração}  
+} % extrasbrazil
+% \main@language{brazil}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fim: Ajuste de alguns nomes de (titulos) de acordo com a exigencia do TG
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sumário, lista de figuras e lista de tabelas:
+%     copiado do book e alterado
+%=================================================
+% Alteração: 
+%     1. não colocar em maiúsculo no header
+%     2. usar linha pontilhada no capítulo também
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sumário copiado de book e alterado
+\renewcommand\tableofcontents{%
+%% inicio a alteração    
+%    \linespread{1}\@currsize % espaçamento simples
+%% fim da alteração
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname
+% inicio da mudança
+%        \@mkboth{%
+%           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+        \@mkboth{\contentsname}{\contentsname}}%
+% fim da mudança           
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+
+%%%%%%%%%%%%%%%%%%%
+% lista de figuras
+\renewcommand\listoffigures{%
+%% inicio a alteração    
+%    \linespread{1}\@currsize % espaçamento simples
+%% fim da alteração
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\listfigurename}%
+% inicio da alteração
+%      \@mkboth{\MakeUppercase\listfigurename}%
+%              {\MakeUppercase\listfigurename}%
+      \@mkboth{\listfigurename}{\listfigurename}%
+% fim da alterasção
+    \@starttoc{lof}%
+    \if@restonecol\twocolumn\fi
+    }
+% configurações original do book
+% \newcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
+
+\renewcommand\listoftables{%
+%% inicio a alteração    
+%    \linespread{1}\@currsize % espaçamento simples
+%% fim da alteração
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\listtablename}%
+% inicio da alteração
+%      \@mkboth{%
+%          \MakeUppercase\listtablename}%
+%         {\MakeUppercase\listtablename}%
+      \@mkboth{\listtablename}{\listtablename}%
+% fim da alteração
+    \@starttoc{lot}%
+    \if@restonecol\twocolumn\fi
+    }
+\let\l@table\l@figure
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Usar linha pontilhado para sumário, inclusive na referencia de capitulos
+% Padrão do book e report não colocam linhas pontilhadas para o
+% capitulo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% copiado do book e alterado
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+% inicio da alteração
+%      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      #1\nobreak%\hfil %desativando o \hfill
+      % inserido para pontilhar
+      \leaders\hbox{$\m@th
+        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+        mu$}\hfill
+      % fim da insercao
+      \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+% final da alteração
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+%\newcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
+%\newcommand*\l@subsection{\@dottedtocline{2}{3.8em}{3.2em}}
+%\newcommand*\l@subsubsection{\@dottedtocline{3}{7.0em}{4.1em}}
+%\newcommand*\l@paragraph{\@dottedtocline{4}{10em}{5em}}
+%\newcommand*\l@subparagraph{\@dottedtocline{5}{12em}{6em}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Obs: Podera definir usando
+% \@dottedtocline como no l@section, mas tem que acertar os
+% parametros. Nao sei se o espacamento com o captitulo anterior pode
+% ser inserido para este caso.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fim: sumário
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Índice Remissivo: copiado e alterado do book
+%==============================================
+% Alteracoes:
+%     1. nao converter pra maiusculo (no Header)
+%     2. constar no sumário
+%     3. usar o espaçamento simples, independente do
+%         espaçamento no resto do documento
+%------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Índice remissivo copiado do book e alterado
+\renewenvironment{theindex}
+               {\if@twocolumn
+                  \@restonecolfalse
+                \else
+                  \@restonecoltrue
+                \fi
+                \twocolumn[\@makeschapterhead{\indexname}]%
+% inicio da alteração
+%                \@mkboth{\MakeUppercase\indexname}%
+%                        {\MakeUppercase\indexname}%
+                \@mkboth{\indexname}{\indexname}%
+                \addcontentsline{toc}{chapter}{\indexname}% adicionar no sumário
+        \linespread{1}\@currsize% espaçamento simples (forçar para ser padrão    % fim da alteração                        
+                \thispagestyle{plain}\parindent\z@
+                \parskip\z@ \@plus .3\p@\relax
+                \columnseprule \z@
+                \columnsep 35\p@
+                \let\item\@idxitem}
+               {\if@restonecol\onecolumn\else\clearpage\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% outras configurações do book               
+%\newcommand\@idxitem{\par\hangindent 40\p@}
+%\newcommand\subitem{\@idxitem \hspace*{20\p@}}
+%\newcommand\subsubitem{\@idxitem \hspace*{30\p@}}
+%\newcommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referências cruzadas
+% usage: \index{word1 | see{word2}}  == word1, see word2.
+% \def\see#1#2{{\em see\/} #1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referencia Bibliográfica
+%===========================================================================
+% copiado do book e alterado para
+%     1. nao converter pra maiusculo, no Header
+%     2. constar no sumário.
+%     3. usar espaçamento simples, independente do espaçamento do documento.
+% Obs.:
+% \linespread{1} % espaçamento simples
+% \@currsize % espaçamento atual será padrão
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% algumas configurações do book
+% \newdimen\bibindent
+% \setlength\bibindent{1.5em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ambiente de bibliografia
+\renewenvironment{thebibliography}[1]
+     {\chapter*{\bibname}%
+% alterando
+%      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+        \@mkboth{\bibname}{\bibname}% sem o \MakeUppercase
+        \addcontentsline{toc}{chapter}{\bibname}% acrescentar no sumário
+        \linespread{1}\@currsize% espaçamento simples (forçar para ser padrão)
+% final da alteracao
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Algumas configurações do book     
+% \newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+% \let\@openbib@code\@empty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fim da referência bibliográfica
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estilo de página
+%======================================================================
+% em geral, o estilo de página é configurado pelo 
+% pacote fancy header, mas como ele não é parte obrigatório,
+% alguns TeX como PCTeX 4.0 ou anterior nao vem com ele.
+% Assim, foi definido um estilo de página.
+%======================================================================
+% Pra nudar a enumeracao da pagina:
+% \pagenumbering{roman}  i, ii, iii, ...
+% \pagenumbering{arabic} 1, 2, 3, ...
+% \setcounter{page}{3} setar o contador da p\'{a}gina em 3
+%======================================================================
+% Eslilo de paginação:
+% \pagestyle{} & thispagestyle{}: plain, empty, headings, myheadings
+% Para alterar a saída no cabecalho (dentro do arquivo Tex)
+% em headings e myheadings, podemos usar:
+% \markright{cabeçalho da página direita}
+% \markboth{cabeçalho da página esquerda}%
+%                 {cabeçalho  da página direita}
+% \markright{} coloca apenas na pagina impar quando impressao 
+% for frente/verso
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Obs.: Na definicao do \chaptermark, etc que está sendo definido dentro da
+% definição de estilos, os parâmetros devem ser indicados com ## e nao 
+% com #, para distinguir o parametro da definição interna
+% (\chaptermark, \sectionmark, etc...) com os parámetros da definição 
+% externa (heading ou myheading)
+% Parece que este tipo de difinição (um definindo o outro) parece que 
+% não aceito dentro do arquivo de documento (Tex)
+% \chaptermark, \sectionmark, etc são macros chamadas quando ocorrer a
+% mudança de capítulo, seção, etc.
+% Nos indieces, capitulos, etc, usa o @mkboth para efetuar saida no cabecalho. 
+% Assim, podemos definir \@mkboth como \markboth por 
+% \let\@mkboth\markboth % saida altomatica ativada
+% ou como nada, usando 
+% \let\@mkboth\\@gobbletwo % saida altomatica desativada
+%==============================================================================
+% pagestyle define o que vai ser colocado no minimo para cabeçalho 
+% e rodapé.
+% Podemos redefinir o hadings e myheadings, mas pela padronização,
+% nao aconselha a redefinição do plain e do empty.
+% estilos: 
+% empty        -> nenhum
+% plain        -> enumeracao da pagina no cabecalho inferior
+% headings     -> titulo (capitulo ou seção) e paginação no cabecalho
+%                 superior
+% myheadings   -> titulo (capitulo ou seção) não será colocado automaticamente,
+%                 mas poderá acrescentar através de \markright{} e markboth{}{}
+%                 na parte superior. A páginação já aparece na parte superior
+% outros nomes -> definido pelo usuario. Deve se nome composto somente
+%                 por letras.
+%---------------------------------------------------------------------
+% Obs.: Quando mudar o capitulo (\chapter{} ou \chapter*{}, 
+%       havera chamadas automaticas de \thispagestyle{plain}
+%       podera mudar este estilo chamando o \thispagestyle{}
+%       logo em seguida.
+% Obs.: a pratica acima nao funciona para \tableofcontents, 
+%       \listoffigures, \theindex, etc pois o conteudo e colocado
+%       automaticamente.
+%       Se nao quiser o plain na primeira pagina, precisamos redefinir
+%       o plain ou o macro correspondente.
+%     1. Para redefinir um macro como outro, basta usar o \let
+%        Relembramos que, quando envolve @, e necessario
+%        colocar entre \makeatletter e \makeatother, se for no arquivo
+%        tex. se for no estilo, nao e necessario.
+%        \makeatletter % necessario se for dentro do arquivo tex.
+%            \let\ps@plain\ps@myheadings
+%        \makeatother
+%        o comando acima copia o ps@myheadings em ps@plain.
+%        tome cuidado quando efetuar copias de macros, pois o
+%        original vai ser perdido. Assim torna impossivel voltar
+%        ao macro original. Assim, quando redefine o macro original,
+%        como este, e aconselhavel que tire uma copia. Por exemplo
+%        \makeatletter
+%           \let\ps@myplain\ps@plain
+%        \makeatother
+%        copia o ps@plain no ps@mypain. Agora podemos redefinir o 
+%        ps@plain como sendo ps@myplain
+%        \makeatletter       
+%           \let\ps@plain\ps@myheadings
+%        \makeatother
+%        como o ps@plain original foi copiado para ps@myplain
+%        podemos recuperar a definicao do ps@plain original
+%        quando quiser, usando o comando
+%        \makeatletter
+%           \let\ps@plain\ps@myplain
+%        \makeatother
+%     2. Outra forma e copiar a definicao do \tableofcontents,
+%        \listoffigures, etc para seu arquivo de estilo e alterar
+%        o que for necessario.
+%     Obs.: As alteracoes no estilo plain e usado para colocar enumeracao
+%        de paginas sem o titulo no cabecalho. E desejavel que o estilo 
+%        adotado coincidacom estilos das outras paginas. 
+%        Por exemplo, o Headdings padrao e titulo e paginas,
+%        entao o plain padrao sera somente as paginas, colocado 
+%        embaixo do texto.
+%           Caso utilizar linhas horizontais separando cabecalho 
+%        com o texto, como no linedheadings abaixo e desejavel 
+%        que no plain tambem tenha linhas horizontais separando
+%        paginacao e texoto (aqui, definimos o linedplain que efetua 
+%        a saida de paginas no cabecalho superior).
+%========================================================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% cabecalho personalizado (myheadings) que e semaelhante ao
+% headings, mas e mais elaborado.
+% Este estilo deve ser redefinido para gosto de cada um
+% mkboth{}{} permite especificar a saida do cabe\c{c}alho, 
+% dentro do arquivo Tex.
+% acrescentando dados em evenhead e oddhead.
+% Note que headings esta definindo o chaptermark, sectionmark,
+% etc para que a chamada do markboth seja automatico.
+% \leftmark e \rightmark sao cabecalhos ou textos colocados por
+% \makeboth, etc. Note que, se isto for colocado na
+% \...head ou \...foot, entao sera colocado do ultimo markboh
+% (que pode ter chamado de algum lugar, tais como mudancao de 
+% capitulos, secoes,... Caso nao quer que tenha saida pelo
+% markboth, nao deve coloca-lo. Caso queira ter saida de markboth,
+% e nao quer que a saida anterior sobreponha, faca chamada de markboth aqui.
+% 
+%---------------------------------------------------------------------
+% capitulo na pagina direita e na esquerda
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definição do estilo de página personalizada.
+% No caso de frente/verso, imprime Capítulo
+% na página par e impar
+%
+\def\ps@linedheadings{% definicao do estilo de cabecalho e rodapé
+    \let\@mkboth\markboth % onde usa @mkboth será mkboth
+    \def\@oddfoot{}% sem rodape na página impar(direita)
+    \def\@evenfoot{}% sem rodapé na página par (direita)
+%      \def\@evenhead{\thepage\hfil\slshape\leftmark}%
+%      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+    \def\@evenhead{% cabecalho da página par (esquerda)
+       \underline{\hbox to \textwidth
+          {{\rm \thepage} \sl \hfil \leftmark}}}
+    \def\@oddhead{% cabecalho da página impar (direita)
+       \underline{\hbox to \textwidth
+          {\hbox{}\sl \rightmark \hfil\rm\thepage}}}
+    \def\chaptermark##1{% Colocar o número e o título do capitulo no cabecalho
+         \markboth% definir, o que vai colocar
+           {% colocar no cabecalho superior esquerdo
+           \ifnum \c@secnumdepth >\m@ne % se contador secnumdepth > ?
+             \if@mainmatter % se for matéria principal
+               \thechapter. \ % número de capítulo
+             \fi
+           \fi ##1}% nome do capitulo
+           {% colocar no cabecalho direito
+           \ifnum \c@secnumdepth >\m@ne % se contador secnumdepth > ?
+             \if@mainmatter % se for matéria principal
+               \thechapter. \ % número de capítulo
+             \fi
+           \fi ##1}}% nome do capitulo
+        \def\sectionmark##1{}} % nao ha saida de seção
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definição do estilo de página personalizada.
+% No caso de frente/verso, imprime Capítulo
+% na página impar e seção na página par
+%
+\if@twoside
+\def\ps@linedheadingstwo{% definicao do estilo de cabecalho e rodapé
+    \let\@mkboth\markboth % onde usa @mkboth será mkboth
+    \def\@oddfoot{}% sem rodape na página impar(direita)
+    \def\@evenfoot{}% sem rodapé na página par (direita)
+%      \def\@evenhead{\thepage\hfil\slshape\leftmark}%
+%      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+    \def\@evenhead{% cabecalho da página par (esquerda)
+       \underline{\hbox to \textwidth
+          {{\rm \thepage} \sl \hfil \leftmark}}}
+    \def\@oddhead{% cabecalho da página impar (direita)
+       \underline{\hbox to \textwidth
+          {\hbox{}\sl \rightmark \hfil\rm\thepage}}}
+    \def\chaptermark##1{% Colocar o número e o título do capitulo no cabecalho
+         \markboth% definir, o que vai colocar
+           {% colocar no cabecalho superior esquerdo
+           \ifnum \c@secnumdepth >\m@ne % se contador secnumdepth > ?
+             \if@mainmatter % se for matéria principal
+               \thechapter. \ % número de capítulo
+             \fi
+           \fi ##1}% nome do capitulo
+           {% não colocar no cabecalho direito
+           }}% nome do capitulo
+    \def\sectionmark##1{%
+      \markright {%
+        \ifnum \c@secnumdepth >\z@
+          \thesection. \ %
+        \fi
+        ##1}}}
+\else
+
+\def\ps@linedheadingstwo{% definicao do estilo de cabecalho e rodapé
+    \let\@mkboth\markboth % onde usa @mkboth será mkboth
+    \def\@oddfoot{}% sem rodape na página impar(direita)
+    \def\@evenfoot{}% sem rodapé na página par (direita)
+%      \def\@evenhead{\thepage\hfil\slshape\leftmark}%
+%      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+    \def\@evenhead{% cabecalho da página par (esquerda)
+       \underline{\hbox to \textwidth
+          {{\rm \thepage} \sl \hfil \leftmark}}}
+    \def\@oddhead{% cabecalho da página impar (direita)
+       \underline{\hbox to \textwidth
+          {\hbox{}\sl \rightmark \hfil\rm\thepage}}}
+    \def\chaptermark##1{% Colocar o número e o título do capitulo no cabecalho
+         \markright{% definir, o que vai colocar no cabecalho superior
+           \ifnum \c@secnumdepth >\m@ne % se contador secnumdepth > ?
+             \if@mainmatter % se for matéria principal
+               \thechapter. \ % número de capítulo
+             \fi
+           \fi ##1}}% nome do capitulo
+        \def\sectionmark##1{}} % nao ha saida de seção
+\fi           
+        
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% plain original do latex
+%\def\ps@plain{\let\@mkboth\@gobbletwo
+%     \let\@oddhead\@empty\def\@oddfoot{\reset@font\hfil\thepage
+%     \hfil}\let\@evenhead\@empty\let\@evenfoot\@oddfoot}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% linedplain: Estilo plain compatível com linedheadings
+%============================================================================
+% foi desativado o \@mkboth usado por teorem, section, etc.
+% isto nao era necessario para este estilo, pois nao estamos utilizando 
+% \leftmark e \rightmark (valores de saida do markboth, markleft, markright)
+%============================================================================
+% paginacao na parte superior 
+% Note que o nome do estilo de pagina nao pode conter numeros
+\def\ps@linedplain{ \let\@mkboth\@gobbletwo
+%      \def\@evenhead{\thepage\hfil\slshape\leftmark}%
+%      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+  \def\@evenhead{% cabecalho da pagina par (esquerda)
+     \underline{\hbox to \textwidth
+        {{\rm\thepage} \hfil}\mbox{}}}% sem o \leftmark 
+  \def\@oddhead{% cabecalho da pagina impar (direita)
+     \underline{\hbox to \textwidth
+        {\hbox{}\sl \hfil\rm\thepage}}}% sem o \rightmark
+  \def\@oddfoot{}%
+  \def\@evenfoot{}%
+} % fim da definicao linedplain
+
+%------------------------------------------------------------------------
+% quando o estilo e aplicado por \thispagestyle{}, temos tomar certo
+% cuidado, pois a saida anterior e carregado por ele.
+% No caso de linedplain que foi planejado para substituir o plain,
+% vai ser chamado apenas na primeira pagina dos capitulos.
+% Porem, ele e aplicado depois do estilo em uso que pode ter efetuado a 
+% saida por \markboth. assim, caso contenha \leftmark, \rightmark
+% (saidas pelo markboth), podera aparecer estes cabecalhos mesmo que 
+% \chaptermark, \sectionmark, etc nao esteja definida.
+% para anular efeito, precisaria efetuar a chamada de \markboth{}{}
+% Neste caso, se o usuario utilizar a mudanca de estilo dentro do texto,
+% markboth{}{} sera anulado, o que nao e legal. 
+% Assim, foi criado o estilo plain que nao permite saidas no cabecalho 
+% (nao tem \leftmark,rightmark) para ser usado na primeira pagina 
+% dos capitulos.
+% Para estilo que permite saída no cabeçalho, crie com outro nome
+% e usando \leftmark e \rightmark.
+%========================================================================
+% Quando define um nome para estilo de cabecalho da pagina
+% deve ser da forma ps@nome, e o nome nao pode conter numeros.
+% por exemplo, headings2 ou cabecalho3 dara erro.
+% Para desativar a saida do cabecalho automatico (capter, section, etc), 
+% coloque o \let\@mkboth\@gobbletwo
+% No caso do estilo de paginas que permita saida por markboth, 
+% mas nao a saida automatica, desative o \@mkboth e defina o \chaptermark
+% \serctionmark, etc sem acao.
+%------------------------------------------------------------------------
+
+% inicializa estilo de pagina linedheadings
+% \ps@linedheadings % e igual ao \pagestyle{linedheadings}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fim: estilo de páginas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONTROLE DA LINHA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overfull \hbox (xx pt too wide) -> a linha ultrapassou xx pontos
+% Underfull \hbox (badness xx) -> muito espaço entre palavras, na linha.
+% xx e a pontuacao de como e ruim, de 0 a 10000.
+% Caso aplicar o ambiente
+% \begin{hyphenation}{zerohyphens} para suplir a hifenizacao,
+% tera maior chance de ocorrer Overflow \hbox.
+% Aqui pretende amenizar isso.
+%
+% Para evitar o Overflow \hbox, podera usar \sloppy
+% quando utiliza \sloppy, permite a quebra de linha, mesmo que ocorra
+% underflow \hbox (muito espaco entre palavras)
+% Pra permitir quebra de linha com bastante espaco entre linhas, somente num
+% trecho, podera usar o ambiente sloppypar:
+% \begin{sloppypar}  \end{sloppypar}
+%
+% O \sloppy e desativado por comando \fussy
+%
+%========================================================================
+% redefinição de \sloppy
+%------------------------------------------------------------------------
+% Dar mais tolerância que o padrão.
+% \def\sloppy{\tolerance=9999 \hfuzz=.5pt \vfuzz=.5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Penalização
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% alterando a penalização da corte de linha antes (ou depois)
+%---------------------------------------------------------------
+% configuracao original do latex
+%\pretolerance=100
+%\tolerance=200 % INITEX sets this to 10000
+%\hbadness=1000
+%\vbadness=1000
+%\linepenalty=10
+%\hyphenpenalty=50
+%\exhyphenpenalty=50
+%\binoppenalty=700
+%\relpenalty=500
+%\clubpenalty=150
+%\widowpenalty=150
+%\displaywidowpenalty=50
+%\brokenpenalty=100
+%\predisplaypenalty=10000
+%\doublehyphendemerits=10000
+%\finalhyphendemerits=5000
+%\adjdemerits=10000
+%\tracinglostchars=1
+%\uchyph=1
+%\defaulthyphenchar=`\-
+%\defaultskewchar=-1
+%\delimiterfactor=901
+%\showboxbreadth=-1
+%\showboxdepth=-1
+%\errorcontextlines=-1
+%\hfuzz=0.1pt
+%\vfuzz=0.1pt
+%\overfullrule=5pt
+%\maxdepth=4pt
+%\splitmaxdepth=\maxdimen
+%\boxmaxdepth=\maxdimen
+%\delimitershortfall=5pt
+%\nulldelimiterspace=1.2pt
+%\scriptspace=0.5pt
+%\parindent=20pt
+%\parskip=0pt plus 1pt
+%\abovedisplayskip=12pt plus 3pt minus 9pt
+%\abovedisplayshortskip=0pt plus 3pt
+%\belowdisplayskip=12pt plus 3pt minus 9pt
+%\belowdisplayshortskip=7pt plus 3pt minus 4pt
+%\topskip=10pt
+%\splittopskip=10pt
+%\parfillskip=0pt plus 1fil
+%-------------------------------------------------------
+% alterando as penalidades (para corte de linhas em...)
+\hyphenpenalty=5000 % hifenização
+\exhyphenpenalty=500 % palavras com hifen
+\binoppenalty=3000 % operador binario (+, - , etc)
+\relpenalty=2000 % operador relacional ( = \cong \ne, ...)
+\clubpenalty=1000 % ???
+\brokenpenalty=1000  % ???
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fim do arquivo
+%------------------------------------------------------------------------
