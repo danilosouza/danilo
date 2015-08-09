@@ -1,0 +1,442 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EngComp (2008 - 2012) - UFPA
+% Modelo para elaboracao de TCC (Trabalho de Conclusao de Curso)
+% Autor: Adam Dreyton
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt,oneside]{book}
+% acentuacao direta
+%\usepackage[utf8x]{inputenc} % UTF-8 (linux/macOSX)
+\usepackage[latin1]{inputenc} % ISO 8859-1 (windows)
+
+\usepackage[brazil]{babel} % lingua portuguesa
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sem o fonte T1, nao podera criar lista de hifenizacao
+% com caracteres acentuadas. 
+% Tambem nao funcionara a busca de texto no PDF final 
+% com letras acentuadas.
+
+\usepackage[T1]{fontenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% pacotes para incrementar recursos matematicos
+% amsmath -> recursos avancados de matematica
+% amssymb -> symbolos e fontes adicionais
+% amsthm -> teorema de demonstracao
+\usepackage{amsmath,amssymb} 
+\usepackage{amsthm} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% para configurar a lista enumerada
+\usepackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% tabela longa que quebra entre páginas
+\usepackage{longtable}
+% linhas duplas na tabela
+\usepackage{hhline}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para incluir imagens externas no LaTeX
+\usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para cores. Ex.: {\color{Red} Texto em vermelho}
+\usepackage[usenames]{color}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Caso queira indentar a primeira linha do capitulo/secao, ative-o
+\usepackage{indentfirst}
+
+%%%%%%%%%%%%%%%%%%%%
+% indice remissivo
+\usepackage{makeidx}
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{geometry}
+% Acerto de margens:
+% lmargin -> left (esquerda). Interna, se frente/verso
+% rmargin -> right (direita). Externa, se frente/verso
+% tmargin -> top (superior).
+% bmargin -> bot (inferior).
+\geometry{lmargin=4cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Este estilo so funciona na classe de documento book (ou amsbook) 
+% ou report
+% modificacoes significativos nos comandos:
+%   1. maketile cria capa personalizada para DM-UFSCar.
+%   2. indice remissivo e bilbiografia serão com espaçamento simples
+%     (regra do TG) e constará no sumário
+%   3. rodape sera com espacamento simples (regra do TG).
+%   4. sumario: cap\'{\i}tulo também terá linhas pontilhadas
+%     (aconselhavel para caso em que nao ha divisao em secoes).
+%   5. Rotulação de figuras e tabelas usam "FIGURA" e "TABELA"
+%     (em maiusculo) devido a exigencia do TG. 
+%   6. Mudança no valor da penalidade para diminuir a possibilidade de
+%      quebra de equcoes nos lugares indesejados.
+% comandos novos:
+%   1. para capa e contra-capa: autores, orientador, orientadores, 
+%      disciplina, coordenador, coordenadores, contracapainfo.
+%   2. estilo de paginas:
+%     linedheadings, linedheadingstwo, linedplain.
+\usepackage{tcc_2_Adam}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% regra de hifenizacao
+\usepackage[none]{hyphenat}%sem hifenizacao
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definicao de novos comandos e configuracao de documentos
+
+% conjunto de numeros como o livro de IMPA
+% nomes como \real, \racional deve ser evitado, pois
+% \natural ja esta definido (e nao pode ser alterado)
+\newcommand{\Cset}{\ensuremath{\mathbb{C}}}
+\newcommand{\Rset}{\ensuremath{\mathbb{R}}}
+\newcommand{\Qset}{\ensuremath{\mathbb{Q}}}
+\newcommand{\Iset}{\ensuremath{\mathbb{I}}}
+\newcommand{\Zset}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Nset}{\ensuremath{\mathbb{N}}}
+
+% Funcoes que provem da abreviatura devem estar em romano reto.
+% LaTeX ja bem com uma colecao destas funcoes pre-definidas:
+% \arccos \arcsin \arctan \arg \bmod
+% \cos \cosh \cot \coth \csc \deg \det \dim \exp \gcd 
+% \hom \inf \ker \lg \lim \liminf \limsup \ln \log 
+% \max \min \sec \sin \sinh \sup \tan \tanh \Pr
+% Nao esta definido alguns nomes em portugues como seno, MDC, etc
+% tambem tera que adicionar funcoes especificas da sua area
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% amsmath oferece \DeclaremathOperator para 
+% definir comandos associados as funcoes matematicas
+% \newcommand{\sen}{\mathrm{sen}}
+% DeclareMathOperator aplica \mathrm automaticamente
+\DeclareMathOperator{\sen}{sen} 
+\DeclareMathOperator{\senh}{senh} 
+\DeclareMathOperator{\mdc}{mdc} 
+\DeclareMathOperator{\mmc}{mmc} 
+% \DeclareMathOperator acima tem o mesmo efeito do 
+% \newcommand{\sen}{\mathrm{sen}}
+%------------------------------------------------------------------------
+% A versão com * "\DeclareMathOperator*{}{}" define como estilo 
+% \sum, \lim, \sup, \inf, etc, isto eh, no modo displaystyle, 
+% poderá colocar limitantes emcima e embaixo
+% DeclareMathOperator*{}{} aplica \mathrm e \mathop 
+% automaticamente e tem o mesmo efeito do 
+% \newcommand{\mylim}{\mathop{\mathrm{lim}}}
+\DeclareMathOperator*{\mylim}{lim} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sloppy % preferencia a underfull (muito espaco entre palavras)
+
+% inicia sem enumeracao de paginas
+% estilo de paginas: empty (nada), plain (página em baixo, centrada),
+%   headings (cabecalho superior com t\'{\i}tulo de cap\'{\i}tulo e paginaçao)
+%   myheadings (paginação em cima, mas sem titulo).
+%   No caso de myheadings, o titulo pode ser colocado com o comando 
+%   do tipo \markright{} ou \markboth{}{}
+\pagestyle{empty} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% tamnho de indentação (da primeira linha do paragrafo)
+% Este valor é exigido no TG que acho muito. Será que não pode mudar?
+\setlength{\parindent}{1.5cm} % indentação do parágrafo
+% indentação da fórmula quando efetuar alinhamento a esquerda (fleqn).
+% Deverá ser desativado, caso não estiver efetuando o alinhamento a
+% esquerda (pois neste caso, \mathindent não existe).
+% \setlength{\mathindent}{\parindent}
+
+% Espaçemanto entre paragrafos
+% primeiro valor e o espaco extra entre paragrafos.
+% valore que segue plue e minus sao valores de controle para
+% expandir ou comprimir os espacos entre paragrafos para que 
+% eles fiquem distribuidos uniformemente na pagina.
+% Na europa, nao indenta o paragrafo \setlenght{\parindent}{0}
+% e separa os paragrafos, inserindo
+% espaco extra (\parskip nao nulo)
+% Tome cuidado pelo \parskip que afeta tambem o sumario
+% (devera voltar ao normal durante o sumario e 
+%  lista de tabelas/figuras)
+% \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+% espaçamento entre linhas
+% cuidado com valores de parámetro: um e meio eh 1.3, duplo eh 1.6
+% \linespread{1} % espaçamento simples
+\linespread{1.3} % espaçamento um e meio
+% \linespread{1.6} % espaçamento duplo
+
+% poderá usar o comando abaixo para alterar localmente o
+% parágrafo. Poderá protege0lo com chaves, para que
+% seja aplicado somente num trecho.
+% \setlenght{\baselineskip}{1.5\baselineskip} % espaçamento 1.5
+% \setlenght{\baselineskip}{2.0\baselineskip} % espaçamento duplo
+
+% Outras configuracoes opcionais
+% Nivel de enumeracao da divisao de documentos:
+% capitulo, secao, subsecao, etc.
+% Nivel dois significa que somente dois primieros 
+% niveis: capitulo e secao (secao e subsecao na classe article)
+% serao enumeradas. 
+% Nivel tres significa, capitulo, secao e subsecao 
+% (na classe article, sera secao, subsecao e subsubsecao)
+% serao enumeradas.
+% Padrao eh 3
+% \setcounter{secnumdepth}{2}
+
+% Nivel de divisão do documento que será referenciado no sumário.
+% nivel dois significa que somente dois primieros 
+% niveis: capitulo e secao (secao e subsecao na classe article)
+% serao colocados no sumário.
+% Nivel tres significa, capitulo, secao e subsecao 
+% (na classe article, sera secao, subsecao e subsubsecao)
+% serao colocadas no sumário.
+% Padrao eh 3
+% \setcounter{tocdepth}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enumeração da equação é subordinado ao cap\'{\i}tulo
+\numberwithin{equation}{chapter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ambientes similares a teoremas
+% Se preferir, use o neme mais curto.
+% Nome do ambiente não pode ser acentuadas.
+
+% estilo de teorema podem ser: plain (padrao), definition, remark
+% \theoremstyle{plain} % teoremas, etc
+
+\newtheorem{teorema}{Teorema}[chapter] % usar contador associado a cap\'{\i}tulo
+% \newtheorem{lema}{Lema}[chapter] % usar contador associado a cap\'{\i}tulo
+\newtheorem{lema}[teorema]{Lema} % usar mesmo contador do teorema
+\newtheorem{corolario}[teorema]{Corolário} % usar mesmo contador do teorema
+\newtheorem{proposicao}[teorema]{Proposição} % usar mesmo contador do teorema
+\newtheorem{axioma}[teorema]{Axioma} % usar mesmo contador do teorema
+
+% estilo de teorema podem ser: plain(padrao), definition, remark
+\theoremstyle{definition} % corpo do documento em romano
+
+\newtheorem{definicao}[teorema]{Definição} % usar mesmo contador do teorema
+\newtheorem{exemplo}[teorema]{Exemplo} % usar mesmo contador do teorema
+% \newtheorem{exercicio}{Exerc\'{\i}cio}[chapter] % usar contador associado a teorema
+
+% estilo de teorema podem ser: plain(padrao), definition, remark
+\theoremstyle{remark} % corpo do documento em romano
+\newtheorem{observacao}[teorema]{Observação} % usar mesmo contador do teorema
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações que podem ser usados para Capa e contra-capa
+%----------------------------------------------------------
+% usar comando correto para singular e plural: \author, \autores
+%   \orientador, \orientadores, \coordenador, \coordenadores
+% \and pula pra proxima linha nos campos de autor, orientador e coordenador
+%   (\and nao pode ser usado no campo da disciplina e data)
+% \\ pula pra próxima linha (todos campos), mas alinhamento 
+%    fica um pouco estranho. Prefira o \and
+% \thanks serve para colocar dados na forma de rodapé para informações 
+%    adicionais como departamento do orientador, etc. Funciona em todo campo.
+% \contracapainfo coloca informações adicionais na contra-capa (nao na capa)
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% titulo (capa e contra-capa)
+% \titulo
+\titulo{\textcolor{red}{TITULO A DEFINIR}}
+% \title{T\'{\i}tulo da Monografia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% autor(a/es/as) (capa e contra-capa)
+% atento no speeling: 
+%    singular: \autor ou \autora
+%    plural: \autores ou \autoras
+%    obs.: \author (original do laTeX) é mesmo que \autor
+\autor{Danilo Henrique Costa Souza}
+% ou
+% \autores{Autor1 \and Autor2}
+% obs.: \thanks coloca informacoes adicionais do autor(a/res/as)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data (capa e contraa-capa)
+% comando em Ingles (comando original do LaTeX)
+\date{\today} % \today e data de compilacao
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% orientador(es) (capa e contra-capa)
+\orientador{Prof. Dr. Ronaldo de Freitas Zampolo}
+% Obs.: \thanks pode ser usado para colocar informacoes do orientador(a/es/as)
+% \orientador{Orientador\thanks{Podera colocar informacoes do orientador.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% informacoes adicionais na contra-capa
+% Caso nao tenha, desative-o
+% comando em portugues (por se comando novo)
+\contracapainfo{Trabalho de Conclusão de Curso apresentado como requisito parcial para obtenção do Grau de Bacharel em Engenharia da Computação pela Universidade Federal do Pará.}
+%informações
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Obs.: \thanks pode ser usado para colocar informacoes do cooordenador(a/es/as)
+% \coordenador{Orientador\thanks{Poderá colocar informações do orientador.}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% agora, estilo de página será headings
+% titulo do cap\'{\i}tulo e página na parte de cima
+% \pagestyle{linedheadings}
+% como a primeira página do cap\'{\i}tulo usa o plain na qual
+% coloca a paginacao em baixo,
+% alterar para myheadings
+% na qual coloca paginacao emcima (sem por titulo automatico)
+\makeatletter % para usar comando com @
+\let\ps@plainoriginal\ps@plain % guardando o estilo plain original
+\let\ps@plain\ps@linedheadings
+\makeatother % para desativar o uso de comandos com @
+
+\pagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% inicio do documento
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle % este é o comando criado neste documento (não é padrão)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Parte frontal: enumeracao em romano minusculo,
+% capitulos nao existem, etc.
+% contagem da pagina inicia em 1 (pois antes dele, 
+% podera existir capa)
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% contra capa deste modelo foi gerado de forma automatica.
+% Note que contra-capa, apesar de ser gerado manualmente também,
+% deve obdecer a exigência da tipografia cient\'{\i}fica,
+% o que sugere que seja feita no LaTeX.
+
+\contracapa % este e o comando criado neste documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resumo, abstract, agradecimentos, etc serao colocados aqui.
+% sumario, lista de figuras, lista de tabelas tambem ficarao aqui.
+% O que anteceder o sumario nao devem ser enumeradas, nem
+% colocadas no sumario.
+% O que vem depois do sumario e opcional.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%Banca examinadora
+	\include{Pre_Textuais/Banca/banca}
+
+\setlength{\parindent}{1.5cm}% mudando a indentação do parágrafo (voltando a original)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+
+	%Agradecimentos
+	\include{Pre_Textuais/Agradecimentos/agradecimentos}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%Resumo
+	\include{Pre_Textuais/Resumo/resumo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%Abstract
+	\include{Pre_Textuais/Abstract/abstract}
+
+\setlength{\parindent}{1.5cm}% mudando a indentação do parágrafo (voltando a original)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% agora, estilo de página será headings
+% titulo do cap\'{\i}tulo e página na parte de cima
+\pagestyle{linedheadings}
+% \makeatletter % para usar comando com @
+% \let\ps@plainoriginal\ps@plain % guardando o estilo plain original
+% \let\ps@plain\ps@linedheadings
+% \makeatother % para desativar o uso de comandos com @
+
+% sumário, lista de figuras e lista de tabelas.
+\tableofcontents % sumário
+\listoffigures % lista de figuras
+\listoftables % lista de tabelas
+
+%\chapter{Prefácio}
+% Escreva a introdução do trabalho aqui.
+%Motivação do trabalho, 
+%o que o trabalho trata, 
+%qual é o resultado principal e 
+%o que será tratado em cada cap\'{\i}tulo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% parte principal: enumeracao em arabico
+% capitulos serao enumeradas
+% contagem das paginas reinicia em 1
+\mainmatter
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+	%Introdução
+	\include{Capitulos/capitulo1/capitulo1}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+	%Redes de sensores ópticos baseados em FBG
+	\include{Capitulos/capitulo2/capitulo2}
+%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+	%Modelagem do sistema de persistência para redes de sensores ópticos
+	\include{Capitulos/capitulo3/capitulo3}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+	%Resultados
+	\include{Capitulos/capitulo4/capitulo4}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+	%Considerações finais e Trabalhos futuros
+	\include{Capitulos/capitulo5/capitulo5}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+	%Trabalhos publicados
+	\include{Capitulos/capitulo6/capitulo6}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% bibliografia criado pelo BibTeX
+
+%\bibliography{dm-tcc} % arquivo bib
+%\bibliographystyle{amsplain} % estilo
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estilo padrão do BibTeX
+%---------------------------------------------
+% plain -> entrada ordenada alfabeticamente com rótulo numerico
+% unsrt -> similar ao plain, mas entrada é impresso na ordem de citação.
+% alpha -> similar ao plain, mas os rótulos são formados pelo nome do 
+%          autor e ano de publicação.
+
+\bibliographystyle{unsrt}
+\bibliography{tcc_Danilo}				
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% indice remissivo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+% indice remissivo
+%\printindex
+
+\end{document}
