@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\chapter{Descrição da técnica estudada e Implementação}
+\chapter{Descrição da técnica estudada e sua implementação}
 \label{cap:descricao_tecnica_imp}
 
 %
@@ -12,14 +12,80 @@
 
 \section{Descrição da técnica estudada}
 
-A técnica implementada neste trabalho, introduzida em \cite{Protiere2007}, pode ser classificada como semi-automática pois necessita da intervenção do usuário para marcar as regiões de interesse da imagem. Estas regiões podem ser objeto ou fundo, havendo a possibilidade de se marcar mais de um objeto para segmentação, nesse caso a imagem resultante seria a soma das imagens de cada objeto separado.
+\subsection{Segmentação de regiões uniformes}
 
-Essa técnica parte da premissa de que as regiões de interesse a serem definidas são bem distintas em termos de cor e textura e utilizando o conjunto de pixels marcados $\Omega_{n}$, sendo $n$ o número de regiões distintas, é calculada a distribuição gaussiana mostrando a probabilidade de um pixel \textit{p(x,y)} pertencer a uma determinada região $l$. Com base nessas distribuições são calculados pesos para cada canal da imagem que serão explicados mais detalhadamente a seguir.
+A técnica implementada neste trabalho, introduzida em \cite{Protiere2007}, pode ser classificada como semi-automática pois necessita da intervenção do usuário para marcar as regiões de interesse da imagem. Estas regiões podem ser objeto ou fundo, havendo a possibilidade de se marcar mais de um objeto para segmentação, nesse caso a imagem resultante seria a soma das imagens de cada objeto separado. 
 
-Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros diferentes de Gabor, \cite{Manjunath1996} \textcolor{red}{Procurar mais artigos sobre gabor}. O autor utilizou 4 direções ($ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$) e 4 frequências centrais ($\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $) para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$ sendo assim possível descrever texturas em qualquer direção.
+O algoritmo consiste em encontrar a menor distância entre cada \textit{pixel} da imagem de entrada e as regiões marcadas, isso é feito calculando a distância geodésica (que nesse caso é euclidiana, ou seja, uma reta entre dois pontos de interesse) ponderada por um peso $\Omega$, chamado de peso geodésico, que é calculado a partir dos \textit{pixels} das regiões marcadas. Para que um ponto seja considerado de uma determinada região tanto a sua distância para a região quando a sua intensidade são levados em consideração.
+
+Partindo da premissa de que as regiões de interesse a serem definidas são bem distintas em termos de cor e textura e utilizando o conjunto de \textit{pixels} marcados $\Delta_{l},\ \forall\  l = 1,2,3,\ \dots\ ,N_{l}$, sendo $N_{l}$ o número de regiões distintas, é calculada a FDP (Função Densidade de Probabilidade), neste caso foi utilizada a função gaussiana, mostrando a probabilidade de um ponto \textit{p(x,y)} pertencer a uma determinada região $l$. Com base nessas distribuições são calculados pesos ($\omega_{i}$) para cada canal da imagem que serão explicados mais detalhadamente.
+
+Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros de Gabor, \cite{Manjunath1996} \textcolor{red}{Procurar mais artigos sobre gabor}. O autor utilizou 4 direções ($ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$) e 4 frequências centrais ($\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $) para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$, sendo assim possível descrever um conjunto maior e mais rico de texturas usando o mínimo possível de filtros. O filtro de Gabor pode ser substituído por outro tipo de filtro 2D, entretanto foi escolhido pelo autor devido à sua avançada capacidade em distinguir texturas (\textcolor{red}{ENCONTRAR REFERENCIAS SOBRE ISSO)}. 
+
+A escolha de se trabalhar com vários canais torna a técnica adaptativa uma vez que os pesos (importância) de cada canal varia de acordo com a imagem e por isso a necessidade de usar um conjunto de filtros capaz de descrever um rico conjunto de texturas.
+
+Os pesos mencionados anteriormente são calculados usando a equação \ref{eq:pesocanal} com base na probabilidade de um \textit{pixel x} ser erroneamente assinalado à uma região (equação \ref{eq:probpeso}). Dessa forma tem-se um vetor com $N_{c}$ (número total de canais) posições que representa o peso que cada canal terá na hora de calcular a probabilidade de um pixel pertencer a uma determinada região, equações \ref{eq:probpixel} e \ref{eq:probpixeltotal}, privilegiando o canal com maior peso, ou seja, os valores da FDP dos \textit{pixels} deste canal é que irão de fato definir a qual região pertence o \textit{pixel} em questão.
+
+	\begin{equation}
+		\forall\  i = 1,2,3,\ \dots\ ,N_{c}\ :\ \omega_{i} = \frac{(P_{i}^{-1})}{\sum_{k=1}^{N_{c}} (P_{k}^{-1})}
+		\label{eq:pesocanal}
+ 	\end{equation}
+ 	
+ 	\begin{equation}
+		\forall\  k = 1,2,\ \dots\ ,l\ : P_{i} = \frac{1}{l} \int_{-\infty} ^{\infty} min(p^{i} _{1}(x),p^{i} _{2}(x),\ \dots\ ,p^{i} _{k}(x)) \ dx
+		\label{eq:probpeso}
+ 	\end{equation}
+
+	\begin{equation}
+ 		P^{i} _{1|2}(x) = \frac{p^{i} _{1}(F_{i}(x))}{p^{i} _{1}(F_{i}(x))\ +\ p^{i} _{2}(F_{i}(x))}
+ 		\label{eq:probpixel}
+	\end{equation}
+ 		
+	\begin{equation}
+		P_{1|2}(x)\ :=\ P_{r}(x \in l_{1}) = \sum_{i=1}^{N_{c}} \omega^{i}P^{i}_{1|2}(x)
+ 		\label{eq:probpixeltotal}
+	\end{equation}
+	
+Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ regiões ao invés de apenas duas têm-se a equação \ref{eq:probpixeltotalexpandida}. O peso geodésico de um pixel da região $a$ competindo somente com a região $b$ é dado pela equação \ref{eq:pesogeodesico}, generalizando para mais de duas regiões uniformes obtêm-se a equação \ref{eq:pesogeodesicofinal}. Este peso é utilizado para calcular a menor distância de um \textit{pixel x} para uma marcação $l_{k}, k \in [1,N_{l}]$, dada pela equação  \ref{eq:distpixel} que utiliza a menor distância entre o \textit{pixel x} e todos os \textit{pixels} da marcação $l_{k}$ calculada de acordo com a equação \ref{eq:distgeodesica}.
+
+	\begin{equation}
+		P_{a|b}(x)\ :=\ P_{r}(x \in l_{a}) = \sum_{i=1}^{N_{c}} \omega^{i}\frac{p^{i} _{a}(F_{i}(x))}{p^{i} _{a}(F_{i}(x))\ +\ p^{i} _{b}(F_{i}(x))}
+ 		\label{eq:probpixeltotalexpandida}
+	\end{equation}
 
 
+	\begin{subequations}	
+		\begin{equation}
+			\Omega_{a} = \Omega_{a|b} = 1 - P_{a|b}(x)
+		\label{eq:pesogeodesico}
+		\end{equation}
+		
+		\begin{equation}
+			\Omega_{a} = \sum_{a\neq b} = \Omega_{a|b}
+		\label{eq:pesogeodesicofinal}
+		\end{equation}
+	\end{subequations}
+	
+	\begin{equation}
+		d_{k}(x) = min_{s \in \Delta _{c}:label(s)=l_{k}}d(s,t)
+		\label{eq:distpixel}
+	\end{equation}
+	
+	\begin{equation}
+		d(s,t) := min_{C_{x,t}} (\Omega \dot{C}_{x,t})
+		\label{eq:distgeodesica}		
+	\end{equation}
+		
+\subsection{Segmentação de regiões não-uniformes}
 
+O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de regiões distintas. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação
+
+	\begin{equation}
+		\Omega_{k}^{s} = \sum_{k \neq r}  \sum_{l} \Omega_{l_{k}^{s}|l_{r}^{l}} 
+		\label{eq:pesogeodesiconaouniforme}		
+	\end{equation}
+	
+		
 \section{Implementação}
 
 
