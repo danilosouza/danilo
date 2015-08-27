@@ -35,7 +35,7 @@ end
 [r, c, v] = find(mat_posicao);
 %taxa = 0.1;
 %temp = horzcat(r,c,v);
-qtde = round(size(v,1)*taxa); 
+
 
 
 % Verifica o percental de pixels será utilizado e caso a taxa seja igual a
@@ -45,8 +45,8 @@ if taxa == 1
 else
     % adiciona 1 para corrigir os casos em que o número de pixels e a taxa 
         % são pequenos e o round seria '0'.
-    
-    for i=1:qtde
+    qtde = size(v,1); 
+    for i=1:round(size(v,1)*taxa)
         index_temp = round(rand * size(v,1));
         if index_temp == 0
             index_temp = index_temp + 1;
