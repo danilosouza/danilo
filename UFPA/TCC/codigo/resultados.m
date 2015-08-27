@@ -1,104 +1,105 @@
 % Script pra gerar respostas
 
-% ########## Imagem 6 ##########
+% ########## Imagem 17 ##########
 
-disp('Imagem 6 a 50%')
+disp('Imagem 17 a 100%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.5,'cinza', './imagens/imagem6.png', './imagens/imagem6_scribbled1.png', './imagens/imagem6_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(1,'cinza', './imagens/imagem17.png', './imagens/imagem17_scribbled1.png', './imagens/imagem17_scribbled2.png');
 time = etime(clock,before);
-save('imagem6_tx50')
+save('imagem17_tx100')
 
-disp('Imagem 6 a 10%')
+disp('Imagem 17 a 50%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.1,'cinza', './imagens/imagem6.png', './imagens/imagem6_scribbled1.png', './imagens/imagem6_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.5,'cinza', './imagens/imagem17.png', './imagens/imagem17_scribbled1.png', './imagens/imagem17_scribbled2.png');
 time = etime(clock,before);
-save('imagem6_tx10')
+save('imagem17_tx50')
 
-disp('Imagem 6 a 1%')
+disp('Imagem 17 a 10%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.01,'cinza', './imagens/imagem6.png', './imagens/imagem6_scribbled1.png', './imagens/imagem6_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.1,'cinza', './imagens/imagem17.png', './imagens/imagem17_scribbled1.png', './imagens/imagem17_scribbled2.png');
 time = etime(clock,before);
-save('imagem6_tx1')
+save('imagem17_tx10')
 
-
-% ########## Imagem 10 ##########
-
-disp('Imagem 10 a 50%')
+disp('Imagem 17 a 1%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.5,'cinza', './imagens/imagem10.png', './imagens/imagem10_scribbled1.png', './imagens/imagem10_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.01,'cinza', './imagens/imagem17.png', './imagens/imagem17_scribbled1.png', './imagens/imagem17_scribbled2.png');
 time = etime(clock,before);
-save('imagem10_tx50')
+save('imagem17_tx1')
 
-disp('Imagem 10 a 10%')
+% ########## Imagem 19 ##########
+
+disp('Imagem 19 a 100%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.1,'cinza', './imagens/imagem10.png', './imagens/imagem10_scribbled1.png', './imagens/imagem10_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(1,'cinza', './imagens/imagem19.png', './imagens/imagem19_scribbled1.png', './imagens/imagem19_scribbled2.png');
 time = etime(clock,before);
-save('imagem10_tx10')
+save('imagem19_tx100')
 
-disp('Imagem 10 a 1%')
+disp('Imagem 19 a 50%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.01,'cinza', './imagens/imagem10.png', './imagens/imagem10_scribbled1.png', './imagens/imagem10_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.5,'cinza', './imagens/imagem19.png', './imagens/imagem19_scribbled1.png', './imagens/imagem19_scribbled2.png');
 time = etime(clock,before);
-save('imagem10_tx1')
+save('imagem19_tx50')
 
-
-% ########## Imagem 12 ##########
-
-disp('Imagem 12 a 50%')
+disp('Imagem 19 a 10%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.5,'cinza', './imagens/imagem12.png', './imagens/imagem12_scribbled1.png', './imagens/imagem12_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.1,'cinza', './imagens/imagem19.png', './imagens/imagem19_scribbled1.png', './imagens/imagem19_scribbled2.png');
 time = etime(clock,before);
-save('imagem12_tx50')
+save('imagem19_tx10')
 
-disp('Imagem 12 a 10%')
+disp('Imagem 19 a 1%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.1,'cinza', './imagens/imagem12.png', './imagens/imagem12_scribbled1.png', './imagens/imagem12_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.01,'cinza', './imagens/imagem19.png', './imagens/imagem19_scribbled1.png', './imagens/imagem19_scribbled2.png');
 time = etime(clock,before);
-save('imagem12_tx10')
+save('imagem19_tx1')
 
-disp('Imagem 12 a 1%')
+% ########## Imagem 21 ##########
+
+disp('Imagem 21 a 100%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.01,'cinza', './imagens/imagem12.png', './imagens/imagem12_scribbled1.png', './imagens/imagem12_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(1,'cinza', './imagens/imagem21.png', './imagens/imagem21_scribbled1.png', './imagens/imagem21_scribbled2.png');
 time = etime(clock,before);
-save('imagem12_tx1')
+save('imagem21_tx100')
 
-
-% ########## Imagem 13 ##########
-
-disp('Imagem 13 a 100%')
+disp('Imagem 21 a 50%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(1,'cinza', './imagens/imagem13.png', './imagens/imagem13_scribbled1.png', './imagens/imagem13_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.5,'cinza', './imagens/imagem21.png', './imagens/imagem21_scribbled1.png', './imagens/imagem21_scribbled2.png');
 time = etime(clock,before);
-save('imagem13_tx100')
+save('imagem21_tx50')
 
-disp('Imagem 13 a 50%')
+disp('Imagem 21 a 10%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.5,'cinza', './imagens/imagem13.png', './imagens/imagem13_scribbled1.png', './imagens/imagem13_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.1,'cinza', './imagens/imagem21.png', './imagens/imagem21_scribbled1.png', './imagens/imagem21_scribbled2.png');
 time = etime(clock,before);
-save('imagem13_tx50')
+save('imagem21_tx10')
 
-disp('Imagem 13 a 10%')
+disp('Imagem 21 a 1%')
 clear
 before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.1,'cinza', './imagens/imagem13.png', './imagens/imagem13_scribbled1.png', './imagens/imagem13_scribbled2.png');
+[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.01,'cinza', './imagens/imagem21.png', './imagens/imagem21_scribbled1.png', './imagens/imagem21_scribbled2.png');
 time = etime(clock,before);
-save('imagem13_tx10')
+save('imagem21_tx1')
 
-disp('Imagem 13 a 1%')
-clear
-before = clock
-[ fdp, I, posicao, posicao_nova, resultado, qtde_pixels, tempo] = segmenta(0.01,'cinza', './imagens/imagem13.png', './imagens/imagem13_scribbled1.png', './imagens/imagem13_scribbled2.png');
-time = etime(clock,before);
-save('imagem13_tx1')
+
+
+
+
+
+
+
+
+
+
+
+
 
