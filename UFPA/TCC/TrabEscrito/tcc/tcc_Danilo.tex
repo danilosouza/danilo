@@ -28,6 +28,7 @@
 \usepackage{amsmath,amssymb} 
 \usepackage{amsthm} 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % para configurar a lista enumerada
 \usepackage{enumerate}
@@ -65,6 +66,13 @@
 % tmargin -> top (superior).
 % bmargin -> bot (inferior).
 \geometry{lmargin=4cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% pacotes adicionais
+
+\usepackage{epstopdf}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Este estilo so funciona na classe de documento book (ou amsbook) 
@@ -142,6 +150,40 @@
 %   No caso de myheadings, o titulo pode ser colocado com o comando 
 %   do tipo \markright{} ou \markboth{}{}
 \pagestyle{empty} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	TiKZ
+%\documentclass{article}
+\usepackage{tikz}
+%\usepackage[utf8]{inputenc}
+\usetikzlibrary{trees}
+%%%<
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{10pt}%
+%%%>
+
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+\tikzset{
+  basic/.style  = {draw,text width=5cm, drop shadow, rectangle,anchor=west},
+  type 1/.style   = {basic, rounded corners=6pt, thin,align=center, fill=green!60,
+                   text width=9em},                
+  type 2/.style = {basic, rounded corners=6pt, thin,align=center, fill=blue!60,
+                   text width=10em},
+  type 3/.style = {basic, thin, align=center, fill=pink!60, text width=9em, rounded corners=6pt},  
+  type 4/.style = {basic, thin, align=center, fill=orange!60, text width=9em, rounded corners=6pt},
+  type 5/.style = {basic, thin, align=center, fill=gray!60, text width=9em, rounded corners=6pt},
+  type 6/.style = {basic, thin, align=center, fill=red!60, text width=9em, rounded corners=6pt},
+  type 7/.style = {basic, thin, align=center, fill=purple!60, text width=9em, rounded corners=6pt},
+}
+\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % tamnho de indentação (da primeira linha do paragrafo)
