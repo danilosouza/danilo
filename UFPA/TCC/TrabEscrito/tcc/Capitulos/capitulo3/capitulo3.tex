@@ -14,15 +14,22 @@
 
 \subsection{Segmentação de regiões uniformes}
 
-A técnica implementada neste trabalho, introduzida em \cite{Protiere2007}, pode ser classificada como semi-automática pois necessita da intervenção do usuário para marcar as regiões de interesse da imagem. Estas regiões podem ser objeto ou fundo, havendo a possibilidade de se marcar mais de um objeto para segmentação, nesse caso a imagem resultante seria a soma das imagens de cada objeto separado. 
+A técnica implementada neste trabalho, introduzida em \cite{Protiere2007}, pode ser classificada como semi-automática pois necessita da intervenção do usuário para marcar as regiões de interesse da imagem. Estas regiões podem ser objeto ou fundo, havendo a possibilidade de se marcar mais de um objeto para segmentação ou marcar objetos não-uniformes, nesse caso a imagem final seria a soma das imagens de cada região não-uniforme separada. 
 
-O algoritmo consiste em encontrar a menor distância entre cada \textit{pixel} da imagem de entrada e as regiões marcadas, isso é feito calculando a distância geodésica (que nesse caso é euclidiana, ou seja, uma reta entre dois pontos de interesse) ponderada por um peso $\Omega$, chamado de peso geodésico, que é calculado a partir dos \textit{pixels} das regiões marcadas. Para que um ponto seja considerado de uma determinada região tanto a sua distância para a região quando a sua intensidade são levados em consideração.
+O algoritmo consiste em encontrar a menor distância entre cada \textit{pixel} da imagem de entrada e as regiões marcadas, isso é feito calculando a distância geodésica (que nesse caso é euclidiana, ou seja, uma reta entre os dois pontos de interesse) de cada \textit{pixel} para os pontos da região marcada ponderada por um peso $\Omega$, chamado de peso geodésico, calculado a partir dos valores dos \textit{pixels} das regiões marcadas. Para que um ponto seja considerado de uma determinada região tanto a sua distância para a região quando a sua intensidade são levados em consideração.
 
-Partindo da premissa de que as regiões de interesse a serem definidas são bem distintas em termos de cor e textura e utilizando o conjunto de \textit{pixels} marcados $\Delta_{l},\ \forall\  l = 1,2,3,\ \dots\ ,N_{l}$, sendo $N_{l}$ o número de regiões distintas, é calculada a FDP (Função Densidade de Probabilidade), neste caso foi utilizada a função gaussiana, mostrando a probabilidade de um ponto \textit{p(x,y)} pertencer a uma determinada região $l$. Com base nessas distribuições são calculados pesos ($\omega_{i}$) para cada canal da imagem que serão explicados mais detalhadamente.
+Partindo da premissa de que as regiões de interesse a serem definidas são bem distintas em termos de cor e textura e utilizando o conjunto de \textit{pixels} marcados $\Delta_{l},\ \forall\  l = 1,2,3,\ \dots\ ,N_{l}$, sendo $N_{l}$ o número de regiões distintas, é calculada a FDP (Função Densidade de Probabilidade), neste caso foi utilizada a função gaussiana, mostrando a probabilidade de um ponto \textit{p(x,y)} pertencer a uma determinada região $l$. Com base nessas distribuições são calculados pesos ($\omega_{i}$) para cada canal da imagem que serão explicados mais detalhadamente. A Figura \ref{fig:exemplo_fdp} mostra um exemplo da FPD de uma imagem com duas regiões.
 
-Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros de Gabor, \cite{Manjunath1996} \textcolor{red}{Procurar mais artigos sobre gabor}. O autor utilizou 4 direções ($ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$) e 4 frequências centrais ($\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $) para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$, sendo assim possível descrever um conjunto maior e mais rico de texturas usando o mínimo possível de filtros. O filtro de Gabor pode ser substituído por outro tipo de filtro 2D, entretanto foi escolhido pelo autor devido à sua avançada capacidade em distinguir texturas (\textcolor{red}{ENCONTRAR REFERENCIAS SOBRE ISSO)}. 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1]{./figuras/capitulo_3/exemplo_fdp.eps}
+		\caption{FDP de uma imagem com duas regiões}
+		\label{fig:exemplo_fdp}
+	\end{figure}
 
-A escolha de se trabalhar com vários canais torna a técnica adaptativa uma vez que os pesos (importância) de cada canal varia de acordo com a imagem e por isso a necessidade de usar um conjunto de filtros capaz de descrever um rico conjunto de texturas.
+Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros de Gabor, \cite{Manjunath1996} \textcolor{red}{Procurar mais artigos sobre gabor}. O 4 direções ($ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$) e 4 frequências centrais ($\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $) foram utilizadas para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$, sendo assim possível descrever um conjunto maior e mais rico de texturas usando o mínimo de filtros. O filtro de Gabor pode ser substituído por outro tipo de filtro 2D, entretanto foi escolhido pelo autor devido à sua avançada capacidade em distinguir texturas (\cite{Sivalingamaiah2012}, \cite{Shioyama1999}). (\textcolor{red}{ENCONTRAR REFERENCIAS SOBRE ISSO)}
+
+A utilização de vários canais torna a técnica adaptativa uma vez que os pesos (importância) de cada canal varia de acordo com a imagem e por isso a necessidade de usar um conjunto de filtros capaz de descrever um rico conjunto de texturas. A ideia é que cada um dos filtros realce uma parte diferente da imagem e com isso o canal resultante que ressaltar melhor a(s) parte(s) de interesse da imagem ganha um maior peso.
 
 Os pesos mencionados anteriormente são calculados usando a equação \ref{eq:pesocanal} com base na probabilidade de um \textit{pixel x} ser erroneamente assinalado à uma região (equação \ref{eq:probpeso}). Dessa forma tem-se um vetor com $N_{c}$ (número total de canais) posições que representa o peso que cada canal terá na hora de calcular a probabilidade de um pixel pertencer a uma determinada região, equações \ref{eq:probpixel} e \ref{eq:probpixeltotal}, privilegiando o canal com maior peso, ou seja, os valores da FDP dos \textit{pixels} deste canal é que irão de fato definir a qual região pertence o \textit{pixel} em questão.
 
@@ -61,7 +68,7 @@ Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ reg
 		\end{equation}
 		
 		\begin{equation}
-			\Omega_{a} = \sum_{a\neq b} = \Omega_{a|b}
+			\Omega_{a} = \sum_{b = 1,\ a\neq b}^{l}  \Omega_{a|b}
 		\label{eq:pesogeodesicofinal}
 		\end{equation}
 	\end{subequations}
@@ -72,21 +79,85 @@ Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ reg
 	\end{equation}
 	
 	\begin{equation}
-		d(s,t) := min_{C_{x,t}} (\Omega \dot{C}_{x,t})
+		d(x,t) := min_{C_{x,t}} (\Omega \dot{C}_{x,t})
 		\label{eq:distgeodesica}		
 	\end{equation}
 		
 \subsection{Segmentação de regiões não-uniformes}
 
-O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de regiões distintas. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação
+O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de regiões distintas. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação. A Figura \ref{fig:exemplo_imagem_nao_uniforme} mostra um exemplo de marcação de regiões não uniformes.
 
 	\begin{equation}
 		\Omega_{k}^{s} = \sum_{k \neq r}  \sum_{l} \Omega_{l_{k}^{s}|l_{r}^{l}} 
 		\label{eq:pesogeodesiconaouniforme}		
 	\end{equation}
 	
-		
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.75]{./figuras/capitulo_3/imagem15_scribbled2.png}
+		\caption{Exemplo de marcação de um objeto de interesse não-uniforme}
+		\label{fig:exemplo_imagem_nao_uniforme}
+	\end{figure}	
+	
 \section{Implementação}
+
+A técnica descrita anteriormente foi implementada utilizando o $Matlab$, bem como em \cite{Protiere2007}. A implementação foi divida em partes para facilitar tanto o desenvolvimento quanto a manutenção do código fonte, estando este agrupado em 9 diferentes funções descritas abaixo com sua relação hierárquica mostrada na Figura \ref{fig:hierarquia_codigo}. O fluxo do código e seus principais resultados utilizados ao longo do processamento são mostrados no diagrama da Figura \ref{fig:fluxo_codigo}, as cores utilizadas nesse diagrama correspondem às funções da Figura \ref{fig:hierarquia_codigo} que realizam as tarefas descritas.
+
+	\begin{itemize}
+		\item \textbf{segmenta.m:}  Função que realiza a classificação dos \textit{pixels} de acordo com a probabilidade.
+		\item \textbf{getPixelsPosition.m:} Função que guarda em uma matriz a posição e os valores dos \textit{pixels} marcados pelo usuário.
+		\item \textbf{getChannels.m:} Função que calcula os canais.
+			\begin{itemize}
+				\item \textbf{gaborFilter.m:} Função que implementa o filtro de Gabor.
+				\item \textbf{getPixelsDist.m:} Função que guarda em uma matriz a posição e os valores dos pixels marcados pelo usuário para todos os canais.
+			\end{itemize}
+		\item \textbf{getChannelWeight:} Função que calcula o peso de cada canal seguindo a equação \ref{eq:pesocanal}.
+		\item \textbf{getGeodesicWeight:} Função que calcula o peso que irá ponderar a distância do \textit{pixel t} para o \textit{pixel x}, onde \textit{x} pertence à uma região marcada.
+		\item \textbf{resampleMatrix.m:} Função que faz a re-amostragem dos \textit{pixels} marcados pelo usuário.
+		\item \textbf{getMinDistance.m:} Função que calcula a menor distância de um \textit{pixel} para cada região marcada na imagem
+	\end{itemize}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1.5]{./figuras/capitulo_3/DiagramaFuncoes.pdf}
+		\caption{Hierarquia das funções criadas}
+		\label{fig:hierarquia_codigo}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.85]{./figuras/capitulo_3/DiagramaCodigo.pdf}
+		\caption{Fluxo do algoritmo}
+		\label{fig:fluxo_codigo}
+	\end{figure}
+
+
+A função \textit{segmenta.m} recebe os parâmetros de entrada listados abaixo. É importante notar que o formato da imagem deve ser ``.png'' para que não haja compressão, ou seja, os valores dos \textit{pixels} não sejam alterados, após a imagem ser salva com as marcações desejadas, para cada região desejada deve ser gerada uma imagem com as sub-regiões de interesse. 
+
+Para armazenar os valores dos pontos das regiões de interesse as imagens marcadas são comparadas ponto a ponto com a imagem original de tal forma que os valores que forem diferentes representam os \textit{pixels} marcados, esses pontos então tem seu valor escrito em uma matriz guardando a mesma posição original. A partir desta matriz cada sub-região é armazenada em uma matriz diferente, estas são distinguidas verificando os \textit{pixels} 8-conectados com seus vizinhos, assim cada imagem marcada é varrida apenas uma vez, feito isto, é calculada a FDP das regiões de interesse, todo este processo é realizado pela função \textit{getPixelsPosition.m}.
+
+A função \textit{getChannels.m} irá construir os filtros de gabor  utilizando a função \textit{gaborFilter.m}, uma vez construídos os filtros são utilizados no canal de luminância (Y) e sua saída ($G_{i}$) é utilizada na equação \ref{eq:defcanal} para definição dos canais, os canais complementares são as crominâncias (Cb e Cr) da imagem. Após a criação do banco de canais, a função \textit{getPixelsDist.m} é chamada para calcular a FDP dos \textit{pixels} das regiões marcadas para cada um dos 19 canais utilizados.
+
+Uma vez calculadas as FDP's das regiões de interesse de cada canal, é possível calcular o peso de cada canal em função dessas probabilidades conforme descrito anteriormente nas equações \ref{eq:pesocanal} e \ref{eq:probpeso}, este cálculo é feito pela função \textit{getChannelsWeight.m} que utiliza a matriz contendo as FDP's das sub-regiões de todos os canais. O valor final da probabilidade de um \textit{pixel x} pertencer a uma região é a soma das probabilidades de \textit{x} pertencer a cada uma das sub-regiões existentes.
+
+Cada \textit{pixel x} no intervalo $[0,255]$ tem um peso geodésico associado, descrito na equação \ref{eq:pesogeodesicofinal} , que representa o complemento da probabilidade de \textit{x} pertencer a uma determinada região ou sub-região. A função \textit{getGeodesicWeight.m} utilizada as equações \ref{eq:probpixeltotalexpandida} e \ref{eq:pesogeodesico} para encontrar os valores de $\Omega$
+
+
+	\begin{equation}
+ 			\forall (x,y) \in \Omega \ : F_{i}(x,y) =  \ \frac{1}{N^{2}} \int \int _{\Omega_{x,y}} \tanh \Bigg( \alpha \frac{G_{i}(u,v)}{\sigma(G_{i})} \Bigg) dudv,\ onde\   \quad  \alpha = 0.25 \ e\   N = 5
+ 			\label{eq:defcanal}
+ 		\end{equation}
+
+	\begin{itemize}
+		\item A taxa referente a quantos $\%$ dos pixels marcados serão usados, no intervalo [0,1]
+		\item A escala de cor a ser utilizada, podendo esta ser: cinza, R, G ou B
+		\item A imagem original
+		\item As imagens marcadas.
+	\end{itemize}
+	
+
+
+
 
 
 %
