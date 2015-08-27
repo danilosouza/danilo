@@ -3,7 +3,7 @@ function [ peso_geo ] = getGeodesicWeight( fdp, regioes, subregioes, Nc, pesos_c
 %geodésica, baseado na probabilidade de um determinado pixel pertencer a
 %uma dada região de interesse
 %   Essa função recebe como parâmetro a FDP de todas as regiões de
-%   interesse e um indice que indica as as regiões e as subregiões
+%   interesse e um indice que indica as regiões e as subregiões
 %   de interesse para qual o peso está sendo
 %   calculado. A probabilidade calculada é a de um pixels pertencer a uma
 %   dada região. A função

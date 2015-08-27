@@ -22,7 +22,7 @@ for i=1:Nc
         for l=1:n_sub_labels(1,k)
             fdp_temp(l,:) = fdp(l,:,k,i);
         end
-        % Varifica quantas subregiões a região atual possui e elimina
+        % Verifica quantas subregiões a região atual possui e elimina
         % os zeros da matriz FDP
         fdp_regiao(k,:) = sum(fdp_temp(:,:));
     end
