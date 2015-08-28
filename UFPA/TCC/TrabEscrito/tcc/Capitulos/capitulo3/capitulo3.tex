@@ -3,12 +3,43 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\chapter{Descrição da técnica estudada e sua implementação}
+\chapter{A técnica estudada e Metodologia}
 \label{cap:descricao_tecnica_imp}
 
 %
 %----------------------------------------------------------------------------------------------------------------------------------------------------%
 %
+\section{A escolha da técnica}
+
+Diversas técnicas de segmentação de imagens foram apresentadas neste trabalho, entretanto, uma técnica em especial chama a atenção pois permite a interação do usuário de forma mais ativa onde o objeto de interesse é marcado, usando marcação simples do tipo pincel com uma cor e o fundo ou outros objetos na imagem são marcados de outra cor, a técnica então se encarrega de separar regiões de interesse com marcações em comum (i.e, de mesma cor) de tal forma que a imagem resultante é a subtração da imagem original por todas as regiões exceto a região de interesse, ou seja, cada \textit{pixel} da imagem é classificado como pertencente a uma determinada região. 
+
+A classificação é feita em função da probabilidade calculada com base na Função Densidade de Probabilidade (FDP) e da distância de um ponto para uma região de interesse qualquer.
+
+Conforme descrito em \cite{Protiere2007} uma grande vantagem deste técnica é que as marcações não precisam ser minuciosas (i.e, \textit{pixel} a \textit{pixel}), elas precisam apenas representar as características de cor e/ou textura das regiões de interesse (e.g, se o fundo de uma imagem não é uniforme então as regiões não-uniformes devem ser marcadas separadamente mas pertencendo à mesma região). A intervenção do usuário facilita o processo de segmentação tornando-o mais simples e eficiente. Essas marcações podem ser consideradas como uma heurística para o algoritmo que é simplificado baseado nessas premissas.
+
+Para o caso a imagem seja complexa (i.e, o fundo e os objetos de interesse possuem cores e/ou texturas parecidas) se faz necessária uma marcação mais abrangente e que marque de forma mais clara a posição dos objetos, conforme mostrado na Figura \ref{fig:imagem_nao_uniforme}  , para que a distância exerça uma influência maior na classificação. É possível perceber na Figura \ref{fig:imagem_nao_uniforme} que os objetos em si são não-uniformes e não apenas o fundo, resultado em uma marcação bastante extensa (i.e, com muitos \textit{pixels}) o que resultará em uma aumento no tempo de execução, uma vez que para se calcular a menor distância de um ponto à uma região é necessário calcular a distância deste ponto para todos os \textit{pixels} da região em questão.
+
+Conforme mostrado acima a técnica apresentada em \cite{Protiere2007} é bastante robusta e pode ser usada tanto em imagens simples (i.e, uniformes e com poucas cores) quanto em imagens complexas (i.e, nao-uniformes e com cores semelhantes no objeto e no fundo) e isso ocorre basicamente porquê a técnica se baseia em dois pilares fundamentais, a probabilidade e a distância de um \textit{pixel} para uma região específica.
+
+	\begin{figure}
+		\centering
+		\subfloat[Fundo da Imagem]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_3/imagem15_scribbled1.eps}
+		\label{fig:fundo_imagem_nao_informe}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Objeto 1]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_3/imagem15_scribbled2.eps}
+		\label{fig:objeto1_imagem_nao_informe}}	
+		\vspace{0.1cm}
+		\subfloat[Objeto 2]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_3/imagem15_scribbled3.eps}
+		\label{fig:objeto2_imagem_nao_informe}}	
+		\caption{Exemplo de marcação de uma figura complexa. A Figura \ref{fig:fundo_imagem_nao_informe} mostra a marcação do fundo da imagem, a Figura \ref{fig:objeto1_imagem_nao_informe} mostra um dos objetos de interesse e a Figura \ref{fig:objeto2_imagem_nao_informe} mostra o outro objeto de interesse.}
+		\label{fig:imagem_nao_uniforme}
+	\end{figure}
+
+
 
 \section{Descrição da técnica estudada}
 
@@ -22,7 +53,7 @@ Partindo da premissa de que as regiões de interesse a serem definidas são bem di
 
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=1]{./figuras/capitulo_3/exemplo_fdp.eps}
+		\includegraphics[scale=1.08]{./figuras/capitulo_3/exemplo_fdp.eps}
 		\caption{FDP de uma imagem com duas regiões}
 		\label{fig:exemplo_fdp}
 	\end{figure}
@@ -85,77 +116,20 @@ Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ reg
 		
 \subsection{Segmentação de regiões não-uniformes}
 
-O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de regiões distintas. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação. A Figura \ref{fig:exemplo_imagem_nao_uniforme} mostra um exemplo de marcação de regiões não uniformes.
+O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de regiões distintas. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação. Um exemplo deste tipo de imagem pode ser visto na Figura \ref{fig:objeto1_imagem_nao_informe}.
 
 	\begin{equation}
 		\Omega_{k}^{s} = \sum_{k \neq r}  \sum_{l} \Omega_{l_{k}^{s}|l_{r}^{l}} 
 		\label{eq:pesogeodesiconaouniforme}		
 	\end{equation}
+
+\section{Metodologia}
+
+Conforme descrito no capítulo anterior a técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas, entretanto o tempo de execução do algoritmo é alto e esta diretamente associado  ao número de \textit{pixels} marcados.
 	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.75]{./figuras/capitulo_3/imagem15_scribbled2.png}
-		\caption{Exemplo de marcação de um objeto de interesse não-uniforme}
-		\label{fig:exemplo_imagem_nao_uniforme}
-	\end{figure}	
 	
-\section{Implementação}
-
-A técnica descrita anteriormente foi implementada utilizando o $Matlab$, bem como em \cite{Protiere2007}. A implementação foi divida em partes para facilitar tanto o desenvolvimento quanto a manutenção do código fonte, estando este agrupado em 9 diferentes funções descritas abaixo com sua relação hierárquica mostrada na Figura \ref{fig:hierarquia_codigo}. O fluxo do código e seus principais resultados utilizados ao longo do processamento são mostrados no diagrama da Figura \ref{fig:fluxo_codigo}, as cores utilizadas nesse diagrama correspondem às funções da Figura \ref{fig:hierarquia_codigo} que realizam as tarefas descritas.
-
-	\begin{itemize}
-		\item \textbf{segmenta.m:}  Função que realiza a classificação dos \textit{pixels} de acordo com a probabilidade.
-		\item \textbf{getPixelsPosition.m:} Função que guarda em uma matriz a posição e os valores dos \textit{pixels} marcados pelo usuário.
-		\item \textbf{getChannels.m:} Função que calcula os canais.
-			\begin{itemize}
-				\item \textbf{gaborFilter.m:} Função que implementa o filtro de Gabor.
-				\item \textbf{getPixelsDist.m:} Função que guarda em uma matriz a posição e os valores dos pixels marcados pelo usuário para todos os canais.
-			\end{itemize}
-		\item \textbf{getChannelWeight:} Função que calcula o peso de cada canal seguindo a equação \ref{eq:pesocanal}.
-		\item \textbf{getGeodesicWeight:} Função que calcula o peso que irá ponderar a distância do \textit{pixel t} para o \textit{pixel x}, onde \textit{x} pertence à uma região marcada.
-		\item \textbf{resampleMatrix.m:} Função que faz a re-amostragem dos \textit{pixels} marcados pelo usuário.
-		\item \textbf{getMinDistance.m:} Função que calcula a menor distância de um \textit{pixel} para cada região marcada na imagem
-	\end{itemize}
-
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=1.5]{./figuras/capitulo_3/DiagramaFuncoes.pdf}
-		\caption{Hierarquia das funções criadas}
-		\label{fig:hierarquia_codigo}
-	\end{figure}
 	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.85]{./figuras/capitulo_3/DiagramaCodigo.pdf}
-		\caption{Fluxo do algoritmo}
-		\label{fig:fluxo_codigo}
-	\end{figure}
-
-
-A função \textit{segmenta.m} recebe os parâmetros de entrada listados abaixo. É importante notar que o formato da imagem deve ser ``.png'' para que não haja compressão, ou seja, os valores dos \textit{pixels} não sejam alterados, após a imagem ser salva com as marcações desejadas, para cada região desejada deve ser gerada uma imagem com as sub-regiões de interesse. 
-
-Para armazenar os valores dos pontos das regiões de interesse as imagens marcadas são comparadas ponto a ponto com a imagem original de tal forma que os valores que forem diferentes representam os \textit{pixels} marcados, esses pontos então tem seu valor escrito em uma matriz guardando a mesma posição original. A partir desta matriz cada sub-região é armazenada em uma matriz diferente, estas são distinguidas verificando os \textit{pixels} 8-conectados com seus vizinhos, assim cada imagem marcada é varrida apenas uma vez, feito isto, é calculada a FDP das regiões de interesse, todo este processo é realizado pela função \textit{getPixelsPosition.m}.
-
-A função \textit{getChannels.m} irá construir os filtros de gabor  utilizando a função \textit{gaborFilter.m}, uma vez construídos os filtros são utilizados no canal de luminância (Y) e sua saída ($G_{i}$) é utilizada na equação \ref{eq:defcanal} para definição dos canais, os canais complementares são as crominâncias (Cb e Cr) da imagem. Após a criação do banco de canais, a função \textit{getPixelsDist.m} é chamada para calcular a FDP dos \textit{pixels} das regiões marcadas para cada um dos 19 canais utilizados.
-
-Uma vez calculadas as FDP's das regiões de interesse de cada canal, é possível calcular o peso de cada canal em função dessas probabilidades conforme descrito anteriormente nas equações \ref{eq:pesocanal} e \ref{eq:probpeso}, este cálculo é feito pela função \textit{getChannelsWeight.m} que utiliza a matriz contendo as FDP's das sub-regiões de todos os canais. O valor final da probabilidade de um \textit{pixel x} pertencer a uma região é a soma das probabilidades de \textit{x} pertencer a cada uma das sub-regiões existentes.
-
-Cada \textit{pixel x} no intervalo $[0,255]$ tem um peso geodésico associado, descrito na equação \ref{eq:pesogeodesicofinal} , que representa o complemento da probabilidade de \textit{x} pertencer a uma determinada região ou sub-região. A função \textit{getGeodesicWeight.m} utilizada as equações \ref{eq:probpixeltotalexpandida} e \ref{eq:pesogeodesico} para encontrar os valores de $\Omega$
-
-
-	\begin{equation}
- 			\forall (x,y) \in \Omega \ : F_{i}(x,y) =  \ \frac{1}{N^{2}} \int \int _{\Omega_{x,y}} \tanh \Bigg( \alpha \frac{G_{i}(u,v)}{\sigma(G_{i})} \Bigg) dudv,\ onde\   \quad  \alpha = 0.25 \ e\   N = 5
- 			\label{eq:defcanal}
- 		\end{equation}
-
-	\begin{itemize}
-		\item A taxa referente a quantos $\%$ dos pixels marcados serão usados, no intervalo [0,1]
-		\item A escala de cor a ser utilizada, podendo esta ser: cinza, R, G ou B
-		\item A imagem original
-		\item As imagens marcadas.
-	\end{itemize}
 	
-
 
 
 

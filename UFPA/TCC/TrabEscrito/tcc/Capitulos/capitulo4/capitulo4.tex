@@ -3,16 +3,73 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\chapter{Resultados}
-\label{cap:resultados}
+\chapter{Implementação e Resultados}
+\label{cap:met_resultados}
 
-%
-%----------------------------------------------------------------------------------------------------------------------------------------------------%
-%
+\section{Implementação}
 
-%
-%----------------------------------------------------------------------------------------------------------------------------------------------------%
-%
+A técnica descrita anteriormente foi implementada utilizando o $Matlab$, bem como em \cite{Protiere2007}. A implementação foi divida em partes para facilitar tanto o desenvolvimento quanto a manutenção do código fonte, estando este agrupado em 9 diferentes funções descritas abaixo com sua relação hierárquica mostrada na Figura \ref{fig:hierarquia_codigo}. O fluxo do código e seus principais resultados utilizados ao longo do processamento são mostrados no diagrama da Figura \ref{fig:fluxo_codigo}, as cores utilizadas nesse diagrama correspondem às funções da Figura \ref{fig:hierarquia_codigo} que realizam as tarefas descritas.
+
+	\begin{itemize}
+		\item \textbf{segmenta.m:}  Função que realiza a classificação dos \textit{pixels} de acordo com a probabilidade.
+		\item \textbf{getPixelsPosition.m:} Função que guarda em uma matriz a posição e os valores dos \textit{pixels} marcados pelo usuário.
+		\item \textbf{getChannels.m:} Função que calcula os canais.
+			\begin{itemize}
+				\item \textbf{gaborFilter.m:} Função que implementa o filtro de Gabor.
+				\item \textbf{getPixelsDist.m:} Função que guarda em uma matriz a posição e os valores dos pixels marcados pelo usuário para todos os canais.
+			\end{itemize}
+		\item \textbf{getChannelWeight:} Função que calcula o peso de cada canal seguindo a equação \ref{eq:pesocanal}.
+		\item \textbf{getGeodesicWeight:} Função que calcula o peso que irá ponderar a distância do \textit{pixel t} para o \textit{pixel x}, onde \textit{x} pertence à uma região marcada.
+		\item \textbf{resampleMatrix.m:} Função que faz a re-amostragem dos \textit{pixels} marcados pelo usuário.
+		\item \textbf{getMinDistance.m:} Função que calcula a menor distância de um \textit{pixel} para uma determinada região marcada na imagem
+	\end{itemize}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1.5]{./figuras/capitulo_4/DiagramaFuncoes.pdf}
+		\caption{Hierarquia das funções criadas}
+		\label{fig:hierarquia_codigo}
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.85]{./figuras/capitulo_4/DiagramaCodigo.pdf}
+		\caption{Fluxo do algoritmo}
+		\label{fig:fluxo_codigo}
+	\end{figure}
+
+
+A função \textit{segmenta.m} recebe os parâmetros de entrada listados abaixo. É importante notar que o formato da imagem deve ser ``.png'' para que não haja compressão, ou seja, os valores dos \textit{pixels} não sejam alterados após a imagem ser salva com as marcações desejadas, para cada região de interesse deve ser gerada uma imagem com as sub-regiões de interesse. 
+
+Para armazenar os valores dos pontos das regiões de interesse as imagens marcadas são comparadas ponto a ponto com a imagem original de tal forma que os valores que forem diferentes representam os \textit{pixels} marcados, esses pontos então tem seu valor escrito em uma matriz guardando a mesma posição original. A partir desta matriz cada sub-região é armazenada em uma matriz diferente, estas são distinguidas verificando os \textit{pixels} 8-conectados com seus vizinhos, assim cada imagem marcada é varrida apenas uma vez. Feito isto, é calculada a FDP das regiões de interesse, todo este processo é realizado pela função \textit{getPixelsPosition.m}.
+
+A função \textit{getChannels.m} irá construir os filtros de gabor  utilizando a função \textit{gaborFilter.m}, uma vez construídos os filtros são utilizados no canal de luminância (Y) e sua saída ($G_{i}$) é utilizada na equação \ref{eq:defcanal} para definição dos canais, os canais complementares são as crominâncias (Cb e Cr) da imagem. Após a criação do banco de canais, a função \textit{getPixelsDist.m} é chamada para calcular a FDP dos \textit{pixels} das regiões marcadas para cada um dos 19 canais utilizados.
+
+Uma vez calculadas as FDP's das regiões de interesse de cada canal, é possível calcular o peso de cada canal em função dessas probabilidades conforme descrito anteriormente nas equações \ref{eq:pesocanal} e \ref{eq:probpeso}, este cálculo é feito pela função \textit{getChannelsWeight.m} que utiliza a matriz contendo as FDP's das sub-regiões de todos os canais. O valor final da probabilidade de um \textit{pixel x} pertencer a uma região é a soma das probabilidades de \textit{x} pertencer a cada uma das sub-regiões existentes.
+
+Cada \textit{pixel x} no intervalo $[0,255]$ tem um peso geodésico associado, descrito na equação \ref{eq:pesogeodesicofinal}, que representa o complemento da probabilidade de \textit{x} pertencer a uma determinada região ou sub-região. A função \textit{getGeodesicWeight.m} utilizada as equações \ref{eq:probpixeltotalexpandida} e \ref{eq:pesogeodesico} para encontrar os valores de $\Omega$ de uma sub-região em comparação com outra. Para cada valor de pixel é criada uma matriz $\Omega(r,s)$, onde $r$ é o número de regiões e $s$ é o número de sub-regiões, a função \textit{getGeodesicWeight.m} é chamada dentro de um laço para calcular o peso para cada sub-região, os pesos são calculados comparando uma a uma das sub-regiões, considerando o fato de que sub-regiões de uma mesma região não competem entre si, e a soma desses pesos é o peso geodésico final para o \textit{pixel} em questão.
+
+Por fim a classificação dos \textit{pixels} propriamente ditos é feita diretamente na função \textit{segmenta.m} que utiliza a função \textit{getMinDistance.m} para encontrar a menor distância de um ponto entre todas as sub-regiões, essas distâncias, calculadas a partir da equação \ref{eq:distgeodesica} são armazenas em uma matriz $D(r,s)$, conforme descrito anteriormente, e a partir dessa matriz é calculada um outra matriz $P(r,s)$ que armazena a probabilidade, segundo a equação \ref{eq:probabilidade}, do \textit{pixel} atual pertencer a cada uma das sub-regiões e então o menor valor da matriz $P$ representa a qual sub-região pertence o \textit{pixel} analisado.
+
+
+	\begin{equation}
+ 			\forall (x,y) \in \Omega \ : F_{i}(x,y) =  \ \frac{1}{N^{2}} \int \int _{\Omega_{x,y}} \tanh \Bigg( \alpha \frac{G_{i}(u,v)}{\sigma(G_{i})} \Bigg) dudv,\ onde\   \quad  \alpha = 0.25 \ e\   N = 5
+ 			\label{eq:defcanal}
+ 		\end{equation}
+
+	\begin{itemize}
+		\item A taxa referente a quantos $\%$ dos pixels marcados serão usados, no intervalo [0,1]
+		\item A escala de cor a ser utilizada, podendo esta ser: cinza, R, G ou B
+		\item A imagem original
+		\item As imagens marcadas.
+	\end{itemize}
+	
+	\begin{equation}
+		Pr(t \in l_{i}) = \frac{d_{i}(t)^{-1}}{\sum _{j \in[1,N_{l}]} d_{j}(t)^{-1}} 
+		\label{eq:probabilidade}  
+ 	\end{equation}
+
+
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
