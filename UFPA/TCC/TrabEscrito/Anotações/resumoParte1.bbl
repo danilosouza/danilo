@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{onfast}
+Alberto "Bartesaghi, I~M a~Preprint Series, Vincent Hall, and Church Street~S"
+  E.
+\newblock "guillermo sapiro institute for mathematics and its applications
+  university of minnesota 5c . program element number o ( n ) implementation of
+  the fast marching algorithm".
+\newblock "2005".
+
+\bibitem{Protiere2007}
+Alexis "Protiere and Guillermo" Sapiro.
+\newblock "{Interactive image segmentation via adaptive weighted distances}".
+\newblock {\em "IEEE Trans. Image Process."}, "16"("4"):"1046--1057", "2007".
+
+\bibitem{colorization}
+Liron "Yatziv and Guillermo" Sapiro.
+\newblock "fast image and video colorization using chrominance blending".
+\newblock {\em "IEEE Trans. Image Process."}, "15":"1120--1129", "2006".
+
+\end{thebibliography}
