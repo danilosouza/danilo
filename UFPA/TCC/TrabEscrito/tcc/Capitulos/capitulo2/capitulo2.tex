@@ -3,14 +3,126 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 
-\chapter{Redes de sensores ópticos baseados em FBG}
-\label{cap:redes_sensores_FBG}
+\chapter{Processamento de imagem}
+\label{cap:processamento_imagens}
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------%
 %
-%ser proprietário.
+%
 
-%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+
+\section{Introdução à Processamento de Imagem}
+
+A III revolução industrial, na década de 1970, proporcionou diversos avanços tecnológicos nas mais diversas áreas da ciência, inclusive abrindo espaço novos ramos de estudo, como por exemplo a Inteligência Artificial que teve seus princípios imaginado por Alan Turing mas que só pode ser propriamente desenvolvida depois dos avanços alcançados por esta revolução. Outra área que se beneficiou desta revolução foi a tecnologia de sensores (e.g, sensores ópticos, de luz, de temperatura, de pressão, de resistência entre outros) devido ao grande avanço no processo de fabricação de \textit{chips} e componentes tornando possível a digitalização desses dispositivos, aumento assim sua precisão e reduzindo seu tamanho a níveis microscópicos nos dias de hoje.
+
+O avanço da tecnologia de sensores e armazenamento digital abriu possibilidades para diversas aplicações e dispositivos, inicialmente à nível militar e de pesquisa, como por exemplo a câmera digital que se tornou possível devido a criação de sensores de luminosidade mais precisos e principalmente ao armazenamento digital de informações em dispositivos de memória menores e com maior densidade, haja visto que o conceito de imagem digital reside no fato de que a imagem deve ser armazenada digitalmente.
+
+Ao final de década e 1990 e ínio dos anos 2000 começou a popularização das câmeras digitais e seu uso e suas vantagens começaram a ser mais difundidos. Neste ponto as memórias digitais já haviam avançado o suficiente para que as pessoas pudessem tirar algumas dezenas/centenas de fotos com suas câmeras. Na década de 2010 as câmeras digitais entraram definitivamente para a vida das pessoas com a popularização dos \textit{smartphones} e paralelo a isso houve também um aumento desses dispositivos principalmente em aplicações relacionadas à segurança como monitoramento de tráfego nas cidades, controle de velocidade, segurança de propriedades privadas, entre outros. A popularização das câmeras digitais em diversas áreas acaba por gera uma grande quantidade de conteúdo que muitas vezes não está organizado da melhor forma possível para interpretação do usuário.
+
+\subsection{Por que utilizar processamento de imagem?}
+
+Esse conteúdo gera a necessidade de técnicas de processamento e análise de imagem cada vez mais eficientes e robustas para que se possa aproveitar esse mundo de imagens geradas da melhor forma possível, portanto com o avanço da tecnologia de digitalização e armazenamento de imagens surge também a necessidade de pesquisa e melhorias nas técnicas para melhor aproveitar o material produzido, um exemplo prático é o reconhecimento automático de placas de automóveis em radares de detecção de velocidade para aplicação de multas. Em sistemas modernos o radar detecta que um veículo está acima do limite permitido e imediatamente tira uma foto da traseira do veículo, esta imagem é então processada por um algoritmo de segmentação de imagem que vai detectar a placa do veículo e posteriormente segmentar cada elemento da placa (números e letras) em imagens diferentes e enviar estas imagens para um algoritmo classificador que irá identificar a placa propriamente dita e enviar essa informação ao sistema principal para que a infração seja gerada para o dono do veículo.
+
+O exemplo apresentado mostra uma das principais vantagens de utilizar processamento de imagem no dia-a-dia, a automatização de sistemas, proporcionando eficiência, fluidez e praticidade em atividades repetitivas que antes precisavam da intervenção humana para analisar visualmente e então tomar decisões, já não necessitam de intervenção com o advento da visão computacional, \cite{Shapiro2000}, entretanto para que as decisões sejam tomadas de forma correta e os efeitos desse tipo de automação sejam positivos é necessário que as técnicas empregadas atendam à demanda existente, partindo dessa visão pode-se considerar a área de processamento de imagem como um meio para se chegar a visão computacional, conde máquinas analisam elementos visualmente para tomada de decisão. 
+
+
+O uso de máquinas para tomada de decisões baseadas em imagens é importante não apenas para automatizar e tonar determinadas tarefas mais eficientes mas também para analisar imagens que não são visíveis ao olho humano (i.e, infra-vermelho e ultra-violeta), a Figura \ref{fig:espectro_luz} mostra o espectro electromagnético, onde é possível perceber que a luz visível ao olho humano é apenas uma pequena parte de todo o espectro e por isso a importância de sistemas computacionais eficientes para interpretar e analisar imagens do espectro não visível, como as de raio gamma e raios-s, muito comuns em estudos astronômicos.
+
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.50]{./figuras/capitulo_2/espectro-luz.png}
+		\caption{Espectro electromagnético.  Ilustração: Peter Hermes Furian / Shutterstock.com}
+		\label{fig:espectro_luz}
+	\end{figure} 
+
+As seções seguintes irão detalhar os principais conceitos relacionados à processamento digital de imagens bem como as principais técnicas existentes e suas aplicações, sendo reservado uma seção para segmentação de imagens, que é o foco principal deste trabalho.
+
+
+\subsection{Definição e principais conceitos}
+
+\subsubsection{Definição}
+
+(Gonzáles et. al) definem em \cite{Gonzalez} que processamento digital de imagens têm dois focos principais: (1) Melhorar a qualidade para percepção humana e (2) Processar a imagem para armazenamento, transmissão e representação para percepção de máquinas autônomas. 
+
+Ainda segundo \cite{Gonzalez}, não existem fronteiras bem definidas no campo de estudos entre processamento de imagens e visão computacional, entretanto pode-se considerar três tipos de processos informatizados nesse caminho: (1) Baixo, (2) Médio e (3) Alto nível que serão detalhados a seguir:
+	\begin{enumerate}
+		\item \textbf{Processos de Baixo nível:} Envolve operações primitivas com imagens, tais como redução de ruído, aprimoramento de contraste e aguçamento de imagem. Este tipo de processo tem como característica o fato de que ambas entrada e saída são imagens.
+		\item \textbf{Processos de Médio nível:} Este processo envolve operações mais complexas como segmentação (particionamento da imagem em regiões ou objetos) e descrição desses objetos em um formato entendível para o processamento por computadores, além de classificação (reconhecimento) desses objetos. Normalmente as entradas deste processo são imagens e as saídas são atributos extraídos das imagens (e.g, bordas, contornos, e a identidade de objetos).
+		\item \textbf{Processos de Alto nível:} Este processo envolve a interpretação de objetos identificados e/ou reconhecidos pelas etapas anteriores, ou seja, dar significado a partir de funções cognitivas associadas à visão.
+	\end{enumerate}
+
+
+\subsubsection{Conceitos básicos}
+O conceito de processamento digital de imagem pode ser definido com o conjunto formado pelos três processos acima citados, criando assim uma ferramenta robusta capaz de extrair informações do mundo real, adequá-las a um formato apropriado (Baixo nível), extrair informações e parâmetros (Médio nível), analisar e tomar decisões com base nas informações coletadas (Alto nível). Tomando o exemplo dos radares de controle de velocidade mencionados na seção anterior para ilustrar o uso desses níveis na hora de estruturar uma ferramenta é possível fazer as seguintes associações:
+
+	\begin{itemize}
+		\item \textbf{Processo de Baixo nível:} Aplicação de filtros para melhorar o contraste da imagem a fim de facilitar a identificação de onde está a placa do automóvel.		
+		\item \textbf{Processo de Médio nível:} Segmentar as letras/números da placa do veículo, transformar cada caractere da placa em um arquivo, por exemplo, por fim classificá-los (i.e, identificar quais são as letras/números presentes naquela placa em análise).
+		\item \textbf{Processo de Alto nível:} De posse dos caracteres, o sistema desenvolvido irá identificar (reconhecer) que aquele array de caracteres naquela ordem significa a placa de um automóvel e enviará a informação da placa (no formato correto) para o sistema que irá gerar o auto de infração.  
+	\end{itemize}
+
+Para aprofundar os conhecimentos em processamento digital de imagens é necessário primeiramente o entendimento de alguns conceitos básicos que serão utilizados posteriormente para o entendimento de técnicas mais complexas, os principais conceitos são:
+
+	\begin{itemize}
+		\item \textbf{Imagem:} Segundo \cite{Gonzalez} uma imagem é definida como uma função bi-dimensional, $f(x,y)$, onde $x$ e $y$ são coordenadas espaciais e a amplitude de $f$ em qualquer par de coordenadas $(x,y)$ é chamada de intensidade ou nível de cinza da imagem naquele ponto.
+		\item \textit{\textbf{Pixel:}} É a menor unidade de uma imagem digital, ou seja, corresponde a um par de coordenadas $(x,y)$, representando um ponto espacial dentro da imagem.
+		\item \textbf{Texel:} É o elemento fundamental de uma textura, formado por um conjunto de \textit{pixels} que agrupados segundo uma ordem lógica formam a textura de uma imagem.
+		\item \textbf{Textura:}	De acordo com \cite{Shapiro2000} a textura de uma imagem é um conjunto de métricas calculadas no processamento da imagem designadas para quantificar a textura perceptível de uma imagem. Essa textura guarda informações referentes ao arranjo espacial de cores ou intensidades em uma imagem ou em uma região selecionada da imagem.
+		\item \textbf{Níveis de cinza:} Níveis para medir a intensidade (valor) de um \textit{pixel} em uma imagem digital, normalmente são valores no intervalo $[0,255]$
+		\item \textbf{Filtragem espacial:} Operação de convolução ou correlação (no domínio espacial) entre uma imagem e uma máscara (filtro), onde esta pode ter diversos formatos utilizados para suavização ou aguçamento de imagens, essa operação será detalhada logo abaixo
+	\end{itemize}
+
+
+
+\subsubsection{Operações básicas}
+
+Para realizar qualquer operação em uma imagem é necessário primeiro entender o conceito de janela ou elemento estruturante, este elemento consistem em uma matriz, que representa uma máscara para filtragem ou um operador morfológico (composto de 0's e 1's). Existem dois  tipos principais de operações que podem ser efetuadas sobre uma imagem e são elas: (1) correlação e convolução, onde a diferença entre a primeira e a segunda é que na convolução a máscara é rotacionada em 180º, por definição da própria operação, \cite{HAYKIN2001} e (2) Operações morfológicas. O primeiro tipo de operação envolve cálculos matemáticos enquanto que o segundo está associado com operações lógicas.
+
+A forma mais comum do uso das janelas são utilizar elementos quadrado ($N_{linhas} = N_{colunas}$) para que exista o elemento central, isto ocorre devido ao seu funcionamento que se dá da seguinte maneira: A janela é posicionada sobre parte da imagem de tal forma que seu \textit{pixel} central fique sobre o primeiro \textit{pixel} (e.g, ponto $x_{1},y_{1}$) da imagem de entrada e partir disso os elementos da janela são multiplicados  por seus correspondentes na imagem, os resultados são então somados e o resultado final é armazenado no ponto $x_{1},y_{1}$ da imagem de saída, este procedimento será explicado com mais detalhes.
+
+Apesar de serem muito utilizadas, operações com janela geram um problema no que diz respeito às bordas da imagem que ocorre quando o pixel central do operador (janela) está sobre os \textit{pixels} mais extremos da imagem fazendo com que parte da janela fique para fora da imagem, o que acarreta em uma operação sem valor para o resultado final pois a janela estaria atuando em cima de valores que não fazem parte da função $f(x,y)$ (imagem). Para resolver este problema existem 2 abordagens clássicas:
+	\begin{enumerate}
+		\item Expandir a imagem de tamanho, em $a = \frac{(m-1)}{2}$ linhas em cima e embaixo e $b = \frac{(n-1)}{2}$ colunas nas laterais, onde $N$x$M$ é o tamanho da janela.
+		\item Reduzir a imagem de saída em $a = \frac{(m-1)}{2}$ linhas em cima e embaixo e $b = \frac{(n-1)}{2}$ colunas nas laterais da imagem utilizando o como \textit{pixel} inicial o ponto $(x+a,y+b)$
+	\end{enumerate}
+
+Nas operações de correlação e convolução a janela representa o filtro ao qual a imagem será submetido, este procedimento é muito utilizado para realizar suavizações (filtros do tipo passa-baixa) ou aguçamentos na imagem (filtros do tipo passa-alta) devido à sua facilidade de implementação computacional. Os filtros mais comumente utilizados são matrizes quadradas e de tamanho ímpar para que haja a presença de um elemento central e caso o filtro $h (m\ X\ n)$, onde $m$ e $n$ são o tamanho do filtro, seja simétrico as operações de convolução e correlação são equivalentes. 
+
+A Figura \ref{fig:exemplo_filtro} um exemplo prático da convolução da Imagem $I$ pelo filtro $h$, resultando na imagem de saída $Y$, neste exemplo foi utilizada a abordagem (2), cita acima, para contornar o problema de borda. Generalizando este procedimento é possível chegar à Equação \ref{eq:saida_filtragem} para definir de forma genérica a imagem $Y$ em função da imagem de entrada $I$ e do tamanho do filtro.
+
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1.2]{./figuras/capitulo_2/exemploFiltro.pdf}
+		\caption{Exemplo de convolução/correlação 2-D}
+		\label{fig:exemplo_filtro}
+	\end{figure}
+
+%\include{Capitulos/capitulo2/exemploFiltro}
+\begin{equation}
+	Y(x,y) = \sum_{s=1}^{m} \sum_{t=1}^{n} I([(x+a)-\frac{m+1}{2}+s],[(y+b)-\frac{n+1}{2}+t])h(s,t)
+	\label{eq:saida_filtragem}
+\end{equation}
+
+
+
+
+\subsection{Aplicações de processamento de imagem}
+\subsection{Diferença entre Processamento e Análise de imagens}
+
+\subsubsection{Técnicas e aplicações de processamento}
+
+\subsubsection{Técnicas e aplicações da análise}
+
+\section{Segmentação de imagens}
+
+\subsection{Tipos de segmentação}
+\subsection{Principais aplicações}
+\subsection{Principais técnicas}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
