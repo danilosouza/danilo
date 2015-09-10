@@ -4,7 +4,7 @@
 %
 
 \chapter{A técnica estudada e Metodologia}
-\label{cap:descricao_tecnica_imp}
+\label{cap:descricao_tecnica_metod}
 
 %
 %----------------------------------------------------------------------------------------------------------------------------------------------------%
@@ -125,8 +125,42 @@ O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com 
 
 \section{Metodologia}
 
-Conforme descrito no capítulo anterior a técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas, entretanto o tempo de execução do algoritmo é alto e esta diretamente associado  ao número de \textit{pixels} marcados.
-	
+A técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas e não-uniformes, entretanto o tempo de execução do algoritmo é alto uma vez que é necessário calcular a distância de cada \textit{pixel} da imagem para cada um dos \textit{pixels} marcados afim de descobrir a menor distância e de acordo com o algoritmo descrito fazer a classificação dos pontos da imagem.
+
+Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo e partir disto foi decidido que o foco do trabalho seria em melhorar esse tempo de cálculo das distâncias. 
+
+A solução encontrada foi reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações, em outras palavras, a re-amostragem tem que ser uniforme para que não haja as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irã detalhar as modificações realizadas e como a avaliação será feita.
+
+\subsection{Modificações realizadas}
+
+
+A implementação da técnica será mostrada com mais detalhes no Capítulo \ref{cap:imp_resultados}, porém para melhor compreensão da modificação alguns passos serão descritos nesta seção. O mais importante neste caso é que os \textit{pixels} marcados são armazenados em uma matriz, chamada de matriz posição, que guarda tanto o valor quanto a posição dos \textit{pixels} escolhidos.
+
+A função \textit{reamostragem.m} é responsável por esse passo, recebendo como entrada uma matriz contendo a sub-região a ser re-amostrada e a taxa de re-amostragem, e retorna a matriz re-amostrada de acordo com a taxa escolhida, mais detalhes sobre essa função serão apresentados no Capítulo \ref{cap:imp_resultados}. Essa nova matriz é então utilizada pelo algoritmo para calcular as probabilidades e posteriormente fazer a classificação dos \textit{pixels}.
+
+O parâmetro modificado para análise do tempo é a taxa de re-amostragem, o valores escolhidos foram: $100\ \%$, $50\ \%$, $10\ \%$ e $1\ \%$ dos \textit{pixels} originalmente marcados. Os valores foram escolhidos para que seja possível analisar se a redução dos conjunto de \textit{pixels} marcados está diretamente ligada ao tempo de execução do algoritmo, por exemplo, se o conjunto $\Omega$ for reduzido pela metade acarretaria na redução pela metade no tempo total. Os número $10$ e $1$ foram escolhidos por representarem extremos, ou seja, verificar o impacto da eliminação de quase todos os \textit{pixes} de $\Omega$ no resultado final e determinar um \textit{trade-off} sobre o ganho de tempo em relação à taxa de re-amostragem desses pontos.
+
+\subsection{Parâmetros avaliados}
+
+Para avaliar o resultado das diferentes taxas de re-amostragem foram utilizados dois parâmetros principais: tempo e o erro na classificação dos \textit{pixels}, sendo que para avaliar o último foi considerado a imagem resultado sem re-amostragem como ponto de referência e a comparação é feita subtraindo as outras imagens resultado dessa imagem referência. Para análise do tempo foram utilizadas duas funções do $MatLab$, \textit{tic/toc} e \textit{etime} para garantir que a conformidade do tmepo medido. Esta avaliação de tempo ocorre de duas formas diferentes, primeiramente a função \textit{tic/toc} é utilizada para medir o tempo de execução de cada passo do algoritmo, que foi divido em oito etapas listadas abaixo. Enquanto que a função \textit{etime} foi usada para medir o tempo de execução total da função \textit{segmenta.m}, que será detalhada no Capítulo \ref{cap:imp_resultados}.
+
+		Etapas do algoritmos
+		\begin{enumerate}
+			\item Posição dos pixels marcados
+			\item Cálculo dos Canais
+			\item Pesos dos canais
+			\item Pesos da distância geodésica
+			\item Re-amostragem
+			\item Tempo total de segmentação
+			\item Cálculo das distâncias
+			\item Cálculo das probabilidades
+		\end{enumerate}
+
+
+
+
+
+
 	
 	
 	

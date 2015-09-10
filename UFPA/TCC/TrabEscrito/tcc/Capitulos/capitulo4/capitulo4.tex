@@ -4,7 +4,7 @@
 %
 
 \chapter{Implementação e Resultados}
-\label{cap:met_resultados}
+\label{cap:imp_resultados}
 
 \section{Implementação}
 
@@ -49,7 +49,7 @@ Uma vez calculadas as FDP's das regiões de interesse de cada canal, é possível c
 
 Cada \textit{pixel x} no intervalo $[0,255]$ tem um peso geodésico associado, descrito na equação \ref{eq:pesogeodesicofinal}, que representa o complemento da probabilidade de \textit{x} pertencer a uma determinada região ou sub-região. A função \textit{getGeodesicWeight.m} utilizada as equações \ref{eq:probpixeltotalexpandida} e \ref{eq:pesogeodesico} para encontrar os valores de $\Omega$ de uma sub-região em comparação com outra. Para cada valor de pixel é criada uma matriz $\Omega(r,s)$, onde $r$ é o número de regiões e $s$ é o número de sub-regiões, a função \textit{getGeodesicWeight.m} é chamada dentro de um laço para calcular o peso para cada sub-região, os pesos são calculados comparando uma a uma das sub-regiões, considerando o fato de que sub-regiões de uma mesma região não competem entre si, e a soma desses pesos é o peso geodésico final para o \textit{pixel} em questão.
 
-Por fim a classificação dos \textit{pixels} propriamente ditos é feita diretamente na função \textit{segmenta.m} que utiliza a função \textit{getMinDistance.m} para encontrar a menor distância de um ponto entre todas as sub-regiões, essas distâncias, calculadas a partir da equação \ref{eq:distgeodesica} são armazenas em uma matriz $D(r,s)$, conforme descrito anteriormente, e a partir dessa matriz é calculada um outra matriz $P(r,s)$ que armazena a probabilidade, segundo a equação \ref{eq:probabilidade}, do \textit{pixel} atual pertencer a cada uma das sub-regiões e então o menor valor da matriz $P$ representa a qual sub-região pertence o \textit{pixel} analisado.
+Por fim a classificação dos \textit{pixels} propriamente ditos é feita diretamente na função \textit{segmenta.m} que utiliza a função \textit{getMinDistance.m} para encontrar a menor distância de um ponto entre todas as sub-regiões, essas distâncias, calculadas a partir da equação \ref{eq:distgeodesica} são armazenas em uma matriz $D(r,s)$, conforme descrito anteriormente, e a partir dessa matriz é calculada um outra matriz $P(r,s)$ que armazena a probabilidade, segundo a equação \ref{eq:probabilidade}, do \textit{pixel} atual pertencer a cada uma das sub-regiões e então o menor valor da matriz $P$ representa a qual sub-região pertence o \textit{pixel} analisado:
 
 
 	\begin{equation}
