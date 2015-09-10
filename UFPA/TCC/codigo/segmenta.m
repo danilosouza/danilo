@@ -151,8 +151,13 @@ dist_min(r,s) = 0;
 probabilidade(r,s) = 0;
 
 
+% #####################################################
+% #                                                   #   
+% #          Reamostrando os pixels marcados          #
+% #                                                   #
+% #####################################################
+ 
 
-% ########## Reamostrando os pixels marcados ##########
 mat_posicao_nova(N,M,s,r) = 0;
 
 tic;
