@@ -11,7 +11,7 @@
 %
 
 
-\section{Introdução à Processamento de Imagem}
+\section{Introdução}
 
 A III revolução industrial, na década de 1970, proporcionou diversos avanços tecnológicos nas mais diversas áreas da ciência, inclusive abrindo espaço novos ramos de estudo, como por exemplo a Inteligência Artificial que teve seus princípios imaginado por Alan Turing mas que só pode ser propriamente desenvolvida depois dos avanços alcançados por esta revolução. Outra área que se beneficiou desta revolução foi a tecnologia de sensores (e.g, sensores ópticos, de luz, de temperatura, de pressão, de resistência entre outros) devido ao grande avanço no processo de fabricação de \textit{chips} e componentes tornando possível a digitalização desses dispositivos, aumento assim sua precisão e reduzindo seu tamanho a níveis microscópicos nos dias de hoje.
 
@@ -77,7 +77,7 @@ Para aprofundar os conhecimentos em processamento digital de imagens é necessári
 
 \subsubsection{Operações básicas}
 
-Para realizar qualquer operação em uma imagem é necessário primeiro entender o conceito de janela ou elemento estruturante, este elemento consistem em uma matriz, que representa uma máscara para filtragem ou um operador morfológico (composto de 0's e 1's). Existem dois  tipos principais de operações que podem ser efetuadas sobre uma imagem e são elas: (1) correlação e convolução, onde a diferença entre a primeira e a segunda é que na convolução a máscara é rotacionada em 180º, por definição da própria operação, \cite{HAYKIN2001} e (2) Operações morfológicas. O primeiro tipo de operação envolve cálculos matemáticos enquanto que o segundo está associado com operações lógicas.
+Para realizar qualquer operação em uma imagem é necessário primeiro entender o conceito de janela ou elemento estruturante, este elemento consistem em uma matriz, que representa uma máscara para filtragem ou um operador morfológico.  Existem dois  tipos principais de operações fundamentais que podem ser efetuadas sobre uma imagem e são elas: (1) correlação e convolução, onde a diferença entre a primeira e a segunda é que na convolução a máscara é rotacionada em 180º, por definição da própria operação, \cite{HAYKIN2001} e (2) Operações morfológicas. O primeiro tipo de operação envolve cálculos matemáticos enquanto que o segundo está associado com operações lógicas.
 
 A forma mais comum do uso das janelas são utilizar elementos quadrado ($N_{linhas} = N_{colunas}$) para que exista o elemento central, isto ocorre devido ao seu funcionamento que se dá da seguinte maneira: A janela é posicionada sobre parte da imagem de tal forma que seu \textit{pixel} central fique sobre o primeiro \textit{pixel} (e.g, ponto $x_{1},y_{1}$) da imagem de entrada e partir disso os elementos da janela são multiplicados  por seus correspondentes na imagem, os resultados são então somados e o resultado final é armazenado no ponto $x_{1},y_{1}$ da imagem de saída, este procedimento será explicado com mais detalhes.
 
@@ -87,33 +87,80 @@ Apesar de serem muito utilizadas, operações com janela geram um problema no que 
 		\item Reduzir a imagem de saída em $a = \frac{(m-1)}{2}$ linhas em cima e embaixo e $b = \frac{(n-1)}{2}$ colunas nas laterais da imagem utilizando o como \textit{pixel} inicial o ponto $(x+a,y+b)$
 	\end{enumerate}
 
-Nas operações de correlação e convolução a janela representa o filtro ao qual a imagem será submetido, este procedimento é muito utilizado para realizar suavizações (filtros do tipo passa-baixa) ou aguçamentos na imagem (filtros do tipo passa-alta) devido à sua facilidade de implementação computacional. Os filtros mais comumente utilizados são matrizes quadradas e de tamanho ímpar para que haja a presença de um elemento central e caso o filtro $h (m\ X\ n)$, onde $m$ e $n$ são o tamanho do filtro, seja simétrico as operações de convolução e correlação são equivalentes. 
+Nas operações de correlação e convolução a janela representa o filtro ao qual a imagem será submetido, este procedimento é muito utilizado para realizar suavizações (filtros do tipo passa-baixa) ou aguçamentos na imagem (filtros do tipo passa-alta) devido à sua facilidade de implementação computacional. Os filtros mais comumente utilizados são matrizes quadradas e de tamanho ímpar para que haja a presença de um elemento central e caso o filtro $h (m\ X\ n)$, onde $m$ e $n$ são o tamanho do filtro, seja simétrico as operações de convolução e correlação são equivalentes. Estas operações são muito utilizadas na etapa de pré-processamento de imagens, para eliminação de ruído, realce de bordas, suavização de imagens, existem diversos tipos de filtros com objetivos específicos (e.g, detecção de texturas) que serão explicados mais detalhadamente adiante neste capítulo.
 
-A Figura \ref{fig:exemplo_filtro} um exemplo prático da convolução da Imagem $I$ pelo filtro $h$, resultando na imagem de saída $Y$, neste exemplo foi utilizada a abordagem (2), cita acima, para contornar o problema de borda. Generalizando este procedimento é possível chegar à Equação \ref{eq:saida_filtragem} para definir de forma genérica a imagem $Y$ em função da imagem de entrada $I$ e do tamanho do filtro.
+A Figura \ref{fig:exemplo_filtro} mostra um exemplo prático da convolução da Imagem $I$ pelo filtro $h$, resultando na imagem de saída $Y$, neste exemplo foi utilizada a abordagem (2), cita acima, para contornar o problema de borda. Generalizando este procedimento é possível chegar à Equação \ref{eq:saida_filtragem} para definir de forma genérica a imagem $Y$ em função da imagem de entrada $I$ e do tamanho do filtro.
 
 
-	\begin{figure}[h]
+	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=1.2]{./figuras/capitulo_2/exemploFiltro.pdf}
+		\includegraphics[scale=1]{./figuras/capitulo_2/exemploFiltro.pdf}
 		\caption{Exemplo de convolução/correlação 2-D}
 		\label{fig:exemplo_filtro}
 	\end{figure}
 
-%\include{Capitulos/capitulo2/exemploFiltro}
 \begin{equation}
 	Y(x,y) = \sum_{s=1}^{m} \sum_{t=1}^{n} I([(x+a)-\frac{m+1}{2}+s],[(y+b)-\frac{n+1}{2}+t])h(s,t)
 	\label{eq:saida_filtragem}
 \end{equation}
 
+Dentro do conjunto de operações básicas existem também as operações de erosão ($\ominus$) e dilatação ($\oplus$) da imagem, utilizadas, respectivamente, para remover objetos menores que o elemento estruturante e preencher espaços vazios, entretanto essas operações resultam, respectivamente, em encolhimento e aumento indesejável dos objetos restantes nas imagens e para resolver este problema utiliza-se as duas técnicas: (1) Abertura e (2) Fechamento. Considere a matriz $A$ e o elemento estruturante $B$, ambos binários, erosão e dilatação de $A$ por $B$ são representadas, respectivamente, por $A \ominus B$ e a dilatação por $A \oplus B$ e podem ser definidas como:
+
+	\begin{itemize}
+		\item \textbf{Erosão:} O elemento estruturante ``anda'' pela imagem tendo como origem seu elemento central, como se fosse um filtro, e para cada posição $(x,y)$ de $B$ dentro de $A$, a saída $g(x,y)$ será igual a 1 se os elementos diferentes de zero de $B$ e de $A$ para aquela janela (que possui tamanho igual ao de $B$) coincidirem, ou seja, se $B$ encaixar em $A'$.
+		
+		A Figura \ref{fig:exemplo_erosao} ilustra $A \ominus B$, na Figura \ref{fig:exemplo_erosao_a} é possível visualizar que os elementos em verde de $B$ coincidem com os elementos em verde de $A$ (considerando a origem de $B$ o ponto $B(2,2)$, entretanto há elementos em $B$ (marcados em vermelho) que estão fora de $A$ ou não coincidem com elementos de $A$ diferentes de zero, nesse caso a erosão não ocorre e portanto $g(1,1) = 0$.
+		\item \textbf{Dilatação:} O algoritmo é parecido com o da erosão à exceção de que para que a saída seja '1' o elemento estruturante $B$ não precisa encaixar na janela atual de $A$ mas apenas tocá-la. A Figura \ref{fig:exemplo_dilatacao} ilustra a dilatação de $A$ por $B$. É possível visualizar na Figura \ref{fig:exemplo_dilatacao_a} que nenhum elemento não nulo de $A$ coincide com os elementos não nulos de $B$, logo $g(1,6) = 0$, enquanto que na Figura \ref{fig:exemplo_dilatacao_b} o elemento $B(3,2)$ coincide com um dos elementos não nulos de $A$, portanto $g(2,5) = 1$.
+		
+		
+	\end{itemize}
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=1.2]{./figuras/capitulo_2/exemploErosaoBase.pdf}
+		\caption{Matriz A e elemento estruturante B}
+		\label{fig:exemplo_morfologia_base}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Caso onde não ocorre a erosão]{
+		\includegraphics[scale=0.85]{./figuras/capitulo_2/exemploErosaoA.pdf}
+		\label{fig:exemplo_erosao_a}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Caso onde ocorre a erosão]{
+		\includegraphics[scale=0.85]{./figuras/capitulo_2/exemploErosaoB.pdf}
+		\label{fig:exemplo_erosao_b}}	
+		\vspace{0.1cm}
+		\subfloat[Resultado final de s$A \ominus B$]{
+		\includegraphics[scale=1]{./figuras/capitulo_2/exemploErosao.pdf}
+		\label{fig:exemplo_erosao_final}}	
+		\caption{Erosão de $A$ por $B$. A Figura \ref{fig:exemplo_erosao_a} mostra o caso em que a erosão não ocorre, a Figura \ref{fig:exemplo_dilatacao_b} mostra o caso em que a erosão ocorre e por fim a Figura \ref{fig:exemplo_erosao_final} mostra o resultado final de $A \ominus B$.}
+		\label{fig:exemplo_erosao}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Caso onde não ocorre a dilatação]{
+		\includegraphics[scale=0.85]{./figuras/capitulo_2/exemploDilatacaoA.pdf}
+		\label{fig:exemplo_dilatacao_a}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Caso onde ocorre a dilatação]{
+		\includegraphics[scale=0.85]{./figuras/capitulo_2/exemploDilatacaoB.pdf}
+		\label{fig:exemplo_dilatacao_b}}	
+		\vspace{0.1cm}
+		\subfloat[Resultado final de s$A \ominus B$]{
+		\includegraphics[scale=1]{./figuras/capitulo_2/exemploDilatacao.pdf}
+		\label{fig:exemplo_dilatacao_final}}	
+		\caption{Dilatação de $A$ por $B$. A Figura \ref{fig:exemplo_dilatacao_a} mostra o caso em que a dilatação não ocorre, a Figura \ref{fig:exemplo_dilatacao_b} mostra o caso em que a dilatação ocorre e por fim a Figura \ref{fig:exemplo_erosao_final} mostra o resultado final de $A \oplus B$.}
+		\label{fig:exemplo_dilatacao}
+	\end{figure}
 
 
+\subsection{Aplicações de processamento de imagem e principais técnicas}
 
-\subsection{Aplicações de processamento de imagem}
-\subsection{Diferença entre Processamento e Análise de imagens}
-
-\subsubsection{Técnicas e aplicações de processamento}
-
-\subsubsection{Técnicas e aplicações da análise}
 
 \section{Segmentação de imagens}
 
