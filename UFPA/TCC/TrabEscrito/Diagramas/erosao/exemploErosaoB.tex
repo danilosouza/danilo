@@ -1,0 +1,48 @@
+% Highlighting elements in matrices
+% Author: Stefan Kottwitz
+\documentclass[varwidth=true]{standalone}
+\usepackage{tikz}
+\pagenumbering{gobble}
+\usepackage{amsmath}
+\usetikzlibrary{trees}
+%%%<
+
+\usetikzlibrary{fit,arrows,matrix,positioning,shapes.misc,shadows}
+
+\tikzset{%
+  highlight/.style={rectangle,rounded corners,fill=red!15,draw,fill opacity=0.5,thick,inner sep=0pt}
+}
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline=(#1.base)] \node (#1) {#2};}
+%
+\newcommand{\Highlight}[1][submatrix]{%
+    \tikz[overlay,remember picture]{
+    \node[highlight,fit=(left.north west) (right.south east)] (#1) {};}
+}
+
+
+\begin{document}
+\[
+	A = \left[\begin{array}{*6{c}}
+    0 & \color{green}{1} & 1 & 0 & 0 & 0 \\
+    \color{green}{1} & \color{green}{1} & \color{green}{1} & 0 & 0 & 0 \\
+    0 & \color{green}{1} & 1 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1 & 1 & 1 \\
+    0 & 1 & 1 & 1 & 1 & 1  \\
+    0 & 1 & 1 & 1 & 0 & 1 
+  \end{array}\right]
+  \qquad
+  B  = \left[\begin{array}{*3{c}}
+    \tikzmark{left}{0} & \color{green}{1} & 0\\
+    \color{green}{1} & \color{green}{1} & \color{green}{1} \\
+    0 & \color{green}{1} & \tikzmark{right}{0}
+  \end{array}\right]
+\]
+
+\tikz[overlay,remember picture] {
+  %\draw[->,thick,red,dashed] (first) -- (second); 
+  %\draw[->,thick,green,dashed] (third) -- (fourth) 
+  %\node[above of=first] {$N$};
+  %\node[above of=second] {$N^T$};
+}
+
+\end{document}?
