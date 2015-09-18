@@ -1,0 +1,110 @@
+\begin{thebibliography}{10}
+
+\bibitem{Shapiro2000}
+Linda Shapiro and George Stockman.
+\newblock {Computer Vision}.
+\newblock 9:609, 2000.
+
+\bibitem{Gonzalez}
+Rafael~C Gonzalez, Richard~E Woods, and Barry~R Masters.
+\newblock {Digital image processing, third edition.}
+\newblock {\em Journal of biomedical optics}, 14(2):029901.
+
+\bibitem{HAYKIN2001}
+S.S. HAYKIN and B.~{VAN VEEN}.
+\newblock {\em {Sinais e sistemas}}.
+\newblock Bookman, 2001.
+
+\bibitem{Bambach2013}
+Sven Bambach.
+\newblock {A Survey on Recent Advances of Computer Vision Algorithms for
+  Egocentric Video}.
+\newblock {\em 2013}, 2013.
+
+\bibitem{Radke2010}
+Richard~J. Radke.
+\newblock {A Survey of Distributed Computer Vision Algorithms}.
+\newblock {\em Handbook of Ambient Intelligence and Smart Environments}, pages
+  35--55, 2010.
+
+\bibitem{Khan2014}
+Waseem Khan.
+\newblock {Image Segmentation Techniques: A Survey}.
+\newblock {\em Journal of Image and Graphics}, 1(4):166--170, 2014.
+
+\bibitem{Chauhan2014}
+Amit~Singh Chauhan, Sanjay Silakari, and Manish Dixit.
+\newblock {Image Segmentation Methods: A Survey Approach}.
+\newblock {\em 2014 Fourth International Conference on Communication Systems
+  and Network Technologies}, 6:929--933, 2014.
+
+\bibitem{Jain1993}
+Nainy Jain and Archana Lala.
+\newblock {Image Segmentation : A Short Survey}.
+\newblock pages 380--384, 1993.
+
+\bibitem{Saraswathi2013}
+S.~Saraswathi and a.~Allirani.
+\newblock {Survey on image segmentation via clustering}.
+\newblock {\em 2013 International Conference on Information Communication and
+  Embedded Systems, ICICES 2013}, pages 331--335, 2013.
+
+\bibitem{Acharya2013}
+Jay Acharya, Sohil Gadhiya, and Kapil Raviya.
+\newblock {Segmentation Techniques for Image Analysis: A Review}.
+\newblock {\em International Journal of Computer Science and Management
+  Research}, 2(1):1218--1221, 2013.
+
+\bibitem{Huang2011}
+Hi~Huang, Ch~Kuo, and Ps~Li.
+\newblock {Adaptive segmentation method of currency image based on texture
+  features}.
+\newblock {\em \ldots (NCM), 2011 7th \ldots}, pages 49--53, 2011.
+
+\bibitem{Yi2012}
+Faliu Yi and Inkyu Moon.
+\newblock {Image segmentation: A survey of graph-cut methods}.
+\newblock {\em 2012 International Conference on Systems and Informatics, ICSAI
+  2012}, (Icsai):1936--1941, 2012.
+
+\bibitem{Deshmukh2014}
+Bhupendra~S Deshmukh.
+\newblock {Segmentation of Microscopic Images : A Survey}.
+\newblock pages 10--12, 2014.
+
+\bibitem{Senthilkumaran2009}
+N.~Senthilkumaran and R.~Rajesh.
+\newblock {Image segmentation - A survey of soft computing approaches}.
+\newblock {\em ARTCom 2009 - International Conference on Advances in Recent
+  Technologies in Communication and Computing}, (1):844--846, 2009.
+
+\bibitem{Raut2009}
+Shital Raut, M.~Raghuvanshi, R.~Dharaskar, and Adarsh Raut.
+\newblock {Image segmentation - A state-of-art survey for prediction}.
+\newblock {\em Proceedings - International Conference on Advanced Computer
+  Control, ICACC 2009}, pages 420--424, 2009.
+
+\bibitem{Protiere2007}
+Alexis Protiere and Guillermo Sapiro.
+\newblock {Interactive image segmentation via adaptive weighted distances}.
+\newblock {\em IEEE Transactions on Image Processing}, 16(4):1046--1057, 2007.
+
+\bibitem{Manjunath1996}
+B~Manjunath and W~Ma.
+\newblock {Texture features for browsing and retrivieval of image data}.
+\newblock {\em $\backslash$mbox\{IEEE\} Trans. on Pattern Analysis and Machine
+  Intelligence}, 8(18):837--842, 1996.
+
+\bibitem{Sivalingamaiah2012}
+M~Sivalingamaiah and B~D~Venakramana Reddy.
+\newblock {Texture Segmentation Using Multichannel Gabor Filtering}.
+\newblock 2(6):22--26, 2012.
+
+\bibitem{Shioyama1999}
+Tadayoshi Shioyama, Haiyuan Wu, and Shigetomo Mitani.
+\newblock {Segmentation and object detection with Gabor filters and cumulative
+  histograms}.
+\newblock {\em Proceedings - International Conference on Image Analysis and
+  Processing, ICIAP 1999}, (1):412--417, 1999.
+
+\end{thebibliography}
