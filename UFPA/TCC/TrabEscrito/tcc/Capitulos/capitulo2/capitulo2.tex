@@ -11,7 +11,8 @@
 %
 
 
-\section{Introdução}
+\section{Introdução à Processamento de Imagens Digitais}
+\label{sec:introdução}
 
 A III revolução industrial, na década de 1970, proporcionou diversos avanços tecnológicos nas mais diversas áreas da ciência, inclusive abrindo espaço novos ramos de estudo, como por exemplo a Inteligência Artificial que teve seus princípios imaginado por Alan Turing mas que só pode ser propriamente desenvolvida depois dos avanços alcançados por esta revolução. Outra área que se beneficiou desta revolução foi a tecnologia de sensores (e.g, sensores ópticos, de luz, de temperatura, de pressão, de resistência entre outros) devido ao grande avanço no processo de fabricação de \textit{chips} e componentes tornando possível a digitalização desses dispositivos, aumento assim sua precisão e reduzindo seu tamanho a níveis microscópicos nos dias de hoje.
 
@@ -20,6 +21,7 @@ O avanço da tecnologia de sensores e armazenamento digital abriu possibilidades 
 Ao final de década e 1990 e ínio dos anos 2000 começou a popularização das câmeras digitais e seu uso e suas vantagens começaram a ser mais difundidos. Neste ponto as memórias digitais já haviam avançado o suficiente para que as pessoas pudessem tirar algumas dezenas/centenas de fotos com suas câmeras. Na década de 2010 as câmeras digitais entraram definitivamente para a vida das pessoas com a popularização dos \textit{smartphones} e paralelo a isso houve também um aumento desses dispositivos principalmente em aplicações relacionadas à segurança como monitoramento de tráfego nas cidades, controle de velocidade, segurança de propriedades privadas, entre outros. A popularização das câmeras digitais em diversas áreas acaba por gera uma grande quantidade de conteúdo que muitas vezes não está organizado da melhor forma possível para interpretação do usuário.
 
 \subsection{Por que utilizar processamento de imagem?}
+\label{sub:porque_processamento_imagens}
 
 Esse conteúdo gera a necessidade de técnicas de processamento e análise de imagem cada vez mais eficientes e robustas para que se possa aproveitar esse mundo de imagens geradas da melhor forma possível, portanto com o avanço da tecnologia de digitalização e armazenamento de imagens surge também a necessidade de pesquisa e melhorias nas técnicas para melhor aproveitar o material produzido, um exemplo prático é o reconhecimento automático de placas de automóveis em radares de detecção de velocidade para aplicação de multas. Em sistemas modernos o radar detecta que um veículo está acima do limite permitido e imediatamente tira uma foto da traseira do veículo, esta imagem é então processada por um algoritmo de segmentação de imagem que vai detectar a placa do veículo e posteriormente segmentar cada elemento da placa (números e letras) em imagens diferentes e enviar estas imagens para um algoritmo classificador que irá identificar a placa propriamente dita e enviar essa informação ao sistema principal para que a infração seja gerada para o dono do veículo.
 
@@ -40,6 +42,8 @@ As seções seguintes irão detalhar os principais conceitos relacionados à process
 
 
 \subsection{Definição e principais conceitos}
+\label{sub:definicao}
+
 
 \subsubsection{Definição}
 
@@ -70,7 +74,9 @@ Para aprofundar os conhecimentos em processamento digital de imagens é necessári
 		\item \textbf{Texel:} É o elemento fundamental de uma textura, formado por um conjunto de \textit{pixels} que agrupados segundo uma ordem lógica formam a textura de uma imagem.
 		\item \textbf{Textura:}	De acordo com \cite{Shapiro2000} a textura de uma imagem é um conjunto de métricas calculadas no processamento da imagem designadas para quantificar a textura perceptível de uma imagem. Essa textura guarda informações referentes ao arranjo espacial de cores ou intensidades em uma imagem ou em uma região selecionada da imagem.
 		\item \textbf{Níveis de cinza:} Níveis para medir a intensidade (valor) de um \textit{pixel} em uma imagem digital, normalmente são valores no intervalo $[0,255]$
-		\item \textbf{Filtragem espacial:} Operação de convolução ou correlação (no domínio espacial) entre uma imagem e uma máscara (filtro), onde esta pode ter diversos formatos utilizados para suavização ou aguçamento de imagens, essa operação será detalhada logo abaixo
+		\item \textbf{Filtragem espacial:} Operação de convolução ou correlação (no domínio espacial) entre uma imagem e uma máscara (filtro), onde esta pode ter diversos formatos utilizados para suavização ou aguçamento de imagens, essa operação será detalhada logo abaixo.
+		\item \textbf{\textit{Pixel} vizinho:} Um \textit{pixel x} é considerado vizinho do \textit{pixel p} se, e somente se, a distância entre $x$ e $p$ for igual a 1 $\therefore$ ($ d_{s \rightarrow p} = 1 $).
+		\item \textbf{Conectividadede \textit{pixels}:} Em imagens digitais existem duas possibilidades de um pixel estar conectado à outro, a conexão pode ser do tipo 4-conectado ou 8-conectado, na primeira considera-se conectados ao pixel $p$ apenas os \textit{pixels} vizinhos na vertical e na horizontal, enquanto que na segunda considera-se os conectados ao \textit{pixel} $p$ os vizinhos em todas as direções (vertical, horizontal e diagonal).
 	\end{itemize}
 
 
@@ -159,14 +165,77 @@ Dentro do conjunto de operações básicas existem também as operações de erosão ($
 	\end{figure}
 
 
-\subsection{Aplicações de processamento de imagem e principais técnicas}
+\subsection{Aplicações de processamento de imagem}
+\label{sub:aplicacoes}
 
+Existem diversas área em que é possível aplicar processamento digital de imagem, seja para automatizar processos ou melhorar a qualidade de um serviço, por exemplo, na automação industrial para otimizar a seleção de produtos  ou identificar falhas na linha de montagem, na compressão de vídeos e imagens para transmissão em redes (i.e, com a popularização dos \textit{smartphones} e das redes móveis a necessidade de reduzir largura de banda na transmissão de arquivos multimídia aumentou nos últimos anos), na digitalização e classificação automática de textos (i.e, permitindo assim a busca em documentos que não foram gerados digitalmente), em segurança usando reconhecimento facial para identificação de pessoas autorizadas, na restauração de imagens que sofreram desgaste do tempo, na área forense usando técnicas que provem, por exemplo, que uma determinada foto foi tirada com uma câmera específica ou que uma imagem foi adulterada, ajudando assim em inquéritos policiais. Abaixo está uma lista de algumas das principais sub-áreas que compões as aplicações acima citadas:
+	\begin{itemize}
+		\item Modelagem de imagem
+		\item Restauração de imagem
+		\item Segmentação
+		\item Interpolação
+		\item Reconhecimento de face
+		\item Codificação de imagem/vídeo
+		\item Sistemas de \textit{eye-tracking}
+		\item Super resolução
+		\item Identificação de dispositivo
+		\item Verificação de Adulteração
+		\item Redução de ruído
+		\item Marca d'água digital
+	\end{itemize}
+
+Além das aplicabilidades mencionadas, a área de visão computacional \cite{Shapiro2000} tem ganhado destaque nos últimos anos por ajudar a analisar situações que antes não eram possíveis, como por exemplo os vídeos em primeira pessoa que apresentam desafios não previstos por técnicas de processamento de imagem inicialmente projetadas para fotos/vídeos feitos por uma terceira pessoa fora da cena. Estes tipos de vídeos apresentam desafios como: (1) Objetos que somem e reaparecem em cena inesperadamente (2) Borrão na câmera causados por sujeira ou água (comum em vídeos de esportes) conforme descrito em \cite{Bambach2013}, o autor também descreve os principais avanços recentes em algoritmos de visão computacional para o campo específico de vídeos em primeira pessoa.
+
+A popularização e redução do custo de câmeras digitais e \textit{smartphones} permitiu a criação de redes sem-fio de câmeras, criando a demanda por algoritmos de visão computacional que se adequem às dificuldades desses dispositivos como: (1) baterias com diferentes capacidades, (2) processadores limitados e (3) antenas com capacidade limitada, em \cite{Radke2010} o autor explica os principais algoritmos utilizados em visão computacional distribuída.
 
 \section{Segmentação de imagens}
+\label{sec:segmentacao}
+
+A área de processamento de imagem é bastante ampla e suas técnicas podem ser aplicadas em diversas áreas para distintos fins (e.g, automação, práticas forense, restauração, análise cognitiva, etc.) e até agora essas áreas foram apenas citadas e suas principais aplicações foram descritas, nesta seção serão detalhadas os tipos de segmentação de imagem, sendo esta a área de interesse deste trabalho, existentes e as principais técnicas utilizadas.
+
+O desenvolvimento de uma aplicação deve ser pensado de forma a atender as demandas requisitadas e em todas os tipos de problemas, desde os mais complexos aos mais simples, duas variáveis são cruciais nesta etapa: (1) tempo e (2) eficiência, estas compõem o grande desafio no desenvolvimento de novas soluções pois cada vez mais busca-se reduzir o tempo de execução de uma determinada tarefa para aumentar sua eficiência (i.e, realizar mais tarefas num mesmo intervalo de tempo). s
+
+Dividir um imagem em regiões de interesse distintas ou simplesmente separar um objeto do fundo é um dos processos mais importantes para análise de imagem pois é nele que são retirados da imagem original aquilo que será de fato utilizado para o processamento final, reduzindo assim o tempo gasto na execução de algoritmos posteriores bem como facilitando o trabalho de extrair informações.  Esse processo irá assinalar valores para cada \textit{pixel} da imagem (onde regiões distintas possuem valores iguais) para facilitar a diferenciação entre as regiões de interesse.  Essa diferenciação entre as regiões ocorre em função de três propriedades da imagem: (1) cor, (2) intensidade e (3) textura da imagem, portanto a escolha de qual técnica será utilizada deve ocorrer após um estudo do domínio do problema.
+
+O conceito de região é importante pois normalmente regiões representam objetos em uma imagem. Gonzáles \cite{Gonzalez} mostra que uma imagem $R$ pode ser dividida em $n$ sub-regiões, $ R_{1}, R_{2},\dots, R_{n} $ tal que:
+
+	\begin{enumerate}
+		\item $ \bigcup_{i=1}^{n}R_{i} = R $.
+		\item $ R_{i}$ é um conjunto conectado, $i = 1, 2,\dots, n $.
+		\item $ R_{i} \cap R_{j} = \emptyset $ para todo $i$ e $j$, onde $ i \neq j $.
+		\item $ Q(R_{i}) = VERDADEIRO\ para\  i = 1, 2,\dots, n $.
+		\item $ Q(R_{i} \cup R_{j}) = FALSO $.
+	\end{enumerate}
+
+Onde $Q(R_{k})$ representa a função (ou propriedade) que deve ser satisfeita pelos \textit{pixels} pertencentes à $R_{k}$ (e.g, se todos os \textit{pixels} da região $R_{i}$ tiverem a mesma intensidade), $\emptyset$ é o conjunto vazio, $\cup\ e\ \cap$ representam, respectivamente, a união e a intersecção entre duas regiões distintas. Duas regiões $R_{i}\ e\ R_{j}$ são adjacentes se a união entre elas forma um conjunto conectado. 
+
+Este é portanto um dos ramos mais estudados em processamento de imagem com diversas técnicas consolidadas (\cite{Khan2014,Chauhan2014,Jain1993,Saraswathi2013,Acharya2013}) e novas abordagens surgindo, algumas específicas para determinados problemas, para mais detalhes sobre algumas delas o leitor deve verificar (\cite{Huang2011,Yi2012,Deshmukh2014,Senthilkumaran2009,Raut2009}).
+
+\subsection{Classificação das técnicas de segmentação}
+\label{sub:tecnicas_segmentacao}
+
+A otimização pode ser feita ao longo de várias etapas do desenvolvimento de uma solução, para o caso específico de processamento de imagens é comum tentar encontrar técnicas que sejam o mais específico possível para solucionar problemas e utilizar abordagens que ponderem o tempo em detrimento de algum outro fator menos relevante (e.g, qualidade, tamanho, modelo de cores).
+
+Em relação à escolha de qual técnica de segmentação utilizar, três tipos devem ser considerados em termos de tempo, esforço e custo, são eles:
+	
+	\begin{enumerate}
+		\item \textbf{Técnicas Automáticas:} Muito utilizadas para segmentar objetos com geometria uniforme (ou quase uniforme) em imagens pré-determinadas (e.g, separar moedas do fundo, separar células, contar caixas em uma estante para controle de estoque, identificar produtos fora do padrão de qualidade especificado). Estas finalidades requerem algoritmos rápidos, entretanto normalmente trabalham com uma heurística refinada para que se obtenha o desempenho desejado. Não necessitam de intervenção humana, o sistema recebe a imagem de entrada e automaticamente separa os objetos de interesse.
+		\item \textbf{Técnicas Semi-automáticas:} São técnicas em que o usuário insere alguma informação (heurística) antes do processamento para facilitar a segmentação, como por exemplo, marcar os objetos de interesse, delimitar uma região da imagem onde o algoritmo irá atuar. A heurística de entrada permite a segmentação de imagens mais complexas (e.g, o fundo não é uniforme, os objetos de interesse possuem o mesmo formato e/ou cor que objetos que não são de interesse). A técnica em estudo neste trabalho (\cite{Protiere2007}) pode ser classificada nesta categoria.
+		\item \textbf{Técnicas Manuais:} São utilizadas quando os algoritmos existentes não são suficientes para extrair a informação desejada da imagem (dificilmente essa situação ocorre na prática), normalmente são utilizados softwares especiais (\cite{photoshop}) de edição de imagem, onde o usuário deve manualmente marcar todas as regiões da imagem (normalmente fazendo isso \textit{pixels} a \textit{pixel}. Este tipo de técnica apresenta um resultado ideal mas na maioria dos casos é inviável porque necessita de muito tempo (principalmente para imagens \textit{Full HD (1080x1920 pixels)} e acarreta em custo com a mão de obra especializada para desenvolver as tarefas.
+	\end{enumerate}	 
 
 \subsection{Tipos de segmentação}
-\subsection{Principais aplicações}
-\subsection{Principais técnicas}
+\label{sub:tipos_segmentação}
+Khan \cite{Khan2014} mostra uma categorização das principais técnicas de segmentação de imagem de acordo com a ideia principal por trás dos algoritmos, o autor sugere que a segmentação de imagens pode ser baseada em:
+	\begin{enumerate}
+		\item \textbf{Borda:} Este tipo de segmentação realiza detecção de bordas (linhas
+		\item \textbf{Lógica Fuzzy:}
+		\item \textbf{Equações Diferenciais Parciais:}
+		\item \textbf{Redes Neurais Artificiais:}
+		\item \textbf{Limiar:} Esta é a segmentação mais simples, escolhe-se um valor $T$ e os \textit{pixels} abaixo de $T$ ($ R(x,y) \leq T$) são marcados como ''preto`` (ou $0$) e os valores acima de $T$ ($ R(x,y) \geq T$) são marcados como branco (ou $255$ para imagens de 8 \textit{bits}). Entretanto para que este processo seja eficiente é necessário que a escolha de $T$ seja feita de forma automática, um dos algoritmos mais conhecidos e utilizado por muito tempo foi criado por Otsu \cite{Otsu1979}. Sezgin  \cite{Sezgin2004} faz uma comparação entre 40 algoritmos baseados em limiar (\textit{threshold}). 
+		\item \textbf{Região:}
+	\end{enumerate}
+
 
 
 
