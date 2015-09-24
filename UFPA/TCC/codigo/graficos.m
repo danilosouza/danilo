@@ -66,6 +66,11 @@ tempo_total = sum(tempo,3);
 % distância representa em relação ao tempo total de execução do algoritmo
 percent = tempo_distancia./tempo_total*100;
 
+% Variável que guarda o tempo das reamostragens de 1, 10 e 50 % relativos
+% ao tempo total de 100%
+tempo_relativo = 100-(vertcat((tempo_total(2,:)./tempo_total(1,:))*100,(tempo_total(3,:)./tempo_total(1,:))*100,(tempo_total(4,:)./tempo_total(1,:))*100));
+
+
 %bar(+(percent' >= 96 & percent' <= 97 ),'DisplayName','tempo_distancia');legend('Full Set','Reamostragem à 50%','Reamostragem à 10%','Reamostragem à 1%','FontSize',14);xlabel('Imagem');title('imagens com percent no intervalo [96,97]')
 %figure;
 %bar(+(percent' > 97 & percent' <= 98 ),'DisplayName','tempo_distancia');legend('Full Set','Reamostragem à 50%','Reamostragem à 10%','Reamostragem à 1%','FontSize',14);xlabel('Imagem');title('imagens com percent no intervalo ]97,98]')
@@ -73,4 +78,32 @@ percent = tempo_distancia./tempo_total*100;
 %bar(+(percent' > 98 & percent' <= 99 ),'DisplayName','tempo_distancia');legend('Full Set','Reamostragem à 50%','Reamostragem à 10%','Reamostragem à 1%','FontSize',14);xlabel('Imagem');title('imagens com percent no intervalo ]98,99]')
 %figure;
 %bar(+(percent' > 99 & percent' <= 100 ),'DisplayName','tempo_distancia');legend('Full Set','Reamostragem à 50%','Reamostragem à 10%','Reamostragem à 1%','FontSize',14);xlabel('Imagem');title('imagens com percent no intervalo ]99,100]')
+
+
+% Variável que armazena o fundo das imagens em uma célula
+fundo_imagens = cell(4,6);
+for i=1:4
+    for j=1:6
+        [~,~,~,s,~] = size(obj{i,j}.resultado);
+        temp = 0;
+        for k=1:s
+            temp = temp + obj{i,j}.resultado(:,:,:,k,1);
+        end
+        fundo_imagens{i,j} = temp;
+    end
+    
+end
+
+% Variável que armazena o erro das imagens reamostradas 
+erro = cell(3,6);
+erro_numerico(3,6) = 0;
+erro_numerico_relativo(3,6) = 0;
+for  i=1:3
+    for j=1:6
+        erro{i,j} = (im2double(obj{1,j}.I)-im2double(fundo_imagens{1,j}))-(im2double(obj{i+1,j}.I)-im2double(fundo_imagens{i+1,j}));
+        erro_numerico(i,j) = size(find(erro{i,j}),1)/3;
+    end
+    erro_numerico_relativo(i,:) = 100*erro_numerico(i,:)./tamanho(3,:);
+end
+
 
