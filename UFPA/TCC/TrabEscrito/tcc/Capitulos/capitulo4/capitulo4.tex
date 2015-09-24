@@ -7,6 +7,7 @@
 \label{cap:imp_resultados}
 
 \section{Implementação}
+\label{sec:implementacao}
 
 A técnica descrita anteriormente foi implementada utilizando o $Matlab$, bem como em \cite{Protiere2007}. A implementação foi divida em partes para facilitar tanto o desenvolvimento quanto a manutenção do código fonte, estando este agrupado em 9 diferentes funções descritas abaixo com sua relação hierárquica mostrada na Figura \ref{fig:hierarquia_codigo}. O fluxo do código e seus principais resultados utilizados ao longo do processamento são mostrados no diagrama da Figura \ref{fig:fluxo_codigo}, as cores utilizadas nesse diagrama correspondem às funções da Figura \ref{fig:hierarquia_codigo} que realizam as tarefas descritas.
 
@@ -24,14 +25,14 @@ A técnica descrita anteriormente foi implementada utilizando o $Matlab$, bem com
 		\item \textbf{getMinDistance.m:} Função que calcula a menor distância de um \textit{pixel} para uma determinada região marcada na imagem
 	\end{itemize}
 
-	\begin{figure}[h]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=1.5]{./figuras/capitulo_4/DiagramaFuncoes.pdf}
 		\caption{Hierarquia das funções criadas}
 		\label{fig:hierarquia_codigo}
 	\end{figure}
 	
-	\begin{figure}[h]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=0.85]{./figuras/capitulo_4/DiagramaCodigo.pdf}
 		\caption{Fluxo do algoritmo}
@@ -68,6 +69,290 @@ Por fim a classificação dos \textit{pixels} propriamente ditos é feita diretamen
 		Pr(t \in l_{i}) = \frac{d_{i}(t)^{-1}}{\sum _{j \in[1,N_{l}]} d_{j}(t)^{-1}} 
 		\label{eq:probabilidade}  
  	\end{equation}
+
+\section{Resultados}
+\label{sec:resultados}
+
+
+Para avaliar o impacto da re-amostragem dos \textit{pixels} marcados pelo usuário na redução do tempo de execução do algoritmo apresentado em \cite{Protiere2007}, bem como mensurar o erro de classificação dos \textit{pixels}, foram definidas 3 taxas diferentes ($50\%,\ 10\%\ e\ 1\%$) e 6 imagens distintas foram selecionadas, sendo 3 artificiais (Figuras \ref{fig:imagem1},\ref{fig:imagem2} e \ref{fig:imagem3}) e 3 naturais (Figuras \ref{fig:imagem4},\ref{fig:imagem5} e \ref{fig:imagem6}). As Figuras \ref{fig:imagem_nao_uniforme}, \ref{fig:imagem2_marcada}, \ref{fig:imagem3_marcada}, \ref{fig:imagem4_marcada}, \ref{fig:imagem5_marcada}, \ref{fig:imagem6_marcada} representam, respectivamente, as  marcações do fundo e do(s) objeto(s) das imagens 1 a 6.
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Imagem 1]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem1.png}
+		\label{fig:imagem1}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Imagem 2]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem2.png}
+		\label{fig:imagem2}}	
+		\quad
+		\subfloat[Imagem 3]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem3.png}
+		\label{fig:imagem3}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Imagem 4]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem4.png}
+		\label{fig:imagem4}}
+		\quad
+		\subfloat[Imagem 5]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem5.png}
+		\label{fig:imagem5}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Imagem 6]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem6.png}
+		\label{fig:imagem6}}
+		\caption{Imagens escolhidas. A Figura \ref{fig:imagem1} mostra Imagem 1, a Figura \ref{fig:imagem2} mostra a Imagem 2, a Figura \ref{fig:imagem3} mostra a Imagem 3, a Figura \ref{fig:imagem4} mostra a Imagem 4, a Figura \ref{fig:imagem5} mostra a Imagem 5 e a Figura \ref{fig:imagem6} mostra a Imagem 6.}
+		\label{fig:imagens_todas}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 2]{
+		\includegraphics[scale=0.6]{./figuras/capitulo_4/imagem2_scribbled1.png}
+		\label{fig:imagem2_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.6]{./figuras/capitulo_4/imagem2_scribbled2.png}
+		\label{fig:imagem2_objeto}}	
+		\caption{Marcação da Imagem 2. A Figura \ref{fig:imagem2_fundo} mostra a marcação do fundo da imagem, a Figura \ref{fig:imagem2_objeto} mostra o objeto de interesse.}
+		\label{fig:imagem2_marcada}
+	\end{figure}	
+	
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 3]{
+		\includegraphics[scale=0.5]{./figuras/capitulo_4/imagem3_scribbled1.png}
+		\label{fig:imagem3_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.5]{./figuras/capitulo_4/imagem3_scribbled2.png}
+		\label{fig:imagem3_objeto}}	
+		\caption{Marcação da Imagem 3. A Figura \ref{fig:imagem3_fundo} mostra a marcação do fundo da imagem, a Figura \ref{fig:imagem3_objeto} mostra o objeto de interesse.}
+		\label{fig:imagem3_marcada}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 4]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/imagem4_scribbled1.png}
+		\label{fig:imagem4_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/imagem4_scribbled2.png}
+		\label{fig:imagem4_objeto}}	
+		\caption{Marcação da Imagem 4. A Figura \ref{fig:imagem4_fundo} mostra a marcação do fundo da imagem, a Figura \ref{fig:imagem4_objeto} mostra o objeto de interesse.}
+		\label{fig:imagem4_marcada}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 5]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/imagem5_scribbled1.png}
+		\label{fig:imagem5_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/imagem5_scribbled2.png}
+		\label{fig:imagem5_objeto}}	
+		\caption{Marcação da Imagem 5. A Figura \ref{fig:imagem5_fundo} mostra a marcação do fundo da imagem, a Figura \ref{fig:imagem5_objeto} mostra o objeto de interesse.}
+		\label{fig:imagem5_marcada}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 6]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/imagem6_scribbled1.png}
+		\label{fig:imagem6_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/imagem6_scribbled2.png}
+		\label{fig:imagem6_objeto}}	
+		\caption{Marcação da Imagem 6. A Figura \ref{fig:imagem6_fundo} mostra a marcação do fundo da imagem, a Figura \ref{fig:imagem6_objeto} mostra o objeto de interesse.}
+		\label{fig:imagem6_marcada}
+	\end{figure}
+	
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Resultado da segmentação do objeto 1 da Imagem 1 com todos os \textit{pixels}]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto1_tx100.png}
+		\label{fig:imagem1_segmentada_objeto1_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação do objeto 1 da Imagem 1 com taxa de re-amostragem de $50\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto1_tx50.png}
+		\label{fig:imagem1_segmentada_objeto1_50}}
+		\quad	
+		\subfloat[Resultado da segmentação do objeto 1 da Imagem 1 com taxa de re-amostragem de $10\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto1_tx10.png}
+		\label{fig:imagem1_segmentada_objeto1_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação do objeto 1 da Imagem 1 com taxa de re-amostragem de $1\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto1_tx1.png}
+		\label{fig:imagem1_segmentada_objeto1_1}}
+		\caption{Resultado da segmentação do objeto 1 da Imagem 1. A Figura \ref{fig:imagem1_segmentada_objeto1_100} mostra a segmentação com $100\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem1_segmentada_objeto1_50} mostra a segmentação com $50\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem1_segmentada_objeto1_10} mostra a segmentação com $10\%$ dos \textit{pixels} marcados e a Figura \ref{fig:imagem1_segmentada_objeto1_1} mostra a segmentação com $1\%$ dos \textit{pixels} marcados.}
+		\label{fig:imagem1_segmentada_objeto1}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Resultado da segmentação do objeto 2 da Imagem 1 com todos os \textit{pixels}]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto2_tx100.png}
+		\label{fig:imagem1_segmentada_objeto2_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação do objeto 2 da Imagem 1 com taxa de re-amostragem de $50\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto2_tx50.png}
+		\label{fig:imagem1_segmentada_objeto2_50}}
+		\quad	
+		\subfloat[Resultado da segmentação do objeto 2 da Imagem 1 com taxa de re-amostragem de $10\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto2_tx10.png}
+		\label{fig:imagem1_segmentada_objeto2_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação do objeto 2 da Imagem 1 com taxa de re-amostragem de $1\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem1_objeto2_tx1.png}
+		\label{fig:imagem1_segmentada_objeto2_1}}
+		\caption{Resultado da segmentação do objeto 2 da Imagem 1. A Figura \ref{fig:imagem1_segmentada_objeto2_100} mostra a segmentação com $100\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem1_segmentada_objeto2_50} mostra a segmentação com $50\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem1_segmentada_objeto2_10} mostra a segmentação com $10\%$ dos \textit{pixels} marcados e a Figura \ref{fig:imagem1_segmentada_objeto2_1} mostra a segmentação com $1\%$ dos \textit{pixels} marcados.}
+		\label{fig:imagem1_segmentada_objeto2}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Resultado da segmentação da Imagem 2 com todos os \textit{pixels}]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/Imagem2_tx100.png}
+		\label{fig:imagem2_segmentada_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 2 com taxa de re-amostragem de $50\%$]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/Imagem2_tx50.png}
+		\label{fig:imagem2_segmentada_50}}
+		\quad	
+		\subfloat[Resultado da segmentação Imagem 2 com taxa de re-amostragem de $10\%$]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/Imagem2_tx10.png}
+		\label{fig:imagem2_segmentada_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 2 com taxa de re-amostragem de $1\%$]{
+		\includegraphics[scale=0.45]{./figuras/capitulo_4/Imagem2_tx1.png}
+		\label{fig:imagem2_segmentada_1}}
+		\caption{Resultado da segmentação do objeto 2 da Imagem 2. A Figura \ref{fig:imagem2_segmentada_100} mostra a segmentação com $100\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem2_segmentada_50} mostra a segmentação com $50\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem2_segmentada_10} mostra a segmentação com $10\%$ dos \textit{pixels} marcados e a Figura \ref{fig:imagem2_segmentada_1} mostra a segmentação com $1\%$ dos \textit{pixels} marcados.}
+		\label{fig:imagem2_segmentada}
+	\end{figure}	
+
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Resultado da segmentação da Imagem 3 com todos os \textit{pixels}]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem3_tx100.png}
+		\label{fig:imagem3_segmentada_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 3 com taxa de re-amostragem de $50\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem3_tx50.png}
+		\label{fig:imagem3_segmentada_50}}
+		\quad	
+		\subfloat[Resultado da segmentação Imagem 3 com taxa de re-amostragem de $10\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem3_tx10.png}
+		\label{fig:imagem3_segmentada_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 3 com taxa de re-amostragem de $1\%$]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/Imagem3_tx1.png}
+		\label{fig:imagem3_segmentada_1}}
+		\caption{Resultado da segmentação do objeto 2 da Imagem 3. A Figura \ref{fig:imagem3_segmentada_100} mostra a segmentação com $100\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem3_segmentada_50} mostra a segmentação com $50\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem3_segmentada_10} mostra a segmentação com $10\%$ dos \textit{pixels} marcados e a Figura \ref{fig:imagem3_segmentada_1} mostra a segmentação com $1\%$ dos \textit{pixels} marcados.}
+		\label{fig:imagem3_segmentada}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Resultado da segmentação da Imagem 4 com todos os \textit{pixels}]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem4_tx100.png}
+		\label{fig:imagem4_segmentada_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 4 com taxa de re-amostragem de $50\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem4_tx50.png}
+		\label{fig:imagem4_segmentada_50}}
+		\quad	
+		\subfloat[Resultado da segmentação Imagem 4 com taxa de re-amostragem de $10\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem4_tx10.png}
+		\label{fig:imagem4_segmentada_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 4 com taxa de re-amostragem de $1\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem4_tx1.png}
+		\label{fig:imagem4_segmentada_1}}
+		\caption{Resultado da segmentação do objeto 2 da Imagem 4. A Figura \ref{fig:imagem4_segmentada_100} mostra a segmentação com $100\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem4_segmentada_50} mostra a segmentação com $50\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem4_segmentada_10} mostra a segmentação com $10\%$ dos \textit{pixels} marcados e a Figura \ref{fig:imagem4_segmentada_1} mostra a segmentação com $1\%$ dos \textit{pixels} marcados.}
+		\label{fig:imagem4_segmentada}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Resultado da segmentação da Imagem 5 com todos os \textit{pixels}]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem5_tx100.png}
+		\label{fig:imagem5_segmentada_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 5 com taxa de re-amostragem de $50\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem5_tx50.png}
+		\label{fig:imagem5_segmentada_50}}
+		\quad	
+		\subfloat[Resultado da segmentação Imagem 5 com taxa de re-amostragem de $10\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem5_tx10.png}
+		\label{fig:imagem5_segmentada_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 5 com taxa de re-amostragem de $1\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem5_tx1.png}
+		\label{fig:imagem5_segmentada_1}}
+		\caption{Resultado da segmentação do objeto 2 da Imagem 5. A Figura \ref{fig:imagem5_segmentada_100} mostra a segmentação com $100\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem5_segmentada_50} mostra a segmentação com $50\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem5_segmentada_10} mostra a segmentação com $10\%$ dos \textit{pixels} marcados e a Figura \ref{fig:imagem5_segmentada_1} mostra a segmentação com $1\%$ dos \textit{pixels} marcados.}
+		\label{fig:imagem5_segmentada}
+	\end{figure}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Resultado da segmentação da Imagem 6 com todos os \textit{pixels}]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem6_tx100.png}
+		\label{fig:imagem6_segmentada_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 6 com taxa de re-amostragem de $50\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem6_tx50.png}
+		\label{fig:imagem6_segmentada_50}}
+		\quad	
+		\subfloat[Resultado da segmentação Imagem 6 com taxa de re-amostragem de $10\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem6_tx10.png}
+		\label{fig:imagem6_segmentada_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Resultado da segmentação Imagem 6 com taxa de re-amostragem de $1\%$]{
+		\includegraphics[scale=0.37]{./figuras/capitulo_4/imagem6_tx1.png}
+		\label{fig:imagem6_segmentada_1}}
+		\caption{Resultado da segmentação do objeto 2 da Imagem 6. A Figura \ref{fig:imagem6_segmentada_100} mostra a segmentação com $100\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem6_segmentada_50} mostra a segmentação com $50\%$ dos \textit{pixels} marcados, a Figura \ref{fig:imagem6_segmentada_10} mostra a segmentação com $10\%$ dos \textit{pixels} marcados e a Figura \ref{fig:imagem6_segmentada_1} mostra a segmentação com $1\%$ dos \textit{pixels} marcados.}
+		\label{fig:imagem6_segmentada}
+	\end{figure}
+
+Analisando as imagens \ref{fig:imagem1_segmentada_objeto1}, \ref{fig:imagem1_segmentada_objeto2}, \ref{fig:imagem2_segmentada}, \ref{fig:imagem3_segmentada}, \ref{fig:imagem4_segmentada}, \ref{fig:imagem5_segmentada} e \ref{fig:imagem6_segmentada} é possível perceber que apenas a re-amostragem com taxa de $1\%$ apresentou resultados visualmente insatisfatórios em todos os casos, apesar das imagens re-amostradas  com taxas de $50\%\ e\ 10\%$ também apresentarem erros, estes são praticamente imperceptíveis ao olho humano especialmente nas imagens 2, 4, e 6 (Figuras \ref{fig:imagem2}, \ref{fig:imagem4} e \ref{fig:imagem6}, respectivamente) que são imagens mais simples, onde o fundo possui cores bem diferentes do objeto de interesse e portanto, a distância de um ponto na imagem para os \textit{pixels} marcados não é tão relevante para o resultado final. Enquanto que nas imagens 1, 3 e 5 (Figuras \ref{fig:imagem1}, \ref{fig:imagem3} e \ref{fig:imagem5}, respectivamente), que são imagens mais complexas (i.e, o fundo da imagem possui cores de intensidade similar às do(s) objeto(s) de interesse) é possível perceber alguns pequenos erros de segmentação, pequenos \textit{pixels} pretos nos objetos que foram classificados de forma errônea, isto ocorreu porque as marcações feitas não foram suficientes, uma vez que nesse caso a distância entre os \textit{pixels} é um fator determinante para um resultado satisfatório.
+
+
+Para quantificar os erros de classificação de todas as imagens, foram subtraídas as imagens re-amostradas da imagem com todos o conjunto de \textit{pixels} ($ I_{100\%} - I_{i}\ \forall\ i =  50\%, 10\%\ e\ 1\%$), considerando as imagens segmentadas com $100\%$ dos \textit{pixels} marcados como referência,  este procedimento resulta em uma imagem onde os pontos que foram corretamente classificados irão sumir (i.e, se tornam zero), sobrando apenas os pontos que não foram classificados corretamente, estes \textit{pixels} restantes são contados para quantificar quantos \textit{pixels} não estão classificados corretamente e o gráfico da Figura \ref{fig:grafico_erro_classificacao} mostra o quanto que esses \textit{pixels} representam relativo ao total de pixels de cada imagem, para cada taxa de re-amostragem.
+
+
+	\begin{figure}[!h]
+		\includegraphics[scale=1]{./figuras/capitulo_4/grafico_erro_classificacao.eps}
+		\caption{Gráfico mostrando o erro de classificação relativo ao total de pixels de cada imagem}
+		\label{fig:grafico_erro_classificacao}
+	\end{figure}
+
 
 
 

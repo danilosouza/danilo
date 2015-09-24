@@ -76,7 +76,7 @@ Para aprofundar os conhecimentos em processamento digital de imagens é necessári
 		\item \textbf{Níveis de cinza:} Níveis para medir a intensidade (valor) de um \textit{pixel} em uma imagem digital, normalmente são valores no intervalo $[0,255]$
 		\item \textbf{Filtragem espacial:} Operação de convolução ou correlação (no domínio espacial) entre uma imagem e uma máscara (filtro), onde esta pode ter diversos formatos utilizados para suavização ou aguçamento de imagens, essa operação será detalhada logo abaixo.
 		\item \textbf{\textit{Pixel} vizinho:} Um \textit{pixel x} é considerado vizinho do \textit{pixel p} se, e somente se, a distância entre $x$ e $p$ for igual a 1 $\therefore$ ($ d_{s \rightarrow p} = 1 $).
-		\item \textbf{Conectividadede \textit{pixels}:} Em imagens digitais existem duas possibilidades de um pixel estar conectado à outro, a conexão pode ser do tipo 4-conectado ou 8-conectado, na primeira considera-se conectados ao pixel $p$ apenas os \textit{pixels} vizinhos na vertical e na horizontal, enquanto que na segunda considera-se os conectados ao \textit{pixel} $p$ os vizinhos em todas as direções (vertical, horizontal e diagonal).
+		\item \textbf{Conectividade \textit{pixels}:} Em imagens digitais existem duas possibilidades de um pixel estar conectado à outro, a conexão pode ser do tipo 4-conectado ou 8-conectado, na primeira considera-se conectados ao pixel $p$ apenas os \textit{pixels} vizinhos na vertical e na horizontal, enquanto que na segunda considera-se os conectados ao \textit{pixel} $p$ os vizinhos em todas as direções (vertical, horizontal e diagonal).
 	\end{itemize}
 
 
@@ -228,12 +228,10 @@ Em relação à escolha de qual técnica de segmentação utilizar, três tipos devem s
 \label{sub:tipos_segmentação}
 Khan \cite{Khan2014} mostra uma categorização das principais técnicas de segmentação de imagem de acordo com a ideia principal por trás dos algoritmos, o autor sugere que a segmentação de imagens pode ser baseada em:
 	\begin{enumerate}
-		\item \textbf{Borda:} Este tipo de segmentação realiza detecção de bordas (linhas
-		\item \textbf{Lógica Fuzzy:}
-		\item \textbf{Equações Diferenciais Parciais:}
-		\item \textbf{Redes Neurais Artificiais:}
+		\item \textbf{Borda:} Este tipo de segmentação realiza detecção de bordas para separar os objetos do fundo da imagem utilizando o fato de que a intensidade dos \textit{pixels} muda abruptamente na borda dos objetos. Os métodos clássicos para detecção de borda são: (1) Baseados no gradiente (derivada de $1^{a}$ ordem, (2) Cruzamento de zeros (derivada de $2^{a}$ ordem), (3) Laplaciano da Gaussiana, (4) Detectores de borda Gaussianos e (5) Detectores de bordas coloridas \cite{Lakshmi2010}. A forma mais simples de realizar detecção de borda é primeiramente realizar detecção de linhas utilizando máscaras (i.e, filtros) capazes de identificar a mudança de intensidade, por exemplo para detecção de pontos isolados a máscara a ser utilizada será $ \Big[ \begin{smallmatrix} 1 & 1 & 1 \\ 1 & -8 & 1 \\ 1 & 1 & 1 \end{smallmatrix} \Big] $, enquanto que para detecção de linhas, as máscaras serão $ \Big[ \begin{smallmatrix} 1 & -2 & 1 \\ 1 & -2 & 1 \\ 1 & -2 & 1 \end{smallmatrix} \Big] $, $ \Big[ \begin{smallmatrix} 1 & 1 & 1 \\ -2 & -2 & -2 \\ 1 & 1 & 1 \end{smallmatrix} \Big] $ e $ \Big[ \begin{smallmatrix} -2 & 1 & 1 \\ 1 & -2 & 1 \\ 1 & 1 & -2 \end{smallmatrix} \Big] $ para linhas na horizontal, vertical e diagonal, respectivamente.
 		\item \textbf{Limiar:} Esta é a segmentação mais simples, escolhe-se um valor $T$ e os \textit{pixels} abaixo de $T$ ($ R(x,y) \leq T$) são marcados como ''preto`` (ou $0$) e os valores acima de $T$ ($ R(x,y) \geq T$) são marcados como branco (ou $255$ para imagens de 8 \textit{bits}). Entretanto para que este processo seja eficiente é necessário que a escolha de $T$ seja feita de forma automática, um dos algoritmos mais conhecidos e utilizado por muito tempo foi criado por Otsu \cite{Otsu1979}. Sezgin  \cite{Sezgin2004} faz uma comparação entre 40 algoritmos baseados em limiar (\textit{threshold}). 
-		\item \textbf{Região:}
+		\item \textbf{Região:} Uma região de uma determinada imagem pode ser descrita como um conjunto de \textit{pixels} conectados (ver seção \ref{sub:definicao}) é tem um papel muito importante na segmentação pois regiões normalmente significam objetos de interesse. Existem três categorias principais para este tipo de segmentação: (1) Crescimento de região, (2) Divisão de região e (3) Fusão de região  \cite{Kaganami2009}. \textit{Pixels} pertencentes a uma mesma região serão marcados, respeitando o princípio de que um pixel não pode pertencer a duas regiões.
+		
 	\end{enumerate}
 
 

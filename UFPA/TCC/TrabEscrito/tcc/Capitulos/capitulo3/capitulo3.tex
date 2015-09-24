@@ -10,7 +10,7 @@
 %----------------------------------------------------------------------------------------------------------------------------------------------------%
 %
 \section{A escolha da técnica}
-
+\label{sec:escolha_tecnica}
 Diversas técnicas de segmentação de imagens foram apresentadas neste trabalho, entretanto, uma técnica em especial chama a atenção pois permite a interação do usuário de forma mais ativa onde o objeto de interesse é marcado, usando marcação simples do tipo pincel com uma cor e o fundo ou outros objetos na imagem são marcados de outra cor, a técnica então se encarrega de separar regiões de interesse com marcações em comum (i.e, de mesma cor) de tal forma que a imagem resultante é a subtração da imagem original por todas as regiões exceto a região de interesse, ou seja, cada \textit{pixel} da imagem é classificado como pertencente a uma determinada região. 
 
 A classificação é feita em função da probabilidade calculada com base na Função Densidade de Probabilidade (FDP) e da distância de um ponto para uma região de interesse qualquer.
@@ -41,9 +41,10 @@ Conforme mostrado acima a técnica apresentada em \cite{Protiere2007} é bastante 
 
 
 \section{Descrição da técnica estudada}
+\label{secc:descricao_tecnica}
 
 \subsection{Segmentação de regiões uniformes}
-
+\label{sub:seg_regioes_uniformes}
 A técnica implementada neste trabalho, introduzida em \cite{Protiere2007}, pode ser classificada como semi-automática pois necessita da intervenção do usuário para marcar as regiões de interesse da imagem considerando a separação em processos de \cite{Gonzalez} citada no Capítulo \ref{cap:processamento_imagens} esta técnica pode ser incluída nos processos de de baixo de médio nível. Estas regiões podem ser objeto ou fundo, havendo a possibilidade de se marcar mais de um objeto para segmentação ou marcar objetos não-uniformes, nesse caso a imagem final seria a soma das imagens de cada região não-uniforme separada. 
 
 O algoritmo consiste em encontrar a menor distância entre cada \textit{pixel} da imagem de entrada e as regiões marcadas, isso é feito calculando a distância geodésica (que nesse caso é euclidiana, ou seja, uma reta entre os dois pontos de interesse) de cada \textit{pixel} para os pontos da região marcada ponderada por um peso $\Omega$, chamado de peso geodésico, calculado a partir dos valores dos \textit{pixels} das regiões marcadas. Para que um ponto seja considerado de uma determinada região tanto a sua distância para a região quando a sua intensidade são levados em consideração.
@@ -114,7 +115,7 @@ Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ reg
 	\end{equation}
 		
 \subsection{Segmentação de regiões não-uniformes}
-
+\label{sub:seg_regioes_nao_uniformes}
 O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de regiões distintas. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação. Um exemplo deste tipo de imagem pode ser visto na Figura \ref{fig:objeto1_imagem_nao_informe}.
 
 	\begin{equation}
@@ -123,7 +124,7 @@ O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com 
 	\end{equation}
 
 \section{Metodologia}
-
+\label{sec:metodologia}
 A técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas e não-uniformes, entretanto o tempo de execução do algoritmo é alto uma vez que é necessário calcular a distância de cada \textit{pixel} da imagem para cada um dos \textit{pixels} marcados afim de descobrir a menor distância e de acordo com o algoritmo descrito fazer a classificação dos pontos da imagem.
 
 Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo e partir disto foi decidido que o foco do trabalho seria em melhorar esse tempo de cálculo das distâncias. 
@@ -131,7 +132,7 @@ Após análise detalhada dos passos da técnica implementada percebeu-se que o temp
 A solução encontrada foi reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações, em outras palavras, a re-amostragem tem que ser uniforme para que não haja as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irã detalhar as modificações realizadas e como a avaliação será feita.
 
 \subsection{Modificações realizadas}
-
+\label{sub:modificaoes}
 
 A implementação da técnica será mostrada com mais detalhes no Capítulo \ref{cap:imp_resultados}, porém para melhor compreensão da modificação alguns passos serão descritos nesta seção. O mais importante neste caso é que os \textit{pixels} marcados são armazenados em uma matriz, chamada de matriz posição, que guarda tanto o valor quanto a posição dos \textit{pixels} escolhidos.
 
@@ -139,13 +140,20 @@ A função \textit{reamostragem.m} é responsável por esse passo, recebendo como en
 
 O parâmetro modificado para análise do tempo é a taxa de re-amostragem, o valores escolhidos foram: $100\ \%$, $50\ \%$, $10\ \%$ e $1\ \%$ dos \textit{pixels} originalmente marcados. Os valores foram escolhidos para que seja possível analisar se a redução dos conjunto de \textit{pixels} marcados está diretamente ligada ao tempo de execução do algoritmo, por exemplo, se o conjunto $\Omega$ for reduzido pela metade acarretaria na redução pela metade no tempo total. Os número $10$ e $1$ foram escolhidos por representarem extremos, ou seja, verificar o impacto da eliminação de quase todos os \textit{pixes} de $\Omega$ no resultado final e determinar um \textit{trade-off} sobre o ganho de tempo em relação à taxa de re-amostragem desses pontos.
 
-\subsection{Parâmetros avaliados}
+A performance das modificações realizadas também foi medida em termos de tempo relativo, ou seja, qual foi a melhoria em relação ao tempo de execução utilizando todos os \textit{pixels} marcados (\textit{Full Set}), este tempo relativo $T_{r}$ é calculado usando a equação
 
-Para avaliar o resultado das diferentes taxas de re-amostragem foram utilizados dois parâmetros principais: tempo e o erro na classificação dos \textit{pixels}, sendo que para avaliar o último foi considerado a imagem resultado sem re-amostragem como ponto de referência e a comparação é feita subtraindo as outras imagens resultado dessa imagem referência. Para análise do tempo foram utilizadas duas funções do $MatLab$, \textit{tic/toc} e \textit{etime} para garantir que a conformidade do tmepo medido. Esta avaliação de tempo ocorre de duas formas diferentes, primeiramente a função \textit{tic/toc} é utilizada para medir o tempo de execução de cada passo do algoritmo, que foi divido em oito etapas listadas abaixo. Enquanto que a função \textit{etime} foi usada para medir o tempo de execução total da função \textit{segmenta.m}, que será detalhada no Capítulo \ref{cap:imp_resultados}.
+	\begin{equation}
+		T_{r}^{i} = 100 - (100\frac{T_{total}^{i}}{T_{total}^{Full Set}})\ ,\ onde\ i = 1, 10, 50. 
+		\label{eq:tempo_relativo}
+	\end{equation}
+
+\subsection{Parâmetros avaliados}
+\label{sub:parametros}
+Para avaliar o resultado das diferentes taxas de re-amostragem foram utilizados dois parâmetros principais: tempo e o erro na classificação dos \textit{pixels}, sendo que para avaliar o último foi considerado a imagem resultado sem re-amostragem como ponto de referência e a comparação é feita subtraindo as outras imagens resultado dessa imagem referência. Para análise do tempo foram utilizadas duas funções do $MatLab$, \textit{tic/toc} e \textit{etime} para garantir que a conformidade do tempo medido. Esta avaliação de tempo ocorre de duas formas diferentes, primeiramente a função \textit{tic/toc} é utilizada para medir o tempo de execução de cada passo do algoritmo, que foi divido em oito etapas listadas abaixo. Enquanto que a função \textit{etime} foi usada para medir o tempo de execução total da função \textit{segmenta.m}, que será detalhada no Capítulo \ref{cap:imp_resultados}.
 
 		Etapas do algoritmos
 		\begin{enumerate}
-			\item Posição dos pixels marcados
+			\item Posição dos \textit{pixels} marcados
 			\item Cálculo dos Canais
 			\item Pesos dos canais
 			\item Pesos da distância geodésica
