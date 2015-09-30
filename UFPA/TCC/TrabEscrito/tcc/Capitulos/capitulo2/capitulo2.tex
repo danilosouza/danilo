@@ -93,6 +93,8 @@ Apesar de serem muito utilizadas, operações com janela geram um problema no que 
 		\item Reduzir a imagem de saída em $a = \frac{(m-1)}{2}$ linhas em cima e embaixo e $b = \frac{(n-1)}{2}$ colunas nas laterais da imagem utilizando o como \textit{pixel} inicial o ponto $(x+a,y+b)$
 	\end{enumerate}
 
+\paragraph{Correlação e Convolução}
+
 Nas operações de correlação e convolução a janela representa o filtro ao qual a imagem será submetido, este procedimento é muito utilizado para realizar suavizações (filtros do tipo passa-baixa) ou aguçamentos na imagem (filtros do tipo passa-alta) devido à sua facilidade de implementação computacional. Os filtros mais comumente utilizados são matrizes quadradas e de tamanho ímpar para que haja a presença de um elemento central e caso o filtro $h (m\ X\ n)$, onde $m$ e $n$ são o tamanho do filtro, seja simétrico as operações de convolução e correlação são equivalentes. Estas operações são muito utilizadas na etapa de pré-processamento de imagens, para eliminação de ruído, realce de bordas, suavização de imagens, existem diversos tipos de filtros com objetivos específicos (e.g, detecção de texturas) que serão explicados mais detalhadamente adiante neste capítulo.
 
 A Figura \ref{fig:exemplo_filtro} mostra um exemplo prático da convolução da Imagem $I$ pelo filtro $h$, resultando na imagem de saída $Y$, neste exemplo foi utilizada a abordagem (2), cita acima, para contornar o problema de borda. Generalizando este procedimento é possível chegar à Equação \ref{eq:saida_filtragem} para definir de forma genérica a imagem $Y$ em função da imagem de entrada $I$ e do tamanho do filtro.
@@ -109,6 +111,8 @@ A Figura \ref{fig:exemplo_filtro} mostra um exemplo prático da convolução da Ima
 	Y(x,y) = \sum_{s=1}^{m} \sum_{t=1}^{n} I([(x+a)-\frac{m+1}{2}+s],[(y+b)-\frac{n+1}{2}+t])h(s,t)
 	\label{eq:saida_filtragem}
 \end{equation}
+
+\paragraph{Morfologia}
 
 Dentro do conjunto de operações básicas existem também as operações de erosão ($\ominus$) e dilatação ($\oplus$) da imagem, utilizadas, respectivamente, para remover objetos menores que o elemento estruturante e preencher espaços vazios, entretanto essas operações resultam, respectivamente, em encolhimento e aumento indesejável dos objetos restantes nas imagens e para resolver este problema utiliza-se as duas técnicas: (1) Abertura e (2) Fechamento. Considere a matriz $A$ e o elemento estruturante $B$, ambos binários, erosão e dilatação de $A$ por $B$ são representadas, respectivamente, por $A \ominus B$ e a dilatação por $A \oplus B$ e podem ser definidas como:
 

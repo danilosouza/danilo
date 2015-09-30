@@ -127,9 +127,18 @@ O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com 
 \label{sec:metodologia}
 A técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas e não-uniformes, entretanto o tempo de execução do algoritmo é alto uma vez que é necessário calcular a distância de cada \textit{pixel} da imagem para cada um dos \textit{pixels} marcados afim de descobrir a menor distância e de acordo com o algoritmo descrito fazer a classificação dos pontos da imagem.
 
-Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo e partir disto foi decidido que o foco do trabalho seria em melhorar esse tempo de cálculo das distâncias. 
+Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo, o gráfico da Figura \ref{fig:histograma_tempo} mostra o histograma da relação $ \frac{T_{distancia}}{T_{total}} $ para as 24 imagens utilizadas , é possível perceber que em todas as imagens o tempo gasto apenas no cálculo da distância representa pelo menos $96\%$ do tempo total de execução do algoritmo. A partir disto foi decidido o foco do trabalho, reduzir $ T_{distanncia} $.
 
-A solução encontrada foi reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações, em outras palavras, a re-amostragem tem que ser uniforme para que não haja as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irã detalhar as modificações realizadas e como a avaliação será feita.
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=1]{./figuras/capitulo_3/grafico_histograma_percent_distancia.eps}
+		\caption{Histograma da relação $ \frac{T_{distancia}}{T_{total}} $, para as 24 imagens de saída}
+		\label{fig:histograma_tempo}
+	\end{figure}
+
+ 
+
+A solução proposta é reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações, em outras palavras, a re-amostragem tem que ser uniforme para que não haja as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irã detalhar as modificações realizadas e como a avaliação será feita.
 
 \subsection{Modificações realizadas}
 \label{sub:modificaoes}

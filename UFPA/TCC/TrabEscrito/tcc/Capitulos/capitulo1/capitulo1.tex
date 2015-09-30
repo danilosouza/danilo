@@ -7,17 +7,26 @@
 \label{introducao}
 
 
-\section{Introdução}
-\label{sec:introducao}
 
 \section{Justificativa}
 \label{sec:justificativa}
+Devido à facilidade de acesso a câmeras digitais, cada vez mais esse tipo de imagem (digital) está presente em nosso dia-a-dia, portanto se faz necessário a existência de ferramentas capazes de processar estas imagens de forma rápida e eficiente. O primeiro passo para extrair informações de uma imagem (i.e, visão computacional \cite{Shapiro2000}) é realizar um pré-processamento com o intuito de facilitar o desenvolvimento de algoritmos mais complexos, em outras palavras, o pré-processamento é importante para suavizar, segmentar, classificar, remover ruídos de imagens para que os algoritmos a serem utilizados nestas sejam desenvolvidos baseados em alguma heurística para que sejam o menos complexo possível.
+
+Um passo muito importante, e portanto muito pesquisado, é o passo de segmentação de imagens que pode ser definido como a divisão de uma imagem e regiões ou objetos de interesse, onde essas regiões e/ou objetos possuem alguma característica em comum (e.g, intensidade, \textit{pixels} conectados dentro de uma borda especificada,  forma geométrica).
+
+A técnica mostrada em \cite{Protiere2007} foi escolhida para estudo por apresentar um resultado muito satisfatório de segmentação e por sua robustez, sendo possível segmentar objetos diferentes e não-informes de uma mesma imagem, fazendo apenas marcações simples sobre os objetos/regiões de interesse. Entretanto, conforme será detalhado na seção \ref{sec:metodologia}, o tempo gasto para calcular a distância mínima de uma \textit{pixel} para uma região é responsável pela maior parte do tempo total de execução do algoritmo, por isto o foco deste trabalho será em reduzir o tempo gasto para calcular a distância mínima mencionada anteriormente. A próxima seção irá detalhar a organização do texto.
 
 \section{Objetivos}
-\label{sec:objetivos}
+\label{sec:objetivo}
 
-\subsection{Organização do Trabalho}
-\label{sub:organizacao}
+O objetivo principal do estudo realizado é verificar o impacto da redução do número de \textit{pixels} marcados para cada região de interesse de uma imagem, conforme apresentado em \cite{Protiere2007}, no resultado final, avaliando também o ganho no tempo de execução do algoritmo proporcionado por essa redução, que é feita fazendo uma re-amostragem dos pontos selecionados.
+
+
+\section{Organização do Trabalho}
+\label{sec:organizacao}
+
+Este trabalho está organizado da seguinte forma: o Capítulo \ref{cap:processamento_imagens} fará uma breve introdução à processamento digital de imagens mostrando sua importância para a indústria no mundo atual exemplificando algumas aplicações, além de mostrar conceitos e operações básicas relativos ao tema e abordando, por fim, as principais técnicas de segmentação de imagem. O capítulo \ref{cap:descricao_tecnica_metod} irá descrever a técnica estudada, mostrando passo a passo do algoritmo e descrevendo a metodologia adotada. O Capítulo \ref{cap:imp_resultados} discute os resultados encontrados e detalha como a técnica foi implementada utilizando o software $MatLab_{\copyright}$, o Capítulo \ref{cap:cons_finais_trab_futuros} faz as consedirações finais sobre o trabalho, explorando possibilidades de trabalhos futuros para uma análise mais completa do problema.[
+
 
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------%

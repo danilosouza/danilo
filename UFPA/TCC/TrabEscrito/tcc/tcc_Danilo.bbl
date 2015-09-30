@@ -89,6 +89,31 @@ Alexis Protiere and Guillermo Sapiro.
 \newblock {Interactive image segmentation via adaptive weighted distances}.
 \newblock {\em IEEE Transactions on Image Processing}, 16(4):1046--1057, 2007.
 
+\bibitem{Lakshmi2010}
+S.~Lakshmi and Dr.V. Sankaranarayanan.
+\newblock {A study of Edge Detection Techniques for Segmentation Computing
+  Approaches}.
+\newblock {\em International Journal of Computer Applications},
+  CASCT(1):35--41, 2010.
+
+\bibitem{Otsu1979}
+NOBUYUKI OTSU.
+\newblock {A Threshold Selection Method from Gray-Level Histograms}.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics},
+  9(1):62--66, 1979.
+
+\bibitem{Sezgin2004}
+Mehmet Sezgin and Bulent Sankur.
+\newblock {Survey over image thresholding techniques and quantitative
+  performance evaluation}.
+\newblock {\em Journal of Electronic Imaging}, 13(1):146--165, 2004.
+
+\bibitem{Kaganami2009}
+Hassana~Grema Kaganami and Zou Beiji.
+\newblock {Region-based segmentation versus edge detection}.
+\newblock {\em IIH-MSP 2009 - 2009 5th International Conference on Intelligent
+  Information Hiding and Multimedia Signal Processing}, pages 1217--1221, 2009.
+
 \bibitem{Manjunath1996}
 B~Manjunath and W~Ma.
 \newblock {Texture features for browsing and retrivieval of image data}.

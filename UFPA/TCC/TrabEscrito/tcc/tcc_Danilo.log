@@ -1,0 +1,2043 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  29 SEP 2015 22:13
+entering extended mode
+**tcc_Danilo.tex
+
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.te
+x
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+(C:\MikTex2.9\tex\latex\base\book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(C:\MikTex2.9\tex\latex\base\bk12.clo
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\MikTex2.9\tex\latex\base\inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(C:\MikTex2.9\tex\latex\base\latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(C:\MikTex2.9\tex\generic\babel\babel.sty
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\MikTex2.9\tex\latex\00miktex\bblopts.cfg
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+(C:\MikTex2.9\tex\generic\babel\portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(C:\MikTex2.9\tex\generic\babel\babel.def
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+(C:\MikTex2.9\tex\latex\base\fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+ (C:\MikTex2.9\tex\latex\base\t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)) (C:\MikTex2.9\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(C:\MikTex2.9\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(C:\MikTex2.9\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+(C:\MikTex2.9\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+(C:\MikTex2.9\tex\latex\amsmath\amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks17
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(C:\MikTex2.9\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\MikTex2.9\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\MikTex2.9\tex\latex\amscls\amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks26
+)
+(C:\MikTex2.9\tex\latex\tools\enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks27
+)
+(C:\MikTex2.9\tex\latex\tools\longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count101
+\LTcapwidth=\dimen113
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count102
+\LT@rows=\count103
+\c@LT@tables=\count104
+\c@LT@chunks=\count105
+\LT@p@ftn=\toks28
+)
+(C:\MikTex2.9\tex\latex\tools\hhline.sty
+Package: hhline 1994/05/23 v2.03 Table rule package (DPC)
+)
+(C:\MikTex2.9\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\MikTex2.9\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks29
+)
+(C:\MikTex2.9\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\MikTex2.9\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\MikTex2.9\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(C:\MikTex2.9\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(C:\MikTex2.9\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(C:\MikTex2.9\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count106
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+(C:\MikTex2.9\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(C:\MikTex2.9\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(C:\MikTex2.9\tex\latex\tools\indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(C:\MikTex2.9\tex\latex\base\makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+
+Writing index file tcc_Danilo.idx
+(C:\MikTex2.9\tex\latex\geometry\geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(C:\MikTex2.9\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(C:\MikTex2.9\tex\generic\oberdiek\ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(C:\MikTex2.9\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count107
+\Gm@cntv=\count108
+\c@Gm@tempcnt=\count109
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
+\Gm@dimlist=\toks30
+
+(C:\MikTex2.9\tex\latex\geometry\geometry.cfg))
+(C:\MikTex2.9\tex\latex\oberdiek\epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(C:\MikTex2.9\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(C:\MikTex2.9\tex\latex\oberdiek\grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(C:\MikTex2.9\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(C:\MikTex2.9\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(C:\MikTex2.9\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(C:\MikTex2.9\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(C:\MikTex2.9\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(C:\MikTex2.9\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen124
+\captionmargin@=\dimen125
+\captionwidth=\dimen126
+\caption@tempdima=\dimen127
+\caption@indent=\dimen128
+\caption@parindent=\dimen129
+\caption@hangindent=\dimen130
+)
+\c@ContinuedFloat=\count110
+Package caption Info: longtable package is loaded.
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+))
+\c@KVtest=\count111
+\sf@farskip=\skip53
+\sf@captopadj=\dimen131
+\sf@capskip=\skip54
+\sf@nearskip=\skip55
+\c@subfigure=\count112
+\c@subfigure@save=\count113
+\c@lofdepth=\count114
+\c@subtable=\count115
+\c@subtable@save=\count116
+\c@lotdepth=\count117
+\sf@top=\skip56
+\sf@bottom=\skip57
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\frankenstein\newclude.sty
+Package: newclude 1999/11/02 v2 A new system for including files (Frankenstein'
+s backbone)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\frankenstein\moredefs.sty
+Package: moredefs 2001/08/31 v1.8 more defining commands (Frankenstein's brain)
+
+\sc@toks@a=\toks31
+\sc@toks@b=\toks32
+)
+\nc@toks@a=\toks33
+\c@IncludeDepth=\count118
+) (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\frankenstein\tag.sto)
+(C:\MikTex2.9\tex\latex\multirow\multirow.sty
+\bigstrutjot=\dimen132
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\standalone\standalone.sty
+Package: standalone 2015/07/15 v1.2 Package to include TeX sub-files with pream
+bles
+(C:\MikTex2.9\tex\latex\xkeyval\xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+(C:\MikTex2.9\tex\generic\xkeyval\xkeyval.tex
+\XKV@toks=\toks34
+\XKV@tempa@toks=\toks35
+\XKV@depth=\count119
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\currfile\currfile.sty
+Package: currfile 2013/02/01 v0.7b Provides the file path elements of the curre
+nt input file
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\filehook\filehook.sty
+Package: filehook 2011/10/12 v0.5d Hooks for input files
+)
+\c@currfiledepth=\count120
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\gincltex\gincltex.sty
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\svn-prov\svn-prov.sty
+Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
+)
+Package: gincltex 2011/09/04 v0.3 Include external LaTeX files like graphics
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\collectbox\collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box32
+)
+\tc@llx=\dimen133
+\tc@lly=\dimen134
+\tc@urx=\dimen135
+\tc@ury=\dimen136
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen137
+\adjbox@Height=\dimen138
+\adjbox@Depth=\dimen139
+\adjbox@Totalheight=\dimen140
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\ifoddpage\ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count121
+)
+(C:\MikTex2.9\tex\latex\ltxmisc\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box33
+\sift@deathcycles=\count122
+\@vwid@loff=\dimen141
+\@vwid@roff=\dimen142
+))
+\gincltex@box=\box34
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\filemod\filemod-expmin.st
+y
+Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
+ (expandable; minimal)
+)) (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\titlesec\titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box35
+\beforetitleunit=\skip58
+\aftertitleunit=\skip59
+\ttl@plus=\dimen143
+\ttl@minus=\dimen144
+\ttl@toksa=\toks36
+\titlewidth=\dimen145
+\titlewidthlast=\dimen146
+\titlewidthfirst=\dimen147
+)
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_2_Adam.st
+y
+File: tcc_2_Adam.sty 2006/07/02 v0.3b2 Estilo para TCC do DM-UFSCar (requer boo
+k ou report como classe de documento)
+
+dm-tcc 0.3b3 <Julho/2006>.
+) (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\hyphenat\hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language69
+LaTeX Info: Redefining \_ on input line 43.
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.st
+y (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.sty
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
+ommon.tex
+\pgfutil@everybye=\toks37
+\pgfutil@tempdima=\dimen148
+\pgfutil@tempdimb=\dimen149
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
+ommon-lists.tex))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-l
+atex.def
+\pgfutil@abb=\box36
+ (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.co
+de.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.st
+y
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.st
+y
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys.
+code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex
+\pgfkeys@pathtoks=\toks38
+\pgfkeys@temptoks=\toks39
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfi
+ltered.code.tex
+\pgfkeys@tmptoks=\toks40
+))
+\pgf@x=\dimen150
+\pgf@y=\dimen151
+\pgf@xa=\dimen152
+\pgf@ya=\dimen153
+\pgf@xb=\dimen154
+\pgf@yb=\dimen155
+\pgf@xc=\dimen156
+\pgf@yc=\dimen157
+\w@pgf@writea=\write4
+\r@pgf@reada=\read1
+\c@pgf@counta=\count123
+\c@pgf@countb=\count124
+\c@pgf@countc=\count125
+\c@pgf@countd=\count126
+\t@pgf@toka=\toks41
+\t@pgf@tokb=\toks42
+\t@pgf@tokc=\toks43
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+pdftex.def
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyss
+oftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count127
+\pgfsyssoftpath@bigbuffer@items=\count128
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysp
+rotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(C:\MikTex2.9\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcore.
+code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.co
+de.tex
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.co
+de.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
+code.tex
+\pgfmath@dimen=\dimen158
+\pgfmath@count=\count129
+\pgfmath@box=\box37
+\pgfmath@toks=\toks44
+\pgfmath@stack@operand=\toks45
+\pgfmath@stack@operation=\toks46
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.code.tex
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.basic.code.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.trigonometric.code.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.random.code.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.comparison.code.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.base.code.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.round.code.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.misc.code.tex)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.integerarithmetics.code.tex)))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
+ode.tex
+\c@pgfmathroundto@lastzeros=\count130
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+oints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen159
+\pgf@picmaxx=\dimen160
+\pgf@picminy=\dimen161
+\pgf@picmaxy=\dimen162
+\pgf@pathminx=\dimen163
+\pgf@pathmaxx=\dimen164
+\pgf@pathminy=\dimen165
+\pgf@pathmaxy=\dimen166
+\pgf@xx=\dimen167
+\pgf@xy=\dimen168
+\pgf@yx=\dimen169
+\pgf@yy=\dimen170
+\pgf@zx=\dimen171
+\pgf@zy=\dimen172
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen173
+\pgf@path@lasty=\dimen174
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athusage.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen175
+\pgf@shorten@start@additional=\dimen176
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+copes.code.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box38
+\pgf@hbox=\box39
+\pgf@layerbox@main=\box40
+\pgf@picture@serial@count=\count131
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreg
+raphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen177
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransformations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen178
+\pgf@pt@y=\dimen179
+\pgf@pt@temp=\dimen180
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreq
+uick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreo
+bjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorea
+rrows.code.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen181
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+hade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen182
+\pgf@sys@shading@range@num=\count132
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorei
+mage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoree
+xternal.code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box41
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorel
+ayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+atterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulesh
+apes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box42
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulepl
+ot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen183
+\pgf@nodesepend=\dimen184
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.sty
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.sty
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\math\pgfmath.sty
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.co
+de.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex)
+\pgffor@iter=\dimen185
+\pgffor@skip=\dimen186
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count133
+\pgfplotmarksize=\dimen187
+)
+\tikz@lastx=\dimen188
+\tikz@lasty=\dimen189
+\tikz@lastxsaved=\dimen190
+\tikz@lastysaved=\dimen191
+\tikzleveldistance=\dimen192
+\tikzsiblingdistance=\dimen193
+\tikz@figbox=\box43
+\tikz@figbox@bg=\box44
+\tikz@tempbox=\box45
+\tikz@tempbox@bg=\box46
+\tikztreelevel=\count134
+\tikznumberofchildren=\count135
+\tikznumberofcurrentchild=\count136
+\tikz@fig@count=\count137
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulema
+trix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count138
+\pgfmatrixcurrentcolumn=\count139
+\pgf@matrix@numberofcolumns=\count140
+)
+\tikz@expandcount=\count141
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarytrees.code.tex
+File: tikzlibrarytrees.code.tex 2008/02/24 v3.0.0 (rcs-revision 1.2)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2013/07/12 v3.0.0 (rcs-revision 1.5)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yarrows.code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen194
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.0 (rcs-revision 1.4)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
+)
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\shapes\pg
+flibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.5)
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2008/01/13 v3.0.0 (rcs-revision 1.3)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.0 (rcs-revision 1.2)
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yfadings.code.tex
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.0 (rcs-revision 1.3)
+)))
+\c@teorema=\count142
+
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.au
+x)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 356.
+LaTeX Font Info:    ... okay on input line 356.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 356.
+LaTeX Font Info:    ... okay on input line 356.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 356.
+LaTeX Font Info:    ... okay on input line 356.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 356.
+LaTeX Font Info:    ... okay on input line 356.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 356.
+LaTeX Font Info:    ... okay on input line 356.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 356.
+LaTeX Font Info:    ... okay on input line 356.
+ (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count143
+\scratchdimen=\dimen195
+\scratchbox=\box47
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen196
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks50
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(113.81102pt, 412.56497pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=412.56497pt
+* \textheight=702.78308pt
+* \oddsidemargin=41.54103pt
+* \evensidemargin=41.54103pt
+* \topmargin=-33.0119pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+ABD: EveryShipout initializing macros
+<./figuras/logo_ufpa/logo_ufpa2.pdf, id=28, 136.51pt x 171.64125pt>
+File: ./figuras/logo_ufpa/logo_ufpa2.pdf Graphic file (type pdf)
+
+<use ./figuras/logo_ufpa/logo_ufpa2.pdf>
+Package pdftex.def Info: ./figuras/logo_ufpa/logo_ufpa2.pdf used on input line 
+360.
+(pdftex.def)             Requested size: 70.13528pt x 88.18538pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+\T1/cmr/bx/n/12 FACULDADE DE EN-GE-NHA-RIA DA
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 360.
+(C:\MikTex2.9\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 360.
+
+(C:\MikTex2.9\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+{C:/Users/Danilo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/D
+anilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/logo_ufpa/logo_u
+fpa2.pdf>]
+File: ./figuras/logo_ufpa/logo_ufpa2.pdf Graphic file (type pdf)
+
+<use ./figuras/logo_ufpa/logo_ufpa2.pdf>
+Package pdftex.def Info: ./figuras/logo_ufpa/logo_ufpa2.pdf used on input line 
+375.
+(pdftex.def)             Requested size: 70.13528pt x 88.18538pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+\T1/cmr/bx/n/12 FACULDADE DE EN-GE-NHA-RIA DA
+ []
+
+[1
+
+]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Pre_Textuais/
+Banca/banca.tex
+Underfull \hbox (badness 4726) in paragraph at lines 8--9
+[]\T1/cmr/bx/n/12 Estudo da re-du-ção do tempo de exe-cu-ção de uma téc-nica
+ []
+
+) [2
+
+
+
+]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Pre_Textuais/
+Agradecimentos/agradecimentos.tex) [3
+
+
+
+]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Pre_Textuais/
+Resumo/resumo.tex) [4
+
+
+
+]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Pre_Textuais/
+Abstract/abstract.tex) [5
+
+
+
+]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.to
+c)
+\tf@toc=\write5
+ [6
+
+
+] [7]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.lo
+f [8
+
+] [9])
+\tf@lof=\write6
+ [10]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.lo
+t)
+\tf@lot=\write7
+ [11
+
+]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
+itulo1/capitulo1.tex
+Cap\'{\i }tulo 1.
+[1
+
+
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
+ (C:\MikTex2.9\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+) [2]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
+itulo2/capitulo2.tex
+Cap\'{\i }tulo 2.
+
+Underfull \hbox (badness 3271) in paragraph at lines 14--14
+ |[]\T1/cmr/bx/n/17.28 Introdução à Pro-ces-sa-mento de Ima-gens
+ []
+
+[3
+
+
+
+]
+Underfull \hbox (badness 1661) in paragraph at lines 28--29
+[]\T1/cmr/m/n/12 O exem-plo apre-sen-tado mos-tra uma das prin-ci-pais van-ta-g
+ens de
+ []
+
+[4] <./figuras/capitulo_2/espectro-luz.png, id=99, 803.0pt x 452.69125pt>
+File: ./figuras/capitulo_2/espectro-luz.png Graphic file (type png)
+
+<use ./figuras/capitulo_2/espectro-luz.png>
+Package pdftex.def Info: ./figuras/capitulo_2/espectro-luz.png used on input li
+ne 36.
+(pdftex.def)             Requested size: 401.49902pt x 226.34506pt.
+ [5 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_2/espectro-luz.png>]
+[6]
+Underfull \hbox (badness 1681) in paragraph at lines 72--73
+[]\T1/cmr/bx/n/12 Imagem: \T1/cmr/m/n/12 Se-gundo [2] uma ima-gem é de-fi-nida 
+como uma fun-ção
+ []
+
+[7]
+Underfull \hbox (badness 3229) in paragraph at lines 98--99
+[] []|\T1/cmr/bx/n/12 2.1.2.3.1 Cor-re-la-ção e Con-vo-lu-ção[] \T1/cmr/m/n/12 
+Nas ope-ra-ções de cor-re-la-ção e
+ []
+
+[8]
+<./figuras/capitulo_2/exemploFiltro.pdf, id=118, 344.99991pt x 386.00311pt>
+File: ./figuras/capitulo_2/exemploFiltro.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploFiltro.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploFiltro.pdf used on input l
+ine 105.
+(pdftex.def)             Requested size: 344.99907pt x 386.00217pt.
+ [9 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_2/exemploFiltro.pdf>]
+<./figuras/capitulo_2/exemploErosaoBase.pdf, id=138, 225.58679pt x 80.00089pt>
+File: ./figuras/capitulo_2/exemploErosaoBase.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploErosaoBase.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploErosaoBase.pdf used on inp
+ut line 130.
+(pdftex.def)             Requested size: 270.70277pt x 96.00055pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figuras/capitulo_2/exemploErosaoA.pdf, id=139, 225.58679pt x 80.00089pt>
+File: ./figuras/capitulo_2/exemploErosaoA.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploErosaoA.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploErosaoA.pdf used on input 
+line 139.
+(pdftex.def)             Requested size: 191.74966pt x 68.00105pt.
+
+<./figuras/capitulo_2/exemploErosaoB.pdf, id=140, 225.58679pt x 80.00089pt>
+File: ./figuras/capitulo_2/exemploErosaoB.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploErosaoB.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploErosaoB.pdf used on input 
+line 144.
+(pdftex.def)             Requested size: 191.74966pt x 68.00105pt.
+
+<./figuras/capitulo_2/exemploErosao.pdf, id=141, 186.1364pt x 80.00089pt>
+File: ./figuras/capitulo_2/exemploErosao.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploErosao.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploErosao.pdf used on input l
+ine 148.
+(pdftex.def)             Requested size: 186.13593pt x 80.00067pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_2/exemploDilatacaoA.pdf, id=142, 225.58679pt x 80.00089pt>
+File: ./figuras/capitulo_2/exemploDilatacaoA.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploDilatacaoA.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploDilatacaoA.pdf used on inp
+ut line 157.
+(pdftex.def)             Requested size: 191.74966pt x 68.00105pt.
+
+<./figuras/capitulo_2/exemploDilatacaoB.pdf, id=143, 225.58679pt x 80.00089pt>
+File: ./figuras/capitulo_2/exemploDilatacaoB.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploDilatacaoB.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploDilatacaoB.pdf used on inp
+ut line 162.
+(pdftex.def)             Requested size: 191.74966pt x 68.00105pt.
+
+<./figuras/capitulo_2/exemploDilatacao.pdf, id=144, 186.1364pt x 80.00089pt>
+File: ./figuras/capitulo_2/exemploDilatacao.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_2/exemploDilatacao.pdf>
+Package pdftex.def Info: ./figuras/capitulo_2/exemploDilatacao.pdf used on inpu
+t line 166.
+(pdftex.def)             Requested size: 186.13593pt x 80.00067pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10] [11 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figu
+ras/capitulo_2/exemploErosaoBase.pdf> <C:/Users/Danilo/Documents/GitHub/danilo/
+UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_2/exemploErosaoA.pdf> <C:/Users/Danil
+o/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_2/exemploEr
+osaoB.pdf> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/fi
+guras/capitulo_2/exemploErosao.pdf>] [12 <C:/Users/Danilo/Documents/GitHub/dani
+lo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_2/exemploDilatacaoA.pdf> <C:/Users
+/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_2/exe
+mploDilatacaoB.pdf> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscri
+to/tcc/figuras/capitulo_2/exemploDilatacao.pdf>] [13] [14]
+
+LaTeX Warning: Citation `photoshop' on page 15 undefined on input line 228.
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 233--235
+[]\T1/cmr/m/n/12 Khan [6] mos-tra uma ca-te-go-ri-za-ção das prin-ci-pais téc-n
+i-cas de
+ []
+
+[15]) [16]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
+itulo3/capitulo3.tex
+Cap\'{\i }tulo 3.
+[17
+
+
+
+]
+Package epstopdf Info: Source file: <./figuras/capitulo_3/imagem15_scribbled1.e
+ps>
+(epstopdf)                    date: 2015-08-28 16:08:21
+(epstopdf)                    size: 845698 bytes
+(epstopdf)             Output file: <./figuras/capitulo_3/imagem15_scribbled1-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-28 16:10:08
+(epstopdf)                    size: 35207 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/imagem
+15_scribbled1-eps-converted-to.pdf ./figuras/capitulo_3/imagem15_scribbled1.eps
+>
+(epstopdf)             \includegraphics on input line 28.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figuras/capitulo_3/imagem15_scribbled1-eps-converted-to.pdf, id=251, 519.942
+5pt x 384.43625pt>
+File: ./figuras/capitulo_3/imagem15_scribbled1-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./figuras/capitulo_3/imagem15_scribbled1-eps-converted-to.pdf>
+Package pdftex.def Info: ./figuras/capitulo_3/imagem15_scribbled1-eps-converted
+-to.pdf used on input line 28.
+(pdftex.def)             Requested size: 207.97331pt x 153.77177pt.
+Package epstopdf Info: Source file: <./figuras/capitulo_3/imagem15_scribbled2.e
+ps>
+(epstopdf)                    date: 2015-08-28 16:07:44
+(epstopdf)                    size: 845748 bytes
+(epstopdf)             Output file: <./figuras/capitulo_3/imagem15_scribbled2-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-28 16:10:09
+(epstopdf)                    size: 35493 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/imagem
+15_scribbled2-eps-converted-to.pdf ./figuras/capitulo_3/imagem15_scribbled2.eps
+>
+(epstopdf)             \includegraphics on input line 33.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figuras/capitulo_3/imagem15_scribbled2-eps-converted-to.pdf, id=252, 519.942
+5pt x 384.43625pt>
+File: ./figuras/capitulo_3/imagem15_scribbled2-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./figuras/capitulo_3/imagem15_scribbled2-eps-converted-to.pdf>
+Package pdftex.def Info: ./figuras/capitulo_3/imagem15_scribbled2-eps-converted
+-to.pdf used on input line 33.
+(pdftex.def)             Requested size: 207.97331pt x 153.77177pt.
+Package epstopdf Info: Source file: <./figuras/capitulo_3/imagem15_scribbled3.e
+ps>
+(epstopdf)                    date: 2015-08-28 16:08:02
+(epstopdf)                    size: 845702 bytes
+(epstopdf)             Output file: <./figuras/capitulo_3/imagem15_scribbled3-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2015-08-28 16:10:10
+(epstopdf)                    size: 33149 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/imagem
+15_scribbled3-eps-converted-to.pdf ./figuras/capitulo_3/imagem15_scribbled3.eps
+>
+(epstopdf)             \includegraphics on input line 37.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figuras/capitulo_3/imagem15_scribbled3-eps-converted-to.pdf, id=253, 519.942
+5pt x 384.43625pt>
+File: ./figuras/capitulo_3/imagem15_scribbled3-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./figuras/capitulo_3/imagem15_scribbled3-eps-converted-to.pdf>
+Package pdftex.def Info: ./figuras/capitulo_3/imagem15_scribbled3-eps-converted
+-to.pdf used on input line 37.
+(pdftex.def)             Requested size: 207.97331pt x 153.77177pt.
+
+Overfull \hbox (24.50043pt too wide) in paragraph at lines 28--38
+ [][]|  [] 
+ []
+
+[18 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_3/imagem15_scribbled1-eps-converted-to.pdf> <C:/Users/Danilo/Documents/
+GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_3/imagem15_scribbled2-e
+ps-converted-to.pdf> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscr
+ito/tcc/figuras/capitulo_3/imagem15_scribbled3-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./figuras/capitulo_3/exemplo_fdp.eps>
+(epstopdf)                    date: 2015-08-12 17:54:19
+(epstopdf)                    size: 25786 bytes
+(epstopdf)             Output file: <./figuras/capitulo_3/exemplo_fdp-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2015-08-12 18:01:57
+(epstopdf)                    size: 7076 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/exempl
+o_fdp-eps-converted-to.pdf ./figuras/capitulo_3/exemplo_fdp.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figuras/capitulo_3/exemplo_fdp-eps-converted-to.pdf, id=266, 421.575pt x 316
+.18124pt>
+File: ./figuras/capitulo_3/exemplo_fdp-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./figuras/capitulo_3/exemplo_fdp-eps-converted-to.pdf>
+Package pdftex.def Info: ./figuras/capitulo_3/exemplo_fdp-eps-converted-to.pdf 
+used on input line 56.
+(pdftex.def)             Requested size: 455.30064pt x 341.47548pt.
+
+Overfull \hbox (42.73567pt too wide) in paragraph at lines 56--57
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19] [20 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figu
+ras/capitulo_3/exemplo_fdp-eps-converted-to.pdf>] [21]
+Package epstopdf Info: Source file: <./figuras/capitulo_3/grafico_histograma_pe
+rcent_distancia.eps>
+(epstopdf)                    date: 2015-09-29 09:33:29
+(epstopdf)                    size: 16302 bytes
+(epstopdf)             Output file: <./figuras/capitulo_3/grafico_histograma_pe
+rcent_distancia-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-09-29 09:33:38
+(epstopdf)                    size: 3692 bytes
+(epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/grafic
+o_histograma_percent_distancia-eps-converted-to.pdf ./figuras/capitulo_3/grafic
+o_histograma_percent_distancia.eps>
+(epstopdf)             \includegraphics on input line 134.
+Package epstopdf Info: Output file is already uptodate.
+
+<./figuras/capitulo_3/grafico_histograma_percent_distancia-eps-converted-to.pdf
+, id=280, 421.575pt x 316.18124pt>
+File: ./figuras/capitulo_3/grafico_histograma_percent_distancia-eps-converted-t
+o.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_3/grafico_histograma_percent_distancia-eps-converted-to
+.pdf>
+Package pdftex.def Info: ./figuras/capitulo_3/grafico_histograma_percent_distan
+cia-eps-converted-to.pdf used on input line 134.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 134--135
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22]
+Underfull \hbox (badness 3713) in paragraph at lines 150--151
+[]\T1/cmr/m/n/12 O pa-râ-me-tro mo-di-fi-cado para aná-lise do tempo é a taxa d
+e
+ []
+
+[23 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_3/grafico_histograma_percent_distancia-eps-converted-to.pdf>]) [24]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
+itulo4/capitulo4.tex
+Cap\'{\i }tulo 4.
+[25
+
+
+
+]
+<./figuras/capitulo_4/DiagramaFuncoes.pdf, id=298, 247.58498pt x 194.8369pt>
+File: ./figuras/capitulo_4/DiagramaFuncoes.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_4/DiagramaFuncoes.pdf>
+Package pdftex.def Info: ./figuras/capitulo_4/DiagramaFuncoes.pdf used on input
+ line 30.
+(pdftex.def)             Requested size: 371.37654pt x 292.25461pt.
+
+<./figuras/capitulo_4/DiagramaCodigo.pdf, id=299, 520.59294pt x 669.98206pt>
+File: ./figuras/capitulo_4/DiagramaCodigo.pdf Graphic file (type pdf)
+
+<use ./figuras/capitulo_4/DiagramaCodigo.pdf>
+Package pdftex.def Info: ./figuras/capitulo_4/DiagramaCodigo.pdf used on input 
+line 37.
+(pdftex.def)             Requested size: 442.50607pt x 569.48744pt.
+
+Overfull \hbox (29.9411pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[26 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_4/DiagramaFuncoes.pdf>] [27 <C:/Users/Danilo/Documents/GitHub/danilo/UF
+PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/DiagramaCodigo.pdf>]
+Underfull \hbox (badness 2932) in paragraph at lines 51--52
+\T1/cmr/m/n/12 de \T1/cmr/m/it/12 x \T1/cmr/m/n/12 per-ten-cer a uma de-ter-mi-
+nada re-gião ou sub-região. A fun-ção
+ []
+
+
+Overfull \hbox (26.80852pt too wide) detected at line 59
+\OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/
+cmsy/m/n/12 2 \OT1/cmr/m/n/12 
+  : \OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )
+ =  [] [] [][] [] []\OML/cmm/m/it/12 [][]dudv;  onde   \OT1/cmr/m/n/12 = 0\OM
+L/cmm/m/it/12 :\OT1/cmr/m/n/12 25 \OML/cmm/m/it/12 e N \OT1/cmr/m/n/12 = 5
+ []
+
+[28] <./figuras/capitulo_4/imagem1.png, id=325, 521.95pt x 421.575pt>
+File: ./figuras/capitulo_4/imagem1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem1.png used on input line 83
+.
+(pdftex.def)             Requested size: 208.77629pt x 168.627pt.
+
+<./figuras/capitulo_4/imagem2.png, id=326, 481.8pt x 271.0125pt>
+File: ./figuras/capitulo_4/imagem2.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem2.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem2.png used on input line 88
+.
+(pdftex.def)             Requested size: 192.71658pt x 108.40306pt.
+
+<./figuras/capitulo_4/imagem3.png, id=327, 421.575pt x 278.54062pt>
+File: ./figuras/capitulo_4/imagem3.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem3.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem3.png used on input line 92
+.
+(pdftex.def)             Requested size: 168.627pt x 111.41426pt.
+
+<./figuras/capitulo_4/imagem4.png, id=328, 466.74374pt x 306.39468pt>
+File: ./figuras/capitulo_4/imagem4.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem4.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem4.png used on input line 97
+.
+(pdftex.def)             Requested size: 186.69418pt x 122.5557pt.
+
+<./figuras/capitulo_4/imagem5.png, id=329, 455.45157pt x 267.24844pt>
+File: ./figuras/capitulo_4/imagem5.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem5.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem5.png used on input line 10
+1.
+(pdftex.def)             Requested size: 182.1774pt x 106.89748pt.
+
+<./figuras/capitulo_4/imagem6.png, id=330, 466.74374pt x 302.63063pt>
+File: ./figuras/capitulo_4/imagem6.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem6.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem6.png used on input line 10
+6.
+(pdftex.def)             Requested size: 186.69418pt x 121.0501pt.
+
+Overfull \hbox (10.04668pt too wide) in paragraph at lines 83--107
+ [][]|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figuras/capitulo_4/imagem2_scribbled1.png, id=331, 361.35pt x 203.25937pt>
+File: ./figuras/capitulo_4/imagem2_scribbled1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem2_scribbled1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem2_scribbled1.png used on in
+put line 115.
+(pdftex.def)             Requested size: 216.81168pt x 121.95656pt.
+
+<./figuras/capitulo_4/imagem2_scribbled2.png, id=332, 361.35pt x 203.25937pt>
+File: ./figuras/capitulo_4/imagem2_scribbled2.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem2_scribbled2.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem2_scribbled2.png used on in
+put line 120.
+(pdftex.def)             Requested size: 216.81168pt x 121.95656pt.
+
+Overfull \hbox (42.17715pt too wide) in paragraph at lines 115--121
+ [][]|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/imagem3_scribbled1.png, id=333, 421.575pt x 278.54062pt>
+File: ./figuras/capitulo_4/imagem3_scribbled1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem3_scribbled1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem3_scribbled1.png used on in
+put line 129.
+(pdftex.def)             Requested size: 210.78697pt x 139.26996pt.
+
+<./figuras/capitulo_4/imagem3_scribbled2.png, id=334, 421.575pt x 278.54062pt>
+File: ./figuras/capitulo_4/imagem3_scribbled2.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem3_scribbled2.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem3_scribbled2.png used on in
+put line 134.
+(pdftex.def)             Requested size: 210.78697pt x 139.26996pt.
+
+Overfull \hbox (30.12775pt too wide) in paragraph at lines 129--135
+ [][]|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/imagem4_scribbled1.png, id=335, 466.74374pt x 306.39468pt
+>
+File: ./figuras/capitulo_4/imagem4_scribbled1.png Graphic file (type png)
+ <use ./figuras/capitulo_4/imagem4_scribbled1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem4_scribbled1.png used on in
+put line 143.
+(pdftex.def)             Requested size: 210.03275pt x 137.87633pt.
+
+<./figuras/capitulo_4/imagem4_scribbled2.png, id=336, 466.74374pt x 306.39468pt
+>
+File: ./figuras/capitulo_4/imagem4_scribbled2.png Graphic file (type png)
+ <use ./figuras/capitulo_4/imagem4_scribbled2.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem4_scribbled2.png used on in
+put line 148.
+(pdftex.def)             Requested size: 210.03275pt x 137.87633pt.
+
+Overfull \hbox (28.6193pt too wide) in paragraph at lines 143--149
+ [][]|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/imagem5_scribbled1.png, id=337, 455.45157pt x 267.24844pt
+>
+File: ./figuras/capitulo_4/imagem5_scribbled1.png Graphic file (type png)
+ <use ./figuras/capitulo_4/imagem5_scribbled1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem5_scribbled1.png used on in
+put line 157.
+(pdftex.def)             Requested size: 204.95131pt x 120.26068pt.
+
+<./figuras/capitulo_4/imagem5_scribbled2.png, id=338, 455.45157pt x 267.24844pt
+>
+File: ./figuras/capitulo_4/imagem5_scribbled2.png Graphic file (type png)
+ <use ./figuras/capitulo_4/imagem5_scribbled2.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem5_scribbled2.png used on in
+put line 162.
+(pdftex.def)             Requested size: 204.95131pt x 120.26068pt.
+
+Overfull \hbox (18.45642pt too wide) in paragraph at lines 157--163
+ [][]|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/imagem6_scribbled1.png, id=339, 466.74374pt x 302.63063pt
+>
+File: ./figuras/capitulo_4/imagem6_scribbled1.png Graphic file (type png)
+ <use ./figuras/capitulo_4/imagem6_scribbled1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem6_scribbled1.png used on in
+put line 171.
+(pdftex.def)             Requested size: 210.03275pt x 136.18251pt.
+
+<./figuras/capitulo_4/imagem6_scribbled2.png, id=340, 466.74374pt x 302.63063pt
+>
+File: ./figuras/capitulo_4/imagem6_scribbled2.png Graphic file (type png)
+ <use ./figuras/capitulo_4/imagem6_scribbled2.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem6_scribbled2.png used on in
+put line 176.
+(pdftex.def)             Requested size: 210.03275pt x 136.18251pt.
+
+Overfull \hbox (28.6193pt too wide) in paragraph at lines 171--177
+ [][]|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/Imagem1_objeto1_tx100.png, id=341, 519.44063pt x 384.6872
+pt>
+File: ./figuras/capitulo_4/Imagem1_objeto1_tx100.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto1_tx100.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto1_tx100.png used on
+ input line 186.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+<./figuras/capitulo_4/Imagem1_objeto1_tx50.png, id=342, 519.44063pt x 384.6872p
+t>
+File: ./figuras/capitulo_4/Imagem1_objeto1_tx50.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto1_tx50.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto1_tx50.png used on 
+input line 191.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+<./figuras/capitulo_4/Imagem1_objeto1_tx10.png, id=343, 519.44063pt x 384.6872p
+t>
+File: ./figuras/capitulo_4/Imagem1_objeto1_tx10.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto1_tx10.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto1_tx10.png used on 
+input line 195.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+<./figuras/capitulo_4/Imagem1_objeto1_tx1.png, id=344, 519.44063pt x 384.6872pt
+>
+File: ./figuras/capitulo_4/Imagem1_objeto1_tx1.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto1_tx1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto1_tx1.png used on i
+nput line 200.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+Overfull \hbox (24.09894pt too wide) in paragraph at lines 186--201
+ [][]|  [] 
+ []
+
+
+Overfull \hbox (24.09894pt too wide) in paragraph at lines 186--201
+ []|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/Imagem1_objeto2_tx100.png, id=345, 519.44063pt x 384.6872
+pt>
+File: ./figuras/capitulo_4/Imagem1_objeto2_tx100.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto2_tx100.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto2_tx100.png used on
+ input line 209.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+<./figuras/capitulo_4/Imagem1_objeto2_tx50.png, id=346, 519.44063pt x 384.6872p
+t>
+File: ./figuras/capitulo_4/Imagem1_objeto2_tx50.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto2_tx50.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto2_tx50.png used on 
+input line 214.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+<./figuras/capitulo_4/Imagem1_objeto2_tx10.png, id=347, 519.44063pt x 384.6872p
+t>
+File: ./figuras/capitulo_4/Imagem1_objeto2_tx10.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto2_tx10.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto2_tx10.png used on 
+input line 218.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+<./figuras/capitulo_4/Imagem1_objeto2_tx1.png, id=348, 519.44063pt x 384.6872pt
+>
+File: ./figuras/capitulo_4/Imagem1_objeto2_tx1.png Graphic file (type png)
+ <use ./figuras/capitulo_4/Imagem1_objeto2_tx1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto2_tx1.png used on i
+nput line 223.
+(pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
+
+Overfull \hbox (24.09894pt too wide) in paragraph at lines 209--224
+ [][]|  [] 
+ []
+
+
+Overfull \hbox (24.09894pt too wide) in paragraph at lines 209--224
+ []|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figuras/capitulo_4/Imagem2_tx100.png, id=349, 489.32813pt x 271.76532pt>
+File: ./figuras/capitulo_4/Imagem2_tx100.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem2_tx100.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem2_tx100.png used on input l
+ine 232.
+(pdftex.def)             Requested size: 220.19562pt x 122.29326pt.
+
+<./figuras/capitulo_4/Imagem2_tx50.png, id=350, 489.32813pt x 271.76532pt>
+File: ./figuras/capitulo_4/Imagem2_tx50.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem2_tx50.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem2_tx50.png used on input li
+ne 237.
+(pdftex.def)             Requested size: 220.19562pt x 122.29326pt.
+
+<./figuras/capitulo_4/Imagem2_tx10.png, id=351, 489.32813pt x 271.76532pt>
+File: ./figuras/capitulo_4/Imagem2_tx10.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem2_tx10.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem2_tx10.png used on input li
+ne 241.
+(pdftex.def)             Requested size: 220.19562pt x 122.29326pt.
+
+<./figuras/capitulo_4/Imagem2_tx1.png, id=352, 489.32813pt x 271.76532pt>
+File: ./figuras/capitulo_4/Imagem2_tx1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem2_tx1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem2_tx1.png used on input lin
+e 246.
+(pdftex.def)             Requested size: 220.19562pt x 122.29326pt.
+
+Overfull \hbox (48.94504pt too wide) in paragraph at lines 232--247
+ [][]|  [] 
+ []
+
+
+Overfull \hbox (48.94504pt too wide) in paragraph at lines 232--247
+ []|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figuras/capitulo_4/Imagem3_tx100.png, id=353, 549.55313pt x 347.04657pt>
+File: ./figuras/capitulo_4/Imagem3_tx100.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem3_tx100.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem3_tx100.png used on input l
+ine 256.
+(pdftex.def)             Requested size: 219.81735pt x 138.81616pt.
+
+<./figuras/capitulo_4/Imagem3_tx50.png, id=354, 549.55313pt x 347.04657pt>
+File: ./figuras/capitulo_4/Imagem3_tx50.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem3_tx50.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem3_tx50.png used on input li
+ne 261.
+(pdftex.def)             Requested size: 219.81735pt x 138.81616pt.
+
+<./figuras/capitulo_4/Imagem3_tx10.png, id=355, 549.55313pt x 347.04657pt>
+File: ./figuras/capitulo_4/Imagem3_tx10.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem3_tx10.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem3_tx10.png used on input li
+ne 265.
+(pdftex.def)             Requested size: 219.81735pt x 138.81616pt.
+
+<./figuras/capitulo_4/Imagem3_tx1.png, id=356, 549.55313pt x 347.04657pt>
+File: ./figuras/capitulo_4/Imagem3_tx1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/Imagem3_tx1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/Imagem3_tx1.png used on input lin
+e 270.
+(pdftex.def)             Requested size: 219.81735pt x 138.81616pt.
+
+Overfull \hbox (48.1885pt too wide) in paragraph at lines 256--271
+ [][]|  [] 
+ []
+
+
+Overfull \hbox (48.1885pt too wide) in paragraph at lines 256--271
+ []|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figuras/capitulo_4/imagem4_tx100.png, id=357, 594.72188pt x 374.90062pt>
+File: ./figuras/capitulo_4/imagem4_tx100.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem4_tx100.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem4_tx100.png used on input l
+ine 279.
+(pdftex.def)             Requested size: 220.04364pt x 138.71106pt.
+
+<./figuras/capitulo_4/imagem4_tx50.png, id=358, 594.72188pt x 374.90062pt>
+File: ./figuras/capitulo_4/imagem4_tx50.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem4_tx50.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem4_tx50.png used on input li
+ne 284.
+(pdftex.def)             Requested size: 220.04364pt x 138.71106pt.
+
+<./figuras/capitulo_4/imagem4_tx10.png, id=359, 594.72188pt x 374.90062pt>
+File: ./figuras/capitulo_4/imagem4_tx10.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem4_tx10.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem4_tx10.png used on input li
+ne 288.
+(pdftex.def)             Requested size: 220.04364pt x 138.71106pt.
+
+<./figuras/capitulo_4/imagem4_tx1.png, id=360, 594.72188pt x 374.90062pt>
+File: ./figuras/capitulo_4/imagem4_tx1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem4_tx1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem4_tx1.png used on input lin
+e 293.
+(pdftex.def)             Requested size: 220.04364pt x 138.71106pt.
+
+Overfull \hbox (48.64108pt too wide) in paragraph at lines 279--294
+ [][]|  [] 
+ []
+
+
+Overfull \hbox (48.64108pt too wide) in paragraph at lines 279--294
+ []|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figuras/capitulo_4/imagem5_tx100.png, id=361, 583.42969pt x 335.75438pt>
+File: ./figuras/capitulo_4/imagem5_tx100.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem5_tx100.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem5_tx100.png used on input l
+ine 302.
+(pdftex.def)             Requested size: 215.8656pt x 124.22717pt.
+
+<./figuras/capitulo_4/imagem5_tx50.png, id=362, 583.42969pt x 335.75438pt>
+File: ./figuras/capitulo_4/imagem5_tx50.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem5_tx50.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem5_tx50.png used on input li
+ne 307.
+(pdftex.def)             Requested size: 215.8656pt x 124.22717pt.
+
+<./figuras/capitulo_4/imagem5_tx10.png, id=363, 583.42969pt x 335.75438pt>
+File: ./figuras/capitulo_4/imagem5_tx10.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem5_tx10.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem5_tx10.png used on input li
+ne 311.
+(pdftex.def)             Requested size: 215.8656pt x 124.22717pt.
+
+<./figuras/capitulo_4/imagem5_tx1.png, id=364, 583.42969pt x 335.75438pt>
+File: ./figuras/capitulo_4/imagem5_tx1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem5_tx1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem5_tx1.png used on input lin
+e 316.
+(pdftex.def)             Requested size: 215.8656pt x 124.22717pt.
+
+Overfull \hbox (40.285pt too wide) in paragraph at lines 302--317
+ [][]|  [] 
+ []
+
+
+Overfull \hbox (40.285pt too wide) in paragraph at lines 302--317
+ []|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figuras/capitulo_4/imagem6_tx100.png, id=365, 594.72188pt x 371.13657pt>
+File: ./figuras/capitulo_4/imagem6_tx100.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem6_tx100.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem6_tx100.png used on input l
+ine 325.
+(pdftex.def)             Requested size: 220.04364pt x 137.31837pt.
+
+<./figuras/capitulo_4/imagem6_tx50.png, id=366, 594.72188pt x 371.13657pt>
+File: ./figuras/capitulo_4/imagem6_tx50.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem6_tx50.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem6_tx50.png used on input li
+ne 330.
+(pdftex.def)             Requested size: 220.04364pt x 137.31837pt.
+
+<./figuras/capitulo_4/imagem6_tx10.png, id=367, 594.72188pt x 371.13657pt>
+File: ./figuras/capitulo_4/imagem6_tx10.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem6_tx10.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem6_tx10.png used on input li
+ne 334.
+(pdftex.def)             Requested size: 220.04364pt x 137.31837pt.
+
+<./figuras/capitulo_4/imagem6_tx1.png, id=368, 594.72188pt x 371.13657pt>
+File: ./figuras/capitulo_4/imagem6_tx1.png Graphic file (type png)
+
+<use ./figuras/capitulo_4/imagem6_tx1.png>
+Package pdftex.def Info: ./figuras/capitulo_4/imagem6_tx1.png used on input lin
+e 339.
+(pdftex.def)             Requested size: 220.04364pt x 137.31837pt.
+
+Overfull \hbox (48.64108pt too wide) in paragraph at lines 325--340
+ [][]|  [] 
+ []
+
+
+Overfull \hbox (48.64108pt too wide) in paragraph at lines 325--340
+ []|  [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 346--347
+[]\T1/cmr/m/n/12 Enquanto que nas ima-gens 1, 3 e 5 (Fi-gu-ras 4.3a[], 4.3c[] e
+ 4.3e[],
+ []
+
+[29]
+<./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf, id=372, 
+421.575pt x 316.18124pt>
+File: ./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use ./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf>
+Package pdftex.def Info: ./figuras/capitulo_4/grafico_erro_classificacao-eps-co
+nverted-to.pdf used on input line 352.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 352--353
+[][] 
+ []
+
+[30 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_4/imagem1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEs
+crito/tcc/figuras/capitulo_4/imagem2.png> <C:/Users/Danilo/Documents/GitHub/dan
+ilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem3.png> <C:/Users/Danilo/D
+ocuments/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem4.png>
+ <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capi
+tulo_4/imagem5.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscri
+to/tcc/figuras/capitulo_4/imagem6.png>]
+
+LaTeX Warning: Text page 31 contains only floats.
+
+[31 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_4/imagem2_scribbled1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA
+/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem2_scribbled2.png> <C:/Users/Danil
+o/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem3_s
+cribbled1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tc
+c/figuras/capitulo_4/imagem3_scribbled2.png> <C:/Users/Danilo/Documents/GitHub/
+danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem4_scribbled1.png> <C:/
+Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_
+4/imagem4_scribbled2.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf, id=3
+93, 421.575pt x 316.18124pt>
+File: ./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf>
+Package pdftex.def Info: ./figuras/capitulo_4/grafico_reducao_tempo_absoluto-ep
+s-converted-to.pdf used on input line 361.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 361--362
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf, id=3
+94, 421.575pt x 316.18124pt>
+File: ./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf>
+Package pdftex.def Info: ./figuras/capitulo_4/grafico_reducao_tempo_relativo-ep
+s-converted-to.pdf used on input line 367.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 367--368
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [32 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras
+/capitulo_4/imagem5_scribbled1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UF
+PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem5_scribbled2.png> <C:/Users/Dan
+ilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem6
+_scribbled1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/
+tcc/figuras/capitulo_4/imagem6_scribbled2.png>] [33 <C:/Users/Danilo/Documents/
+GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objeto1_tx100
+.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/
+tcc/figuras/capitulo_4/Imagem1_objeto1_tx50.png (PNG copy)> <C:/Users/Danilo/Do
+cuments/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objet
+o1_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabE
+scrito/tcc/figuras/capitulo_4/Imagem1_objeto1_tx1.png (PNG copy)>] [34 <C:/User
+s/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Im
+agem1_objeto2_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UF
+PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objeto2_tx50.png (PNG copy)> 
+<C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capit
+ulo_4/Imagem1_objeto2_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/da
+nilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objeto2_tx1.png (PNG c
+opy)>] [35 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/fi
+guras/capitulo_4/Imagem2_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHu
+b/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem2_tx50.png (PNG copy
+)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/ca
+pitulo_4/Imagem2_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/
+UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem2_tx1.png (PNG copy)>]
+[36 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_4/Imagem3_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danil
+o/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem3_tx50.png (PNG copy)> <C:/
+Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_
+4/Imagem3_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TC
+C/TrabEscrito/tcc/figuras/capitulo_4/Imagem3_tx1.png (PNG copy)>] [37 <C:/Users
+/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/ima
+gem4_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/Tr
+abEscrito/tcc/figuras/capitulo_4/imagem4_tx50.png (PNG copy)> <C:/Users/Danilo/
+Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem4_tx1
+0.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito
+/tcc/figuras/capitulo_4/imagem4_tx1.png (PNG copy)>] [38 <C:/Users/Danilo/Docum
+ents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem5_tx100.pn
+g (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc
+/figuras/capitulo_4/imagem5_tx50.png (PNG copy)> <C:/Users/Danilo/Documents/Git
+Hub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem5_tx10.png (PNG co
+py)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/
+capitulo_4/imagem5_tx1.png (PNG copy)>] [39 <C:/Users/Danilo/Documents/GitHub/d
+anilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem6_tx100.png (PNG copy)>
+ <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capi
+tulo_4/imagem6_tx50.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UF
+PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem6_tx10.png (PNG copy)> <C:/User
+s/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/im
+agem6_tx1.png (PNG copy)>] [40 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TC
+C/TrabEscrito/tcc/figuras/capitulo_4/grafico_erro_classificacao-eps-converted-t
+o.pdf>] [41 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/f
+iguras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf>]
+[42 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf>]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
+itulo5/capitulo5.tex
+Cap\'{\i }tulo 5.
+) [43
+
+
+
+]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.bb
+l
+Underfull \hbox (badness 2293) in paragraph at lines 36--40
+[]\T1/cmr/m/n/12 Amit Singh Chauhan, San-jay Si-la-kari, and Ma-nish Di-xit.  I
+mage
+ []
+
+
+Underfull \hbox (badness 6944) in paragraph at lines 36--40
+\T1/cmr/m/it/12 Con-fe-rence on Com-mu-ni-ca-tion Sys-tems and Network Te-ch-no
+-lo-gies\T1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 1742) in paragraph at lines 47--51
+[]\T1/cmr/m/n/12 S. Sa-raswathi and a. Al-li-rani.  Sur-vey on image seg-men-ta
+-tion via
+ []
+
+[44
+
+
+]
+Underfull \hbox (badness 2096) in paragraph at lines 82--86
+\T1/cmr/m/n/12 seg-men-ta-tion - A state-of-art sur-vey for pre-dic-tion.  \T1/
+cmr/m/it/12 Pro-ce-e-dings -
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 100--104
+\T1/cmr/m/n/12 His-to-grams.  \T1/cmr/m/it/12 IEEE Tran-sac-ti-ons on Sys-tems,
+ Man, and Cy-ber-ne-tics\T1/cmr/m/n/12 ,
+ []
+
+) [45]
+(C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.au
+x)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 18162 strings out of 493921
+ 359301 string characters out of 3147279
+ 447524 words of memory out of 3000000
+ 20878 multiletter control sequences out of 15000+200000
+ 25031 words of font info for 64 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 66i,18n,89p,1317b,504s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecti1000.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecti0600.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\Danilo\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Danilo\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\
+Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk>
+ <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+csl1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx2488.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Danilo\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Danilo\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk> <C:\Users\Da
+nilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk><C
+:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MikTex2.9/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MikTex2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MikTex2.9/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MikTe
+x2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MikTex2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MikTex2.9/fonts/type1/
+public/amsfonts/symbols/msam10.pfb>
+Output written on tcc_Danilo.pdf (57 pages, 11135684 bytes).
+PDF statistics:
+ 1039 PDF objects out of 1200 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 429 words of extra memory for PDF output out of 10000 (max. 10000000)
+
