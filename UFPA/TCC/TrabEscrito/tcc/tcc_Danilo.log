@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  1 OCT 2015 20:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  15 OCT 2015 18:59
 entering extended mode
 **tcc_Danilo.tex
 
@@ -432,6 +432,23 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen146
 \titlewidthfirst=\dimen147
 )
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\verse\verse.sty
+Package: verse 2009/09/04 v2.4a verse typesetting
+\c@vslineno=\count123
+\c@poemline=\count124
+\c@fvsline=\count125
+\c@modulo@vs=\count126
+\c@verse@envctr=\count127
+\versewidth=\skip60
+\vgap=\skip61
+\vindent=\skip62
+\stanzaskip=\skip63
+\vleftskip=\skip64
+\vrightskip=\skip65
+\c@chrsinstr=\count128
+\beforepoemtitleskip=\skip66
+\afterpoemtitleskip=\skip67
+)
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_2_Adam.st
 y
 File: tcc_2_Adam.sty 2006/07/02 v0.3b2 Estilo para TCC do DM-UFSCar (requer boo
@@ -497,10 +514,10 @@ ltered.code.tex
 \pgf@yc=\dimen157
 \w@pgf@writea=\write4
 \r@pgf@reada=\read1
-\c@pgf@counta=\count123
-\c@pgf@countb=\count124
-\c@pgf@countc=\count125
-\c@pgf@countd=\count126
+\c@pgf@counta=\count129
+\c@pgf@countb=\count130
+\c@pgf@countc=\count131
+\c@pgf@countd=\count132
 \t@pgf@toka=\toks41
 \t@pgf@tokb=\toks42
 \t@pgf@tokc=\toks43
@@ -521,8 +538,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyss
 oftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count127
-\pgfsyssoftpath@bigbuffer@items=\count128
+\pgfsyssoftpath@smallbuffer@items=\count133
+\pgfsyssoftpath@bigbuffer@items=\count134
 )
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysp
 rotocol.code.tex
@@ -559,7 +576,7 @@ de.tex)
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
 code.tex
 \pgfmath@dimen=\dimen158
-\pgfmath@count=\count129
+\pgfmath@count=\count135
 \pgfmath@box=\box37
 \pgfmath@toks=\toks44
 \pgfmath@stack@operand=\toks45
@@ -585,7 +602,7 @@ ns.misc.code.tex)
 ns.integerarithmetics.code.tex)))
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
 ode.tex
-\c@pgfmathroundto@lastzeros=\count130
+\c@pgfmathroundto@lastzeros=\count136
 ))
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
 oints.code.tex
@@ -623,7 +640,7 @@ File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
 \pgfpic=\box38
 \pgf@hbox=\box39
 \pgf@layerbox@main=\box40
-\pgf@picture@serial@count=\count131
+\pgf@picture@serial@count=\count137
 )
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreg
 raphicstate.code.tex
@@ -658,7 +675,7 @@ File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
 hade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen182
-\pgf@sys@shading@range@num=\count132
+\pgf@sys@shading@range@num=\count138
 )
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorei
 mage.code.tex
@@ -726,7 +743,7 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
 yplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count133
+\pgf@plot@mark@count=\count139
 \pgfplotmarksize=\dimen187
 )
 \tikz@lastx=\dimen188
@@ -739,19 +756,19 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
 \tikz@figbox@bg=\box44
 \tikz@tempbox=\box45
 \tikz@tempbox@bg=\box46
-\tikztreelevel=\count134
-\tikznumberofchildren=\count135
-\tikznumberofcurrentchild=\count136
-\tikz@fig@count=\count137
+\tikztreelevel=\count140
+\tikznumberofchildren=\count141
+\tikznumberofcurrentchild=\count142
+\tikz@fig@count=\count143
 
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulema
 trix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count138
-\pgfmatrixcurrentcolumn=\count139
-\pgf@matrix@numberofcolumns=\count140
+\pgfmatrixcurrentrow=\count144
+\pgfmatrixcurrentcolumn=\count145
+\pgf@matrix@numberofcolumns=\count146
 )
-\tikz@expandcount=\count141
+\tikz@expandcount=\count147
 
 (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
 libraries\tikzlibrarytopaths.code.tex
@@ -802,34 +819,34 @@ File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.0 (rcs-revision 1.2)
 yfadings.code.tex
 File: pgflibraryfadings.code.tex 2008/02/07 v3.0.0 (rcs-revision 1.3)
 )))
-\c@teorema=\count142
+\c@teorema=\count148
 
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.au
 x)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 356.
-LaTeX Font Info:    ... okay on input line 356.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 356.
-LaTeX Font Info:    ... okay on input line 356.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 356.
-LaTeX Font Info:    ... okay on input line 356.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 356.
-LaTeX Font Info:    ... okay on input line 356.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 356.
-LaTeX Font Info:    ... okay on input line 356.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 356.
-LaTeX Font Info:    ... okay on input line 356.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 357.
+LaTeX Font Info:    ... okay on input line 357.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 357.
+LaTeX Font Info:    ... okay on input line 357.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 357.
+LaTeX Font Info:    ... okay on input line 357.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 357.
+LaTeX Font Info:    ... okay on input line 357.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 357.
+LaTeX Font Info:    ... okay on input line 357.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 357.
+LaTeX Font Info:    ... okay on input line 357.
  (C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
+\scratchcounter=\count149
 \scratchdimen=\dimen195
 \scratchbox=\box47
-\nofMPsegments=\count144
-\nofMParguments=\count145
+\nofMPsegments=\count150
+\nofMParguments=\count151
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count146
+\MPscratchCnt=\count152
 \MPscratchDim=\dimen196
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
 \everyMPtoPDFconversion=\toks50
 )
 *geometry* driver: auto-detecting
@@ -875,28 +892,28 @@ File: ./figuras/logo_ufpa/logo_ufpa2.pdf Graphic file (type pdf)
 
 <use ./figuras/logo_ufpa/logo_ufpa2.pdf>
 Package pdftex.def Info: ./figuras/logo_ufpa/logo_ufpa2.pdf used on input line 
-360.
+361.
 (pdftex.def)             Requested size: 70.13528pt x 88.18538pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--360
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--360
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--360
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 \T1/cmr/bx/n/12 FACULDADE DE EN-GE-NHA-RIA DA
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 360.
+LaTeX Font Info:    Try loading font information for U+msa on input line 361.
 (C:\MikTex2.9\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 360.
+LaTeX Font Info:    Try loading font information for U+msb on input line 361.
 
 (C:\MikTex2.9\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -910,20 +927,20 @@ File: ./figuras/logo_ufpa/logo_ufpa2.pdf Graphic file (type pdf)
 
 <use ./figuras/logo_ufpa/logo_ufpa2.pdf>
 Package pdftex.def Info: ./figuras/logo_ufpa/logo_ufpa2.pdf used on input line 
-375.
+376.
 (pdftex.def)             Requested size: 70.13528pt x 88.18538pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 \T1/cmr/bx/n/12 FACULDADE DE EN-GE-NHA-RIA DA
  []
 
@@ -1003,20 +1020,19 @@ Underfull \hbox (badness 3568) in paragraph at lines 20--21
 e
  []
 
-[2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
- (C:\MikTex2.9\tex\latex\base\omscmr.fd
+(C:\MikTex2.9\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
-) [3]
+ [2]) [3]
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
 itulo2/capitulo2.tex
 Cap\'{\i }tulo 2.
 
-Underfull \hbox (badness 3271) in paragraph at lines 14--14
- |[]\T1/cmr/bx/n/17.28 Introdução à Pro-ces-sa-mento de Ima-gens
+Underfull \hbox (badness 1466) in paragraph at lines 14--14
+ |[]\T1/cmr/bx/n/17.28 Introdução ao Pro-ces-sa-mento de Ima-gens
  []
 
 [4
@@ -1039,14 +1055,14 @@ ne 39.
  [6 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
 apitulo_2/espectro-luz.png>]
 [7]
-Underfull \hbox (badness 1681) in paragraph at lines 75--76
-[]\T1/cmr/bx/n/12 Imagem: \T1/cmr/m/n/12 Se-gundo [2] uma ima-gem é de-fi-nida 
-como uma fun-ção
+Underfull \hbox (badness 1436) in paragraph at lines 75--76
+[]\T1/cmr/bx/n/12 Imagem: \T1/cmr/m/n/12 se-gundo [3], uma ima-gem é de-fi-nida
+ como uma fun-ção
  []
 
 [8]
-Underfull \hbox (badness 3229) in paragraph at lines 101--102
-[] []|\T1/cmr/bx/n/12 2.1.2.3.1 Cor-re-la-ção e Con-vo-lu-ção[] \T1/cmr/m/n/12 
+Underfull \hbox (badness 4242) in paragraph at lines 101--102
+[] []|\T1/cmr/bx/n/12 2.1.2.3.1 Cor-re-la-ção e con-vo-lu-ção[] \T1/cmr/m/n/12 
 Nas ope-ra-ções de cor-re-la-ção e
  []
 
@@ -1136,12 +1152,8 @@ lo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_2/exemploDilatacaoA.pdf> <C:/Users
 /Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_2/exe
 mploDilatacaoB.pdf> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscri
 to/tcc/figuras/capitulo_2/exemploDilatacao.pdf>] [14] [15]
-
-LaTeX Warning: Citation `photoshop' on page 16 undefined on input line 231.
-
-
 Underfull \hbox (badness 3895) in paragraph at lines 236--238
-[]\T1/cmr/m/n/12 Khan [6] mos-tra uma ca-te-go-ri-za-ção das prin-ci-pais téc-n
+[]\T1/cmr/m/n/12 Khan [7] mos-tra uma ca-te-go-ri-za-ção das prin-ci-pais téc-n
 i-cas de
  []
 
@@ -1978,19 +1990,19 @@ Cap\'{\i }tulo 5.
 ]
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.bb
 l
-Underfull \hbox (badness 2293) in paragraph at lines 36--40
+Underfull \hbox (badness 2293) in paragraph at lines 41--45
 []\T1/cmr/m/n/12 Amit Singh Chauhan, San-jay Si-la-kari, and Ma-nish Di-xit.  I
 mage
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 36--40
+Underfull \hbox (badness 6944) in paragraph at lines 41--45
 \T1/cmr/m/it/12 Con-fe-rence on Com-mu-ni-ca-tion Sys-tems and Network Te-ch-no
 -lo-gies\T1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 1742) in paragraph at lines 47--51
+Underfull \hbox (badness 1742) in paragraph at lines 52--56
 []\T1/cmr/m/n/12 S. Sa-raswathi and a. Al-li-rani.  Sur-vey on image seg-men-ta
 -tion via
  []
@@ -1999,58 +2011,54 @@ Underfull \hbox (badness 1742) in paragraph at lines 47--51
 
 
 ]
-Underfull \hbox (badness 2096) in paragraph at lines 82--86
+Underfull \hbox (badness 2096) in paragraph at lines 87--91
 \T1/cmr/m/n/12 seg-men-ta-tion - A state-of-art sur-vey for pre-dic-tion.  \T1/
 cmr/m/it/12 Pro-ce-e-dings -
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 100--104
+Underfull \hbox (badness 1052) in paragraph at lines 104--108
 \T1/cmr/m/n/12 His-to-grams.  \T1/cmr/m/it/12 IEEE Tran-sac-ti-ons on Sys-tems,
  Man, and Cy-ber-ne-tics\T1/cmr/m/n/12 ,
  []
 
 ) [46]
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.au
-x)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+x) ) 
 Here is how much of TeX's memory you used:
- 18160 strings out of 493921
- 359261 string characters out of 3147279
- 447485 words of memory out of 3000000
- 20876 multiletter control sequences out of 15000+200000
+ 18273 strings out of 493921
+ 360725 string characters out of 3147279
+ 449941 words of memory out of 3000000
+ 20986 multiletter control sequences out of 15000+200000
  25031 words of font info for 64 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  66i,18n,89p,1317b,504s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecti1000.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecti0600.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\Danilo\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Danilo\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\
-Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk>
- <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-csl1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx2488.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Danilo\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Danilo\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk> <C:\Users\Da
-nilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk><C
-:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MikTex2.9/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MikTex2.9/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MikTex2.9/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MikTe
-x2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MikTex2.9/fonts/type1/public/
-amsfonts/cm/cmr8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MikTex2.9/fonts/type1/
-public/amsfonts/symbols/msam10.pfb>
-Output written on tcc_Danilo.pdf (57 pages, 11137385 bytes).
+ <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecti1000.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecti0600.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\Danilo\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Danilo\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\User
+s\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.p
+k> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecsl1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx2488.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Danilo\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Danilo\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk> <C:\Users\
+Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk>
+<C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MikTex2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MikTex2.9/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MikTex2.9/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Mik
+Tex2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MikTex2.9/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MikTex2.9/fonts/type
+1/public/amsfonts/symbols/msam10.pfb>
+Output written on tcc_Danilo.pdf (57 pages, 11086910 bytes).
 PDF statistics:
  1039 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

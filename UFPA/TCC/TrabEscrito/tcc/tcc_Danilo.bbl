@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{Protiere2007}
+Alexis Protiere and Guillermo Sapiro.
+\newblock {Interactive image segmentation via adaptive weighted distances}.
+\newblock {\em IEEE Transactions on Image Processing}, 16(4):1046--1057, 2007.
+
 \bibitem{Shapiro2000}
 Linda Shapiro and George Stockman.
 \newblock {Computer Vision}.
@@ -84,10 +89,9 @@ Shital Raut, M.~Raghuvanshi, R.~Dharaskar, and Adarsh Raut.
 \newblock {\em Proceedings - International Conference on Advanced Computer
   Control, ICACC 2009}, pages 420--424, 2009.
 
-\bibitem{Protiere2007}
-Alexis Protiere and Guillermo Sapiro.
-\newblock {Interactive image segmentation via adaptive weighted distances}.
-\newblock {\em IEEE Transactions on Image Processing}, 16(4):1046--1057, 2007.
+\bibitem{photoshop}
+{Inspira\c{c}\~{a}o do Photoshop, Informa\c{c}\~{o}es do Photoshop |
+  Photoshop.com}, 2015.
 
 \bibitem{Lakshmi2010}
 S.~Lakshmi and Dr.V. Sankaranarayanan.
