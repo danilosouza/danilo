@@ -1,31 +1,31 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
-\contentsline {section}{\numberline {1.1}Justificativa}{1}
+\contentsline {section}{\numberline {1.1}Justificativa}{2}
 \contentsline {section}{\numberline {1.2}Objetivos}{2}
-\contentsline {section}{\numberline {1.3}Organiza\c c\~ao do Trabalho}{2}
-\contentsline {chapter}{\numberline {2}Processamento de imagem}{3}
-\contentsline {section}{\numberline {2.1}Introdu\c c\~ao \`a Processamento de Imagens Digitais}{3}
-\contentsline {subsection}{\numberline {2.1.1}Por que utilizar processamento de imagem?}{4}
-\contentsline {subsection}{\numberline {2.1.2}Defini\c c\~ao e principais conceitos}{5}
-\contentsline {subsubsection}{\numberline {2.1.2.1}Defini\c c\~ao}{5}
-\contentsline {subsubsection}{\numberline {2.1.2.2}Conceitos b\'asicos}{6}
-\contentsline {subsubsection}{\numberline {2.1.2.3}Opera\c c\~oes b\'asicas}{8}
-\contentsline {paragraph}{\numberline {2.1.2.3.1}Correla\c c\~ao e Convolu\c c\~ao}{8}
-\contentsline {paragraph}{\numberline {2.1.2.3.2}Morfologia}{10}
-\contentsline {subsection}{\numberline {2.1.3}Aplica\c c\~oes de processamento de imagem}{10}
-\contentsline {section}{\numberline {2.2}Segmenta\c c\~ao de imagens}{13}
-\contentsline {subsection}{\numberline {2.2.1}Classifica\c c\~ao das t\'ecnicas de segmenta\c c\~ao}{14}
-\contentsline {subsection}{\numberline {2.2.2}Tipos de segmenta\c c\~ao}{15}
-\contentsline {chapter}{\numberline {3}A t\'ecnica estudada e Metodologia}{17}
-\contentsline {section}{\numberline {3.1}A escolha da t\'ecnica}{17}
-\contentsline {section}{\numberline {3.2}Descri\c c\~ao da t\'ecnica estudada}{19}
-\contentsline {subsection}{\numberline {3.2.1}Segmenta\c c\~ao de regi\~oes uniformes}{19}
-\contentsline {subsection}{\numberline {3.2.2}Segmenta\c c\~ao de regi\~oes n\~ao-uniformes}{21}
-\contentsline {section}{\numberline {3.3}Metodologia}{22}
-\contentsline {subsection}{\numberline {3.3.1}Modifica\c c\~oes realizadas}{22}
-\contentsline {subsection}{\numberline {3.3.2}Par\^ametros avaliados}{24}
-\contentsline {chapter}{\numberline {4}Implementa\c c\~ao e Resultados}{25}
-\contentsline {section}{\numberline {4.1}Implementa\c c\~ao}{25}
-\contentsline {section}{\numberline {4.2}Resultados}{29}
-\contentsline {chapter}{\numberline {5}Considera\c c\~oes finais e Trabalhos futuros}{43}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{44}
+\contentsline {section}{\numberline {1.3}Organiza\c c\~ao do Trabalho}{3}
+\contentsline {chapter}{\numberline {2}Processamento de imagem}{4}
+\contentsline {section}{\numberline {2.1}Introdu\c c\~ao \`a Processamento de Imagens Digitais}{4}
+\contentsline {subsection}{\numberline {2.1.1}Por que utilizar processamento de imagem?}{5}
+\contentsline {subsection}{\numberline {2.1.2}Defini\c c\~ao e principais conceitos}{6}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Defini\c c\~ao}{6}
+\contentsline {subsubsection}{\numberline {2.1.2.2}Conceitos b\'asicos}{7}
+\contentsline {subsubsection}{\numberline {2.1.2.3}Opera\c c\~oes b\'asicas}{9}
+\contentsline {paragraph}{\numberline {2.1.2.3.1}Correla\c c\~ao e Convolu\c c\~ao}{9}
+\contentsline {paragraph}{\numberline {2.1.2.3.2}Morfologia}{11}
+\contentsline {subsection}{\numberline {2.1.3}Aplica\c c\~oes de processamento de imagem}{11}
+\contentsline {section}{\numberline {2.2}Segmenta\c c\~ao de imagens}{14}
+\contentsline {subsection}{\numberline {2.2.1}Classifica\c c\~ao das t\'ecnicas de segmenta\c c\~ao}{15}
+\contentsline {subsection}{\numberline {2.2.2}Tipos de segmenta\c c\~ao}{16}
+\contentsline {chapter}{\numberline {3}A t\'ecnica estudada e Metodologia}{18}
+\contentsline {section}{\numberline {3.1}A escolha da t\'ecnica}{18}
+\contentsline {section}{\numberline {3.2}Descri\c c\~ao da t\'ecnica estudada}{20}
+\contentsline {subsection}{\numberline {3.2.1}Segmenta\c c\~ao de regi\~oes uniformes}{20}
+\contentsline {subsection}{\numberline {3.2.2}Segmenta\c c\~ao de regi\~oes n\~ao-uniformes}{22}
+\contentsline {section}{\numberline {3.3}Metodologia}{23}
+\contentsline {subsection}{\numberline {3.3.1}Modifica\c c\~oes realizadas}{23}
+\contentsline {subsection}{\numberline {3.3.2}Par\^ametros avaliados}{25}
+\contentsline {chapter}{\numberline {4}Implementa\c c\~ao e Resultados}{26}
+\contentsline {section}{\numberline {4.1}Implementa\c c\~ao}{26}
+\contentsline {section}{\numberline {4.2}Resultados}{30}
+\contentsline {chapter}{\numberline {5}Considera\c c\~oes finais e Trabalhos futuros}{44}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{45}
