@@ -18,11 +18,11 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Objeto 1}}}{19}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Objeto 2}}}{19}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces FDP's de uma imagem com duas regi\~oes estimadas a partir dos \textit {pixels} marcados.\relax }}{21}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Histograma da rela\c c\~ao $ \frac {T_{distancia}}{T_{total}} $, para as 24 imagens de sa\IeC {\'\i }da\relax }}{24}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Histograma da rela\c c\~ao $ \frac {T_{distancia}}{T_{total}} $, para as 24 imagens de sa\IeC {\'\i }da\relax }}{23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Hierarquia das fun\c c\~oes criadas\relax }}{27}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Fluxo do algoritmo\relax }}{28}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Imagens escolhidas. A Figura \ref {fig:imagem1} mostra Imagem 1, a Figura \ref {fig:imagem2} mostra a Imagem 2, a Figura \ref {fig:imagem3} mostra a Imagem 3, a Figura \ref {fig:imagem4} mostra a Imagem 4, a Figura \ref {fig:imagem5} mostra a Imagem 5 e a Figura \ref {fig:imagem6} mostra a Imagem 6.\relax }}{31}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Hierarquia das fun\c c\~oes criadas.\relax }}{27}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Fluxo do algoritmo.\relax }}{28}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Imagens utilizadas. A Figura \ref {fig:imagem1} mostra Imagem 1, a Figura \ref {fig:imagem2} mostra a Imagem 2, a Figura \ref {fig:imagem3} mostra a Imagem 3, a Figura \ref {fig:imagem4} mostra a Imagem 4, a Figura \ref {fig:imagem5} mostra a Imagem 5 e a Figura \ref {fig:imagem6} mostra a Imagem 6.\relax }}{31}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagem 1}}}{31}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagem 2}}}{31}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Imagem 3}}}{31}
@@ -81,5 +81,5 @@
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 6 com taxa de re-amostragem de $1\%$}}}{40}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Gr\'afico do erro de classifica\c c\~ao relativo ao total de \textit {pixels} de cada imagem $\%$\relax }}{41}
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Gr\'afico do tempo absoluto para classifica\c c\~ao das imagens (em minutos)\relax }}{42}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Gr\'afico do tempo absoluto para classifica\c c\~ao das imagens (em $\%$)\relax }}{43}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Gr\'afico do tempo relativo para classifica\c c\~ao das imagens (em $\%$)\relax }}{43}
 \addvspace {10\p@ }
