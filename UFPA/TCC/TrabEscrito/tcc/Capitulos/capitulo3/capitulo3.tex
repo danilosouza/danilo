@@ -53,12 +53,12 @@ Partindo da premissa de que as regiões de interesse a serem definidas são bem di
 
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=1.08]{./figuras/capitulo_3/exemplo_fdp.eps}
+		\includegraphics[scale=1.08]{./figuras/capitulo_3/exemplo_fdp1.eps}
 		\caption{FDP's de uma imagem com duas regiões estimadas a partir dos \textit{pixels} marcados.}
 		\label{fig:exemplo_fdp}
 	\end{figure}
 
-Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros de Gabor, \cite{Manjunath1996} \textcolor{red}{Procurar mais artigos sobre gabor}. As direções $ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$ e as frequências centrais $\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $ foram utilizadas para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$, sendo assim possível descrever um conjunto maior e mais rico de texturas usando o mínimo de filtros. O filtro de Gabor pode ser substituído por outro tipo de filtro 2D, entretanto foi escolhido pelo autor devido à sua avançada capacidade em distinguir texturas (\cite{Sivalingamaiah2012}, \cite{Shioyama1999}). (\textcolor{red}{ENCONTRAR REFERENCIAS SOBRE ISSO)}
+Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros de Gabor, \cite{Manjunath1996}. As direções $ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$ e as frequências centrais $\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $ foram utilizadas para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$, sendo assim possível descrever um conjunto maior e mais rico de texturas usando o mínimo de filtros. O filtro de Gabor pode ser substituído por outro tipo de filtro 2D, entretanto foi escolhido pelo autor devido à sua avançada capacidade em distinguir texturas (\cite{Sivalingamaiah2012}, \cite{Shioyama1999}).
 
 A utilização de vários canais torna a técnica adaptativa uma vez que os pesos (importância) de cada canal varia de acordo com a imagem e por isso a necessidade de usar um conjunto de filtros capaz de descrever um rico conjunto de texturas. A ideia é que cada um dos filtros realce uma parte diferente da imagem e com isso o canal resultante que ressaltar melhor a(s) parte(s) de interesse da imagem ganha um maior peso.
 
@@ -127,7 +127,7 @@ O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com 
 \label{sec:metodologia}
 A técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas e não-uniformes, entretanto o tempo de execução do algoritmo é alto uma vez que é necessário calcular a distância de cada \textit{pixel} da imagem para cada um dos \textit{pixels} marcados afim de descobrir a menor distância e de acordo com o algoritmo descrito fazer a classificação dos pontos da imagem.
 
-Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo, o gráfico da Figura \ref{fig:histograma_tempo} mostra o histograma da relação $ \frac{T_{distancia}}{T_{total}} $ para as 24 imagens utilizadas , é possível perceber que em todas as imagens o tempo gasto apenas no cálculo da distância representa pelo menos $96\%$ do tempo total de execução do algoritmo. A partir disto foi decidido o foco do trabalho, reduzir $ T_{distanncia} $.
+Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo, o gráfico da Figura \ref{fig:histograma_tempo} mostra o histograma da relação $ \frac{T_{distancia}}{T_{total}} $ para as 24 imagens utilizadas, é possível perceber que em todas as imagens o tempo gasto apenas no cálculo da distância representa pelo menos $96\%$ do tempo total de execução do algoritmo. A partir disto foi decidido o foco do trabalho, reduzir $ T_{distanncia} $.
 
 	\begin{figure}[!h]
 		\centering
@@ -138,7 +138,7 @@ Após análise detalhada dos passos da técnica implementada percebeu-se que o temp
 
  
 
-A solução proposta é reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações, em outras palavras, a re-amostragem tem que ser uniforme para que não haja as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irã detalhar as modificações realizadas e como a avaliação será feita.
+A solução proposta é reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações, em outras palavras, a re-amostragem tem que ser uniforme para que não haja as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irão detalhar as modificações realizadas e como a avaliação será feita.
 
 \subsection{Modificações realizadas}
 \label{sub:modificaoes}
@@ -152,7 +152,7 @@ O parâmetro modificado para análise do tempo é a taxa de re-amostragem, o valore
 A performance das modificações realizadas também foi medida em termos de tempo relativo, ou seja, qual foi a melhoria em relação ao tempo de execução utilizando todos os \textit{pixels} marcados (\textit{Full Set}), este tempo relativo $T_{r}$ é calculado usando a equação
 
 	\begin{equation}
-		T_{r}^{i} = 100 - (100\frac{T_{total}^{i}}{T_{total}^{Full Set}})\ ,\ onde\ i = 1, 10, 50. 
+		T_{r}^{i} = 100 - \bigg( 100\frac{T_{total}^{i}}{T_{total}^{Full Set}}\ \bigg) ,\ onde\ i = 1, 10, 50. 
 		\label{eq:tempo_relativo}
 	\end{equation}
 

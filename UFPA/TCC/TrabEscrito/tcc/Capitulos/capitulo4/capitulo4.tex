@@ -9,33 +9,33 @@
 \section{Implementação}
 \label{sec:implementacao}
 
-A técnica descrita anteriormente foi implementada utilizando o $Matlab$, bem como em \cite{Protiere2007}. A implementação foi divida em partes para facilitar tanto o desenvolvimento quanto a manutenção do código fonte, estando este agrupado em 9 diferentes funções descritas abaixo com sua relação hierárquica mostrada na Figura \ref{fig:hierarquia_codigo}. O fluxo do código e seus principais resultados utilizados ao longo do processamento são mostrados no diagrama da Figura \ref{fig:fluxo_codigo}, as cores utilizadas nesse diagrama correspondem às funções da Figura \ref{fig:hierarquia_codigo} que realizam as tarefas descritas.
+A técnica descrita anteriormente foi implementada utilizando o $Matlab$, bem como em \cite{Protiere2007}. A implementação foi divida em partes para facilitar tanto o desenvolvimento quanto a manutenção do código fonte, estando este agrupado em 9 diferentes funções descritas abaixo com sua relação hierárquica mostrada na Figura \ref{fig:hierarquia_codigo}. O fluxo do código e seus principais resultados são mostrados no diagrama da Figura \ref{fig:fluxo_codigo}. As cores utilizadas nesse diagrama correspondem às funções da Figura \ref{fig:hierarquia_codigo} que realizam as tarefas descritas abaixo.
 
 	\begin{itemize}
-		\item \textbf{segmenta.m:}  Função que realiza a classificação dos \textit{pixels} de acordo com a probabilidade.
-		\item \textbf{getPixelsPosition.m:} Função que guarda em uma matriz a posição e os valores dos \textit{pixels} marcados pelo usuário.
-		\item \textbf{getChannels.m:} Função que calcula os canais.
+		\item \textbf{segmenta.m:}  função que realiza a classificação dos \textit{pixels} de acordo com a probabilidade.
+		\item \textbf{getPixelsPosition.m:} função que guarda em uma matriz a posição e os valores dos \textit{pixels} marcados pelo usuário.
+		\item \textbf{getChannels.m:} função que calcula os canais.
 			\begin{itemize}
-				\item \textbf{gaborFilter.m:} Função que implementa o filtro de Gabor.
-				\item \textbf{getPixelsDist.m:} Função que guarda em uma matriz a posição e os valores dos pixels marcados pelo usuário para todos os canais.
+				\item \textbf{gaborFilter.m:} função que implementa o filtro de Gabor.
+				\item \textbf{getPixelsDist.m:} função que guarda em uma matriz a posição e os valores dos pixels marcados pelo usuário para todos os canais.
 			\end{itemize}
-		\item \textbf{getChannelWeight:} Função que calcula o peso de cada canal seguindo a equação \ref{eq:pesocanal}.
-		\item \textbf{getGeodesicWeight:} Função que calcula o peso que irá ponderar a distância do \textit{pixel t} para o \textit{pixel x}, onde \textit{x} pertence à uma região marcada.
-		\item \textbf{resampleMatrix.m:} Função que faz a re-amostragem dos \textit{pixels} marcados pelo usuário.
-		\item \textbf{getMinDistance.m:} Função que calcula a menor distância de um \textit{pixel} para uma determinada região marcada na imagem
+		\item \textbf{getChannelWeight:} função que calcula o peso de cada canal seguindo a equação \ref{eq:pesocanal}.
+		\item \textbf{getGeodesicWeight:} função que calcula o peso que irá ponderar a distância do \textit{pixel t} para o \textit{pixel x}, onde \textit{x} pertence à uma região marcada.
+		\item \textbf{resampleMatrix.m:} função que faz a re-amostragem dos \textit{pixels} marcados pelo usuário.
+		\item \textbf{getMinDistance.m:} função que calcula a menor distância de um \textit{pixel} para uma determinada região marcada na imagem
 	\end{itemize}
 
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=1.5]{./figuras/capitulo_4/DiagramaFuncoes.pdf}
-		\caption{Hierarquia das funções criadas}
+		\caption{Hierarquia das funções criadas.}
 		\label{fig:hierarquia_codigo}
 	\end{figure}
 	
 	\begin{figure}[!h]
 		\centering
 		\includegraphics[scale=0.85]{./figuras/capitulo_4/DiagramaCodigo.pdf}
-		\caption{Fluxo do algoritmo}
+		\caption{Fluxo do algoritmo.}
 		\label{fig:fluxo_codigo}
 	\end{figure}
 
@@ -46,17 +46,23 @@ Para armazenar os valores dos pontos das regiões de interesse as imagens marcada
 
 A função \textit{getChannels.m} irá construir os filtros de gabor  utilizando a função \textit{gaborFilter.m}, uma vez construídos os filtros são utilizados no canal de luminância (Y) e sua saída ($G_{i}$) é utilizada na equação \ref{eq:defcanal} para definição dos canais, os canais complementares são as crominâncias (Cb e Cr) da imagem. Após a criação do banco de canais, a função \textit{getPixelsDist.m} é chamada para calcular a FDP dos \textit{pixels} das regiões marcadas para cada um dos 19 canais utilizados.
 
-Uma vez calculadas as FDP's das regiões de interesse de cada canal, é possível calcular o peso de cada canal em função dessas probabilidades conforme descrito anteriormente nas equações \ref{eq:pesocanal} e \ref{eq:probpeso}, este cálculo é feito pela função \textit{getChannelsWeight.m} que utiliza a matriz contendo as FDP's das sub-regiões de todos os canais. O valor final da probabilidade de um \textit{pixel x} pertencer a uma região é a soma das probabilidades de \textit{x} pertencer a cada uma das sub-regiões existentes.
-
-Cada \textit{pixel x} no intervalo $[0,255]$ tem um peso geodésico associado, descrito na equação \ref{eq:pesogeodesicofinal}, que representa o complemento da probabilidade de \textit{x} pertencer a uma determinada região ou sub-região. A função \textit{getGeodesicWeight.m} utilizada as equações \ref{eq:probpixeltotalexpandida} e \ref{eq:pesogeodesico} para encontrar os valores de $\Omega$ de uma sub-região em comparação com outra. Para cada valor de pixel é criada uma matriz $\Omega(r,s)$, onde $r$ é o número de regiões e $s$ é o número de sub-regiões, a função \textit{getGeodesicWeight.m} é chamada dentro de um laço para calcular o peso para cada sub-região, os pesos são calculados comparando uma a uma das sub-regiões, considerando o fato de que sub-regiões de uma mesma região não competem entre si, e a soma desses pesos é o peso geodésico final para o \textit{pixel} em questão.
-
-Por fim a classificação dos \textit{pixels} propriamente ditos é feita diretamente na função \textit{segmenta.m} que utiliza a função \textit{getMinDistance.m} para encontrar a menor distância de um ponto entre todas as sub-regiões, essas distâncias, calculadas a partir da equação \ref{eq:distgeodesica} são armazenas em uma matriz $D(r,s)$, conforme descrito anteriormente, e a partir dessa matriz é calculada um outra matriz $P(r,s)$ que armazena a probabilidade, segundo a equação \ref{eq:probabilidade}, do \textit{pixel} atual pertencer a cada uma das sub-regiões e então o menor valor da matriz $P$ representa a qual sub-região pertence o \textit{pixel} analisado:
-
-
-	\begin{equation}
+		\begin{equation}
  			\forall (x,y) \in \Omega \ : F_{i}(x,y) =  \ \frac{1}{N^{2}} \int \int _{\Omega_{x,y}} \tanh \Bigg( \alpha \frac{G_{i}(u,v)}{\sigma(G_{i})} \Bigg) dudv,\ onde\   \quad  \alpha = 0.25 \ e\   N = 5
  			\label{eq:defcanal}
  		\end{equation}
+
+Uma vez calculadas as FDP's das regiões de interesse de cada canal, é possível calcular o peso de cada canal em função dessas probabilidades, conforme descrito anteriormente nas equações \ref{eq:pesocanal} e \ref{eq:probpeso}. Este cálculo é feito pela função \textit{getChannelsWeight.m} que utiliza a matriz contendo as FDP's das sub-regiões de todos os canais. O valor final da probabilidade de um \textit{pixel x} pertencer a uma região é a soma das probabilidades de \textit{x} pertencer a cada uma das sub-regiões existentes.
+
+Cada \textit{pixel x} no intervalo $[0,255]$ tem um peso geodésico associado, descrito na equação \ref{eq:pesogeodesicofinal}, que representa o complemento da probabilidade de \textit{x} pertencer a uma determinada região ou sub-região. A função \textit{getGeodesicWeight.m} utilizada as equações \ref{eq:probpixeltotalexpandida} e \ref{eq:pesogeodesico} para encontrar os valores de $\Omega$ de uma sub-região em comparação com outra. Para cada valor de pixel é criada uma matriz $\Omega(r,s)$, onde $r$ é o número de regiões e $s$ é o número de sub-regiões. A função \textit{getGeodesicWeight.m} é chamada dentro de um laço para calcular o peso para cada sub-região. Tais pesos são calculados comparando uma a uma das sub-regiões, considerando o fato de que sub-regiões de uma mesma região não competem entre si, e a soma desses pesos é o peso geodésico final para o \textit{pixel} em questão.
+
+Por fim, a classificação dos \textit{pixels} é feita diretamente na função \textit{segmenta.m} que utiliza a função \textit{getMinDistance.m} para encontrar a menor distância de um ponto entre todas as sub-regiões, essas distâncias, calculadas a partir da equação \ref{eq:distgeodesica} são armazenas em uma matriz $D(r,s)$, conforme descrito anteriormente, e a partir dessa matriz é calculada um outra matriz $P(r,s)$ que armazena a probabilidade, segundo a equação \ref{eq:probabilidade}, do \textit{pixel} atual pertencer a cada uma das sub-regiões e então o menor valor da matriz $P$ representa a qual sub-região pertence o \textit{pixel} analisado:
+
+	\begin{equation}
+		Pr(t \in l_{i}) = \frac{d_{i}(t)^{-1}}{\sum _{j \in[1,N_{l}]} d_{j}(t)^{-1}} 
+		\label{eq:probabilidade}  
+ 	\end{equation}
+
+	
 
 	\begin{itemize}
 		\item A taxa referente a quantos $\%$ dos pixels marcados serão usados, no intervalo [0,1]
@@ -65,16 +71,11 @@ Por fim a classificação dos \textit{pixels} propriamente ditos é feita diretamen
 		\item As imagens marcadas.
 	\end{itemize}
 	
-	\begin{equation}
-		Pr(t \in l_{i}) = \frac{d_{i}(t)^{-1}}{\sum _{j \in[1,N_{l}]} d_{j}(t)^{-1}} 
-		\label{eq:probabilidade}  
- 	\end{equation}
-
 \section{Resultados}
 \label{sec:resultados}
 
 
-Para avaliar o impacto da re-amostragem dos \textit{pixels} marcados pelo usuário na redução do tempo de execução do algoritmo apresentado em \cite{Protiere2007}, bem como mensurar o erro de classificação dos \textit{pixels}, foram definidas 3 taxas diferentes ($50\%,\ 10\%\ e\ 1\%$) e 6 imagens distintas foram selecionadas, sendo 3 artificiais (Figuras \ref{fig:imagem1},\ref{fig:imagem2} e \ref{fig:imagem3}) e 3 naturais (Figuras \ref{fig:imagem4},\ref{fig:imagem5} e \ref{fig:imagem6}). As Figuras \ref{fig:imagem_nao_uniforme}, \ref{fig:imagem2_marcada}, \ref{fig:imagem3_marcada}, \ref{fig:imagem4_marcada}, \ref{fig:imagem5_marcada}, \ref{fig:imagem6_marcada} representam, respectivamente, as  marcações do fundo e do(s) objeto(s) das imagens 1 a 6.
+Para avaliar o impacto da re-amostragem dos \textit{pixels} marcados pelo usuário na redução do tempo de execução do algoritmo apresentado em \cite{Protiere2007}, bem como mensurar o erro de classificação dos \textit{pixels}, foram definidas 3 taxas de re-amostragem diferentes ($50\%,\ 10\%\ e\ 1\%$) e 6 imagens distintas foram selecionadas, sendo 3 artificiais (Figuras \ref{fig:imagem1},\ref{fig:imagem2} e \ref{fig:imagem3}) e 3 naturais (Figuras \ref{fig:imagem4},\ref{fig:imagem5} e \ref{fig:imagem6}). As Figuras \ref{fig:imagem_nao_uniforme}, \ref{fig:imagem2_marcada}, \ref{fig:imagem3_marcada}, \ref{fig:imagem4_marcada}, \ref{fig:imagem5_marcada}, \ref{fig:imagem6_marcada} representam, respectivamente, as  marcações do fundo e do(s) objeto(s) das imagens 1 a 6.
 
 	\begin{figure}[!h]
 		\centering
@@ -104,7 +105,7 @@ Para avaliar o impacto da re-amostragem dos \textit{pixels} marcados pelo usuári
 		\subfloat[Imagem 6]{
 		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem6.png}
 		\label{fig:imagem6}}
-		\caption{Imagens escolhidas. A Figura \ref{fig:imagem1} mostra Imagem 1, a Figura \ref{fig:imagem2} mostra a Imagem 2, a Figura \ref{fig:imagem3} mostra a Imagem 3, a Figura \ref{fig:imagem4} mostra a Imagem 4, a Figura \ref{fig:imagem5} mostra a Imagem 5 e a Figura \ref{fig:imagem6} mostra a Imagem 6.}
+		\caption{Imagens utilizadas. A Figura \ref{fig:imagem1} mostra Imagem 1, a Figura \ref{fig:imagem2} mostra a Imagem 2, a Figura \ref{fig:imagem3} mostra a Imagem 3, a Figura \ref{fig:imagem4} mostra a Imagem 4, a Figura \ref{fig:imagem5} mostra a Imagem 5 e a Figura \ref{fig:imagem6} mostra a Imagem 6.}
 		\label{fig:imagens_todas}
 	\end{figure}
 
@@ -346,7 +347,16 @@ Analisando as imagens \ref{fig:imagem1_segmentada_objeto1}, \ref{fig:imagem1_seg
 Enquanto que nas imagens 1, 3 e 5 (Figuras \ref{fig:imagem1}, \ref{fig:imagem3} e \ref{fig:imagem5}, respectivamente), que são imagens mais complexas (i.e, o fundo da imagem possui cores de intensidade similar às do(s) objeto(s) de interesse) é possível perceber alguns pequenos erros de segmentação, pequenos \textit{pixels} pretos nos objetos que foram classificados de forma errônea, isto ocorreu porque as marcações feitas não foram suficientes, uma vez que nesse caso a distância entre os \textit{pixels} é um fator determinante para um resultado satisfatório.
 
 
+Para quantificar os erros de classificação de todas as imagens, tomou-se como referência (i.e, segmentação ideal) as imagens segmentadas com $100\%$ dos \textit{pixels} marcados ( $I_{100\%}^{i},\  \forall\  i = 1,\ 2,\ \dots,\ 6 $). As imagens segmentadas com re-amostragem dos \textit{pixels} marcados ($I_{k}^{i}\ \forall\ k =  50\%, 10\%\ e\ 1\%,\ i = 1,\ 2,\ \dots\,\ 6  $) são as imagens em que o erro de classificação é avaliado, este erro é calculado da seguinte forma: $ E_{k}^{1} = I_{100\%}^{1} - I_{k}^{1}\ \forall\ k =  50\%, 10\%\ e\ 1\% $ e assim suscetivamente para as outras imagens, em outras palavras, é feita uma subtração entre a imagem segmentada de referência e as imagens segmentadas com re-amostragem e o resultado deste operação é o conjunto de \textit{pixels} que deveria ter sido classificado como objeto e/ou fundo da imagem, mas não foram, ou seja, o erro de classificação.
+
+Estes \textit{pixels} de erro são então quantificados e o erro final de classificação final se dá relativo ao número total de \textit{pixels} da imagem, dessa forma tem-se $ E_{final(k)}^{i} = \frac{E_{k}^{i}}{Total_{pixels}^{i}}100,\ \forall\ k =  50\%, 10\%\ e\ 1\%,\ i = 1,\ 2,\ \dots,\ 6 $ como sendo a porcentagem de \textit{pixels} de uma dada imagem que foram classificados erroneamente.
+
+
+%\begin{comment}
+\iffalse
 Para quantificar os erros de classificação de todas as imagens, foram subtraídas as imagens re-amostradas da imagem com todos o conjunto de \textit{pixels} ($ I_{100\%} - I_{i}\ \forall\ i =  50\%, 10\%\ e\ 1\%$), considerando as imagens segmentadas com $100\%$ dos \textit{pixels} marcados como referência,  este procedimento resulta em uma imagem onde os pontos que foram corretamente classificados irão sumir (i.e, se tornam zero), sobrando apenas os pontos que não foram classificados corretamente, estes \textit{pixels} restantes são contados para quantificar quantos \textit{pixels} não estão classificados corretamente e o gráfico da Figura \ref{fig:grafico_erro_classificacao} mostra o quanto que esses \textit{pixels} representam relativo ao total de pixels de cada imagem, para cada taxa de re-amostragem, em outras palavras, o erro de classificação é dado por $ Erro = \frac{N_{\textit{pixels}\ errados}}{N_{total\ de\ \textit{pixels}}} $. O gráfico da Figura \ref{fig:grafico_erro_classificacao} também mostra que para as re-amostragens à $50\%\ e 10\%$ o erro de classificação foi de menos de $1\%$.
+\fi
+%\end{comment}
 
 	\begin{figure}[!h]
 		\includegraphics[scale=1]{./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf}
@@ -354,7 +364,7 @@ Para quantificar os erros de classificação de todas as imagens, foram subtraídas
 		\label{fig:grafico_erro_classificacao}
 	\end{figure}
 
-A avaliação do tempo, aferido conforme descrito na seção \ref{sub:parametros}, pode ser feita em termos do tempo absoluto, mostrado no gráfico da Figura \ref{fig:grafico_tempo_absoluto}, e em termos de tempo relativo, mostrado no gráfico da Figura \ref{fig:grafico_tempo_relativo}, este gráfico mostra o quanto que o tempo de execução do algoritmo com re-amostragem de $50\%,\ 10\%,\ e\ 1\%$ foi menor do que a execução do algoritmo original com $100\%$ dos \textit{pixels} marcados, é possível perceber que a redução de tempo não foi muito significativa, apesar de satisfatória, considerando as reduções atingidas utilizando apenas $10\%$ (que foi a menor taxa a apresentar um resultado satisfatório)dos \textit{pixels} marcados, à exceção da imagem 2 que obteve uma redução em torno de $32\%$ do tempo de execução, todas as outras imagens não atingiram a marca de  $20\%$ de  redução do tempo de execução do algoritmo.
+A avaliação do tempo, aferido conforme descrito na seção \ref{sub:parametros}, pode ser feita em termos do tempo absoluto, mostrado no gráfico da Figura \ref{fig:grafico_tempo_absoluto}, e em termos de tempo relativo, mostrado no gráfico da Figura \ref{fig:grafico_tempo_relativo}, este gráfico mostra o quanto o tempo de execução do algoritmo com re-amostragem de $50\%,\ 10\%,\ e\ 1\%$ foi menor do que a execução do algoritmo original com $100\%$ dos \textit{pixels} marcados. É possível perceber que a redução de tempo não passou de 40$\%$ e avaliando em separadamente a segmentação obtida com taxa de re-amostragem de $10\%$  dos \textit{pixels} marcados (que é a menor taxa onde não é possível perceber visualmente erros significativos de classificação), à exceção da imagem 2 que obteve uma redução em torno de $32\%$ do tempo de execução, todas as outras imagens não atingiram a marca de $20\%$ de  redução do tempo de execução do algoritmo.
 
 
 	\begin{figure}[!h]
@@ -365,7 +375,7 @@ A avaliação do tempo, aferido conforme descrito na seção \ref{sub:parametros}, p
 
 	\begin{figure}[!h]
 		\includegraphics[scale=1]{./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf}
-		\caption{Gráfico do tempo absoluto para classificação das imagens (em $\%$)}
+		\caption{Gráfico do tempo relativo para classificação das imagens (em $\%$)}
 		\label{fig:grafico_tempo_relativo}
 	\end{figure}
 
