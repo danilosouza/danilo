@@ -20,12 +20,12 @@
 \contentsline {section}{\numberline {3.1}A escolha da t\'ecnica}{18}
 \contentsline {section}{\numberline {3.2}Descri\c c\~ao da t\'ecnica estudada}{20}
 \contentsline {subsection}{\numberline {3.2.1}Segmenta\c c\~ao de regi\~oes uniformes}{20}
-\contentsline {subsection}{\numberline {3.2.2}Segmenta\c c\~ao de regi\~oes n\~ao-uniformes}{22}
+\contentsline {subsection}{\numberline {3.2.2}Segmenta\c c\~ao de regi\~oes n\~ao-uniformes}{23}
 \contentsline {section}{\numberline {3.3}Metodologia}{23}
 \contentsline {subsection}{\numberline {3.3.1}Modifica\c c\~oes realizadas}{24}
 \contentsline {subsection}{\numberline {3.3.2}Par\^ametros avaliados}{25}
-\contentsline {chapter}{\numberline {4}Implementa\c c\~ao e Resultados}{26}
-\contentsline {section}{\numberline {4.1}Implementa\c c\~ao}{26}
-\contentsline {section}{\numberline {4.2}Resultados}{30}
-\contentsline {chapter}{\numberline {5}Considera\c c\~oes finais e Trabalhos futuros}{44}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{45}
+\contentsline {chapter}{\numberline {4}Implementa\c c\~ao e Resultados}{27}
+\contentsline {section}{\numberline {4.1}Implementa\c c\~ao}{27}
+\contentsline {section}{\numberline {4.2}Resultados}{31}
+\contentsline {chapter}{\numberline {5}Considera\c c\~oes finais e Trabalhos futuros}{45}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{46}

@@ -62,7 +62,7 @@ Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 dest
 
 A utilização de vários canais torna a técnica adaptativa uma vez que os pesos (importância) de cada canal varia de acordo com a imagem e por isso a necessidade de usar um conjunto de filtros capaz de descrever um rico conjunto de texturas. A ideia é que cada um dos filtros realce uma parte diferente da imagem e com isso o canal resultante que ressaltar melhor a(s) parte(s) de interesse da imagem ganha um maior peso.
 
-Os pesos mencionados anteriormente são calculados usando a equação \ref{eq:pesocanal} com base na probabilidade de um \textit{pixel x} ser erroneamente assinalado à uma região (equação \ref{eq:probpeso}). Dessa forma tem-se um vetor com $N_{c}$ (número total de canais) posições que representa o peso que cada canal terá na hora de calcular a probabilidade de um pixel pertencer a uma determinada região, equações \ref{eq:probpixel} e \ref{eq:probpixeltotal}, privilegiando o canal com maior peso, ou seja, os valores da FDP dos \textit{pixels} deste canal é que irão de fato definir a qual região pertence o \textit{pixel} em questão.
+Os pesos mencionados anteriormente, $\omega_{i},\ \forall\ i = 1,2,\dots,N_{c}$, são calculados usando a equação \ref{eq:pesocanal} com base na probabilidade $P_{i},\ \forall\ i = 1,2,\dots,N_{c} $de um \textit{pixel x} ser erroneamente assinalado à uma região (equação \ref{eq:probpeso}). 
 
 	\begin{equation}
 		\forall\  i = 1,2,3,\ \dots\ ,N_{c}\ :\ \omega_{i} = \frac{(P_{i}^{-1})}{\sum_{k=1}^{N_{c}} (P_{k}^{-1})}
@@ -74,6 +74,9 @@ Os pesos mencionados anteriormente são calculados usando a equação \ref{eq:pesoc
 		\label{eq:probpeso}
  	\end{equation}
 
+
+Dessa forma tem-se um vetor com $N_{c}$ (número total de canais) posições que representa o peso que cada canal terá na hora de calcular a probabilidade, $P^{i} _{1|2}(x),\ \forall\ i = 1,2,\dots,N_{c}$, de um pixel pertencer a uma determinada região, segundo a equação \ref{eq:probpixel}. A probabilidade final de um \textit{pixel} pertencer a uma região é dada pela soma dos valores de $P^{i} _{1|2}(x)$ ponderados por $\omega_{i}$ (equação \ref{eq:probpixeltotal}), privilegiando o canal com maior peso, ou seja, os valores da FDP dos \textit{pixels} dos canais com maiores peso é que irão de fato definir a qual região pertence o \textit{pixel} em questão.
+
 	\begin{equation}
  		P^{i} _{1|2}(x) = \frac{p^{i} _{1}(F_{i}(x))}{p^{i} _{1}(F_{i}(x))\ +\ p^{i} _{2}(F_{i}(x))}
  		\label{eq:probpixel}
@@ -84,13 +87,15 @@ Os pesos mencionados anteriormente são calculados usando a equação \ref{eq:pesoc
  		\label{eq:probpixeltotal}
 	\end{equation}
 	
-Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ regiões ao invés de apenas duas têm-se a equação \ref{eq:probpixeltotalexpandida}. O peso geodésico de um pixel da região $a$ competindo somente com a região $b$ é dado pela equação \ref{eq:pesogeodesico}, generalizando para mais de duas regiões uniformes obtêm-se a equação \ref{eq:pesogeodesicofinal}. Este peso é utilizado para calcular a menor distância de um \textit{pixel x} para uma marcação $l_{k}, k \in [1,N_{l}]$, dada pela equação  \ref{eq:distpixel} que utiliza a menor distância entre o \textit{pixel x} e todos os \textit{pixels} da marcação $l_{k}$ calculada de acordo com a equação \ref{eq:distgeodesica}.
+Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ regiões ao invés de apenas duas é possível calcular a probabilidade, $P_{a|b}(x)$, de um pixel pertencer a uma dada região $a$ em comparação com outra região $b$, de acordo com a equação \ref{eq:probpixeltotalexpandida}, sendo esta a equação utilizada na implementação.
 
 	\begin{equation}
 		P_{a|b}(x)\ :=\ P_{r}(x \in l_{a}) = \sum_{i=1}^{N_{c}} \omega^{i}\frac{p^{i} _{a}(F_{i}(x))}{p^{i} _{a}(F_{i}(x))\ +\ p^{i} _{b}(F_{i}(x))}
  		\label{eq:probpixeltotalexpandida}
 	\end{equation}
 
+
+O peso geodésico de um pixel da região $a$, $\Omega_{a},\ \forall\ a=1,2,\dots,N_{l}$, competindo somente com a região $b$ é dado pela equação \ref{eq:pesogeodesico}, generalizando para mais de duas regiões uniformes obtêm-se a equação \ref{eq:pesogeodesicofinal} que calcula o valor de $\Omega_{a},\ \forall\ a=1,2,\dots,N_{l}$, considerando todas as outras regiões de interesse.
 
 	\begin{subequations}	
 		\begin{equation}
@@ -103,20 +108,25 @@ Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ reg
 		\label{eq:pesogeodesicofinal}
 		\end{equation}
 	\end{subequations}
+
+ O peso $\Omega$ é utilizado para calcular a menor distância $d(s,t)$ de um \textit{pixel} $s(x_{0},y_{0})$ para um ponto $t(x_{1},y_{1})$ na imagem de acordo com a equação \ref{eq:distgeodesica}, onde $\dot{C}(s,t) = \sqrt[2]{(x_{1}-x_{0})^{2}+(y_{1}-y_{0})^{2}}$, representando o menor caminho entre os pontos. A equação \ref{eq:distpixel} utiliza a equação \ref{eq:distgeodesica} para calcular a menor distância $d_{k}(x)$ de um \textit{pixel} para cada uma das regiões $r_{k}\ \forall\ k = 1,2,\dots,N_{l}$ de interesse levando em consideração apenas os pontos pertencentes a região em análise. Armazenando os resultados em um vetor (ou matriz quando houver sub-regiões), esses valores serão usados para calcular a probabilidade final $P$ de um \textit{pixel} pertencer a uma região, que será detalhada no Capitulo \ref{cap:imp_resultados}.
+
+
+	\begin{equation}
+		d(s,t) := min_{C_{s,t}} (\Omega \dot{C}_{s,t})
+		\label{eq:distgeodesica}		
+	\end{equation}
 	
 	\begin{equation}
-		d_{k}(x) = min_{s \in \Delta _{c}:label(s)=l_{k}}d(s,t)
+		d_{k}(x) = min_{s \in \Delta _{c}:label(s)=r_{k}}d(s,t)
 		\label{eq:distpixel}
 	\end{equation}
 	
-	\begin{equation}
-		d(x,t) := min_{C_{x,t}} (\Omega \dot{C}_{x,t})
-		\label{eq:distgeodesica}		
-	\end{equation}
+
 		
 \subsection{Segmentação de regiões não-uniformes}
 \label{sub:seg_regioes_nao_uniformes}
-O algoritmo apresentado até este ponto trabalha recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de regiões distintas. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação. Um exemplo deste tipo de imagem pode ser visto na Figura \ref{fig:objeto1_imagem_nao_informe}.
+O algoritmo apresentado até este ponto recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de outras regiões. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação \ref{eq:pesogeodesiconaouniforme}. Um exemplo deste tipo de imagem pode ser visto na Figura \ref{fig:objeto1_imagem_nao_informe}.
 
 	\begin{equation}
 		\Omega_{k}^{s} = \sum_{k \neq r}  \sum_{l} \Omega_{l_{k}^{s}|l_{r}^{l}} 
@@ -149,7 +159,7 @@ A função \textit{reamostragem.m} é responsável por esse passo, recebendo como en
 
 O parâmetro modificado para análise do tempo é a taxa de re-amostragem, o valores escolhidos foram: $100\ \%$, $50\ \%$, $10\ \%$ e $1\ \%$ dos \textit{pixels} originalmente marcados. Os valores foram escolhidos para que seja possível analisar se a redução dos conjunto de \textit{pixels} marcados está diretamente ligada ao tempo de execução do algoritmo, por exemplo, se o conjunto $\Omega$ for reduzido pela metade acarretaria na redução pela metade no tempo total. Os número $10$ e $1$ foram escolhidos por representarem extremos, ou seja, verificar o impacto da eliminação de quase todos os \textit{pixes} de $\Omega$ no resultado final e determinar um \textit{trade-off} sobre o ganho de tempo em relação à taxa de re-amostragem desses pontos.
 
-A performance das modificações realizadas também foi medida em termos de tempo relativo, ou seja, qual foi a melhoria em relação ao tempo de execução utilizando todos os \textit{pixels} marcados (\textit{Full Set}), este tempo relativo $T_{r}$ é calculado usando a equação
+A performance das modificações realizadas também foi medida em termos de tempo relativo, ou seja, qual foi a melhoria em relação ao tempo de execução utilizando todos os \textit{pixels} marcados (\textit{Full Set}), este tempo relativo $T_{r}$ é calculado usando a equação \ref{eq:tempo_relativo}.
 
 	\begin{equation}
 		T_{r}^{i} = 100 - \bigg( 100\frac{T_{total}^{i}}{T_{total}^{Full Set}}\ \bigg) ,\ onde\ i = 1, 10, 50. 

@@ -18,6 +18,14 @@
 %\usepackage[table]{xcolor}
 \usepackage{multicol}
 \usepackage{textcomp} 
+\usepackage{subfig}
+\usepackage{epstopdf}
+
+
+\newenvironment{variableblock}[3]{%
+  \setbeamercolor{block body}{#2}
+  \setbeamercolor{block title}{#3}
+  \begin{block}{#1}}{\end{block}}
 
 % Setup TikZ
 \usepackage{tikz}
@@ -25,7 +33,7 @@
 \tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
 
 %diretÃ³rio das figuras
-\graphicspath{../figuras}
+\graphicspath{./figuras}
 
 \title[Extreme Chock]{%
 \textcolor{red}{TITULO A DEFINIR}%
@@ -57,59 +65,255 @@
 
 \section{Introdução}
 
-\begin{frame}{Processamento Digital de Imagens}
+\begin{frame}{Processamento Digital de Imagens (Crescimento)}
 
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Dispositivos mais acessíveis.
+			\item Mundo mais digital.
+			\item Quantidade de conteúdo multimídia.
+			\item O que fazer com esse conteúdo?
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.65]{./figuras/multimediaGrowth.png}
+			\caption{Consumo de conteúdo multimídia no período 2008-2010}
+			\label{fig:consumo_multimidia}
+		\end{figure}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Processamento Digital de Imagens (Importância)}
+	\begin{itemize}
+		\item Por que estudar?
+		\item Definições
+			\begin{itemize}
+				\item \textit{Pixels}.
+				\item \textit{Texels}.
+				\item Textura.
+			\end{itemize}
+		\item 3 níveis de processos (Gonzalez et. al)
+			\begin{itemize}
+				\item Baixo - operações básicas.
+				\item Médio - segmentação e classificação.
+				\item Alto - semântica, extração de informação.
+			\end{itemize}						
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Aplicações}
 
+	\begin{itemize}
+		\item Está presente em diversas áreas
+			\begin{itemize}
+				\item Segurança (e.g, fiscalização de velocidade, detecção de movimentos).
+				\item Automação industrial (e.g, classificação de produtos, verificação de falhas).
+				\item Entretenimento (redes sociais) (e.g, reconhecimento facial, edição de fotos). 
+			\end{itemize}
+	\end{itemize}
+
 \end{frame}
 
 \begin{frame}{Segmentação de Imagens}
+
+	\begin{itemize}
+		\item Dividir uma imagem.
+			\begin{itemize}
+				\item Cor, textura, geometria.
+			\end{itemize}
+		\item Processo de nível médio.
+		\item Pré-requisito para classificação
+		
+	\end{itemize}
 
 \end{frame}
 
 
 \section{A técnica estudada}
 
-\begin{frame}{Introdução à técnica}
+\begin{frame}{A técnica estudada}
+
+
+	\begin{variableblock}{Princípio}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+  		Classificar um \textit{pixel} com base na distância e na intensidade, utilizando marcações do usuário (heurística).
+	\end{variableblock}	
+
+	\begin{variableblock}{Robustez}{bg=green!15,fg=black}{bg=green!90,fg=white}
+		O algoritmo suporta a marcação de regiões não-uniformes, sendo capaz de realizar segmentações precisas em imagens complexas.
+	\end{variableblock}	
+
+	\begin{variableblock}{O Problema}{bg=red!15,fg=black}{bg=red!80,fg=white}
+		O tempo de execução do algoritmo é a sua principal desvantagem, sendo portanto o objeto de estudo deste trabalho.
+	\end{variableblock}		
 
 \end{frame}
 
 \begin{frame}{O algoritmo}
-
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item Marcar as regiões de interesse.
+		\item Guardar valores e posição destes pontos e calcular as FDP's de cada região.
+		\item Calcular os canais.
+		\item Repetir o passo 2 para cada canal.
+		\item Calcular o peso de cada canal.
+		\item Calcular o peso da distância Geodésica.
+		\item Se $T_{re-amostragem} < 1$, então 8. Se $T_{re-amostragem} = 1$, então 9.  
+		\item Re-amostrar os \textit{pixels} das regiões de interesse.
+		\item Calcular a menor distância de cada \textit{pixel} para todas as sub-regiões.
+		\item Calcular a probabilidade de cada \textit{pixel} para todas as sub-regiões.
+	\end{enumerate}
+\end{multicols}
 \end{frame}
 
-\begin{frame}
 
-\end{frame}
 
 \section{Metodologia utilizada}
 
-\begin{frame}{Modificações realizadas}
-
-\end{frame}
-
-\begin{frame}{Escolha dos parâmetros avaliados}
-
-\end{frame}
 
 \begin{frame}{Método de avaliação}
+
+	Foram escolhidas duas métricas principais para avaliação:
+
+	\begin{itemize}
+		\item Tempo
+			\begin{itemize}
+				\item Tempo absoluto e relativo (Equação \ref{eq:tempo_relativo})
+				\item Funções \textit{tic/toc} e \textit{etime} do $MatLab^{\copyright}$
+			\end{itemize}
+		\item Erro de classificação relativo
+			\begin{itemize}
+				\item \% de \textit{pixels} classificados incorretamente (Equação \ref{eq:erro_relativo}).
+			\end{itemize}
+	\end{itemize}
+	
+		\begin{equation}
+		T_{r}^{i} = 100 - \bigg( 100\frac{T_{total}^{i}}{T_{total}^{Full Set}}\ \bigg) ,\ onde\ i = 1, 10, 50. 
+		\label{eq:tempo_relativo}
+		\end{equation}
+		
+		\begin{equation}
+			Erro = \frac{N_{\textit{pixels}\ errados}}{N_{total\ de\ \textit{pixels}}},\ \quad
+			N_{pixels\ errados} = I_{100\%} - I_{i}\ \forall\ i =  50\%, 10\%\ e\ 1\% 
+		\label{eq:erro_relativo}
+		\end{equation}
+
+
+\end{frame}	
+
+\begin{frame}{Modificação realizada}
+
+	\begin{variableblock}{Redução do espaço de busca}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+  		Re-amostragem uniforme dos \textit{pixels} das regiões de interesse usando taxas de re-amostragem de $ 50\%, 10\%, e\ 1\%$
+	\end{variableblock}	
+
+
+\end{frame}
+
+\begin{frame}{Exemplo de re-amostrada}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Sem re-amostragem.]{
+		\includegraphics[scale=0.29]{./figuras/pixels_marcados_imagem2_100.eps}
+		\label{fig:imagem2_reamostrada_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Re-amostragem a $50\%$.]{
+		\includegraphics[scale=0.29]{./figuras/pixels_marcados_imagem2_50.eps}
+		\label{fig:imagem2_reamostrada_50}}
+		\quad	
+		\subfloat[Re-amostragem a $10\%$.]{
+		\includegraphics[scale=0.29]{./figuras/pixels_marcados_imagem2_10.eps}
+		\label{fig:imagem2_reamostrada_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Re-amostragem a $1\%$.]{
+		\includegraphics[scale=0.29]{./figuras/pixels_marcados_imagem2_1.eps}
+		\label{fig:imagem2_reamostrada_1}}
+		\label{fig:imagem2_reamostrada}
+	\end{figure}
 
 \end{frame}
 
 
 \section{Resultados}
 
-\begin{frame}{Resultados de tempo}
+\begin{frame}{Resultados de tempo absoluto}
 
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf}
+		\caption{Resultados de tempo absoluto.}
+		\label{fig:tempo_absoluto}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Resultados de tempo relativo}
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf}
+		\caption{Resultados de tempo relativo.}
+		\label{fig:tempo_relativo}
+	\end{figure}
 \end{frame}
 
 \begin{frame}{Resultados de erro}
 
+	\begin{figure}[!h]
+		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf}
+		\caption{Gráfico do erro de classificação relativo.}
+		\label{fig:grafico_erro_classificacao}
+	\end{figure}
+
 \end{frame}
 
-\begin{frame}{Imagens resultantes}
+\begin{frame}{Imagens escolhidas}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Imagem 1]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/imagem1.png}
+		\label{fig:imagem1}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Imagem 2]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/imagem2.png}
+		\label{fig:imagem2}}	
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Imagem 3]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/imagem3.png}
+		\label{fig:imagem3}}
+		\quad
+		\subfloat[Imagem 4]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/imagem4.png}
+		\label{fig:imagem4}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Imagem 5]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/imagem5.png}
+		\label{fig:imagem5}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Imagem 6]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/imagem6.png}
+		\label{fig:imagem6}}
+		\label{fig:imagens_todas}
+	\end{figure}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Imagens resultantes (Imagem 1)}
+
 
 \end{frame}
 

@@ -18,68 +18,68 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Objeto 1}}}{19}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Objeto 2}}}{19}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces FDP's de uma imagem com duas regi\~oes estimadas a partir dos \textit {pixels} marcados.\relax }}{21}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Histograma da rela\c c\~ao $ \frac {T_{distancia}}{T_{total}} $, para as 24 imagens de sa\IeC {\'\i }da\relax }}{23}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Histograma da rela\c c\~ao $ \frac {T_{distancia}}{T_{total}} $, para as 24 imagens de sa\IeC {\'\i }da\relax }}{24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Hierarquia das fun\c c\~oes criadas.\relax }}{27}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Fluxo do algoritmo.\relax }}{28}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Imagens utilizadas. A Figura \ref {fig:imagem1} mostra Imagem 1, a Figura \ref {fig:imagem2} mostra a Imagem 2, a Figura \ref {fig:imagem3} mostra a Imagem 3, a Figura \ref {fig:imagem4} mostra a Imagem 4, a Figura \ref {fig:imagem5} mostra a Imagem 5 e a Figura \ref {fig:imagem6} mostra a Imagem 6.\relax }}{31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagem 1}}}{31}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagem 2}}}{31}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Imagem 3}}}{31}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Imagem 4}}}{31}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Imagem 5}}}{31}
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Imagem 6}}}{31}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Marca\c c\~ao da Imagem 2. A Figura \ref {fig:imagem2_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem2_objeto} mostra o objeto de interesse.\relax }}{32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 2}}}{32}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{32}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Marca\c c\~ao da Imagem 3. A Figura \ref {fig:imagem3_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem3_objeto} mostra o objeto de interesse.\relax }}{32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 3}}}{32}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{32}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Marca\c c\~ao da Imagem 4. A Figura \ref {fig:imagem4_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem4_objeto} mostra o objeto de interesse.\relax }}{32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 4}}}{32}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{32}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Marca\c c\~ao da Imagem 5. A Figura \ref {fig:imagem5_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem5_objeto} mostra o objeto de interesse.\relax }}{33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 5}}}{33}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Hierarquia das fun\c c\~oes criadas.\relax }}{28}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Fluxo do algoritmo.\relax }}{29}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Imagens utilizadas. A Figura \ref {fig:imagem1} mostra Imagem 1, a Figura \ref {fig:imagem2} mostra a Imagem 2, a Figura \ref {fig:imagem3} mostra a Imagem 3, a Figura \ref {fig:imagem4} mostra a Imagem 4, a Figura \ref {fig:imagem5} mostra a Imagem 5 e a Figura \ref {fig:imagem6} mostra a Imagem 6.\relax }}{32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagem 1}}}{32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagem 2}}}{32}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Imagem 3}}}{32}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Imagem 4}}}{32}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Imagem 5}}}{32}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Imagem 6}}}{32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Marca\c c\~ao da Imagem 2. A Figura \ref {fig:imagem2_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem2_objeto} mostra o objeto de interesse.\relax }}{33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 2}}}{33}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{33}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Marca\c c\~ao da Imagem 6. A Figura \ref {fig:imagem6_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem6_objeto} mostra o objeto de interesse.\relax }}{33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 6}}}{33}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Marca\c c\~ao da Imagem 3. A Figura \ref {fig:imagem3_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem3_objeto} mostra o objeto de interesse.\relax }}{33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 3}}}{33}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{33}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1. A Figura \ref {fig:imagem1_segmentada_objeto1_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto1_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto1_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem1_segmentada_objeto1_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{34}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com todos os \textit {pixels}}}}{34}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com taxa de re-amostragem de $50\%$}}}{34}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com taxa de re-amostragem de $10\%$}}}{34}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com taxa de re-amostragem de $1\%$}}}{34}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1. A Figura \ref {fig:imagem1_segmentada_objeto2_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto2_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto2_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem1_segmentada_objeto2_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{35}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com todos os \textit {pixels}}}}{35}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com taxa de re-amostragem de $50\%$}}}{35}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com taxa de re-amostragem de $10\%$}}}{35}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com taxa de re-amostragem de $1\%$}}}{35}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 2. A Figura \ref {fig:imagem2_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem2_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem2_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem2_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{36}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 2 com todos os \textit {pixels}}}}{36}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 2 com taxa de re-amostragem de $50\%$}}}{36}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 2 com taxa de re-amostragem de $10\%$}}}{36}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 2 com taxa de re-amostragem de $1\%$}}}{36}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 3. A Figura \ref {fig:imagem3_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem3_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem3_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem3_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{37}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 3 com todos os \textit {pixels}}}}{37}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 3 com taxa de re-amostragem de $50\%$}}}{37}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 3 com taxa de re-amostragem de $10\%$}}}{37}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 3 com taxa de re-amostragem de $1\%$}}}{37}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 4. A Figura \ref {fig:imagem4_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem4_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem4_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem4_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{38}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 4 com todos os \textit {pixels}}}}{38}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 4 com taxa de re-amostragem de $50\%$}}}{38}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 4 com taxa de re-amostragem de $10\%$}}}{38}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 4 com taxa de re-amostragem de $1\%$}}}{38}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 5. A Figura \ref {fig:imagem5_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem5_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem5_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem5_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{39}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 5 com todos os \textit {pixels}}}}{39}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 5 com taxa de re-amostragem de $50\%$}}}{39}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 5 com taxa de re-amostragem de $10\%$}}}{39}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 5 com taxa de re-amostragem de $1\%$}}}{39}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 6. A Figura \ref {fig:imagem6_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem6_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem6_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem6_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{40}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 6 com todos os \textit {pixels}}}}{40}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 6 com taxa de re-amostragem de $50\%$}}}{40}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 6 com taxa de re-amostragem de $10\%$}}}{40}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 6 com taxa de re-amostragem de $1\%$}}}{40}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Gr\'afico do erro de classifica\c c\~ao relativo ao total de \textit {pixels} de cada imagem $\%$\relax }}{41}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Gr\'afico do tempo absoluto para classifica\c c\~ao das imagens (em minutos)\relax }}{42}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Gr\'afico do tempo relativo para classifica\c c\~ao das imagens (em $\%$)\relax }}{43}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Marca\c c\~ao da Imagem 4. A Figura \ref {fig:imagem4_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem4_objeto} mostra o objeto de interesse.\relax }}{33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 4}}}{33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{33}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Marca\c c\~ao da Imagem 5. A Figura \ref {fig:imagem5_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem5_objeto} mostra o objeto de interesse.\relax }}{34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 5}}}{34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{34}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Marca\c c\~ao da Imagem 6. A Figura \ref {fig:imagem6_fundo} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:imagem6_objeto} mostra o objeto de interesse.\relax }}{34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem 6}}}{34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Regi\~ao de interesse}}}{34}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1. A Figura \ref {fig:imagem1_segmentada_objeto1_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto1_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto1_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem1_segmentada_objeto1_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com todos os \textit {pixels}}}}{35}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com taxa de re-amostragem de $50\%$}}}{35}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com taxa de re-amostragem de $10\%$}}}{35}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 1 da Imagem 1 com taxa de re-amostragem de $1\%$}}}{35}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1. A Figura \ref {fig:imagem1_segmentada_objeto2_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto2_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem1_segmentada_objeto2_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem1_segmentada_objeto2_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{36}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com todos os \textit {pixels}}}}{36}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com taxa de re-amostragem de $50\%$}}}{36}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com taxa de re-amostragem de $10\%$}}}{36}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao do objeto 2 da Imagem 1 com taxa de re-amostragem de $1\%$}}}{36}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 2. A Figura \ref {fig:imagem2_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem2_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem2_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem2_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 2 com todos os \textit {pixels}}}}{37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 2 com taxa de re-amostragem de $50\%$}}}{37}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 2 com taxa de re-amostragem de $10\%$}}}{37}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 2 com taxa de re-amostragem de $1\%$}}}{37}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 3. A Figura \ref {fig:imagem3_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem3_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem3_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem3_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{38}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 3 com todos os \textit {pixels}}}}{38}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 3 com taxa de re-amostragem de $50\%$}}}{38}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 3 com taxa de re-amostragem de $10\%$}}}{38}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 3 com taxa de re-amostragem de $1\%$}}}{38}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 4. A Figura \ref {fig:imagem4_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem4_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem4_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem4_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{39}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 4 com todos os \textit {pixels}}}}{39}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 4 com taxa de re-amostragem de $50\%$}}}{39}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 4 com taxa de re-amostragem de $10\%$}}}{39}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 4 com taxa de re-amostragem de $1\%$}}}{39}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 5. A Figura \ref {fig:imagem5_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem5_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem5_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem5_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{40}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 5 com todos os \textit {pixels}}}}{40}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 5 com taxa de re-amostragem de $50\%$}}}{40}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 5 com taxa de re-amostragem de $10\%$}}}{40}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 5 com taxa de re-amostragem de $1\%$}}}{40}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Resultado da segmenta\c c\~ao do objeto 2 da Imagem 6. A Figura \ref {fig:imagem6_segmentada_100} mostra a segmenta\c c\~ao com $100\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem6_segmentada_50} mostra a segmenta\c c\~ao com $50\%$ dos \textit {pixels} marcados, a Figura \ref {fig:imagem6_segmentada_10} mostra a segmenta\c c\~ao com $10\%$ dos \textit {pixels} marcados e a Figura \ref {fig:imagem6_segmentada_1} mostra a segmenta\c c\~ao com $1\%$ dos \textit {pixels} marcados.\relax }}{41}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Resultado da segmenta\c c\~ao da Imagem 6 com todos os \textit {pixels}}}}{41}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 6 com taxa de re-amostragem de $50\%$}}}{41}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 6 com taxa de re-amostragem de $10\%$}}}{41}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Resultado da segmenta\c c\~ao Imagem 6 com taxa de re-amostragem de $1\%$}}}{41}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Gr\'afico do erro de classifica\c c\~ao relativo ao total de \textit {pixels} de cada imagem $\%$\relax }}{42}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Gr\'afico do tempo absoluto para classifica\c c\~ao das imagens (em minutos)\relax }}{43}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Gr\'afico do tempo relativo para classifica\c c\~ao das imagens (em $\%$)\relax }}{44}
 \addvspace {10\p@ }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  17 OCT 2015 16:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  21 OCT 2015 23:51
 entering extended mode
 **tcc_Danilo.tex
 
@@ -1178,11 +1178,11 @@ Underfull \hbox (badness 1033) in paragraph at lines 14--15
 ]
 Package epstopdf Info: Source file: <./figuras/capitulo_3/imagem15_scribbled1.e
 ps>
-(epstopdf)                    date: 2015-08-28 16:08:21
+(epstopdf)                    date: 2015-08-28 17:08:21
 (epstopdf)                    size: 845698 bytes
 (epstopdf)             Output file: <./figuras/capitulo_3/imagem15_scribbled1-e
 ps-converted-to.pdf>
-(epstopdf)                    date: 2015-08-28 16:10:08
+(epstopdf)                    date: 2015-08-28 17:10:08
 (epstopdf)                    size: 35207 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/imagem
 15_scribbled1-eps-converted-to.pdf ./figuras/capitulo_3/imagem15_scribbled1.eps
@@ -1201,11 +1201,11 @@ Package pdftex.def Info: ./figuras/capitulo_3/imagem15_scribbled1-eps-converted
 (pdftex.def)             Requested size: 207.97331pt x 153.77177pt.
 Package epstopdf Info: Source file: <./figuras/capitulo_3/imagem15_scribbled2.e
 ps>
-(epstopdf)                    date: 2015-08-28 16:07:44
+(epstopdf)                    date: 2015-08-28 17:07:44
 (epstopdf)                    size: 845748 bytes
 (epstopdf)             Output file: <./figuras/capitulo_3/imagem15_scribbled2-e
 ps-converted-to.pdf>
-(epstopdf)                    date: 2015-08-28 16:10:09
+(epstopdf)                    date: 2015-08-28 17:10:09
 (epstopdf)                    size: 35493 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/imagem
 15_scribbled2-eps-converted-to.pdf ./figuras/capitulo_3/imagem15_scribbled2.eps
@@ -1224,11 +1224,11 @@ Package pdftex.def Info: ./figuras/capitulo_3/imagem15_scribbled2-eps-converted
 (pdftex.def)             Requested size: 207.97331pt x 153.77177pt.
 Package epstopdf Info: Source file: <./figuras/capitulo_3/imagem15_scribbled3.e
 ps>
-(epstopdf)                    date: 2015-08-28 16:08:02
+(epstopdf)                    date: 2015-08-28 17:08:02
 (epstopdf)                    size: 845702 bytes
 (epstopdf)             Output file: <./figuras/capitulo_3/imagem15_scribbled3-e
 ps-converted-to.pdf>
-(epstopdf)                    date: 2015-08-28 16:10:10
+(epstopdf)                    date: 2015-08-28 17:10:10
 (epstopdf)                    size: 33149 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/imagem
 15_scribbled3-eps-converted-to.pdf ./figuras/capitulo_3/imagem15_scribbled3.eps
@@ -1256,11 +1256,11 @@ GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_3/imagem15_scribbled2-e
 ps-converted-to.pdf> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscr
 ito/tcc/figuras/capitulo_3/imagem15_scribbled3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figuras/capitulo_3/exemplo_fdp1.eps>
-(epstopdf)                    date: 2015-10-16 22:44:20
+(epstopdf)                    date: 2015-10-16 23:44:20
 (epstopdf)                    size: 31909 bytes
 (epstopdf)             Output file: <./figuras/capitulo_3/exemplo_fdp1-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2015-10-16 22:44:26
+(epstopdf)                    date: 2015-10-16 23:44:26
 (epstopdf)                    size: 7296 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/exempl
 o_fdp1-eps-converted-to.pdf ./figuras/capitulo_3/exemplo_fdp1.eps>
@@ -1283,54 +1283,65 @@ Overfull \hbox (42.73567pt too wide) in paragraph at lines 56--57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] [21 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figu
-ras/capitulo_3/exemplo_fdp1-eps-converted-to.pdf>] [22]
+[20]
+Underfull \hbox (badness 1067) in paragraph at lines 65--66
+\T1/cmr/m/n/12 cal-cu-la-dos usando a equa-ção 3.1[] com base na pro-ba-bi-li-d
+ade $\OML/cmm/m/it/12 P[];  \OMS/cmsy/m/n/12 8 \OML/cmm/m/it/12 i \OT1/cmr/m/n/
+12 =$
+ []
+
+[21 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_3/exemplo_fdp1-eps-converted-to.pdf>] [22]
 Package epstopdf Info: Source file: <./figuras/capitulo_3/grafico_histograma_pe
 rcent_distancia.eps>
-(epstopdf)                    date: 2015-09-29 09:33:29
+(epstopdf)                    date: 2015-09-29 10:33:29
 (epstopdf)                    size: 16302 bytes
 (epstopdf)             Output file: <./figuras/capitulo_3/grafico_histograma_pe
 rcent_distancia-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-09-29 09:33:38
+(epstopdf)                    date: 2015-09-29 10:33:38
 (epstopdf)                    size: 3692 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figuras/capitulo_3/grafic
 o_histograma_percent_distancia-eps-converted-to.pdf ./figuras/capitulo_3/grafic
 o_histograma_percent_distancia.eps>
-(epstopdf)             \includegraphics on input line 134.
+(epstopdf)             \includegraphics on input line 144.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figuras/capitulo_3/grafico_histograma_percent_distancia-eps-converted-to.pdf
-, id=281, 421.575pt x 316.18124pt>
+, id=282, 421.575pt x 316.18124pt>
 File: ./figuras/capitulo_3/grafico_histograma_percent_distancia-eps-converted-t
 o.pdf Graphic file (type pdf)
 
 <use ./figuras/capitulo_3/grafico_histograma_percent_distancia-eps-converted-to
 .pdf>
 Package pdftex.def Info: ./figuras/capitulo_3/grafico_histograma_percent_distan
-cia-eps-converted-to.pdf used on input line 134.
+cia-eps-converted-to.pdf used on input line 144.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (9.00899pt too wide) in paragraph at lines 134--135
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 144--145
  [][] 
  []
 
-[23 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
-apitulo_3/grafico_histograma_percent_distancia-eps-converted-to.pdf>]
-Underfull \hbox (badness 3713) in paragraph at lines 150--151
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23]
+Underfull \hbox (badness 3713) in paragraph at lines 160--161
 []\T1/cmr/m/n/12 O pa-râ-me-tro mo-di-fi-cado para aná-lise do tempo é a taxa d
 e
  []
 
-[24]) [25]
+[24 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_3/grafico_histograma_percent_distancia-eps-converted-to.pdf>] [25])
+[26]
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
 itulo4/capitulo4.tex
 Cap\'{\i }tulo 4.
-[26
+[27
 
 
 
 ]
-<./figuras/capitulo_4/DiagramaFuncoes.pdf, id=299, 247.58498pt x 194.8369pt>
+<./figuras/capitulo_4/DiagramaFuncoes.pdf, id=303, 247.58498pt x 194.8369pt>
 File: ./figuras/capitulo_4/DiagramaFuncoes.pdf Graphic file (type pdf)
 
 <use ./figuras/capitulo_4/DiagramaFuncoes.pdf>
@@ -1338,7 +1349,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/DiagramaFuncoes.pdf used on input
  line 30.
 (pdftex.def)             Requested size: 371.37654pt x 292.25461pt.
 
-<./figuras/capitulo_4/DiagramaCodigo.pdf, id=300, 520.59294pt x 669.98206pt>
+<./figuras/capitulo_4/DiagramaCodigo.pdf, id=304, 520.59294pt x 669.98206pt>
 File: ./figuras/capitulo_4/DiagramaCodigo.pdf Graphic file (type pdf)
 
 <use ./figuras/capitulo_4/DiagramaCodigo.pdf>
@@ -1353,8 +1364,8 @@ Overfull \hbox (29.9411pt too wide) in paragraph at lines 37--38
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
-apitulo_4/DiagramaFuncoes.pdf>] [28 <C:/Users/Danilo/Documents/GitHub/danilo/UF
+[28 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+apitulo_4/DiagramaFuncoes.pdf>] [29 <C:/Users/Danilo/Documents/GitHub/danilo/UF
 PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/DiagramaCodigo.pdf>]
 Overfull \hbox (26.80852pt too wide) detected at line 52
 \OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/
@@ -1365,9 +1376,9 @@ L/cmm/m/it/12 :\OT1/cmr/m/n/12 25 \OML/cmm/m/it/12 e N \OT1/cmr/m/n/12 = 5
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 56--57
-\T1/cmr/m/n/12 de \T1/cmr/m/it/12 x \T1/cmr/m/n/12 per-ten-cer a uma de-ter-mi-
-nada re-gião ou sub-região. A fun-ção
+Underfull \hbox (badness 2150) in paragraph at lines 56--57
+\T1/cmr/m/n/12 as-so-ci-ado, des-crito na equa-ção 3.6b[], que re-pre-senta o c
+om-ple-mento da
  []
 
 
@@ -1376,7 +1387,7 @@ Underfull \hbox (badness 1102) in paragraph at lines 58--59
 mr/m/n/12 é feita di-re-ta-mente na fun-ção
  []
 
-[29] <./figuras/capitulo_4/imagem1.png, id=326, 521.95pt x 421.575pt>
+[30] <./figuras/capitulo_4/imagem1.png, id=331, 521.95pt x 421.575pt>
 File: ./figuras/capitulo_4/imagem1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem1.png>
@@ -1384,7 +1395,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem1.png used on input line 84
 .
 (pdftex.def)             Requested size: 208.77629pt x 168.627pt.
 
-<./figuras/capitulo_4/imagem2.png, id=327, 481.8pt x 271.0125pt>
+<./figuras/capitulo_4/imagem2.png, id=332, 481.8pt x 271.0125pt>
 File: ./figuras/capitulo_4/imagem2.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem2.png>
@@ -1392,7 +1403,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem2.png used on input line 89
 .
 (pdftex.def)             Requested size: 192.71658pt x 108.40306pt.
 
-<./figuras/capitulo_4/imagem3.png, id=328, 421.575pt x 278.54062pt>
+<./figuras/capitulo_4/imagem3.png, id=333, 421.575pt x 278.54062pt>
 File: ./figuras/capitulo_4/imagem3.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem3.png>
@@ -1400,7 +1411,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem3.png used on input line 93
 .
 (pdftex.def)             Requested size: 168.627pt x 111.41426pt.
 
-<./figuras/capitulo_4/imagem4.png, id=329, 466.74374pt x 306.39468pt>
+<./figuras/capitulo_4/imagem4.png, id=334, 466.74374pt x 306.39468pt>
 File: ./figuras/capitulo_4/imagem4.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem4.png>
@@ -1408,7 +1419,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem4.png used on input line 98
 .
 (pdftex.def)             Requested size: 186.69418pt x 122.5557pt.
 
-<./figuras/capitulo_4/imagem5.png, id=330, 455.45157pt x 267.24844pt>
+<./figuras/capitulo_4/imagem5.png, id=335, 455.45157pt x 267.24844pt>
 File: ./figuras/capitulo_4/imagem5.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem5.png>
@@ -1416,7 +1427,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem5.png used on input line 10
 2.
 (pdftex.def)             Requested size: 182.1774pt x 106.89748pt.
 
-<./figuras/capitulo_4/imagem6.png, id=331, 466.74374pt x 302.63063pt>
+<./figuras/capitulo_4/imagem6.png, id=336, 466.74374pt x 302.63063pt>
 File: ./figuras/capitulo_4/imagem6.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem6.png>
@@ -1431,7 +1442,7 @@ Overfull \hbox (10.04668pt too wide) in paragraph at lines 84--108
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figuras/capitulo_4/imagem2_scribbled1.png, id=332, 361.35pt x 203.25937pt>
+<./figuras/capitulo_4/imagem2_scribbled1.png, id=337, 361.35pt x 203.25937pt>
 File: ./figuras/capitulo_4/imagem2_scribbled1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem2_scribbled1.png>
@@ -1439,7 +1450,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem2_scribbled1.png used on in
 put line 116.
 (pdftex.def)             Requested size: 216.81168pt x 121.95656pt.
 
-<./figuras/capitulo_4/imagem2_scribbled2.png, id=333, 361.35pt x 203.25937pt>
+<./figuras/capitulo_4/imagem2_scribbled2.png, id=338, 361.35pt x 203.25937pt>
 File: ./figuras/capitulo_4/imagem2_scribbled2.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem2_scribbled2.png>
@@ -1455,7 +1466,7 @@ Overfull \hbox (42.17715pt too wide) in paragraph at lines 116--122
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figuras/capitulo_4/imagem3_scribbled1.png, id=334, 421.575pt x 278.54062pt>
+<./figuras/capitulo_4/imagem3_scribbled1.png, id=339, 421.575pt x 278.54062pt>
 File: ./figuras/capitulo_4/imagem3_scribbled1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem3_scribbled1.png>
@@ -1463,7 +1474,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem3_scribbled1.png used on in
 put line 130.
 (pdftex.def)             Requested size: 210.78697pt x 139.26996pt.
 
-<./figuras/capitulo_4/imagem3_scribbled2.png, id=335, 421.575pt x 278.54062pt>
+<./figuras/capitulo_4/imagem3_scribbled2.png, id=340, 421.575pt x 278.54062pt>
 File: ./figuras/capitulo_4/imagem3_scribbled2.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem3_scribbled2.png>
@@ -1479,7 +1490,7 @@ Overfull \hbox (30.12775pt too wide) in paragraph at lines 130--136
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figuras/capitulo_4/imagem4_scribbled1.png, id=336, 466.74374pt x 306.39468pt
+<./figuras/capitulo_4/imagem4_scribbled1.png, id=341, 466.74374pt x 306.39468pt
 >
 File: ./figuras/capitulo_4/imagem4_scribbled1.png Graphic file (type png)
  <use ./figuras/capitulo_4/imagem4_scribbled1.png>
@@ -1487,7 +1498,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem4_scribbled1.png used on in
 put line 144.
 (pdftex.def)             Requested size: 210.03275pt x 137.87633pt.
 
-<./figuras/capitulo_4/imagem4_scribbled2.png, id=337, 466.74374pt x 306.39468pt
+<./figuras/capitulo_4/imagem4_scribbled2.png, id=342, 466.74374pt x 306.39468pt
 >
 File: ./figuras/capitulo_4/imagem4_scribbled2.png Graphic file (type png)
  <use ./figuras/capitulo_4/imagem4_scribbled2.png>
@@ -1503,7 +1514,7 @@ Overfull \hbox (28.6193pt too wide) in paragraph at lines 144--150
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figuras/capitulo_4/imagem5_scribbled1.png, id=338, 455.45157pt x 267.24844pt
+<./figuras/capitulo_4/imagem5_scribbled1.png, id=343, 455.45157pt x 267.24844pt
 >
 File: ./figuras/capitulo_4/imagem5_scribbled1.png Graphic file (type png)
  <use ./figuras/capitulo_4/imagem5_scribbled1.png>
@@ -1511,7 +1522,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem5_scribbled1.png used on in
 put line 158.
 (pdftex.def)             Requested size: 204.95131pt x 120.26068pt.
 
-<./figuras/capitulo_4/imagem5_scribbled2.png, id=339, 455.45157pt x 267.24844pt
+<./figuras/capitulo_4/imagem5_scribbled2.png, id=344, 455.45157pt x 267.24844pt
 >
 File: ./figuras/capitulo_4/imagem5_scribbled2.png Graphic file (type png)
  <use ./figuras/capitulo_4/imagem5_scribbled2.png>
@@ -1527,7 +1538,7 @@ Overfull \hbox (18.45642pt too wide) in paragraph at lines 158--164
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figuras/capitulo_4/imagem6_scribbled1.png, id=340, 466.74374pt x 302.63063pt
+<./figuras/capitulo_4/imagem6_scribbled1.png, id=345, 466.74374pt x 302.63063pt
 >
 File: ./figuras/capitulo_4/imagem6_scribbled1.png Graphic file (type png)
  <use ./figuras/capitulo_4/imagem6_scribbled1.png>
@@ -1535,7 +1546,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem6_scribbled1.png used on in
 put line 172.
 (pdftex.def)             Requested size: 210.03275pt x 136.18251pt.
 
-<./figuras/capitulo_4/imagem6_scribbled2.png, id=341, 466.74374pt x 302.63063pt
+<./figuras/capitulo_4/imagem6_scribbled2.png, id=346, 466.74374pt x 302.63063pt
 >
 File: ./figuras/capitulo_4/imagem6_scribbled2.png Graphic file (type png)
  <use ./figuras/capitulo_4/imagem6_scribbled2.png>
@@ -1551,7 +1562,7 @@ Overfull \hbox (28.6193pt too wide) in paragraph at lines 172--178
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figuras/capitulo_4/Imagem1_objeto1_tx100.png, id=342, 519.44063pt x 384.6872
+<./figuras/capitulo_4/Imagem1_objeto1_tx100.png, id=347, 519.44063pt x 384.6872
 pt>
 File: ./figuras/capitulo_4/Imagem1_objeto1_tx100.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto1_tx100.png>
@@ -1559,7 +1570,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto1_tx100.png used on
  input line 187.
 (pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
 
-<./figuras/capitulo_4/Imagem1_objeto1_tx50.png, id=343, 519.44063pt x 384.6872p
+<./figuras/capitulo_4/Imagem1_objeto1_tx50.png, id=348, 519.44063pt x 384.6872p
 t>
 File: ./figuras/capitulo_4/Imagem1_objeto1_tx50.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto1_tx50.png>
@@ -1567,7 +1578,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto1_tx50.png used on
 input line 192.
 (pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
 
-<./figuras/capitulo_4/Imagem1_objeto1_tx10.png, id=344, 519.44063pt x 384.6872p
+<./figuras/capitulo_4/Imagem1_objeto1_tx10.png, id=349, 519.44063pt x 384.6872p
 t>
 File: ./figuras/capitulo_4/Imagem1_objeto1_tx10.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto1_tx10.png>
@@ -1575,7 +1586,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto1_tx10.png used on
 input line 196.
 (pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
 
-<./figuras/capitulo_4/Imagem1_objeto1_tx1.png, id=345, 519.44063pt x 384.6872pt
+<./figuras/capitulo_4/Imagem1_objeto1_tx1.png, id=350, 519.44063pt x 384.6872pt
 >
 File: ./figuras/capitulo_4/Imagem1_objeto1_tx1.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto1_tx1.png>
@@ -1596,7 +1607,7 @@ Overfull \hbox (24.09894pt too wide) in paragraph at lines 187--202
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<./figuras/capitulo_4/Imagem1_objeto2_tx100.png, id=346, 519.44063pt x 384.6872
+<./figuras/capitulo_4/Imagem1_objeto2_tx100.png, id=351, 519.44063pt x 384.6872
 pt>
 File: ./figuras/capitulo_4/Imagem1_objeto2_tx100.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto2_tx100.png>
@@ -1604,7 +1615,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto2_tx100.png used on
  input line 210.
 (pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
 
-<./figuras/capitulo_4/Imagem1_objeto2_tx50.png, id=347, 519.44063pt x 384.6872p
+<./figuras/capitulo_4/Imagem1_objeto2_tx50.png, id=352, 519.44063pt x 384.6872p
 t>
 File: ./figuras/capitulo_4/Imagem1_objeto2_tx50.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto2_tx50.png>
@@ -1612,7 +1623,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto2_tx50.png used on
 input line 215.
 (pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
 
-<./figuras/capitulo_4/Imagem1_objeto2_tx10.png, id=348, 519.44063pt x 384.6872p
+<./figuras/capitulo_4/Imagem1_objeto2_tx10.png, id=353, 519.44063pt x 384.6872p
 t>
 File: ./figuras/capitulo_4/Imagem1_objeto2_tx10.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto2_tx10.png>
@@ -1620,7 +1631,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem1_objeto2_tx10.png used on
 input line 219.
 (pdftex.def)             Requested size: 207.77257pt x 153.87215pt.
 
-<./figuras/capitulo_4/Imagem1_objeto2_tx1.png, id=349, 519.44063pt x 384.6872pt
+<./figuras/capitulo_4/Imagem1_objeto2_tx1.png, id=354, 519.44063pt x 384.6872pt
 >
 File: ./figuras/capitulo_4/Imagem1_objeto2_tx1.png Graphic file (type png)
  <use ./figuras/capitulo_4/Imagem1_objeto2_tx1.png>
@@ -1640,7 +1651,7 @@ Overfull \hbox (24.09894pt too wide) in paragraph at lines 210--225
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figuras/capitulo_4/Imagem2_tx100.png, id=350, 489.32813pt x 271.76532pt>
+<./figuras/capitulo_4/Imagem2_tx100.png, id=355, 489.32813pt x 271.76532pt>
 File: ./figuras/capitulo_4/Imagem2_tx100.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem2_tx100.png>
@@ -1648,7 +1659,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem2_tx100.png used on input l
 ine 233.
 (pdftex.def)             Requested size: 220.19562pt x 122.29326pt.
 
-<./figuras/capitulo_4/Imagem2_tx50.png, id=351, 489.32813pt x 271.76532pt>
+<./figuras/capitulo_4/Imagem2_tx50.png, id=356, 489.32813pt x 271.76532pt>
 File: ./figuras/capitulo_4/Imagem2_tx50.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem2_tx50.png>
@@ -1656,7 +1667,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem2_tx50.png used on input li
 ne 238.
 (pdftex.def)             Requested size: 220.19562pt x 122.29326pt.
 
-<./figuras/capitulo_4/Imagem2_tx10.png, id=352, 489.32813pt x 271.76532pt>
+<./figuras/capitulo_4/Imagem2_tx10.png, id=357, 489.32813pt x 271.76532pt>
 File: ./figuras/capitulo_4/Imagem2_tx10.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem2_tx10.png>
@@ -1664,7 +1675,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem2_tx10.png used on input li
 ne 242.
 (pdftex.def)             Requested size: 220.19562pt x 122.29326pt.
 
-<./figuras/capitulo_4/Imagem2_tx1.png, id=353, 489.32813pt x 271.76532pt>
+<./figuras/capitulo_4/Imagem2_tx1.png, id=358, 489.32813pt x 271.76532pt>
 File: ./figuras/capitulo_4/Imagem2_tx1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem2_tx1.png>
@@ -1684,7 +1695,7 @@ Overfull \hbox (48.94504pt too wide) in paragraph at lines 233--248
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figuras/capitulo_4/Imagem3_tx100.png, id=354, 549.55313pt x 347.04657pt>
+<./figuras/capitulo_4/Imagem3_tx100.png, id=359, 549.55313pt x 347.04657pt>
 File: ./figuras/capitulo_4/Imagem3_tx100.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem3_tx100.png>
@@ -1692,7 +1703,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem3_tx100.png used on input l
 ine 257.
 (pdftex.def)             Requested size: 219.81735pt x 138.81616pt.
 
-<./figuras/capitulo_4/Imagem3_tx50.png, id=355, 549.55313pt x 347.04657pt>
+<./figuras/capitulo_4/Imagem3_tx50.png, id=360, 549.55313pt x 347.04657pt>
 File: ./figuras/capitulo_4/Imagem3_tx50.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem3_tx50.png>
@@ -1700,7 +1711,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem3_tx50.png used on input li
 ne 262.
 (pdftex.def)             Requested size: 219.81735pt x 138.81616pt.
 
-<./figuras/capitulo_4/Imagem3_tx10.png, id=356, 549.55313pt x 347.04657pt>
+<./figuras/capitulo_4/Imagem3_tx10.png, id=361, 549.55313pt x 347.04657pt>
 File: ./figuras/capitulo_4/Imagem3_tx10.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem3_tx10.png>
@@ -1708,7 +1719,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/Imagem3_tx10.png used on input li
 ne 266.
 (pdftex.def)             Requested size: 219.81735pt x 138.81616pt.
 
-<./figuras/capitulo_4/Imagem3_tx1.png, id=357, 549.55313pt x 347.04657pt>
+<./figuras/capitulo_4/Imagem3_tx1.png, id=362, 549.55313pt x 347.04657pt>
 File: ./figuras/capitulo_4/Imagem3_tx1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/Imagem3_tx1.png>
@@ -1728,7 +1739,7 @@ Overfull \hbox (48.1885pt too wide) in paragraph at lines 257--272
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figuras/capitulo_4/imagem4_tx100.png, id=358, 594.72188pt x 374.90062pt>
+<./figuras/capitulo_4/imagem4_tx100.png, id=363, 594.72188pt x 374.90062pt>
 File: ./figuras/capitulo_4/imagem4_tx100.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem4_tx100.png>
@@ -1736,7 +1747,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem4_tx100.png used on input l
 ine 280.
 (pdftex.def)             Requested size: 220.04364pt x 138.71106pt.
 
-<./figuras/capitulo_4/imagem4_tx50.png, id=359, 594.72188pt x 374.90062pt>
+<./figuras/capitulo_4/imagem4_tx50.png, id=364, 594.72188pt x 374.90062pt>
 File: ./figuras/capitulo_4/imagem4_tx50.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem4_tx50.png>
@@ -1744,7 +1755,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem4_tx50.png used on input li
 ne 285.
 (pdftex.def)             Requested size: 220.04364pt x 138.71106pt.
 
-<./figuras/capitulo_4/imagem4_tx10.png, id=360, 594.72188pt x 374.90062pt>
+<./figuras/capitulo_4/imagem4_tx10.png, id=365, 594.72188pt x 374.90062pt>
 File: ./figuras/capitulo_4/imagem4_tx10.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem4_tx10.png>
@@ -1752,7 +1763,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem4_tx10.png used on input li
 ne 289.
 (pdftex.def)             Requested size: 220.04364pt x 138.71106pt.
 
-<./figuras/capitulo_4/imagem4_tx1.png, id=361, 594.72188pt x 374.90062pt>
+<./figuras/capitulo_4/imagem4_tx1.png, id=366, 594.72188pt x 374.90062pt>
 File: ./figuras/capitulo_4/imagem4_tx1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem4_tx1.png>
@@ -1772,7 +1783,7 @@ Overfull \hbox (48.64108pt too wide) in paragraph at lines 280--295
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figuras/capitulo_4/imagem5_tx100.png, id=362, 583.42969pt x 335.75438pt>
+<./figuras/capitulo_4/imagem5_tx100.png, id=367, 583.42969pt x 335.75438pt>
 File: ./figuras/capitulo_4/imagem5_tx100.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem5_tx100.png>
@@ -1780,7 +1791,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem5_tx100.png used on input l
 ine 303.
 (pdftex.def)             Requested size: 215.8656pt x 124.22717pt.
 
-<./figuras/capitulo_4/imagem5_tx50.png, id=363, 583.42969pt x 335.75438pt>
+<./figuras/capitulo_4/imagem5_tx50.png, id=368, 583.42969pt x 335.75438pt>
 File: ./figuras/capitulo_4/imagem5_tx50.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem5_tx50.png>
@@ -1788,7 +1799,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem5_tx50.png used on input li
 ne 308.
 (pdftex.def)             Requested size: 215.8656pt x 124.22717pt.
 
-<./figuras/capitulo_4/imagem5_tx10.png, id=364, 583.42969pt x 335.75438pt>
+<./figuras/capitulo_4/imagem5_tx10.png, id=369, 583.42969pt x 335.75438pt>
 File: ./figuras/capitulo_4/imagem5_tx10.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem5_tx10.png>
@@ -1796,7 +1807,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem5_tx10.png used on input li
 ne 312.
 (pdftex.def)             Requested size: 215.8656pt x 124.22717pt.
 
-<./figuras/capitulo_4/imagem5_tx1.png, id=365, 583.42969pt x 335.75438pt>
+<./figuras/capitulo_4/imagem5_tx1.png, id=370, 583.42969pt x 335.75438pt>
 File: ./figuras/capitulo_4/imagem5_tx1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem5_tx1.png>
@@ -1816,7 +1827,7 @@ Overfull \hbox (40.285pt too wide) in paragraph at lines 303--318
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figuras/capitulo_4/imagem6_tx100.png, id=366, 594.72188pt x 371.13657pt>
+<./figuras/capitulo_4/imagem6_tx100.png, id=371, 594.72188pt x 371.13657pt>
 File: ./figuras/capitulo_4/imagem6_tx100.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem6_tx100.png>
@@ -1824,7 +1835,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem6_tx100.png used on input l
 ine 326.
 (pdftex.def)             Requested size: 220.04364pt x 137.31837pt.
 
-<./figuras/capitulo_4/imagem6_tx50.png, id=367, 594.72188pt x 371.13657pt>
+<./figuras/capitulo_4/imagem6_tx50.png, id=372, 594.72188pt x 371.13657pt>
 File: ./figuras/capitulo_4/imagem6_tx50.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem6_tx50.png>
@@ -1832,7 +1843,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem6_tx50.png used on input li
 ne 331.
 (pdftex.def)             Requested size: 220.04364pt x 137.31837pt.
 
-<./figuras/capitulo_4/imagem6_tx10.png, id=368, 594.72188pt x 371.13657pt>
+<./figuras/capitulo_4/imagem6_tx10.png, id=373, 594.72188pt x 371.13657pt>
 File: ./figuras/capitulo_4/imagem6_tx10.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem6_tx10.png>
@@ -1840,7 +1851,7 @@ Package pdftex.def Info: ./figuras/capitulo_4/imagem6_tx10.png used on input li
 ne 335.
 (pdftex.def)             Requested size: 220.04364pt x 137.31837pt.
 
-<./figuras/capitulo_4/imagem6_tx1.png, id=369, 594.72188pt x 371.13657pt>
+<./figuras/capitulo_4/imagem6_tx1.png, id=374, 594.72188pt x 371.13657pt>
 File: ./figuras/capitulo_4/imagem6_tx1.png Graphic file (type png)
 
 <use ./figuras/capitulo_4/imagem6_tx1.png>
@@ -1866,25 +1877,25 @@ Underfull \hbox (badness 1122) in paragraph at lines 347--348
  4.3e[],
  []
 
-[30]
-<./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf, id=373, 
+[31]
+<./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf, id=378, 
 421.575pt x 316.18124pt>
 File: ./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use ./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf>
 Package pdftex.def Info: ./figuras/capitulo_4/grafico_erro_classificacao-eps-co
-nverted-to.pdf used on input line 362.
+nverted-to.pdf used on input line 360.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (9.00899pt too wide) in paragraph at lines 362--363
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 360--361
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[31 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+[32 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
 apitulo_4/imagem1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEs
 crito/tcc/figuras/capitulo_4/imagem2.png> <C:/Users/Danilo/Documents/GitHub/dan
 ilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem3.png> <C:/Users/Danilo/D
@@ -1893,9 +1904,9 @@ ocuments/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem4.png>
 tulo_4/imagem5.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscri
 to/tcc/figuras/capitulo_4/imagem6.png>]
 
-LaTeX Warning: Text page 32 contains only floats.
+LaTeX Warning: Text page 33 contains only floats.
 
-[32 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+[33 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
 apitulo_4/imagem2_scribbled1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA
 /TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem2_scribbled2.png> <C:/Users/Danil
 o/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem3_s
@@ -1905,16 +1916,16 @@ danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem4_scribbled1.png> <C:/
 Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_
 4/imagem4_scribbled2.png>]
 <./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf, id=3
-93, 421.575pt x 316.18124pt>
+98, 421.575pt x 316.18124pt>
 File: ./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use ./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf>
 Package pdftex.def Info: ./figuras/capitulo_4/grafico_reducao_tempo_absoluto-ep
-s-converted-to.pdf used on input line 371.
+s-converted-to.pdf used on input line 369.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (9.00899pt too wide) in paragraph at lines 371--372
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 369--370
 [][] 
  []
 
@@ -1923,79 +1934,79 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf, id=3
-94, 421.575pt x 316.18124pt>
+99, 421.575pt x 316.18124pt>
 File: ./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use ./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf>
 Package pdftex.def Info: ./figuras/capitulo_4/grafico_reducao_tempo_relativo-ep
-s-converted-to.pdf used on input line 377.
+s-converted-to.pdf used on input line 375.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (9.00899pt too wide) in paragraph at lines 377--378
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 375--376
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [33 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras
+) [34 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras
 /capitulo_4/imagem5_scribbled1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UF
 PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem5_scribbled2.png> <C:/Users/Dan
 ilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem6
 _scribbled1.png> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/
-tcc/figuras/capitulo_4/imagem6_scribbled2.png>] [34 <C:/Users/Danilo/Documents/
+tcc/figuras/capitulo_4/imagem6_scribbled2.png>] [35 <C:/Users/Danilo/Documents/
 GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objeto1_tx100
 .png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/
 tcc/figuras/capitulo_4/Imagem1_objeto1_tx50.png (PNG copy)> <C:/Users/Danilo/Do
 cuments/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objet
 o1_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabE
-scrito/tcc/figuras/capitulo_4/Imagem1_objeto1_tx1.png (PNG copy)>] [35 <C:/User
+scrito/tcc/figuras/capitulo_4/Imagem1_objeto1_tx1.png (PNG copy)>] [36 <C:/User
 s/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Im
 agem1_objeto2_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UF
 PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objeto2_tx50.png (PNG copy)> 
 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capit
 ulo_4/Imagem1_objeto2_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/da
 nilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem1_objeto2_tx1.png (PNG c
-opy)>] [36 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/fi
+opy)>] [37 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/fi
 guras/capitulo_4/Imagem2_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHu
 b/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem2_tx50.png (PNG copy
 )> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/ca
 pitulo_4/Imagem2_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/
 UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem2_tx1.png (PNG copy)>]
-[37 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+[38 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
 apitulo_4/Imagem3_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danil
 o/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/Imagem3_tx50.png (PNG copy)> <C:/
 Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_
 4/Imagem3_tx10.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TC
-C/TrabEscrito/tcc/figuras/capitulo_4/Imagem3_tx1.png (PNG copy)>] [38 <C:/Users
+C/TrabEscrito/tcc/figuras/capitulo_4/Imagem3_tx1.png (PNG copy)>] [39 <C:/Users
 /Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/ima
 gem4_tx100.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/Tr
 abEscrito/tcc/figuras/capitulo_4/imagem4_tx50.png (PNG copy)> <C:/Users/Danilo/
 Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem4_tx1
 0.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito
-/tcc/figuras/capitulo_4/imagem4_tx1.png (PNG copy)>] [39 <C:/Users/Danilo/Docum
+/tcc/figuras/capitulo_4/imagem4_tx1.png (PNG copy)>] [40 <C:/Users/Danilo/Docum
 ents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem5_tx100.pn
 g (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc
 /figuras/capitulo_4/imagem5_tx50.png (PNG copy)> <C:/Users/Danilo/Documents/Git
 Hub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem5_tx10.png (PNG co
 py)> <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/
-capitulo_4/imagem5_tx1.png (PNG copy)>] [40 <C:/Users/Danilo/Documents/GitHub/d
+capitulo_4/imagem5_tx1.png (PNG copy)>] [41 <C:/Users/Danilo/Documents/GitHub/d
 anilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem6_tx100.png (PNG copy)>
  <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capi
 tulo_4/imagem6_tx50.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/UF
 PA/TCC/TrabEscrito/tcc/figuras/capitulo_4/imagem6_tx10.png (PNG copy)> <C:/User
 s/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/capitulo_4/im
-agem6_tx1.png (PNG copy)>] [41 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TC
+agem6_tx1.png (PNG copy)>] [42 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TC
 C/TrabEscrito/tcc/figuras/capitulo_4/grafico_erro_classificacao-eps-converted-t
-o.pdf>] [42 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/f
+o.pdf>] [43 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/f
 iguras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf>]
-[43 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
+[44 <C:/Users/Danilo/Documents/GitHub/danilo/UFPA/TCC/TrabEscrito/tcc/figuras/c
 apitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf>]
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Capitulos/cap
 itulo5/capitulo5.tex
 Cap\'{\i }tulo 5.
-) [44
+) [45
 
 
 
@@ -2013,10 +2024,10 @@ Underfull \hbox (badness 1484) in paragraph at lines 53--57
 -tion via
  []
 
-[45
+[46
 
 
-]) [46]
+]) [47]
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\tcc_Danilo.au
 x)
 
@@ -2052,12 +2063,13 @@ fonts/cm/cmmi10.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
 ublic/amsfonts/cm/cmmi7.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi8.
 pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/MikTex2.9/fonts/
 type1/public/amsfonts/cm/cmr12.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm
-/cmr8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MikTex2.9
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MikTex2.9/fonts/type1/public/amsf
-onts/symbols/msam10.pfb>
-Output written on tcc_Danilo.pdf (57 pages, 11087201 bytes).
+/cmr6.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/MikTex2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MikTex2.9/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><
+C:/MikTex2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tcc_Danilo.pdf (58 pages, 11099492 bytes).
 PDF statistics:
- 1032 PDF objects out of 1200 (max. 8388607)
+ 1043 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  429 words of extra memory for PDF output out of 10000 (max. 10000000)
 
