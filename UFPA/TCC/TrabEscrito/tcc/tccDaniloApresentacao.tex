@@ -21,6 +21,7 @@
 \usepackage{subfig}
 \usepackage{epstopdf}
 
+\captionsetup[subfigure]{labelformat=empty}
 
 \newenvironment{variableblock}[3]{%
   \setbeamercolor{block body}{#2}
@@ -79,8 +80,8 @@
 	\begin{column}{0.5\textwidth}
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[scale=0.65]{./figuras/multimediaGrowth.png}
-			\caption{Consumo de conteúdo multimídia no período 2008-2010}
+			\includegraphics[scale=0.55]{./figuras/multimediaGrowth.png}
+			\caption{Consumo de conteúdo multimídia por adultos nos EUA no período 2008-2010}
 			\label{fig:consumo_multimidia}
 		\end{figure}
 	\end{column}
@@ -159,7 +160,7 @@
 		\item Guardar valores e posição destes pontos e calcular as FDP's de cada região.
 		\item Calcular os canais.
 		\item Repetir o passo 2 para cada canal.
-		\item Calcular o peso de cada canal.
+		\item Calcular o peso de cada canal (adaptativo).
 		\item Calcular o peso da distância Geodésica.
 		\item Se $T_{re-amostragem} < 1$, então 8. Se $T_{re-amostragem} = 1$, então 9.  
 		\item Re-amostrar os \textit{pixels} das regiões de interesse.
@@ -181,7 +182,7 @@
 	\begin{itemize}
 		\item Tempo
 			\begin{itemize}
-				\item Tempo absoluto e relativo (Equação \ref{eq:tempo_relativo})
+				\item Tempo relativo (Equação \ref{eq:tempo_relativo})
 				\item Funções \textit{tic/toc} e \textit{etime} do $MatLab^{\copyright}$
 			\end{itemize}
 		\item Erro de classificação relativo
@@ -207,13 +208,17 @@
 \begin{frame}{Modificação realizada}
 
 	\begin{variableblock}{Redução do espaço de busca}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
-  		Re-amostragem uniforme dos \textit{pixels} das regiões de interesse usando taxas de re-amostragem de $ 50\%, 10\%, e\ 1\%$
+		Reduzir o número de cálculos para encontrar a menor distância sem perder informação.
+		\linebreak
+		  		
+  		Re-amostragem uniforme dos \textit{pixels} das regiões de interesse usando taxas de re-amostragem de $ 50\%, 10\%, e\ 1\%$.
+  		
 	\end{variableblock}	
 
 
 \end{frame}
 
-\begin{frame}{Exemplo de re-amostrada}
+\begin{frame}{Exemplo de re-amostragem}
 
 	\begin{figure}[!h]
 		\centering
@@ -242,18 +247,7 @@
 
 \section{Resultados}
 
-\begin{frame}{Resultados de tempo absoluto}
-
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_reducao_tempo_absoluto-eps-converted-to.pdf}
-		\caption{Resultados de tempo absoluto.}
-		\label{fig:tempo_absoluto}
-	\end{figure}
-\end{frame}
-
-
-\begin{frame}{Resultados de tempo relativo}
+\begin{frame}{Resultados de tempo}
 
 	\begin{figure}[!h]
 		\centering
@@ -267,7 +261,7 @@
 
 	\begin{figure}[!h]
 		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf}
-		\caption{Gráfico do erro de classificação relativo.}
+		\caption{Erro de classificação relativo.}
 		\label{fig:grafico_erro_classificacao}
 	\end{figure}
 
@@ -307,28 +301,209 @@
 		\label{fig:imagens_todas}
 	\end{figure}
 
-
 \end{frame}
 
 
+\begin{frame}{Imagens resultantes (Imagem 1 - objeto 1)}
 
-\begin{frame}{Imagens resultantes (Imagem 1)}
-
-
+	\begin{figure}[!h]
+		\centering
+		\subfloat[$100\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto1_tx100.png}
+		\label{fig:imagem1_segmentada_objeto1_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$50\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto1_tx50.png}
+		\label{fig:imagem1_segmentada_objeto1_50}}
+		\quad	
+		\subfloat[$10\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto1_tx10.png}
+		\label{fig:imagem1_segmentada_objeto1_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$1\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto1_tx1.png}
+		\label{fig:imagem1_segmentada_objeto1_1}}
+		\label{fig:imagem1_segmentada_objeto1}
+	\end{figure}
 \end{frame}
+
+
+\begin{frame}{Imagens resultantes (Imagem 1 - objeto 2)}
+
+	\begin{figure}[!h]
+		%\centering
+		\subfloat[$100\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto2_tx100.png}
+		\label{fig:imagem1_segmentada_objeto2_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$50\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto2_tx50.png}
+		\label{fig:imagem1_segmentada_objeto2_50}}
+		\quad	
+		\subfloat[$10\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto2_tx10.png}
+		\label{fig:imagem1_segmentada_objeto2_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$1\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem1_objeto2_tx1.png}
+		\label{fig:imagem1_segmentada_objeto2_1}}
+		\label{fig:imagem1_segmentada_objeto2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Imagens resultantes (Imagem 2)}
+
+	\begin{figure}[!h]
+		%\centering
+		\subfloat[$100\%$]{
+		\includegraphics[scale=0.29]{./figuras/capitulo_4/Imagem2_tx100.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$50\%$]{
+		\includegraphics[scale=0.29]{./figuras/capitulo_4/Imagem2_tx50.png}}
+		\quad	
+		\subfloat[$10\%$]{
+		\includegraphics[scale=0.29]{./figuras/capitulo_4/Imagem2_tx10.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$1\%$]{
+		\includegraphics[scale=0.29]{./figuras/capitulo_4/Imagem2_tx1.png}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Imagens resultantes (Imagem 3)}
+
+	\begin{figure}[!h]
+		%\centering
+		\subfloat[$100\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem3_tx100.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$50\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem3_tx50.png}}
+		\quad	
+		\subfloat[$10\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem3_tx10.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$1\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem3_tx1.png}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Imagens resultantes (Imagem 4)}
+
+	\begin{figure}[!h]
+		%\centering
+		\subfloat[$100\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem4_tx100.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$50\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem4_tx50.png}}
+		\quad	
+		\subfloat[$10\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem4_tx10.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$1\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem4_tx1.png}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Imagens resultantes (Imagem 5)}
+
+	\begin{figure}[!h]
+		%\centering
+		\subfloat[$100\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem5_tx100.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$50\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem5_tx50.png}}
+		\quad	
+		\subfloat[$10\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem5_tx10.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$1\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem5_tx1.png}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Imagens resultantes (Imagem 6)}
+
+	\begin{figure}[!h]
+		%\centering
+		\subfloat[$100\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem6_tx100.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$50\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem6_tx50.png}}
+		\quad	
+		\subfloat[$10\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem6_tx10.png}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[$1\%$]{
+		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem6_tx1.png}}
+	\end{figure}
+\end{frame}
+
 
 \begin{frame}{Avaliação dos resultados}
 
+
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+	\begin{itemize}
+		\item A redução de tempo ficou abaixo de 35\%.
+		\item O erro de classificação ficou abaixo dos 10\%.
+		\item O cálculo das distâncias é a etapa mais demorada.
+	\end{itemize}	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.425]{./figuras/capitulo_3/grafico_histograma_percent_distancia-eps-converted-to.pdf}
+			\caption{Histograma da relação $ \frac{T_{distancia}}{T_{total}} $ para as 24 imagens finais}
+			\label{fig:histograma}
+		\end{figure}
+	\end{column}
+\end{columns}
+
+
+
 \end{frame}
+
 
 \section{Considerações finais}
 
 \begin{frame}{Conclusão}
 
+	\begin{variableblock}{Fator determinante}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+		O total de \textit{pixels} da imagem e das marcações influencia no tempo de execução.
+	\end{variableblock}	
+		
+	\begin{variableblock}{Desempenho}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+		O algoritmo se mostrou capaz de segmentar imagens complexas.
+	\end{variableblock}	
+
+	\begin{variableblock}{Contribuições}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+  		A re-amostragem apresentou resultados positivos.
+	\end{variableblock}	
+
+	\begin{variableblock}{Avaliações futuras}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+  		É necessária uma análise com mais imagens (qualitativo e quantitativo).
+	\end{variableblock}	
+
+
 
 \end{frame}
-
-
 
 \begin{frame}
 
