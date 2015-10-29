@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  21 OCT 2015 23:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  26 OCT 2015 23:33
 entering extended mode
 **tcc_Danilo.tex
 
@@ -965,7 +965,24 @@ Agradecimentos/agradecimentos.tex) [3
 
 ]
 (C:\Users\Danilo\Documents\GitHub\danilo\UFPA\TCC\TrabEscrito\tcc\Pre_Textuais/
-Resumo/resumo.tex) [4
+Resumo/resumo.tex
+Underfull \hbox (badness 2042) in paragraph at lines 12--13
+\T1/cmr/m/n/12 al-guma ca-rac-te-rís-tica em co-mum (e.g, cor, ge-o-me-tria, te
+x-tura), com o
+ []
+
+
+Underfull \hbox (badness 3019) in paragraph at lines 14--15
+[]\T1/cmr/bx/n/12 PALAVRAS--CHAVE: seg-men-ta-ção semi-automática de ima-gens,
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 14--15
+\T1/cmr/bx/n/12 re-amostragem, re-du-ção de tempo, pro-ces-sa-mento de ima-gens
+,
+ []
+
+) [4
 
 
 
@@ -2037,7 +2054,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  18269 strings out of 493921
  360688 string characters out of 3147279
- 448992 words of memory out of 3000000
+ 448988 words of memory out of 3000000
  20984 multiletter control sequences out of 15000+200000
  23658 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -2048,8 +2065,8 @@ n\ec\dpi600\ecrm1000.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
 our\jknappen\ec\dpi600\ecbi1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\f
 onts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Danilo\AppData\Local\M
 iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Danilo\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\
-Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk>
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\
+Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk>
  <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
 cbx2488.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecrm1200.pk> <C:\Users\Danilo\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
@@ -2067,9 +2084,9 @@ type1/public/amsfonts/cm/cmr12.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm
 onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MikTex2.9/fonts/type1/public/amsfo
 nts/cm/cmsy8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 C:/MikTex2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tcc_Danilo.pdf (58 pages, 11099492 bytes).
+Output written on tcc_Danilo.pdf (58 pages, 11102375 bytes).
 PDF statistics:
- 1043 PDF objects out of 1200 (max. 8388607)
+ 1045 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  429 words of extra memory for PDF output out of 10000 (max. 10000000)
 

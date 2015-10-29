@@ -20,6 +20,7 @@
 \usepackage{textcomp} 
 \usepackage{subfig}
 \usepackage{epstopdf}
+\usepackage{amsmath}
 
 \captionsetup[subfigure]{labelformat=empty}
 
@@ -41,17 +42,18 @@
 }
 
 \author[Souza]{
-	\inst{1}%
-     Danilo~Souza\and
+     Danilo~Henrique~Costa~Souza\and
      }
 
 
 \institute[Belém]{
-  \inst{1}%
-  Universidade Federal do Pará
+  Universidade Federal do Pará \linebreak
+  Instituto de Tecnologia \linebreak
+  Faculdade de Engenharia da Computação e Telecomunicações \linebreak
+  Orientador: Professor Ronaldo de Freitas Zampolo
   }
 \date[Belém 2015]{
-  25 de Novembro de 2015
+  25 de novembro de 2015
   }
 
 \begin{document}
@@ -72,7 +74,7 @@
 	\begin{column}{0.5\textwidth}
 		\begin{itemize}
 			\item Dispositivos mais acessíveis.
-			\item Mundo mais digital.
+			\item Interação entre pessoas mais digital.
 			\item Quantidade de conteúdo multimídia.
 			\item O que fazer com esse conteúdo?
 		\end{itemize}
@@ -97,7 +99,7 @@
 				\item \textit{Texels}.
 				\item Textura.
 			\end{itemize}
-		\item 3 níveis de processos (Gonzalez et. al)
+		\item 3 níveis de processos (Gonzalez et. al):
 			\begin{itemize}
 				\item Baixo - operações básicas.
 				\item Médio - segmentação e classificação.
@@ -109,35 +111,85 @@
 \begin{frame}{Aplicações}
 
 	\begin{itemize}
-		\item Está presente em diversas áreas
+		\item Presença em diversas áreas
 			\begin{itemize}
-				\item Segurança (e.g, fiscalização de velocidade, detecção de movimentos).
-				\item Automação industrial (e.g, classificação de produtos, verificação de falhas).
-				\item Entretenimento (redes sociais) (e.g, reconhecimento facial, edição de fotos). 
+				\item Segurança: fiscalização de velocidade, detecção de movimentos).
+				\item Automação industrial: classificação de produtos, verificação de falhas).
+				\item Entretenimento: em redes sociais, reconhecimento facial e edição de fotos). 
 			\end{itemize}
 	\end{itemize}
 
 \end{frame}
 
-\begin{frame}{Segmentação de Imagens}
+\begin{frame}{Segmentação de Imagens - Definição}
+
+	\begin{variableblock}{Definição (Gonzales et. al)}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+  		Consiste em dividir uma imagem em sub-imagens formadas pelos objetos/regiões da imagem original. A divisão não deve ser realizada além do necessário para detectar os objetos e/ou regiões relevantes para a aplicação.
+	\end{variableblock}	
+
+	\begin{enumerate}
+		\item $ \bigcup_{i=1}^{n}R_{i} = R $.
+		\item $ R_{i}$ é um conjunto conectado, $i = 1, 2,\dots, n $.
+		\item $ R_{i} \cap R_{j} = \emptyset $ para todo $i$ e $j$, onde $ i \neq j $.
+		\item $ Q(R_{i}) = VERDADEIRO\ para\  i = 1, 2,\dots, n $.
+		\item $ Q(R_{i} \cup R_{j}) = FALSO $, onde $ i \neq j$, onde $Q(R_{k})$ representa a função e/ou propriedade (cor, textura, geometria) que deve ser satisfeita pelos \textit{pixels} pertencentes à $R_{k}$.
+	\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}{Segmentação de Imagens - Aplicações e técnicas}
 
 	\begin{itemize}
-		\item Dividir uma imagem.
+		\item Aplicações
+		\begin{itemize}
+			\item Facilitar classificação de imagens
+			\item Edição de imagens
+		\end{itemize}
+		\item Técnicas
 			\begin{itemize}
-				\item Cor, textura, geometria.
+				\item Limiar (\textit{threshold})
+					\begin{itemize}
+						\item Forma mais simples de segmentação
+						\begin{equation}
+								g(x,y) = 		
+								\begin{cases}
+								 	0, \text{se } p(x,y) < T \\
+									1, \text{se } p(x,y) > T
+								\end{cases}
+						\end{equation}
+					\end{itemize}
+				\item Dividir e mesclar
+					\begin{enumerate}
+						\item Dividir a imagem em regiões de tamanhos iguais
+						\item Verifica se as regiões obedecem o critério
+						\item Mescla as regiões em comum
+						\item Repete os passo (1) e (2) para regiões diferentes
+						\item \textcolor{red}{Não funciona bem para regiões não-uniformes}		
+					\end{enumerate}
+				\item Detecção de bordas
+					\begin{itemize}
+						\item Calcula o gradiente de intensidade
+						\item Bordas possuem mudanças abruptas de intensidade
+						\item Filtro de Sobel
+					\end{itemize}
 			\end{itemize}
-		\item Processo de nível médio.
-		\item Pré-requisito para classificação
-		
 	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}{Segmentação de Imagens - Dividir e mesclar}
+
+\end{frame}
+
+\begin{frame}{Segmentação de Imagens - Detecção de bordas}
 
 \end{frame}
 
 
 \section{A técnica estudada}
 
-\begin{frame}{A técnica estudada}
-
+\begin{frame}{A técnica estudada (Protiere e Sapiro)}
 
 	\begin{variableblock}{Princípio}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
   		Classificar um \textit{pixel} com base na distância e na intensidade, utilizando marcações do usuário (heurística).
@@ -150,6 +202,17 @@
 	\begin{variableblock}{O Problema}{bg=red!15,fg=black}{bg=red!80,fg=white}
 		O tempo de execução do algoritmo é a sua principal desvantagem, sendo portanto o objeto de estudo deste trabalho.
 	\end{variableblock}		
+
+\end{frame}
+
+\begin{frame}{O algoritmo}
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.25]{./figuras/capitulo_4/DiagramaCodigo.pdf}
+		\caption{Fluxo do algoritmo.}
+		\label{fig:fluxo_codigo}
+	\end{figure}
 
 \end{frame}
 
@@ -192,13 +255,13 @@
 	\end{itemize}
 	
 		\begin{equation}
-		T_{r}^{i} = 100 - \bigg( 100\frac{T_{total}^{i}}{T_{total}^{Full Set}}\ \bigg) ,\ onde\ i = 1, 10, 50. 
+		T_{r}^{i} = 100 - \bigg( 100\frac{T_{\text{total}}^{i}}{T_{\text{total}}^{\textit{Full Set}}}\ \bigg) ,\ onde\ i = 1, 10, 50. 
 		\label{eq:tempo_relativo}
 		\end{equation}
 		
 		\begin{equation}
-			Erro = \frac{N_{\textit{pixels}\ errados}}{N_{total\ de\ \textit{pixels}}},\ \quad
-			N_{pixels\ errados} = I_{100\%} - I_{i}\ \forall\ i =  50\%, 10\%\ e\ 1\% 
+			\text{Erro} = \frac{N_{\textit{pixels}\ \text{errados}}}{N_{\text{total}\ \text{de}\ \textit{pixels}}},\ \quad
+			N_{\textit{pixels}\ \text{errados}} = I_{100\%} - I_{i}\ \forall\ i =  50\%, 10\%\ \text{e}\ 1\% 
 		\label{eq:erro_relativo}
 		\end{equation}
 
@@ -303,6 +366,28 @@
 
 \end{frame}
 
+\begin{frame}{Imagens resultantes (Imagem 1 - marcações)}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem]{
+		\includegraphics[scale=0.21]{./figuras/capitulo_3/imagem15_scribbled1.eps}
+		\label{fig:fundo_imagem_nao_informe}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Objeto 1]{
+		\includegraphics[scale=0.21]{./figuras/capitulo_3/imagem15_scribbled2.eps}
+		\label{fig:objeto1_imagem_nao_informe}}	
+		\vspace{0.1cm}
+		\subfloat[Objeto 2]{
+		\includegraphics[scale=0.21]{./figuras/capitulo_3/imagem15_scribbled3.eps}
+		\label{fig:objeto2_imagem_nao_informe}}	
+		\caption{Exemplo de marcação de uma figura complexa. A Figura \ref{fig:fundo_imagem_nao_informe} mostra a marcação do fundo da imagem, a Figura \ref{fig:objeto1_imagem_nao_informe} mostra um dos objetos de interesse e a Figura \ref{fig:objeto2_imagem_nao_informe} mostra o outro objeto de interesse.}
+		\label{fig:imagem_nao_uniforme}
+	\end{figure}
+
+\end{frame}
+
 
 \begin{frame}{Imagens resultantes (Imagem 1 - objeto 1)}
 
@@ -355,6 +440,21 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Imagens resultantes (Imagem 2 - marcações)}
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 2]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem2_scribbled1.png}
+		\label{fig:imagem2_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.4]{./figuras/capitulo_4/imagem2_scribbled2.png}
+		\label{fig:imagem2_objeto}}
+		\label{fig:imagem2_marcada}
+	\end{figure}
+\end{frame}
+
 \begin{frame}{Imagens resultantes (Imagem 2)}
 
 	\begin{figure}[!h]
@@ -373,6 +473,23 @@
 		\subfloat[$1\%$]{
 		\includegraphics[scale=0.29]{./figuras/capitulo_4/Imagem2_tx1.png}}
 	\end{figure}
+\end{frame}
+
+\begin{frame}{Imagens resultantes (Imagem 3 - marcações)}
+
+\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 3]{
+		\includegraphics[scale=0.35]{./figuras/capitulo_4/imagem3_scribbled1.png}
+		\label{fig:imagem3_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.35]{./figuras/capitulo_4/imagem3_scribbled2.png}
+		\label{fig:imagem3_objeto}}
+		\label{fig:imagem3_marcada}
+	\end{figure}
+
 \end{frame}
 
 \begin{frame}{Imagens resultantes (Imagem 3)}
@@ -395,6 +512,23 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Imagens resultantes (Imagem 4 - marcações)}
+
+\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 4]{
+		\includegraphics[scale=0.32]{./figuras/capitulo_4/imagem4_scribbled1.png}
+		\label{fig:imagem4_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.32]{./figuras/capitulo_4/imagem4_scribbled2.png}
+		\label{fig:imagem4_objeto}}
+		\label{fig:imagem4_marcada}
+	\end{figure}
+
+\end{frame}
+
 \begin{frame}{Imagens resultantes (Imagem 4)}
 
 	\begin{figure}[!h]
@@ -413,6 +547,23 @@
 		\subfloat[$1\%$]{
 		\includegraphics[scale=0.2]{./figuras/capitulo_4/Imagem4_tx1.png}}
 	\end{figure}
+\end{frame}
+
+\begin{frame}{Imagens resultantes (Imagem 5 - marcações)}
+
+\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 5]{
+		\includegraphics[scale=0.32]{./figuras/capitulo_4/imagem5_scribbled1.png}
+		\label{fig:imagem5_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.32]{./figuras/capitulo_4/imagem5_scribbled2.png}
+		\label{fig:imagem5_objeto}}
+		\label{fig:imagem5_marcada}
+	\end{figure}
+
 \end{frame}
 
 \begin{frame}{Imagens resultantes (Imagem 5)}
@@ -435,6 +586,22 @@
 	\end{figure}
 \end{frame}
 
+\begin{frame}{Imagens resultantes (Imagem 6 - marcações)}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Fundo da Imagem 6]{
+		\includegraphics[scale=0.32]{./figuras/capitulo_4/imagem6_scribbled1.png}
+		\label{fig:imagem6_fundo}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Região de interesse]{
+		\includegraphics[scale=0.32]{./figuras/capitulo_4/imagem6_scribbled2.png}
+		\label{fig:imagem6_objeto}}
+		\label{fig:imagem6_marcada}
+	\end{figure}
+
+\end{frame}
 \begin{frame}{Imagens resultantes (Imagem 6)}
 
 	\begin{figure}[!h]
@@ -507,8 +674,13 @@
 
 \begin{frame}
 
+\begin{center}
 	{\Huge Obrigado!}
-
+	\linebreak
+	Danilo Henrique Costa Souza
+	
+	e-mail: dhcsouza@gmail.com
+\end{center}
 \end{frame}
 
 \end{document}

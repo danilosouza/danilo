@@ -1,0 +1,6 @@
+
+
+slide "Processamento Digital de Imagens (Importância)"
+	Por que 'N'?
+	processos mesmo segundo Gonzales
+	
