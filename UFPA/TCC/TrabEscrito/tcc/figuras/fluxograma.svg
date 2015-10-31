@@ -1,0 +1,2461 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="876.9399999999999"
+   height="489"
+   id="svg3336"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fluxograma.svg">
+  <metadata
+     id="metadata4066">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview4064"
+     showgrid="false"
+     inkscape:zoom="1.0961145"
+     inkscape:cx="438.47"
+     inkscape:cy="244.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3336" />
+  <xhtml:style />
+  <defs
+     id="defs3338" />
+  <g
+     transform="translate(0,0)"
+     id="g3340">
+    <g
+       id="g3342">
+      <rect
+         fill="#FFFFFF"
+         stroke="none"
+         x="0"
+         y="0"
+         width="876.9399999999999"
+         height="489"
+         id="rect3344" />
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,101.69696969696973,89.5)"
+       id="g3346">
+      <g
+         id="g3348">
+        <g
+           transform="translate(0,0) scale(1.1030303030303028,1.04)"
+           id="g3350">
+          <g
+             id="g3352">
+            <path
+               fill="#EEEEEE"
+               stroke="none"
+               d="M 100 50 A 50 50 0 1 0 99.99997500000208 50.04999999166668 Z"
+               id="path3354" />
+            <g
+               transform="scale(0.9065934065934068,0.9615384615384615)"
+               id="g3356">
+              <path
+                 fill="none"
+                 stroke="#AAAAAA"
+                 d="M 55.15151515151514 0 M 55.15151515151514 0 C 85.61085315151513 0 110.30303030303028 23.281195600000004 110.30303030303028 52 C 110.30303030303028 80.7188044 85.61085315151513 104 55.15151515151514 104 C 24.69217715151515 104 0 80.7188044 0 52 C 0 23.281195600000004 24.69217715151515 0 55.15151515151514 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3358" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,112,121)"
+       id="g3360">
+      <g
+         transform="translate(38,0) matrix(1,0,0,1,0,0) translate(-38,0)"
+         id="g3362">
+        <g
+           id="g3364">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="42"
+             fill-opacity="0"
+             id="rect3366" />
+        </g>
+      </g>
+      <g
+         transform="translate(38,0) matrix(1,0,0,1,0,0) translate(-38,0)"
+         id="g3368">
+        <g
+           id="g3370">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="42"
+             fill-opacity="0"
+             id="rect3372" />
+        </g>
+      </g>
+      <g
+         transform="translate(38,0) matrix(1,0,0,1,0,0) translate(-38,0)"
+         id="g3374">
+        <g
+           id="g3376">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="19"
+             y="0"
+             width="59"
+             height="42"
+             fill-opacity="0"
+             id="rect3378" />
+        </g>
+      </g>
+      <g
+         transform="translate(38,0) matrix(1,0,0,1,0,0) translate(-38,0)"
+         id="g3380">
+        <g
+           id="g3382">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="19"
+             y="0"
+             width="59"
+             height="42"
+             fill-opacity="0"
+             id="rect3384" />
+        </g>
+        <text
+           fill="rgb(0, 0, 0)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="19"
+           y="12"
+           id="text3386">Definir</text>
+        <text
+           fill="rgb(0, 0, 0)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="58"
+           y="12"
+           id="text3388">as</text>
+        <text
+           fill="rgb(0, 0, 0)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="16"
+           y="26"
+           id="text3390">regi</text>
+        <text
+           fill="rgb(0, 0, 0)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="37"
+           y="26"
+           id="text3392">õ</text>
+        <text
+           fill="rgb(0, 0, 0)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="44"
+           y="26"
+           id="text3394">es</text>
+        <text
+           fill="rgb(0, 0, 0)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="60"
+           y="26"
+           id="text3396">de</text>
+        <text
+           fill="rgb(0, 0, 0)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="20"
+           y="40"
+           id="text3398">interesse</text>
+      </g>
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,338.30303030303025,109.5)"
+       id="g3400">
+      <g
+         id="g3402">
+        <g
+           transform="translate(0,0) scale(1.14,0.64)"
+           id="g3404">
+          <g
+             id="g3406">
+            <g
+               transform="scale(0.8771929824561404,1.5625)"
+               id="g3408">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 31.999999999999996 0 L 81.99999999999999 0 C 99.67311199458538 0 113.99999999999999 14.326888005414606 113.99999999999999 32 C 113.99999999999999 49.6731119945854 99.67311199458538 64 81.99999999999999 64 L 31.999999999999996 64 C 14.326888005414604 64 0 49.6731119945854 0 32 C 0 14.326888005414606 14.326888005414604 0 31.999999999999996 0 Z"
+                 id="path3410" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 31.999999999999996 0 M 31.999999999999996 0 L 81.99999999999999 0 C 99.67311199458538 0 113.99999999999999 14.326888005414606 113.99999999999999 32 C 113.99999999999999 49.6731119945854 99.67311199458538 64 81.99999999999999 64 L 31.999999999999996 64 C 14.326888005414604 64 0 49.6731119945854 0 32 C 0 14.326888005414606 14.326888005414604 0 31.999999999999996 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3412" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,349,121)"
+       id="g3414">
+      <g
+         transform="translate(0,0) matrix(1,0,0,1,0,0) translate(0,0)"
+         id="g3416">
+        <g
+           id="g3418">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="94"
+             height="42"
+             fill-opacity="0"
+             id="rect3420" />
+        </g>
+      </g>
+      <g
+         transform="translate(0,0) matrix(1,0,0,1,0,0) translate(0,0)"
+         id="g3422">
+        <g
+           id="g3424">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="94"
+             height="42"
+             fill-opacity="0"
+             id="rect3426" />
+        </g>
+      </g>
+      <g
+         transform="translate(0,0) matrix(1,0,0,1,0,0) translate(0,0)"
+         id="g3428">
+        <g
+           id="g3430">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="95"
+             height="42"
+             fill-opacity="0"
+             id="rect3432" />
+        </g>
+      </g>
+      <g
+         transform="translate(0,0) matrix(1,0,0,1,0,0) translate(0,0)"
+         id="g3434">
+        <g
+           id="g3436">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="95"
+             height="42"
+             fill-opacity="0"
+             id="rect3438" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="0"
+           y="12"
+           id="text3440">Guardar</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="48"
+           y="12"
+           id="text3442">posi</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="71"
+           y="12"
+           id="text3444">çã</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="84"
+           y="12"
+           id="text3446">o</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="91"
+           y="12"
+           id="text3448">,</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="6"
+           y="26"
+           id="text3450">valor</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="36"
+           y="26"
+           id="text3452">e</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="46"
+           y="26"
+           id="text3454">calcular</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="35"
+           y="40"
+           id="text3456">FDP</text>
+      </g>
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,539,115.5)"
+       id="g3458">
+      <g
+         id="g3460">
+        <g
+           transform="translate(0,0) scale(1.0899999999999999,0.52)"
+           id="g3462">
+          <g
+             id="g3464">
+            <g
+               transform="scale(0.9174311926605506,1.923076923076923)"
+               id="g3466">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 id="path3468" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 26 0 M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3470" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,549,135)"
+       id="g3472">
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3474">
+        <g
+           id="g3476">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="14"
+             fill-opacity="0"
+             id="rect3478" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3480">
+        <g
+           id="g3482">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="14"
+             fill-opacity="0"
+             id="rect3484" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3486">
+        <g
+           id="g3488">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="2"
+             y="0"
+             width="86"
+             height="14"
+             fill-opacity="0"
+             id="rect3490" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3492">
+        <g
+           id="g3494">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="2"
+             y="0"
+             width="86"
+             height="14"
+             fill-opacity="0"
+             id="rect3496" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="2"
+           y="12"
+           id="text3498">Calcular</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="51"
+           y="12"
+           id="text3500">canais</text>
+      </g>
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,723.5,78.5)"
+       id="g3502">
+      <g
+         id="g3504">
+        <g
+           transform="translate(0,0) scale(1.28,1.15)"
+           id="g3506">
+          <g
+             id="g3508">
+            <g
+               transform="scale(0.78125,0.8695652173913044)"
+               id="g3510">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 64 0 L 128 57.49999999999999 L 64 114.99999999999999 L 0 57.49999999999999 L 64 0 Z"
+                 id="path3512" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 64 0 M 64 0 L 128 57.49999999999999 L 64 114.99999999999999 L 0 57.49999999999999 L 64 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3514" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,734,115)"
+       id="g3516">
+      <g
+         transform="translate(28,0) matrix(1,0,0,1,0,0) translate(-28,0)"
+         id="g3518">
+        <g
+           id="g3520">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="108"
+             height="42"
+             fill-opacity="0"
+             id="rect3522" />
+        </g>
+      </g>
+      <g
+         transform="translate(28,0) matrix(1,0,0,1,0,0) translate(-28,0)"
+         id="g3524">
+        <g
+           id="g3526">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="108"
+             height="42"
+             fill-opacity="0"
+             id="rect3528" />
+        </g>
+      </g>
+      <g
+         transform="translate(28,0) matrix(1,0,0,1,0,0) translate(-28,0)"
+         id="g3530">
+        <g
+           id="g3532">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="14"
+             y="0"
+             width="81"
+             height="42"
+             fill-opacity="0"
+             id="rect3534" />
+        </g>
+      </g>
+      <g
+         transform="translate(28,0) matrix(1,0,0,1,0,0) translate(-28,0)"
+         id="g3536">
+        <g
+           id="g3538">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="14"
+             y="0"
+             width="81"
+             height="42"
+             fill-opacity="0"
+             id="rect3540" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="14"
+           y="12"
+           id="text3542">FDP</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="41"
+           y="12"
+           id="text3544">calculada</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="17"
+           y="26"
+           id="text3546">para</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="45"
+           y="26"
+           id="text3548">todos</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="78"
+           y="26"
+           id="text3550">os</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="32"
+           y="40"
+           id="text3552">canais</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="68"
+           y="40"
+           id="text3554">?</text>
+      </g>
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,733,238.5)"
+       id="g3556">
+      <g
+         id="g3558">
+        <g
+           transform="translate(0,0) scale(1.0899999999999999,0.52)"
+           id="g3560">
+          <g
+             id="g3562">
+            <g
+               transform="scale(0.9174311926605506,1.923076923076923)"
+               id="g3564">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 id="path3566" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 26 0 M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3568" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,743,251)"
+       id="g3570">
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3572">
+        <g
+           id="g3574">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="28"
+             fill-opacity="0"
+             id="rect3576" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3578">
+        <g
+           id="g3580">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="28"
+             fill-opacity="0"
+             id="rect3582" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3584">
+        <g
+           id="g3586">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="2"
+             y="0"
+             width="87"
+             height="28"
+             fill-opacity="0"
+             id="rect3588" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3590">
+        <g
+           id="g3592">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="2"
+             y="0"
+             width="87"
+             height="28"
+             fill-opacity="0"
+             id="rect3594" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="2"
+           y="12"
+           id="text3596">Calcular</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="51"
+           y="12"
+           id="text3598">o</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="61"
+           y="12"
+           id="text3600">peso</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="6"
+           y="26"
+           id="text3602">de</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="23"
+           y="26"
+           id="text3604">cada</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="53"
+           y="26"
+           id="text3606">canal</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,207.5,111.5)"
+       id="g3608">
+      <image
+         width="160"
+         height="60"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA8CAYAAADha7EVAAACnUlEQVR4Xu2cQUoDUQyG8+q4E8/kFQrWrR5Bwb3TnWiF8Qa6duMNrDfRG2jbhdBiZMSi46hgmpLX8rkUkz/vy8cbWkuT8AOBQAIpMJtoCAgCIkEoAQQMxU84AuJAKAEEDMVPOALiQCgBBAzFTzgC4kAoAQQMxU84AuJAKAEEDMVPOALiQCgBBAzFTzgC4kAoAQQMxU84AuJAKAEEDMVPOALiQCgBBAzFTzgC4kAoAQQMxU84AuJAKAEEDMW/nPCt45udlHR/urHZfzntPiwnxacrAvpwzKpLLWAnyV091KtKNZkVfam6T1kN+TEMAua4lQVn+irgeyuVWr5qNCsucxMRARdcdo7lLQHnQ85FHPT6ucyNgLlswnGOrwKqiqTWlvVBXzvl+GL32jHW1AoBTdjyLmrcgCqi9ZZ/EzF1jsZnu7dRJ2oJuH18U0qSk6iByF2cQOPWU5H5F7DUv5ekkr59I4uqDFWkPxn0houn/68DAv6P10r89Z8C1g5+27qK3qumMgsBV4IwQ/5J4MdHsLRvPlF51E46zOoRzG5Xn0DjRcjnE/jzYLV4Scvx+d5V9Gl5ERK9gSXk//o2jOizaKpGg165hFhTSwQ0Ycu7qC3gh3izouKN6Lx3txbTNf4VJ3o5mW6WuYk3B80NuBbKNQ/x/mEEkYNpUZR8GGENF8yR/AhwA/qxpJOBAAIaoFHiRwAB/VjSyUAAAQ3QKPEjgIB+LOlkIICABmiU+BFAQD+WdDIQQEADNEr8CCCgH0s6GQggoAEaJX4EENCPJZ0MBBDQAI0SPwII6MeSTgYCCGiARokfAQT0Y0knAwEENECjxI8AAvqxpJOBAAIaoFHiRwAB/VjSyUAAAQ3QKPEjgIB+LOlkIICABmiU+BF4A4Ieij1b+ihFAAAAAElFTkSuQmCC"
+         transform="translate(0,0)"
+         id="image3610" />
+    </g>
+    <g
+       transform="matrix(1,0,0,1,447.80303030303025,111.5)"
+       id="g3612">
+      <image
+         width="121"
+         height="60"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAA8CAYAAABCbxWWAAACIklEQVR4Xu3bMU4CURDG8Xm6ttyNRK09AiZYC51RC7yB1jQeAW7gETiCiiYmEMYsCJLF6q3jjsyfiuaNM9+PWXAJSXjsfQJp7ydkQAE5wIsAZJADJBBgRDYZ5AAJBBiRTQY5QAIBRmSTQQ6QQIAR2WSQAyQQYEQ2GeQACQQYkU0GOUACAUZkk0EOkECAEdlkkAMkEGBENhnkAAkEGJFNzkRudYcTPUid6fXxY2aJPzsGcmbUrYuhlkdVZaQi/bfbk1FmKfNjIGdGvEZeHy+xF0nP329OnzJLmh0DOTPaKvIGW/R+dnjU/7hqTzJL//oxkDMj3bpcLyukSpLqCBvkusiiksofoqiIpq/n32v9LCKD13lxJ4N2+byRxw5yqzvsSZLLRrr5h39U18irD2HL3x15wwa55gvrR+Sdy7e+iKZyowdNbDSX60zkzXvy9uXaGe56NJBrI68KVINUlYfpvOg0sbnVkUCuiVw9XuLOiqLHv1CZwXo6tnMzRHS8EOlwM8STUs1ett6Tx6qpx23NmoF6PF5+QbEQOfOMywcvj68co5744GUUrKeyIHvSMOoFZKNgPZUF2ZOGUS8gGwXrqSzInjSMegHZKFhPZUH2pGHUC8hGwXoqC7InDaNeQDYK1lNZkD1pGPUCslGwnsqC7EnDqBeQjYL1VBZkTxpGvYBsFKynsiB70jDqBWSjYD2VBdmThlEvIBsF66ksyJ40jHr5BDjlkz2MuaQKAAAAAElFTkSuQmCC"
+         transform="translate(0,0)"
+         id="image3614" />
+    </g>
+    <g
+       transform="matrix(1,0,0,1,643.2999339498307,106)"
+       id="g3616">
+      <image
+         width="110"
+         height="60"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAA8CAYAAACHHY8HAAABxklEQVR4Xu2aO07DQBRF34Bps7dIwDqCFGqcDgGF2QHUblhCsgOWkCWEn4QUlIecxGAlw6fzu9Jx5Uzjo3t8JzMjJ+OSTCBJUgNtiBN9CRCHONEERLFpHOJEExDFpnGIE01AFJvGIU40AVFsGoc40QREsWkc4kQTEMWmcYgTTUAUm8YhTjQBUWwahzjRBESxaRziRBMQxaZxHXGDcT33gzR6uTp+iO4TcV1x57U3P91t6maT15uTaVSBiMuIa4cagavkZ2/Xp4/RBCLuF3FfAs3vlodHk/fL4TyKQMTlp8r1aNpJxwMJRFxOnLml5iNvN/O0vf+u38LMqueP4taqYXPfy7UnbjCuS0t20QtNkId6K26zUFl/px9NIOIyL0tW3N7U6U/mqWle1UfzmCr/miqDCWtxEZcVtxncDcfd7pdFUUZYXSLuP9uBQMJoXOa/bbA9Oens32YrsxEb8CCrxp8wWnFuPnNPJUdewYW1eBwyi4hSxmRxImoPcYgTTUAUm8YhTjQBUWwahzjRBESxaRziRBMQxaZxiBNNQBSbxiFONAFRbBqHONEERLFpHOJEExDFpnGIE01AFJvGIU40AVFsGicq7hNukZM91TukowAAAABJRU5ErkJggg=="
+         transform="translate(0,0)"
+         id="image3618" />
+    </g>
+    <g
+       transform="matrix(1,0,0,1,757.5,189)"
+       id="g3620">
+      <image
+         width="60"
+         height="79"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABPCAYAAAC3SqYdAAACNElEQVR4Xu2aQU7CUBiE/6doXAh6A/EEcgP1BrIoa7yBi5K4U3cmdOENdE0X6AnEG+gJxBsodWEUfeaVVkvoxoQ3fyLTBTQl6bz5Zvq3STGyYJtZML9Cw/89cZWEa2F8KiJ2FAVnaMA6hjuxdUZH3QCuDxd0Rms0jCs2E0awZqURlDMNVhoBm5VGUGalgZRZaSBsTmkEbFYaQZlTGkiZlQbC5pRGwGalEZQ5pYGUWWkgbE5pBGxWGkGZUxpImZUGwuaUnifsahhfi8hGyTn3smODkt9ekig4mOc6iufymnD64tvIyZ8Wb+VsFAXuhbmXzathOepv1lY+hiKmLOVZQ1aeRuNKQy6az17civj/U0u102sbMZfOQPraP/2Y3kyG3Yo9TLqtK19m3Xn9JpytvBbGQzGylfq1Ij8GC/vi0o2Cuk+zMMPTKVsxGecp84B0YYadUDXs3RtjdiatnvT617h9SKJWw3e6UMPrYby3ZOS2eBnn19OXlf3XKCi7Rc2dAeQazldd7fQGRsxu0YUVe5d0W/l9ee4GZwakd4WCQDHl/DAyXWily1K2Vm58PlWVhQmttFvA2nG/vvo5fnT778uV7bfz5hDZMrjhycSO04eLJAraSLMqlc5Tdt/odNUMo1Mt6qlUmoaBBJgwELaKFBNWwQ4UZcJA2CpSTFgFO1CUCQNhq0gxYRXsQFEmDIStIsWEVbADRZkwELaKFBNWwQ4UZcJA2CpSTFgFO1CUCQNhq0h9A2n561A4E1dwAAAAAElFTkSuQmCC"
+         transform="translate(0,0)"
+         id="image3622" />
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,539,242)"
+       id="g3624">
+      <g
+         id="g3626">
+        <g
+           transform="translate(0,0) scale(1.0899999999999999,0.52)"
+           id="g3628">
+          <g
+             id="g3630">
+            <g
+               transform="scale(0.9174311926605506,1.923076923076923)"
+               id="g3632">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 id="path3634" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 26 0 M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3636" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,549,247)"
+       id="g3638">
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3640">
+        <g
+           id="g3642">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="42"
+             fill-opacity="0"
+             id="rect3644" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3646">
+        <g
+           id="g3648">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="42"
+             fill-opacity="0"
+             id="rect3650" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3652">
+        <g
+           id="g3654">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="2"
+             y="0"
+             width="87"
+             height="42"
+             fill-opacity="0"
+             id="rect3656" />
+        </g>
+      </g>
+      <g
+         transform="translate(4,0) matrix(1,0,0,1,0,0) translate(-4,0)"
+         id="g3658">
+        <g
+           id="g3660">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="2"
+             y="0"
+             width="87"
+             height="42"
+             fill-opacity="0"
+             id="rect3662" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="2"
+           y="12"
+           id="text3664">Calcular</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="51"
+           y="12"
+           id="text3666">o</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="61"
+           y="12"
+           id="text3668">peso</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="12"
+           y="26"
+           id="text3670">da</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="29"
+           y="26"
+           id="text3672">dist</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="48"
+           y="26"
+           id="text3674">â</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="55"
+           y="26"
+           id="text3676">ncia</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="16"
+           y="40"
+           id="text3678">geod</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="44"
+           y="40"
+           id="text3680">é</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="51"
+           y="40"
+           id="text3682">sica</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,617.9279716945694,234.49999999999994)"
+       id="g3684">
+      <image
+         width="119"
+         height="60"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAA8CAYAAABcpiUlAAACLUlEQVR4Xu3ZQU7CYBAF4DeJJi4UuYEcRU+gG9ZyA7vAxB11rYmeQxZcwTMZd6K/+X9bLFGThzHSmTzCgsCQzLyv0zZg0CNsAhZ2Mg0G4QY+CIQr3MAJBB5NmyvcwAkEHk2bK9zACQQeTZsr3MAJBB5NmyvcwAkEHk2bK9zACQQeTZsr3MAJBB5NmyvcwAkEHk2bK9zACQQeTZsr3MAJBB7NxebuT+fHBswScP18O34M7PGno/Uad+9qMdp9fbkz2Fme+i3hRLi8fy9xG9SZwSbdUYTLw+bKfuFWi+FgZ3kBQ/3dGML1iNuiAhUMw3aEhFReWnMMCtcZ7mA6rwDMuqhlhFSegCXhbma6qt7aafng8mGS74ABG3V7T1nUPq8XeXvbzc2f2dY6/mXC//i1p5vxWjpbi6rgJqthOFrDLfvacubtFS57fPQGt224nJYt1YAdrg2h0zJr+mPd1jZ3raOPG6qMXHWRyyk673HTpW6oNvPuB27b8wo5X4u/PoTrGbfpvfyIsVzWZjjvjiPcALjtCA3yvRlO83vCDYTbjlL+OLBUp2S1flvmgft1zeX7ViWRgHCJkLyWCNerHNG3cImQvJYI16sc0bdwiZC8lgjXqxzRt3CJkLyWCNerHNG3cImQvJYI16sc0bdwiZC8lgjXqxzRt3CJkLyWCNerHNG3cImQvJYI16sc0bdwiZC8lgjXqxzRt3CJkLyWCNerHNG3cImQvJYI16sc0fc7lr+BPaLH8PEAAAAASUVORK5CYII="
+         transform="translate(0,0)"
+         id="image3686" />
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,320.80303030303025,210.5)"
+       id="g3688">
+      <g
+         id="g3690">
+        <g
+           transform="translate(0,0) scale(1.28,1.15)"
+           id="g3692">
+          <g
+             id="g3694">
+            <g
+               transform="scale(0.78125,0.8695652173913044)"
+               id="g3696">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 64 0 L 128 57.49999999999999 L 64 114.99999999999999 L 0 57.49999999999999 L 64 0 Z"
+                 id="path3698" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 64 0 M 64 0 L 128 57.49999999999999 L 64 114.99999999999999 L 0 57.49999999999999 L 64 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3700" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,331,254)"
+       id="g3702">
+      <g
+         transform="translate(64,0) matrix(1,0,0,1,0,0) translate(-64,0)"
+         id="g3704">
+        <g
+           id="g3706">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="108"
+             height="28"
+             fill-opacity="0"
+             id="rect3708" />
+        </g>
+      </g>
+      <g
+         transform="translate(64,0) matrix(1,0,0,1,0,0) translate(-64,0)"
+         id="g3710">
+        <g
+           id="g3712">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="108"
+             height="28"
+             fill-opacity="0"
+             id="rect3714" />
+        </g>
+      </g>
+      <g
+         transform="translate(64,0) matrix(1,0,0,1,0,0) translate(-64,0)"
+         id="g3716">
+        <g
+           id="g3718">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="32"
+             y="0"
+             width="89"
+             height="28"
+             fill-opacity="0"
+             id="rect3720" />
+        </g>
+      </g>
+      <g
+         transform="translate(64,0) matrix(1,0,0,1,0,0) translate(-64,0)"
+         id="g3722">
+        <g
+           id="g3724">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="32"
+             y="0"
+             width="89"
+             height="28"
+             fill-opacity="0"
+             id="rect3726" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="32"
+           y="12"
+           id="text3728">Taxa</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="62"
+           y="12"
+           id="text3730">de</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="10"
+           y="26"
+           id="text3732">amostragem</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="78"
+           y="26"
+           id="text3734"> &lt;</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="91"
+           y="26"
+           id="text3736">1</text>
+      </g>
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,313.80303030303025,395)"
+       id="g3738">
+      <g
+         id="g3740">
+        <g
+           transform="translate(0,0) scale(1.35,0.74)"
+           id="g3742">
+          <g
+             id="g3744">
+            <g
+               transform="scale(0.7407407407407407,1.3513513513513513)"
+               id="g3746">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 37.00000000000001 0 L 98.00000000000001 0 C 118.43453574373937 0 135 16.565464256260636 135 37 C 135 57.43453574373937 118.43453574373937 74 98.00000000000001 74 L 37.00000000000001 74 C 16.56546425626064 74 0 57.43453574373937 0 37 C 0 16.565464256260636 16.56546425626064 0 37.00000000000001 0 Z"
+                 id="path3748" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 37.00000000000001 0 M 37.00000000000001 0 L 98.00000000000001 0 C 118.43453574373937 0 135 16.565464256260636 135 37 C 135 57.43453574373937 118.43453574373937 74 98.00000000000001 74 L 37.00000000000001 74 C 16.56546425626064 74 0 57.43453574373937 0 37 C 0 16.565464256260636 16.56546425626064 0 37.00000000000001 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3750" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,325,404)"
+       id="g3752">
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3754">
+        <g
+           id="g3756">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="115"
+             height="56"
+             fill-opacity="0"
+             id="rect3758" />
+        </g>
+      </g>
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3760">
+        <g
+           id="g3762">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="115"
+             height="56"
+             fill-opacity="0"
+             id="rect3764" />
+        </g>
+      </g>
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3766">
+        <g
+           id="g3768">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="10"
+             y="0"
+             width="97"
+             height="56"
+             fill-opacity="0"
+             id="rect3770" />
+        </g>
+      </g>
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3772">
+        <g
+           id="g3774">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="10"
+             y="0"
+             width="97"
+             height="56"
+             fill-opacity="0"
+             id="rect3776" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="10"
+           y="12"
+           id="text3778">Calcular</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="59"
+           y="12"
+           id="text3780">a</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="69"
+           y="12"
+           id="text3782">menor</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="9"
+           y="26"
+           id="text3784">dist</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="28"
+           y="26"
+           id="text3786">â</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="35"
+           y="26"
+           id="text3788">ncia</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="61"
+           y="26"
+           id="text3790">de</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="78"
+           y="26"
+           id="text3792">cada</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="15"
+           y="40"
+           id="text3794">pixel</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="44"
+           y="40"
+           id="text3796">para</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="72"
+           y="40"
+           id="text3798">cada</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="40"
+           y="54"
+           id="text3800">regi</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="61"
+           y="54"
+           id="text3802">ã</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="68"
+           y="54"
+           id="text3804">o</text>
+      </g>
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,101.69696969696973,242)"
+       id="g3806">
+      <g
+         id="g3808">
+        <g
+           transform="translate(0,0) scale(1.0899999999999999,0.52)"
+           id="g3810">
+          <g
+             id="g3812">
+            <g
+               transform="scale(0.9174311926605506,1.923076923076923)"
+               id="g3814">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 id="path3816" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 26 0 M 26 0 L 82.99999999999999 0 C 97.35940349560062 0 108.99999999999999 11.640596504399367 108.99999999999999 26 C 108.99999999999999 40.35940349560064 97.35940349560062 52 82.99999999999999 52 L 26 52 C 11.640596504399369 52 0 40.35940349560064 0 26 C 0 11.640596504399367 11.640596504399369 0 26 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3818" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,112,254)"
+       id="g3820">
+      <g
+         transform="translate(22,0) matrix(1,0,0,1,0,0) translate(-22,0)"
+         id="g3822">
+        <g
+           id="g3824">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="28"
+             fill-opacity="0"
+             id="rect3826" />
+        </g>
+      </g>
+      <g
+         transform="translate(22,0) matrix(1,0,0,1,0,0) translate(-22,0)"
+         id="g3828">
+        <g
+           id="g3830">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="90"
+             height="28"
+             fill-opacity="0"
+             id="rect3832" />
+        </g>
+      </g>
+      <g
+         transform="translate(22,0) matrix(1,0,0,1,0,0) translate(-22,0)"
+         id="g3834">
+        <g
+           id="g3836">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="11"
+             y="0"
+             width="69"
+             height="28"
+             fill-opacity="0"
+             id="rect3838" />
+        </g>
+      </g>
+      <g
+         transform="translate(22,0) matrix(1,0,0,1,0,0) translate(-22,0)"
+         id="g3840">
+        <g
+           id="g3842">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="11"
+             y="0"
+             width="69"
+             height="28"
+             fill-opacity="0"
+             id="rect3844" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="11"
+           y="12"
+           id="text3846">Re</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="27"
+           y="12"
+           id="text3848">-</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="31"
+           y="12"
+           id="text3850">amostrar</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="15"
+           y="26"
+           id="text3852">marca</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="49"
+           y="26"
+           id="text3854">çõ</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="62"
+           y="26"
+           id="text3856">es</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,180.69696969696972,238)"
+       id="g3858">
+      <image
+         width="144"
+         height="60"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAAA8CAYAAACJmDMtAAACUklEQVR4Xu3bT0rDQBiG8e8DBRdaewN7FD2Bbrq2NzCLCu4a1wp6DrvoFTyTuLM6MmOiiX+g8oZkCk/pQmi/NPPMj7RadONGAaGAC7OMUsAABAKpAICkfAwDCANSAQBJ+RgGEAakAgCS8jEMIAxIBQAk5WMYQBiQCgBIyscwgDAgFQCQlI9hAGFAKgAgKR/DAMKAVABAUj6GAYQBqQCApHwMAwgDUgEASfkYBhAGpAJbAWh/vjx2s0Uwu36+nT5KK2a40wJZA9q7Wk12X1/u3Pwsrvot2AmAOt1/+WBZAqrgLNx81lwhgOT97vwAeQEqVuPRzvrC3MrfVgqgzvdfPmAegGo4ZoW5jetVBQvpR6/+/xFA8n53foDBAY3my8LMFk04aZUh3c08AKjzbe/ugIMBOrh8mMXfrMx80lxOiGo83StHX4DiYz7YGXcXfZuP9HQzbe3AYNuRAAUvze2oBShdd+o3rXgVAlBO4LIBVEdJb2EeSjM/bIXiLSwnN3+ey2BXoNYZfXyIjpCKJqT0dhavR9VZ8iE6P1N5AKq7fEKKn41+3gAEoI0KpD8krtelu503BwC0Ub5en5TXFejb0itI9+52Gh8CUK82NnqxrAHVK0hfpnooQ/CS78I22tfenrQVgHqrwQv9uwCA/p2MgWYBAOFBKgAgKR/DAMKAVABAUj6GAYQBqQCApHwMAwgDUgEASfkYBhAGpAIAkvIxDCAMSAUAJOVjGEAYkAoASMrHMIAwIBUAkJSPYQBhQCoAICkfwwDCgFQAQFI+hgGEAanAO3nzgT20gS+dAAAAAElFTkSuQmCC"
+         transform="translate(0,0)"
+         id="image3860" />
+    </g>
+    <g
+       transform="matrix(1,0,0,1,354.80303030303025,321)"
+       id="g3862">
+      <image
+         width="60"
+         height="104"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABoCAYAAACt45OTAAACaElEQVR4Xu2bPU4CURSF7xMwJiq6BN0BrkBcAsXQ6hIsILFTOhMoXAK2ULAEcQWyA1mCDJoYfnxmhh8Bq1fccxM4U2kyzJ3zfYc7NONkxw63Y3mFgbfduInhfKX9ICI+bkQ1NGCbwNW2T4LG9Qg+Hz4wCZpnYFyxaRjBmpVGUJ7PYKURsFlpBGVWGkiZlQbC5pZGwGalEZS5pYGUWWkgbG5pBGxWGkGZWxpImZUGwuaWRsBmpRGUuaWBlFlpIGxuaQRsVhpBmVsaSJmVBsLmlkbAZqURlLmlgZRZaSBsbmkEbFYaQZlbGkiZlQbC5pZGwGalEZS5pYGUWWkgbG5pBOytrfRxtdV14i5DIHrxr8N6uRjymZBzVSt9VGkX95y8hNzQj5erz0bUDflMyLmqgZMbWbXsJX0h7d/h5u98attNBqsHPqy2Chlxb8kwP8/r5lM3/5+Kv/iql3shxkLPVQ+cWq60m87JdXpzSejF1JW/vZfnYSO6CQ0Qej4k8MFd52x/Onlftby40YXtUSZ7/v1Y6ocGCD0fEnjTcvpd9k5Wqg2xC/kOLwzMLI97Iu5k3YofjDK5AsIuNHAyLH1R2sn9WmAvtbgRJS9QQw5YpdM0t53TfG7c/7PsB/E4dyZPpQ9IWsRjaTPImmWwXXill5azk/RZG0+yBaRdm8CzX1/p83ZYLzdRVV4+BtEDredhl5Z1WoulZZ2Zhq0NaM+nYW3C1tenYWsD2vNpWJuw9fVp2NqA9nwa1iZsfX0atjagPZ+GtQlbX5+GrQ1oz6dhbcLW16dhawPa82lYm7D19WnY2oD2/J0z/As2C054oPczgQAAAABJRU5ErkJggg=="
+         transform="translate(0,0)"
+         id="image3864" />
+    </g>
+    <g
+       transform="matrix(1,0,0,1,151.69696969696972,289.5)"
+       id="g3866">
+      <image
+         width="192"
+         height="172"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,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"
+         transform="translate(0,0)"
+         id="image3868" />
+    </g>
+    <g
+       transform="matrix(1,0,0,1,418.80303030303025,238)"
+       id="g3870">
+      <image
+         width="124"
+         height="60"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAA8CAYAAACkRt7SAAACLElEQVR4Xu3ZPU7DQBAF4DcSSBQQcgNyFDgBaajJDXARJLqYHgnOQYpcgUPRYVi0izfY/EgjbYTNzIsoEKwjv/d51lYi4MtVA+IqLcOC4M4uAoIT3FkDzuJywgnurAFncTnhBHfWgLO4nHCCO2vAWVxOOMGdNeAsLiec4M4acBaXE05wZw04i8sJJ7izBpzF5YQT3FkDzuJywgnurAFncf/FhB8u16cCrAJw+3x38eTMaKdxRw1+cLOZ7b++3AtkHlO/BZwRvMx/lOAt9Eogi248gpdhx6PHBV5tppO95gqC+qdoBLcCnqGBCoJpjhUQ0q/SXpcENwA+Wa4rAKsudIoV0g8ggeDlztt3GGxLP7p+XMQnb0Bm3TwhKsvnvSZOeZ7w+D8Z7Ix32PofvtXXXXGw+hJ4kBqCkx54mutMHKec4CXXx2jAc4i0pUuoATnuBeOWXuL867GDTXjvjD4e2iJ81YVP23uc9/Ys+dBWfg2MAzzn2MLHe/v3F8Gtgbd50gcvTVOL4LIbkeBGwXOsFv5BBOfxbwQ3Dp7jpS9PJNQhSM3P0svQx3UPL8vCoxUNEFxRkqUlBLekqchCcEVJlpYQ3JKmIgvBFSVZWkJwS5qKLARXlGRpCcEtaSqyEFxRkqUlBLekqchCcEVJlpYQ3JKmIgvBFSVZWkJwS5qKLARXlGRpCcEtaSqyEFxRkqUlBLekqchCcEVJlpYQ3JKmIgvBFSVZWkJwS5qKLO/v3Yc9ZXU3ZgAAAABJRU5ErkJggg=="
+         transform="translate(0,0)"
+         id="image3872" />
+    </g>
+    <g
+       transform="translate(0,0) matrix(1,0,0,1,539,395)"
+       id="g3874">
+      <g
+         id="g3876">
+        <g
+           transform="translate(0,0) scale(1.35,0.74)"
+           id="g3878">
+          <g
+             id="g3880">
+            <g
+               transform="scale(0.7407407407407407,1.3513513513513513)"
+               id="g3882">
+              <path
+                 fill="#C6DD58"
+                 stroke="none"
+                 d="M 37.00000000000001 0 L 98.00000000000001 0 C 118.43453574373937 0 135 16.565464256260636 135 37 C 135 57.43453574373937 118.43453574373937 74 98.00000000000001 74 L 37.00000000000001 74 C 16.56546425626064 74 0 57.43453574373937 0 37 C 0 16.565464256260636 16.56546425626064 0 37.00000000000001 0 Z"
+                 id="path3884" />
+              <path
+                 fill="none"
+                 stroke="#90B328"
+                 d="M 37.00000000000001 0 M 37.00000000000001 0 L 98.00000000000001 0 C 118.43453574373937 0 135 16.565464256260636 135 37 C 135 57.43453574373937 118.43453574373937 74 98.00000000000001 74 L 37.00000000000001 74 C 16.56546425626064 74 0 57.43453574373937 0 37 C 0 16.565464256260636 16.56546425626064 0 37.00000000000001 0 Z"
+                 stroke-miterlimit="10"
+                 stroke-width="2"
+                 id="path3886" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,550,404)"
+       id="g3888">
+      <g
+         transform="translate(58,0) matrix(1,0,0,1,0,0) translate(-58,0)"
+         id="g3890">
+        <g
+           id="g3892">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="115"
+             height="56"
+             fill-opacity="0"
+             id="rect3894" />
+        </g>
+      </g>
+      <g
+         transform="translate(58,0) matrix(1,0,0,1,0,0) translate(-58,0)"
+         id="g3896">
+        <g
+           id="g3898">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="115"
+             height="56"
+             fill-opacity="0"
+             id="rect3900" />
+        </g>
+      </g>
+      <g
+         transform="translate(58,0) matrix(1,0,0,1,0,0) translate(-58,0)"
+         id="g3902">
+        <g
+           id="g3904">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="29"
+             y="0"
+             width="115"
+             height="56"
+             fill-opacity="0"
+             id="rect3906" />
+        </g>
+      </g>
+      <g
+         transform="translate(58,0) matrix(1,0,0,1,0,0) translate(-58,0)"
+         id="g3908">
+        <g
+           id="g3910">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="29"
+             y="0"
+             width="115"
+             height="56"
+             fill-opacity="0"
+             id="rect3912" />
+        </g>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="29"
+           y="12"
+           id="text3914">Calcular</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="78"
+           y="12"
+           id="text3916">a</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="11"
+           y="26"
+           id="text3918">probabilidade</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="90"
+           y="26"
+           id="text3920">de</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="0"
+           y="40"
+           id="text3922">cada</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="30"
+           y="40"
+           id="text3924">pixel</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="59"
+           y="40"
+           id="text3926">para</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="87"
+           y="40"
+           id="text3928">cada</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="40"
+           y="54"
+           id="text3930">regi</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="61"
+           y="54"
+           id="text3932">ã</text>
+        <text
+           fill="rgb(28, 33, 12)"
+           stroke="none"
+           font-family="Arial"
+           font-size="12px"
+           font-style="normal"
+           font-weight="normal"
+           text-decoration=""
+           line-height="14px"
+           x="68"
+           y="54"
+           id="text3934">o</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,444.30303030303025,402)"
+       id="g3936">
+      <image
+         width="124"
+         height="60"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAAA8CAYAAACkRt7SAAACIElEQVR4Xu3bMU4CYRCG4fkNtMYbeCYT8Bya2Lu0igneQGsbj4A30RsoSwdhzIoossECZsIk81oQG77953t2FmJiEX5SNVBSTcuwAniymwBwwJM1kGxcNhzwZA0kG5cNBzxZA8nGZcMBT9ZAsnHZcMCTNZBsXDYc8GQNJBuXDQc8WQPJxmXDAU/WQLJx2XDAkzWQbFw2HPBkDSQblw03AD++eqq06Gk9617K6OzdINItAnCDahtwKXItKg32aDLv3EeFB9wSfJW1gh/2BwbxphGAG9T5s+GtLH3VxVFV3/UeDS5jEgG4QY3r4CoqpfX/HXHgAbcGVxEpzYu04FVlrCKD6bA/NrjsThEt8O2Pp53yc7zpC3k5qqpIWfu9wd/c+EPCA25xS/4H3twLGy2r6ItqqQ6x6TzSDcD/fIavHulaQkGvxgTcAXxzo0XlTY/KRX3Teza43F4RgO9V3/LNW7/3NNBFq/r2/MHgMiYRgBvU2AbXD9Eymgz7lUG8aQTgBnX+gn9Dzzsj/rRqUGzUiAZ8UfRkOutWUaH50hb17nE+F49054KjxQMeTcT5PIA7FxwtHvBoIs7nAdy54GjxgEcTcT4P4M4FR4sHPJqI83kAdy44Wjzg0USczwO4c8HR4gGPJuJ8HsCdC44WD3g0EefzAO5ccLR4wKOJOJ8HcOeCo8UDHk3E+TyAOxccLR7waCLO5wHcueBo8YBHE3E+zyfYYZE9rASOHQAAAABJRU5ErkJggg=="
+         transform="translate(0,0)"
+         id="image3938" />
+    </g>
+    <g
+       transform="matrix(1,0,0,1,630,20)"
+       id="g3940">
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g3942">
+        <g
+           id="g3944">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="147"
+             height="18"
+             fill-opacity="0"
+             id="rect3946" />
+        </g>
+      </g>
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g3948">
+        <g
+           id="g3950">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="147"
+             height="18"
+             fill-opacity="0"
+             id="rect3952" />
+        </g>
+      </g>
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g3954">
+        <g
+           id="g3956">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="58"
+             y="0"
+             width="31"
+             height="17"
+             fill-opacity="0"
+             id="rect3958" />
+        </g>
+      </g>
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g3960">
+        <g
+           id="g3962">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="58"
+             y="0"
+             width="31"
+             height="17"
+             fill-opacity="0"
+             id="rect3964" />
+        </g>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="58"
+           y="14"
+           id="text3966">N</text>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="70"
+           y="14"
+           id="text3968">ã</text>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="79"
+           y="14"
+           id="text3970">o</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,792,211)"
+       id="g3972">
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3974">
+        <g
+           id="g3976">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="49"
+             height="18"
+             fill-opacity="0"
+             id="rect3978" />
+        </g>
+      </g>
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3980">
+        <g
+           id="g3982">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="49"
+             height="18"
+             fill-opacity="0"
+             id="rect3984" />
+        </g>
+      </g>
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3986">
+        <g
+           id="g3988">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="10"
+             y="0"
+             width="31"
+             height="17"
+             fill-opacity="0"
+             id="rect3990" />
+        </g>
+      </g>
+      <g
+         transform="translate(20,0) matrix(1,0,0,1,0,0) translate(-20,0)"
+         id="g3992">
+        <g
+           id="g3994">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="10"
+             y="0"
+             width="31"
+             height="17"
+             fill-opacity="0"
+             id="rect3996" />
+        </g>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="10"
+           y="14"
+           id="text3998">Sim</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,253,242)"
+       id="g4000">
+      <g
+         transform="translate(6,0) matrix(1,0,0,1,0,0) translate(-6,0)"
+         id="g4002">
+        <g
+           id="g4004">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="36"
+             height="18"
+             fill-opacity="0"
+             id="rect4006" />
+        </g>
+      </g>
+      <g
+         transform="translate(6,0) matrix(1,0,0,1,0,0) translate(-6,0)"
+         id="g4008">
+        <g
+           id="g4010">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="36"
+             height="18"
+             fill-opacity="0"
+             id="rect4012" />
+        </g>
+      </g>
+      <g
+         transform="translate(6,0) matrix(1,0,0,1,0,0) translate(-6,0)"
+         id="g4014">
+        <g
+           id="g4016">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="3"
+             y="0"
+             width="30"
+             height="17"
+             fill-opacity="0"
+             id="rect4018" />
+        </g>
+      </g>
+      <g
+         transform="translate(6,0) matrix(1,0,0,1,0,0) translate(-6,0)"
+         id="g4020">
+        <g
+           id="g4022">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="3"
+             y="0"
+             width="30"
+             height="17"
+             fill-opacity="0"
+             id="rect4024" />
+        </g>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="3"
+           y="14"
+           id="text4026">Sim</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,351,359)"
+       id="g4028">
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g4030">
+        <g
+           id="g4032">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="147"
+             height="18"
+             fill-opacity="0"
+             id="rect4034" />
+        </g>
+      </g>
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g4036">
+        <g
+           id="g4038">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="0"
+             y="0"
+             width="147"
+             height="18"
+             fill-opacity="0"
+             id="rect4040" />
+        </g>
+      </g>
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g4042">
+        <g
+           id="g4044">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="58"
+             y="0"
+             width="31"
+             height="17"
+             fill-opacity="0"
+             id="rect4046" />
+        </g>
+      </g>
+      <g
+         transform="translate(116,0) matrix(1,0,0,1,0,0) translate(-116,0)"
+         id="g4048">
+        <g
+           id="g4050">
+          <rect
+             fill="rgb(0,0,0)"
+             stroke="none"
+             x="58"
+             y="0"
+             width="31"
+             height="17"
+             fill-opacity="0"
+             id="rect4052" />
+        </g>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="58"
+           y="14"
+           id="text4054">N</text>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="70"
+           y="14"
+           id="text4056">ã</text>
+        <text
+           fill="rgb(7, 30, 45)"
+           stroke="none"
+           font-family="Arial"
+           font-size="16px"
+           font-style="normal"
+           font-weight="bold"
+           text-decoration=""
+           line-height="18.5px"
+           x="79"
+           y="14"
+           id="text4058">o</text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1,0,0,1,563.5,34)"
+       id="g4060">
+      <image
+         width="228"
+         height="111"
+         preserveAspectRatio="none"
+         xlink:href="data:image/png;base64,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"
+         transform="translate(0,0)"
+         id="image4062" />
+    </g>
+  </g>
+</svg>

@@ -1,7 +1,7 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {brazil}
 \beamer@sectionintoc {1}{Introdu\c c\~ao}{3}{0}{1}
-\beamer@sectionintoc {2}{A t\'ecnica estudada}{10}{0}{2}
-\beamer@sectionintoc {3}{Metodologia utilizada}{13}{0}{3}
-\beamer@sectionintoc {4}{Resultados}{16}{0}{4}
-\beamer@sectionintoc {5}{Considera\c c\~oes finais}{33}{0}{5}
+\beamer@sectionintoc {2}{A t\'ecnica estudada}{11}{0}{2}
+\beamer@sectionintoc {3}{Metodologia utilizada}{14}{0}{3}
+\beamer@sectionintoc {4}{Resultados}{17}{0}{4}
+\beamer@sectionintoc {5}{Considera\c c\~oes finais}{34}{0}{5}

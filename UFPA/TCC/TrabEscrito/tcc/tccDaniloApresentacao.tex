@@ -21,8 +21,11 @@
 \usepackage{subfig}
 \usepackage{epstopdf}
 \usepackage{amsmath}
+\usepackage{svg}
 
 \captionsetup[subfigure]{labelformat=empty}
+\setsvg{inkscape = inkscape -z -D}
+
 
 \newenvironment{variableblock}[3]{%
   \setbeamercolor{block body}{#2}
@@ -117,6 +120,7 @@
 				\item Automação industrial: classificação de produtos, verificação de falhas).
 				\item Entretenimento: em redes sociais, reconhecimento facial e edição de fotos). 
 			\end{itemize}
+		\item Facilitar classificação de imagens
 	\end{itemize}
 
 \end{frame}
@@ -138,15 +142,7 @@
 \end{frame}
 
 
-\begin{frame}{Segmentação de Imagens - Aplicações e técnicas}
-
-	\begin{itemize}
-		\item Aplicações
-		\begin{itemize}
-			\item Facilitar classificação de imagens
-			\item Edição de imagens
-		\end{itemize}
-		\item Técnicas
+\begin{frame}{Segmentação de Imagens - Técnicas}
 			\begin{itemize}
 				\item Limiar (\textit{threshold})
 					\begin{itemize}
@@ -162,27 +158,107 @@
 				\item Dividir e mesclar
 					\begin{enumerate}
 						\item Dividir a imagem em regiões de tamanhos iguais
-						\item Verifica se as regiões obedecem o critério
+						\item Verifica se as novas regiões obedecem o critério estabelecido
 						\item Mescla as regiões em comum
-						\item Repete os passo (1) e (2) para regiões diferentes
-						\item \textcolor{red}{Não funciona bem para regiões não-uniformes}		
+						\item Repete os passo (1) e (2) até que não haja novas imagens
 					\end{enumerate}
 				\item Detecção de bordas
 					\begin{itemize}
 						\item Calcula o gradiente de intensidade
 						\item Bordas possuem mudanças abruptas de intensidade
-						\item Filtro de Sobel
 					\end{itemize}
-			\end{itemize}
-	\end{itemize}
+		\end{itemize}
 	
+\end{frame}
+
+
+\begin{frame}{Segmentação de Imagens - Limiar}
+
+	\begin{figure}[!h]
+		\centering
+		\subfloat[Imagem original (http://vejasp.abril.com.br/).]{
+		\includegraphics[scale=0.19]{./figuras/sobel_original.eps}
+		\label{fig:sobel_original}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Limiar de 0.2.]{
+		\includegraphics[scale=0.19]{./figuras/thresh_02.eps}
+		\label{fig:thresh_02}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\quad
+		\subfloat[Limiar de 0.5.]{
+		\includegraphics[scale=0.19]{./figuras/thresh_05.eps}
+		\label{fig:threshold_02}}
+		\label{fig:threshold}
+	\end{figure}
+
+
 \end{frame}
 
 \begin{frame}{Segmentação de Imagens - Dividir e mesclar}
 
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.65]{./figuras/split-merge.png}
+		\caption{Dividir e Mesclar.}
+		\label{fig:fluxo_codigo}
+	\end{figure}
+
+	\begin{variableblock}{Definição (Gonzales et. al)}{bg=red!15,fg=black}{bg=red!70,fg=white}
+  		Não funciona bem para regiões não-uniformes.
+	\end{variableblock}	
+
+\textcolor{red}{}
 \end{frame}
 
 \begin{frame}{Segmentação de Imagens - Detecção de bordas}
+
+\begin{columns}
+
+\begin{column}{0.3\textwidth}
+		\begin{itemize}
+		\item Filtro de Sobel:
+			\[
+				G_{x} = \Big[ \begin{smallmatrix} -1 & -2 & -1 \\ 0 & 0 & 0 \\ 1 & 2 & 1 \end{smallmatrix} \Big] 
+				\]
+				
+				
+				\[
+				G_{y} = \Big[ \begin{smallmatrix} -1 & 0 & 1 \\ -2& 0 & 2 \\ -1 & 0 & 1 \end{smallmatrix} \Big]
+			\]
+			
+			\[
+				G = \big( G_{x} \ast I \big) + \big( G_{y} \ast I \big)
+			\]
+	\end{itemize}
+
+\end{column}
+
+\begin{column}{0.7\textwidth}
+		\begin{figure}[!h]
+		\centering
+		\subfloat[Imagem original.]{
+		\includegraphics[scale=0.19]{./figuras/sobel_original.eps}
+		\label{fig:sobel_original}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Sobel horizontal.]{
+		\includegraphics[scale=0.19]{./figuras/sobel_horizontal.eps}
+		\label{fig:sobel_horizontal}}
+		\quad	
+		\subfloat[Sobel vertical.]{
+		\includegraphics[scale=0.19]{./figuras/sobel_vertical.eps}
+		\label{fig:sobel_vertical}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Sobel final.]{
+		\includegraphics[scale=0.19]{./figuras/sobel_final.eps}
+		\label{fig:sobel_final}}
+		\label{fig:sobel}
+	\end{figure}
+\end{column}
+\end{columns}
 
 \end{frame}
 
@@ -209,9 +285,10 @@
 
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.25]{./figuras/capitulo_4/DiagramaCodigo.pdf}
-		\caption{Fluxo do algoritmo.}
-		\label{fig:fluxo_codigo}
+		%\includesvg[svgpath = figuras/]{fluxograma}		
+		\includegraphics[scale=0.35]{./figuras/fluxograma.png}
+		%\caption{Fluxograma do algoritmo.}
+		%\label{fig:fluxograma}
 	\end{figure}
 
 \end{frame}
