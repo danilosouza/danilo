@@ -1,0 +1,363 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  28 MAR 2016 14:41
+entering extended mode
+**Danilo_lista1.tex
+
+(C:\Users\Danilo\Documents\GitHub\danilo\USP\IdentificacaoDeSistemas\Lista1\Dan
+ilo_lista1.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+(C:\MikTex2.9\tex\latex\base\report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(C:\MikTex2.9\tex\latex\base\size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\MikTex2.9\tex\latex\base\inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(C:\MikTex2.9\tex\latex\base\latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count88
+)
+(C:\MikTex2.9\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\MikTex2.9\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(C:\MikTex2.9\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\MikTex2.9\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\MikTex2.9\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(C:\MikTex2.9\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(C:\MikTex2.9\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(C:\MikTex2.9\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(C:\MikTex2.9\tex\latex\geometry\geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(C:\MikTex2.9\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(C:\MikTex2.9\tex\generic\oberdiek\ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(C:\MikTex2.9\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
+\Gm@bindingoffset=\dimen105
+\Gm@wd@mp=\dimen106
+\Gm@odd@mp=\dimen107
+\Gm@even@mp=\dimen108
+\Gm@layoutwidth=\dimen109
+\Gm@layoutheight=\dimen110
+\Gm@layouthoffset=\dimen111
+\Gm@layoutvoffset=\dimen112
+\Gm@dimlist=\toks17
+
+(C:\MikTex2.9\tex\latex\geometry\geometry.cfg))
+(C:\MikTex2.9\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count93
+\float@exts=\toks18
+\float@box=\box26
+\@float@everytoks=\toks19
+\@floatcapt=\box27
+)
+(C:\Users\Danilo\Documents\GitHub\danilo\USP\IdentificacaoDeSistemas\Lista1\Dan
+ilo_lista1.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+
+(C:\Users\Danilo\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count94
+\scratchdimen=\dimen113
+\scratchbox=\box28
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen114
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
+\everyMPtoPDFconversion=\toks21
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 14.
+[1
+
+{C:/Users/Danilo/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Chapter 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 17.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
+(C:\MikTex2.9\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+
+<./grafico_lista1_questao1.png, id=7, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao1.png Graphic file (type png)
+
+<use ./grafico_lista1_questao1.png>
+Package pdftex.def Info: ./grafico_lista1_questao1.png used on input line 31.
+(pdftex.def)             Requested size: 462.74957pt x 220.53438pt.
+
+<./modelo_lista1_questao1.png, id=8, 565.36218pt x 269.50688pt>
+File: ./modelo_lista1_questao1.png Graphic file (type png)
+
+<use ./modelo_lista1_questao1.png>
+Package pdftex.def Info: ./modelo_lista1_questao1.png used on input line 38.
+(pdftex.def)             Requested size: 254.41063pt x 121.27696pt.
+ [1
+
+ <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/gr
+afico_lista1_questao1.png (PNG copy)>]
+[2 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/
+modelo_lista1_questao1.png>]
+Chapter 2.
+<./grafico_lista1_questao2_continuo.png, id=22, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao2_continuo.png Graphic file (type png)
+
+<use ./grafico_lista1_questao2_continuo.png>
+Package pdftex.def Info: ./grafico_lista1_questao2_continuo.png used on input l
+ine 49.
+(pdftex.def)             Requested size: 411.32947pt x 196.0289pt.
+
+<./grafico_lista1_questao2_discreto.png, id=23, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao2_discreto.png Graphic file (type png)
+
+<use ./grafico_lista1_questao2_discreto.png>
+Package pdftex.def Info: ./grafico_lista1_questao2_discreto.png used on input l
+ine 56.
+(pdftex.def)             Requested size: 411.32947pt x 196.0289pt.
+
+<./modelo_lista1_questao2.png, id=24, 703.87968pt x 370.38374pt>
+File: ./modelo_lista1_questao2.png Graphic file (type png)
+
+<use ./modelo_lista1_questao2.png>
+Package pdftex.def Info: ./modelo_lista1_questao2.png used on input line 63.
+(pdftex.def)             Requested size: 316.74292pt x 166.67113pt.
+ [3
+
+ <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/gr
+afico_lista1_questao2_continuo.png (PNG copy)> <C:/Users/Danilo/Documents/GitHu
+b/danilo/USP/IdentificacaoDeSistemas/Lista1/grafico_lista1_questao2_discreto.pn
+g (PNG copy)>] [4 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeS
+istemas/Lista1/modelo_lista1_questao2.png>]
+Chapter 3.
+<./grafico_lista1_questao3_pert_baixa.png, id=31, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao3_pert_baixa.png Graphic file (type png)
+
+<use ./grafico_lista1_questao3_pert_baixa.png>
+Package pdftex.def Info: ./grafico_lista1_questao3_pert_baixa.png used on input
+ line 77.
+(pdftex.def)             Requested size: 462.74957pt x 220.53438pt.
+
+<./grafico_lista1_questao3_pert_alta.png, id=32, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao3_pert_alta.png Graphic file (type png)
+
+<use ./grafico_lista1_questao3_pert_alta.png>
+Package pdftex.def Info: ./grafico_lista1_questao3_pert_alta.png used on input 
+line 85.
+(pdftex.def)             Requested size: 462.74957pt x 220.53438pt.
+
+<./modelo_lista1_questao3.png, id=33, 545.03625pt x 380.92313pt>
+File: ./modelo_lista1_questao3.png Graphic file (type png)
+
+<use ./modelo_lista1_questao3.png>
+Package pdftex.def Info: ./modelo_lista1_questao3.png used on input line 92.
+(pdftex.def)             Requested size: 272.51746pt x 190.46109pt.
+ [5
+
+ <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/gr
+afico_lista1_questao3_pert_baixa.png (PNG copy)>] <./imagem_lista1_questa03_ord
+em1.png, id=37, 215.30438pt x 277.035pt>
+File: ./imagem_lista1_questa03_ordem1.png Graphic file (type png)
+
+<use ./imagem_lista1_questa03_ordem1.png>
+Package pdftex.def Info: ./imagem_lista1_questa03_ordem1.png used on input line
+ 101.
+(pdftex.def)             Requested size: 107.65192pt x 138.51715pt.
+
+<./imagem_lista1_questa03_ordem2.png, id=38, 241.65282pt x 278.54062pt>
+File: ./imagem_lista1_questa03_ordem2.png Graphic file (type png)
+
+<use ./imagem_lista1_questa03_ordem2.png>
+Package pdftex.def Info: ./imagem_lista1_questa03_ordem2.png used on input line
+ 108.
+(pdftex.def)             Requested size: 120.82611pt x 139.26996pt.
+ [6 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1
+/grafico_lista1_questao3_pert_alta.png (PNG copy)> <C:/Users/Danilo/Documents/G
+itHub/danilo/USP/IdentificacaoDeSistemas/Lista1/modelo_lista1_questao3.png>] [7
+ <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/im
+agem_lista1_questa03_ordem1.png> <C:/Users/Danilo/Documents/GitHub/danilo/USP/I
+dentificacaoDeSistemas/Lista1/imagem_lista1_questa03_ordem2.png>]
+Chapter 4.
+<./grafico_lista1_questao4_pert_baixa.png, id=46, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao4_pert_baixa.png Graphic file (type png)
+
+<use ./grafico_lista1_questao4_pert_baixa.png>
+Package pdftex.def Info: ./grafico_lista1_questao4_pert_baixa.png used on input
+ line 121.
+(pdftex.def)             Requested size: 462.74957pt x 220.53438pt.
+
+<./grafico_lista1_questao4_pert_alta.png, id=47, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao4_pert_alta.png Graphic file (type png)
+
+<use ./grafico_lista1_questao4_pert_alta.png>
+Package pdftex.def Info: ./grafico_lista1_questao4_pert_alta.png used on input 
+line 128.
+(pdftex.def)             Requested size: 462.74957pt x 220.53438pt.
+
+<./modelo_lista1_questao4.png, id=48, 787.44188pt x 408.02437pt>
+File: ./modelo_lista1_questao4.png Graphic file (type png)
+
+<use ./modelo_lista1_questao4.png>
+Package pdftex.def Info: ./modelo_lista1_questao4.png used on input line 135.
+(pdftex.def)             Requested size: 354.34557pt x 183.60927pt.
+ [8
+
+ <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/gr
+afico_lista1_questao4_pert_baixa.png (PNG copy)>] [9 <C:/Users/Danilo/Documents
+/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/grafico_lista1_questao4_pert_
+alta.png (PNG copy)> <C:/Users/Danilo/Documents/GitHub/danilo/USP/Identificacao
+DeSistemas/Lista1/modelo_lista1_questao4.png>]
+Chapter 5.
+<./grafico_lista1_questao5.png, id=55, 1028.34187pt x 490.08093pt>
+File: ./grafico_lista1_questao5.png Graphic file (type png)
+
+<use ./grafico_lista1_questao5.png>
+Package pdftex.def Info: ./grafico_lista1_questao5.png used on input line 146.
+(pdftex.def)             Requested size: 462.74957pt x 220.53438pt.
+ [10
+
+ <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista1/gr
+afico_lista1_questao5.png (PNG copy)>]
+(C:\Users\Danilo\Documents\GitHub\danilo\USP\IdentificacaoDeSistemas\Lista1\Dan
+ilo_lista1.aux) ) 
+Here is how much of TeX's memory you used:
+ 2190 strings out of 493921
+ 30887 string characters out of 3147279
+ 89242 words of memory out of 3000000
+ 5477 multiletter control sequences out of 15000+200000
+ 7588 words of font info for 27 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,11n,19p,538b,240s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Mi
+kTex2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MikTex2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi7.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MikTex2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MikTex2.9/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Danilo_lista1.pdf (11 pages, 599912 bytes).
+PDF statistics:
+ 88 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+

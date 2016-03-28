@@ -1,0 +1,153 @@
+\documentclass{report}
+\usepackage[latin1]{inputenc}
+
+\title{Solução da Lista 1 de Identificação de Sistemas}
+\author{Danilo Henrique Costa Souza}
+\date{04 de Abril de 2016}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{float}
+\begin{document}
+
+\maketitle
+
+\chapter{Item a}
+	As funções de transferência contínua e discreta para o sistema apresentado estão descritas nas equações \ref{eq:func_trans_continua} e \ref{eq:func_trans_discreta}, respectivamente. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_a}.
+	\begin{equation}
+		G(s) = \frac{2e^{-3s}}{10s + 1}
+	\label{eq:func_trans_continua}	
+	\end{equation}
+
+	\begin{equation}
+		G(z) = \frac{0.1903z^{-3}}{z - 0.9048}
+	\label{eq:func_trans_discreta}
+	\end{equation}
+
+	A Figura \ref{fig:item_a} mostra que a saída do sistema discretizado sofre um atraso de 1 segundo (começando em 5s) em relação ao sistema contínuo (começando em 4s) devido ao atraso ocasionado pelo conversor A/D (segurador de ordem zero).
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao1.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_a}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.45]{./modelo_lista1_questao1.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item a}
+		\label{fig:modelo_item_a}
+	\end{figure}
+
+\chapter{Item b}
+
+As Figuras \ref{fig:item_b_continuo} e \ref{fig:item_b_discreto} mostram, respectivamente, os gráficos da saída  do sistema afetado por um ruído aleatório gaussiano com média nula e $\lambda^{2} = e^{-6}$. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_b}.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{./grafico_lista1_questao2_continuo.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_b_continuo}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{./grafico_lista1_questao2_discreto.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_b_discreto}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.45]{./modelo_lista1_questao2.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item b}
+		\label{fig:modelo_item_b}
+	\end{figure}
+
+
+\chapter{Item c}
+
+As Figuras \ref{fig:item_c_baixa} e \ref{fig:item_c_alta} mostram as respostas do sistema para as três formas de perturbação com variância baixa ($\lambda^{2} = 0.001$) e alta ($\lambda^{2} = 0.1$), respectivamente.
+A perturbação com variância alta aumentou a amplitude do ruído em 10 vezes em relação a perturbação com variância baixa. É possível perceber que para os dois valores de $\lambda^{2}$, as perturbações filtradas tiveram sua amplitude muito próxima de zero, sendo que o filtro de $2^{a}$ ordem inibiu praticamente toda a perturbação enquanto que o filtro de $1^{a}$ ordem apresenta alguma oscilação. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_c}.
+
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao3_pert_baixa.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_c_baixa}
+	\end{figure}
+	
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao3_pert_alta.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_c_alta}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{./modelo_lista1_questao3.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item c}
+		\label{fig:modelo_item_c}
+	\end{figure}	
+
+As funções de transferência discretizadas com os filtros de $1^{a}$ e $2^{a}$ ordem estão são mostradas nas Figuras \ref{fig:item_c_discreta_ordem_1} e \ref{fig:item_c_discreta_ordem_2}, respectivamente.	
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.5]{./imagem_lista1_questa03_ordem1.png}
+		\caption{$H(z)$ com filtro de $1^{a} ordem$}
+		\label{fig:item_c_discreta_ordem_1}
+	\end{figure}
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.5]{./imagem_lista1_questa03_ordem2.png}
+		\caption{$H(z)$ com filtro de $2^{a} ordem$}
+		\label{fig:item_c_discreta_ordem_2}
+	\end{figure}
+
+\chapter{Item d}
+
+Para o ruído de baixa intensidade ($\lambda^{2} = 0.001$) as perturbações filtradas não alteram significativamente a saída do processo, enquanto que a perturbação direta possui um efeito maior na saída do processo, sem comprometer no entanto, a sua forma, ou seja, ainda é possível determinar o comportamento do sistema, como mostrado na Figura \ref{fig:item_d_baixa}.
+
+Para o ruído de alta intensidade ($\lambda^{2} = 0.1$) as perturbações filtradas alteram a saída do processo mas sem alterar o seu comportamento, enquanto que a perturbação direta nessa caso afeta significativamente a saída do processo, conforme mostrado na Figura \ref{fig:item_d_alta}. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_c}.
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao4_pert_baixa.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_d_baixa}
+	\end{figure}
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao4_pert_alta.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_d_alta}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.45]{./modelo_lista1_questao4.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item d}
+		\label{fig:modelo_item_d}
+	\end{figure}	
+
+\chapter{Item e}
+
+A Figura \ref{fig:item_e} mostra que as duas perturbações simultâneas afetam significativamente a saída do processo, dificultando assim, sua identificação.
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao5.png}
+		\caption{Saídas dos sistemas contínuo e discreto}
+		\label{fig:item_e}
+	\end{figure}
+
+%\bibliographystyle{plain}
+%\bibliography{references}
+\end{document}
