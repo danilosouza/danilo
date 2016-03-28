@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\chapter{A técnica estudada e Metodologia}
+\chapter{A técnica estudada e a metodologia}
 \label{cap:descricao_tecnica_metod}
 
 %
@@ -11,15 +11,17 @@
 %
 \section{A escolha da técnica}
 \label{sec:escolha_tecnica}
-Diversas técnicas de segmentação de imagens foram citadas neste trabalho, entretanto, uma técnica em especial chama a atenção pois permite a interação do usuário de forma mais ativa onde o objeto de interesse é marcado, usando marcação simples do tipo pincel com uma cor e o fundo ou outros objetos na imagem são marcados de outra cor, a técnica então se encarrega de separar regiões de interesse com marcações em comum (i.e, de mesma cor) de tal forma que a imagem resultante é a subtração da imagem original por todas as regiões exceto a região de interesse, ou seja, cada \textit{pixel} da imagem é classificado como pertencente a uma determinada região. 
+Diversas técnicas de segmentação de imagens foram citadas neste trabalho, entretanto, uma técnica em especial chama a atenção pois permite a interação do usuário de forma mais ativa onde o objeto de interesse é marcado, usando marcação simples do tipo pincel com uma cor e o fundo ou outros objetos na imagem são marcados de outra cor. O algoritmo se encarrega então, de separar regiões de interesse com marcações em comum (i.e, de mesma cor) de tal forma que a imagem resultante é a subtração da imagem original por todas as regiões exceto a região de interesse, ou seja, cada \textit{pixel} da imagem é classificado como pertencente a uma determinada região.
 
-A classificação é feita com base na Função Densidade de Probabilidade (FDP) e da distância de um ponto para uma região de interesse qualquer.
+Esta técnica pode ser utilizada para substituir a segmentação manual de uma imagem. Ao invés de marcar o objeto de interesse \textit{pixel} a \textit{pixel}, o usuário realiza apenas marcações consideradas relevantes para que a segmentação seja alcançada, e mesmo que o tempo de execução do algoritmo seja elevado (da ordem horas), é possível obter um resultado semelhante à segmentação manual, porém com esforço reduzido para realizar tarefas como edição de imagens.
 
-Conforme descrito em \cite{Protiere2007} uma grande vantagem deste técnica é que as marcações não precisam ser minuciosas (i.e, \textit{pixel} a \textit{pixel}), elas precisam apenas representar as características de cor e/ou textura das regiões de interesse (e.g, se o fundo de uma imagem não é uniforme então as regiões não-uniformes devem ser marcadas separadamente mas pertencendo à mesma região). A intervenção do usuário facilita o processo de segmentação tornando-o mais simples e eficiente. Essas marcações podem ser consideradas como uma heurística para o algoritmo que é simplificado baseado nessas premissas.
+A classificação é feita com base na Função Densidade de Probabilidade e da distância de um ponto para uma região de interesse qualquer.
 
-Para o caso a imagem seja complexa (i.e, o fundo e os objetos de interesse possuem cores e/ou texturas parecidas) se faz necessária uma marcação mais abrangente e que marque de forma mais clara a posição dos objetos, conforme mostrado na Figura \ref{fig:imagem_nao_uniforme}  , para que a distância exerça uma influência maior na classificação. É possível perceber na Figura \ref{fig:imagem_nao_uniforme} que os objetos em si são não-uniformes e não apenas o fundo, resultado em uma marcação bastante extensa (i.e, com muitos \textit{pixels}) o que resultará em um aumento no tempo de execução, uma vez que para se calcular a menor distância de um ponto a uma região é necessário calcular a distância deste ponto para todos os \textit{pixels} da região em questão.
+Conforme descrito em \cite{Protiere2007} uma grande vantagem deste técnica é que as marcações não precisam ser minuciosas (\textit{pixel} a \textit{pixel}), elas precisam apenas representar as características de cor e/ou textura das regiões de interesse, se o fundo de uma imagem não é uniforme então as regiões não-uniformes devem ser marcadas separadamente mas pertencendo à mesma região. A intervenção do usuário facilita o processo de segmentação tornando-o mais simples e eficiente. Essas marcações podem ser consideradas como uma heurística para o algoritmo que é simplificado baseado nessas premissas.
 
-Conforme mostrado acima a técnica apresentada em \cite{Protiere2007} é bastante robusta e pode ser usada tanto em imagens simples (i.e, uniformes e com poucas cores) quanto em imagens complexas (i.e, nao-uniformes e com cores semelhantes no objeto e no fundo) e isso ocorre basicamente porque a técnica se baseia em dois pilares fundamentais, a probabilidade e a distância de um \textit{pixel} para uma região específica.
+Para imagens mais complexas, onde o fundo e os objetos de interesse possuem cores e/ou texturas parecidas, faz-se necessária uma marcação mais abrangente e que marque de forma mais clara a posição dos objetos, conforme mostrado na Figura \ref{fig:imagem_nao_uniforme}, para que a distância exerça uma influência maior na classificação. É possível perceber na Figura \ref{fig:imagem_nao_uniforme} que os objetos em si são não-uniformes e não apenas o fundo, resultado em uma marcação bastante extensa (i.e, com muitos \textit{pixels}) o que resultará em um aumento no tempo de execução, uma vez que, para calcular a menor distância de um ponto a uma região é necessário calcular a distância deste ponto para todos os \textit{pixels} da região em questão.
+
+Conforme mostrado acima a técnica apresentada em \cite{Protiere2007} é bastante robusta e pode ser usada tanto em imagens simples (i.e, uniformes e com poucas cores) quanto em imagens complexas (i.e, não-uniformes e com cores semelhantes no objeto e no fundo) e isso ocorre basicamente porque a técnica se baseia em dois pilares fundamentais, a probabilidade e a distância de um \textit{pixel} para uma região específica.
 
 	\begin{figure}
 		\centering
@@ -45,7 +47,9 @@ Conforme mostrado acima a técnica apresentada em \cite{Protiere2007} é bastante 
 
 \subsection{Segmentação de regiões uniformes}
 \label{sub:seg_regioes_uniformes}
-A técnica implementada neste trabalho, introduzida em \cite{Protiere2007}, pode ser classificada como semi-automática pois necessita da intervenção do usuário para marcar as regiões de interesse da imagem considerando a separação em processos de \cite{Gonzalez} citada no Capítulo \ref{cap:processamento_imagens} esta técnica pode ser incluída nos processos de médio nível. Estas regiões podem ser objeto ou fundo, havendo a possibilidade de se marcar mais de um objeto para segmentação ou marcar objetos não-uniformes, nesse caso a imagem final seria a soma das imagens de cada região não-uniforme separada. 
+A técnica implementada neste trabalho, introduzida em \cite{Protiere2007}, pode ser classificada como semi-automática pois necessita da intervenção do usuário para marcar as regiões de interesse da imagem e considerando a separação em processos de \cite{Gonzalez} citada no Capítulo \ref{cap:processamento_imagens}. Esta técnica pode ser incluída nos processos de médio nível. Estas regiões podem ser objeto ou fundo e havendo a possibilidade de se marcar mais de um objeto para segmentação ou marcar objetos não-uniformes, nesse caso a imagem final será a soma das imagens de cada região não-uniforme separada. 
+
+A escolha das regiões se dá por meio de experimentação, isto é, não existe um procedimento padrão para realizar a marcações, o usuário normalmente tem que realizar mais de uma marcação até chegar no resultado desejado. É possível, todavia, reduzir o número de tentativas considerando a uniformidade da imagem e sua distribuição de cores e a partir disso definir se a distância terá um papel mais importante na segmentação do que a cor do objeto, definindo assim uma estratégia de marcações para que o número de tentativas seja o mínimo possível.
 
 O algoritmo consiste em encontrar a menor distância entre cada \textit{pixel} da imagem de entrada e as regiões marcadas, isso é feito calculando a distância geodésica (que nesse caso é uma reta entre os dois pontos de interesse) de cada \textit{pixel} para os pontos da região marcada ponderada por um peso $\Omega$, chamado de peso geodésico, calculado a partir dos valores dos \textit{pixels} das regiões marcadas. Para que um ponto seja considerado de uma determinada região tanto a sua distância para a região quando a sua intensidade são levados em consideração.
 
@@ -58,11 +62,11 @@ Partindo da premissa de que as regiões de interesse a serem definidas são bem di
 		\label{fig:exemplo_fdp}
 	\end{figure}
 
-Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros de Gabor, \cite{Manjunath1996}. As direções $ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$ e as frequências centrais $\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $ foram utilizadas para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$, sendo assim possível descrever um conjunto maior e mais rico de texturas usando o mínimo de filtros. O filtro de Gabor pode ser substituído por outro tipo de filtro 2D, entretanto foi escolhido pelo autor devido à sua avançada capacidade em distinguir texturas (\cite{Sivalingamaiah2012}, \cite{Shioyama1999}).
+Em \cite{Protiere2007} o autor utilizou 19 canais para segmentação, sendo 3 destes canais a Luminância ($Y$) e Crominância ($Cr$ e $Cb$) e os outros 16 são o resultado da filtragem do canal de $Y$ por 16 filtros de Gabor, \cite{Manjunath1996}. As direções $ \theta = 0, \pi/4, \pi/2$ e $ 3\pi/4$ e as frequências centrais $\omega = 1/2, 1/4, 1/8 $ e $ 1/16 $ foram utilizadas para definir os filtros. A escolha de apenas 4 direções se dá em função da simetria, uma vez que o sentido não importa, ou seja, $0 = \pi$, $\pi/4 = 5\pi/4$, $\pi/2 = 3\pi/2$ e $3\pi/4 = 7\pi/4$, sendo assim possível descrever um conjunto maior e mais rico de texturas usando o mínimo de filtros. O filtro de Gabor pode ser substituído por outro tipo de filtro 2D, entretanto foi escolhido pelo autor devido à sua avançada capacidade em distinguir texturas \cite{Sivalingamaiah2012}, \cite{Shioyama1999}.
 
-A utilização de vários canais torna a técnica adaptativa uma vez que os pesos (importância) de cada canal varia de acordo com a imagem e por isso a necessidade de usar um conjunto de filtros capaz de descrever um rico conjunto de texturas. A ideia é que cada um dos filtros realce uma parte diferente da imagem e com isso o canal resultante que ressaltar melhor a(s) parte(s) de interesse da imagem ganha um maior peso.
+A utilização de vários canais torna a técnica adaptativa uma vez que os pesos (importância) de cada canal varia de acordo com a imagem e por isso a necessidade de usar um conjunto de filtros capaz de descrever um rico conjunto de texturas. A ideia é que cada um dos filtros realce uma parte diferente da imagem e com isso o canal resultante que ressaltar melhor a(s) parte(s) de interesse da imagem ganha um peso maior.
 
-Os pesos mencionados anteriormente, $\omega_{i},\ \forall\ i = 1,2,\dots,N_{c}$, são calculados usando a equação \ref{eq:pesocanal} com base na probabilidade $P_{i},\ \forall\ i = 1,2,\dots,N_{c} $de um \textit{pixel x} ser erroneamente assinalado à uma região (equação \ref{eq:probpeso}). 
+Os pesos mencionados anteriormente, $\omega_{i},\ \forall\ i = 1,2,\dots,N_{c}$, são calculados usando a equação \ref{eq:pesocanal} com base na probabilidade $P_{i},\ \forall\ i = 1,2,\dots,N_{c}\ $de um \textit{pixel x} ser erroneamente assinalado à uma região (Equação \ref{eq:probpeso}). 
 
 	\begin{equation}
 		\forall\  i = 1,2,3,\ \dots\ ,N_{c}\ :\ \omega_{i} = \frac{(P_{i}^{-1})}{\sum_{k=1}^{N_{c}} (P_{k}^{-1})}
@@ -75,7 +79,7 @@ Os pesos mencionados anteriormente, $\omega_{i},\ \forall\ i = 1,2,\dots,N_{c}$,
  	\end{equation}
 
 
-Dessa forma tem-se um vetor com $N_{c}$ (número total de canais) posições que representa o peso que cada canal terá na hora de calcular a probabilidade, $P^{i} _{1|2}(x),\ \forall\ i = 1,2,\dots,N_{c}$, de um pixel pertencer a uma determinada região, segundo a equação \ref{eq:probpixel}. A probabilidade final de um \textit{pixel} pertencer a uma região é dada pela soma dos valores de $P^{i} _{1|2}(x)$ ponderados por $\omega_{i}$ (equação \ref{eq:probpixeltotal}), privilegiando o canal com maior peso, ou seja, os valores da FDP dos \textit{pixels} dos canais com maiores peso é que irão de fato definir a qual região pertence o \textit{pixel} em questão.
+Dessa forma tem-se um vetor com $N_{c}$ (número total de canais) posições que representa o peso que cada canal terá na hora de calcular a probabilidade, $P^{i} _{1|2}(x),\ \forall\ i = 1,2,\dots,N_{c}$, de um \textit{pixel} pertencer a uma determinada região, segundo a Equação \ref{eq:probpixel}. A probabilidade final de um \textit{pixel} pertencer a uma região é dada pela soma dos valores de $P^{i} _{1|2}(x)$ ponderados por $\omega_{i}$ (Equação \ref{eq:probpixeltotal}), privilegiando o canal com maior peso, ou seja, os valores da FDP dos \textit{pixels} dos canais com maiores peso é que irão de fato definir a qual região pertence o \textit{pixel} em questão.
 
 	\begin{equation}
  		P^{i} _{1|2}(x) = \frac{p^{i} _{1}(F_{i}(x))}{p^{i} _{1}(F_{i}(x))\ +\ p^{i} _{2}(F_{i}(x))}
@@ -87,7 +91,7 @@ Dessa forma tem-se um vetor com $N_{c}$ (número total de canais) posições que re
  		\label{eq:probpixeltotal}
 	\end{equation}
 	
-Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ regiões ao invés de apenas duas é possível calcular a probabilidade, $P_{a|b}(x)$, de um pixel pertencer a uma dada região $a$ em comparação com outra região $b$, de acordo com a equação \ref{eq:probpixeltotalexpandida}, sendo esta a equação utilizada na implementação.
+Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ regiões ao invés de apenas duas é possível calcular a probabilidade, $P_{a|b}(x)$, de um \textit{pixel} pertencer a uma dada região $a$ em comparação com outra região $b$, de acordo com a Equação \ref{eq:probpixeltotalexpandida}, sendo esta a Equação utilizada na implementação.
 
 	\begin{equation}
 		P_{a|b}(x)\ :=\ P_{r}(x \in l_{a}) = \sum_{i=1}^{N_{c}} \omega^{i}\frac{p^{i} _{a}(F_{i}(x))}{p^{i} _{a}(F_{i}(x))\ +\ p^{i} _{b}(F_{i}(x))}
@@ -95,7 +99,7 @@ Expandindo as equações \ref{eq:probpixel} e \ref{eq:probpixeltotal} para $l$ reg
 	\end{equation}
 
 
-O peso geodésico de um pixel da região $a$, $\Omega_{a},\ \forall\ a=1,2,\dots,N_{l}$, competindo somente com a região $b$ é dado pela equação \ref{eq:pesogeodesico}, generalizando para mais de duas regiões uniformes obtêm-se a equação \ref{eq:pesogeodesicofinal} que calcula o valor de $\Omega_{a},\ \forall\ a=1,2,\dots,N_{l}$, considerando todas as outras regiões de interesse.
+O peso geodésico de um \textit{pixel} da região $a$, $\Omega_{a},\ \forall\ a=1,2,\dots,N_{l}$, competindo somente com a região $b$ é dado pela Equação \ref{eq:pesogeodesico}, generalizando para mais de duas regiões uniformes obtêm-se a Equação \ref{eq:pesogeodesicofinal} que calcula o valor de $\Omega_{a},\ \forall\ a=1,2,\dots,N_{l}$, considerando todas as outras regiões de interesse.
 
 	\begin{subequations}	
 		\begin{equation}
@@ -109,7 +113,7 @@ O peso geodésico de um pixel da região $a$, $\Omega_{a},\ \forall\ a=1,2,\dots,N
 		\end{equation}
 	\end{subequations}
 
- O peso $\Omega$ é utilizado para calcular a menor distância $d(s,t)$ de um \textit{pixel} $s(x_{0},y_{0})$ para um ponto $t(x_{1},y_{1})$ na imagem de acordo com a equação \ref{eq:distgeodesica}, onde $\dot{C}(s,t) = \sqrt[2]{(x_{1}-x_{0})^{2}+(y_{1}-y_{0})^{2}}$, representando o menor caminho entre os pontos. A equação \ref{eq:distpixel} utiliza a equação \ref{eq:distgeodesica} para calcular a menor distância $d_{k}(x)$ de um \textit{pixel} para cada uma das regiões $r_{k}\ \forall\ k = 1,2,\dots,N_{l}$ de interesse levando em consideração apenas os pontos pertencentes a região em análise. Armazenando os resultados em um vetor (ou matriz quando houver sub-regiões), esses valores serão usados para calcular a probabilidade final $P$ de um \textit{pixel} pertencer a uma região, que será detalhada no Capitulo \ref{cap:imp_resultados}.
+ O peso $\Omega$ é utilizado para calcular a distância geodésica $d(s,t)$ de um \textit{pixel} $s(x_{0},y_{0})$ para um \textit{pixel} $t(x_{1},y_{1})$ na imagem de acordo com a Equação \ref{eq:distgeodesica}, onde $\dot{C}(s,t) = \sqrt[2]{(x_{1}-x_{0})^{2}+(y_{1}-y_{0})^{2}}$ representa o menor caminho (distância euclidiana para este caso) entre os pontos. A Equação \ref{eq:distpixel} utiliza a Equação \ref{eq:distgeodesica} para calcular a menor distância geodésica $d_{k}(x)$ de um \textit{pixel} para cada uma das regiões $r_{k}\ \forall\ k = 1,2,\dots,N_{l}$ de interesse levando em consideração apenas os pontos pertencentes a região em análise. Armazenando os resultados em um vetor (ou matriz quando houver sub-regiões), esses valores serão usados para calcular a probabilidade final $P$ de um \textit{pixel} pertencer a uma região, que será detalhada no Capítulo \ref{cap:imp_resultados}.
 
 
 	\begin{equation}
@@ -126,7 +130,7 @@ O peso geodésico de um pixel da região $a$, $\Omega_{a},\ \forall\ a=1,2,\dots,N
 		
 \subsection{Segmentação de regiões não-uniformes}
 \label{sub:seg_regioes_nao_uniformes}
-O algoritmo apresentado até este ponto recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de outras regiões. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela equação \ref{eq:pesogeodesiconaouniforme}. Um exemplo deste tipo de imagem pode ser visto na Figura \ref{fig:objeto1_imagem_nao_informe}.
+O algoritmo apresentado até este ponto recebe como entrada imagens com regiões distintas e uniformes, porém pode também ser expandido para trabalhar com imagens que possuam regiões não-uniformes. A mudança acontece apenas no cálculo dos pesos geodésicos $\Omega$. As regiões da imagem são divididas em sub-regiões de tal forma que cada sub-região compete apenas com sub-regiões de outras regiões. Definindo $l_{k}^{s}$ como a componente (sub-região) $s$ da região $k$ pode-se definir o peso $\Omega_{k}^{s}$ pela Equação \ref{eq:pesogeodesiconaouniforme}. Um exemplo deste tipo de imagem pode ser visto na Figura \ref{fig:objeto1_imagem_nao_informe}.
 
 	\begin{equation}
 		\Omega_{k}^{s} = \sum_{k \neq r}  \sum_{l} \Omega_{l_{k}^{s}|l_{r}^{l}} 
@@ -135,9 +139,9 @@ O algoritmo apresentado até este ponto recebe como entrada imagens com regiões d
 
 \section{Metodologia}
 \label{sec:metodologia}
-A técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas e não-uniformes, entretanto o tempo de execução do algoritmo é alto uma vez que é necessário calcular a distância de cada \textit{pixel} da imagem para cada um dos \textit{pixels} marcados afim de descobrir a menor distância e de acordo com o algoritmo descrito fazer a classificação dos pontos da imagem.
+A técnica escolhida é bastante robusta sendo capaz de segmentar objetos em imagens complexas e não-uniformes, entretanto o tempo de execução do algoritmo é alto uma vez que é necessário calcular a distância de cada \textit{pixel} da imagem para cada um dos \textit{pixels} marcados a fim de descobrir a menor distância e de acordo com o algoritmo descrito fazer a classificação dos pontos da imagem.
 
-Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo, o gráfico da Figura \ref{fig:histograma_tempo} mostra o histograma da relação $ \frac{T_{distancia}}{T_{total}} $ para as 24 imagens utilizadas, é possível perceber que em todas as imagens o tempo gasto apenas no cálculo da distância representa pelo menos $96\%$ do tempo total de execução do algoritmo. A partir disto foi decidido o foco do trabalho, reduzir $ T_{distanncia} $.
+Após análise detalhada dos passos da técnica implementada percebeu-se que o tempo gasto para calcular todas as distâncias para todos os \textit{pixels} representava boa parte do tempo total de execução do algoritmo, o gráfico da Figura \ref{fig:histograma_tempo} mostra o histograma da relação $ \frac{T_{distancia}}{T_{total}} $ para as 24 imagens utilizadas. É possível perceber que em todas as imagens o tempo gasto apenas no cálculo da distância representa pelo menos $96\%$ do tempo total de execução do algoritmo. A partir disto foi decidido o foco do trabalho.
 
 	\begin{figure}[!h]
 		\centering
@@ -148,44 +152,53 @@ Após análise detalhada dos passos da técnica implementada percebeu-se que o temp
 
  
 
-A solução proposta é reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações, em outras palavras, a re-amostragem tem que ser uniforme para que não haja as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irão detalhar as modificações realizadas e como a avaliação será feita.
+A solução proposta é reduzir o número de \textit{pixels} marcados, ou seja, fazer uma re-amostragem desses \textit{pixels} seguindo o princípio da técnica de utilizar a heurística provida pelo usuário nas marcações. Em outras palavras, a re-amostragem tem que ser uniforme para que as informações de cor e textura inicialmente selecionadas sejam preservadas. As seções seguintes irão detalhar as modificações realizadas e como a avaliação será feita.
 
 \subsection{Modificações realizadas}
 \label{sub:modificaoes}
 
 A implementação da técnica será mostrada com mais detalhes no Capítulo \ref{cap:imp_resultados}, porém para melhor compreensão da modificação alguns passos serão descritos nesta seção. O mais importante neste caso é que os \textit{pixels} marcados são armazenados em uma matriz, chamada de matriz posição, que guarda tanto o valor quanto a posição dos \textit{pixels} escolhidos.
 
-A função \textit{reamostragem.m} é responsável por esse passo, recebendo como entrada uma matriz contendo a sub-região a ser re-amostrada e a taxa de re-amostragem, e retorna a matriz re-amostrada de acordo com a taxa escolhida, mais detalhes sobre essa função serão apresentados no Capítulo \ref{cap:imp_resultados}. Essa nova matriz é então utilizada pelo algoritmo para calcular as probabilidades e posteriormente fazer a classificação dos \textit{pixels}.
+A função \textit{reamostragem.m} é responsável por esse passo, recebendo como entrada uma matriz contendo a sub-região a ser re-amostrada e a taxa de re-amostragem, e retorna a matriz re-amostrada de acordo com a taxa escolhida. Essa nova matriz é então utilizada pelo algoritmo para calcular as probabilidades e posteriormente fazer a classificação dos \textit{pixels}.
 
-O parâmetro modificado para análise do tempo é a taxa de re-amostragem, o valores escolhidos foram: $100\ \%$, $50\ \%$, $10\ \%$ e $1\ \%$ dos \textit{pixels} originalmente marcados. Os valores foram escolhidos para que seja possível analisar se a redução dos conjunto de \textit{pixels} marcados está diretamente ligada ao tempo de execução do algoritmo, por exemplo, se o conjunto $\Omega$ for reduzido pela metade acarretaria na redução pela metade no tempo total. Os número $10$ e $1$ foram escolhidos por representarem extremos, ou seja, verificar o impacto da eliminação de quase todos os \textit{pixes} de $\Omega$ no resultado final e determinar um \textit{trade-off} sobre o ganho de tempo em relação à taxa de re-amostragem desses pontos.
+O parâmetro modificado para análise do tempo é a taxa de re-amostragem, o valores escolhidos foram: $100\ \%$, $50\ \%$, $10\ \%$ e $1\ \%$ dos \textit{pixels} originalmente marcados. Os valores foram escolhidos para que seja possível analisar se a redução dos conjunto de \textit{pixels} marcados está diretamente ligada ao tempo de execução do algoritmo, por exemplo, se o conjunto $\Omega$ for reduzido pela metade acarretaria na redução pela metade no tempo total. Os número $10$ e $1$ foram escolhidos por representarem extremos, ou seja, verificar o impacto da eliminação de quase todos os \textit{pixes} de $\Omega$ no resultado final e determinar um \textit{trade-off} sobre o ganho de tempo em relação à taxa de re-amostragem desses pontos. 
 
-A performance das modificações realizadas também foi medida em termos de tempo relativo, ou seja, qual foi a melhoria em relação ao tempo de execução utilizando todos os \textit{pixels} marcados (\textit{Full Set}), este tempo relativo $T_{r}$ é calculado usando a equação \ref{eq:tempo_relativo}.
+A Figura \ref{fig:imagem2_reamostrada} mostra um exemplo de re-amostragem com as taxas acima citadas, nesta figura é possível perceber nas Figuras \ref{fig:imagem2_reamostrada_50} e \ref{fig:imagem2_reamostrada_10} que as taxas de $50\ \%$ e $10\ \%$ não apresentam descontinuidade na marcação, enquanto que na Figura \ref{fig:imagem2_reamostrada_1} é possível perceber algumas descontinuidades na marcação, o que irá resultar em erros de classificação.
+
+A performance das modificações realizadas também foi medida em termos de tempo relativo, ou seja, qual foi a melhoria em relação ao tempo de execução utilizando todos os \textit{pixels} marcados (\textit{Full Set}). O tempo relativo $T_{r}$ é calculado usando a Equação \ref{eq:tempo_relativo}.
 
 	\begin{equation}
 		T_{r}^{i} = 100 - \bigg( 100\frac{T_{total}^{i}}{T_{total}^{Full Set}}\ \bigg) ,\ onde\ i = 1, 10, 50. 
 		\label{eq:tempo_relativo}
 	\end{equation}
 
+\begin{figure}[H]
+		\centering
+		\subfloat[Sem re-amostragem.]{
+		\includegraphics[scale=0.42]{./figuras/pixels_marcados_imagem2_100.eps}
+		\label{fig:imagem2_reamostrada_100}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Re-amostragem a $50\%$.]{
+		\includegraphics[scale=0.42]{./figuras/pixels_marcados_imagem2_50.eps}
+		\label{fig:imagem2_reamostrada_50}}
+		\quad	
+		\subfloat[Re-amostragem a $10\%$.]{
+		\includegraphics[scale=0.42]{./figuras/pixels_marcados_imagem2_10.eps}
+		\label{fig:imagem2_reamostrada_10}}
+		\hspace*{0.1cm}
+		\vspace*{0.1cm}
+		\subfloat[Re-amostragem a $1\%$.]{
+		\includegraphics[scale=0.42]{./figuras/pixels_marcados_imagem2_1.eps}
+		\label{fig:imagem2_reamostrada_1}}
+		\caption{Exemplo de re-amostragem com taxas de $50\ \%$, $10\ \%$ e $1\ \%$.}
+		\label{fig:imagem2_reamostrada}
+	\end{figure}
+
+
 \subsection{Parâmetros avaliados}
 \label{sub:parametros}
-Para avaliar o resultado das diferentes taxas de re-amostragem foram utilizados dois parâmetros principais: tempo e o erro na classificação dos \textit{pixels}, sendo que para avaliar o último foi considerado a imagem resultado sem re-amostragem como ponto de referência e a comparação é feita subtraindo as outras imagens resultado dessa imagem referência. Para análise do tempo foram utilizadas duas funções do $MatLab$, \textit{tic/toc} e \textit{etime} para garantir que a conformidade do tempo medido. Esta avaliação de tempo ocorre de duas formas diferentes, primeiramente a função \textit{tic/toc} é utilizada para medir o tempo de execução de cada passo do algoritmo, que foi divido em oito etapas listadas abaixo. Enquanto que a função \textit{etime} foi usada para medir o tempo de execução total da função \textit{segmenta.m}, que será detalhada no Capítulo \ref{cap:imp_resultados}.
-
-		Etapas do algoritmos
-		\begin{enumerate}
-			\item Posição dos \textit{pixels} marcados
-			\item Cálculo dos Canais
-			\item Pesos dos canais
-			\item Pesos da distância geodésica
-			\item Re-amostragem
-			\item Tempo total de segmentação
-			\item Cálculo das distâncias
-			\item Cálculo das probabilidades
-		\end{enumerate}
-
-
-
-
-
+Para avaliar o resultado das diferentes taxas de re-amostragem foram utilizados dois parâmetros principais: tempo e o erro na classificação dos \textit{pixels}, sendo que para avaliar o último foi considerado a imagem resultado sem re-amostragem como ponto de referência e a comparação é feita subtraindo as outras imagens resultado dessa imagem referência. Para análise do tempo foram utilizadas duas funções do $MatLab$, \textit{tic/toc} e \textit{etime} para garantir que a conformidade do tempo medido. Esta avaliação de tempo ocorre de duas formas diferentes, primeiramente a função \textit{tic/toc} é utilizada para medir o tempo de execução de cada passo do algoritmo, que foi divido em oito etapas listadas abaixo. Enquanto que a função \textit{etime} foi usada para medir o tempo de execução total da função \textit{segmenta.m}.
 
 	
 	

@@ -73,7 +73,7 @@
 
 \usepackage{epstopdf}
 \usepackage{subfig}
-
+\usepackage{float}
 \usepackage{newclude}
 \usepackage{multirow}
 \usepackage{standalone}
@@ -241,7 +241,7 @@
 % (na classe article, sera secao, subsecao e subsubsecao)
 % serao enumeradas.
 % Padrao eh 3
-% \setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{3}
 
 % Nivel de divisão do documento que será referenciado no sumário.
 % nivel dois significa que somente dois primieros 
@@ -251,7 +251,7 @@
 % (na classe article, sera secao, subsecao e subsubsecao)
 % serao colocadas no sumário.
 % Padrao eh 3
-% \setcounter{tocdepth}{2}
+\setcounter{tocdepth}{4}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Enumeração da equação é subordinado ao cap\'{\i}tulo
@@ -300,7 +300,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % titulo (capa e contra-capa)
 % \titulo
-\titulo{Estudo da redução do tempo de execução de uma técnica semiautomática de segmentação de imagens.}
+\titulo{Redução do tempo de execução em técnica de segmentação de imagens por re-amostragem dos pontos de referência}
 % \title{T\'{\i}tulo da Monografia}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -317,7 +317,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Data (capa e contraa-capa)
 % comando em Ingles (comando original do LaTeX)
-\date{\today} % \today e data de compilacao
+\date{27 de Novembro de 2015} % \today e data de compilacao
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % orientador(es) (capa e contra-capa)
@@ -416,7 +416,7 @@
 % sumário, lista de figuras e lista de tabelas.
 \tableofcontents % sumário
 \listoffigures % lista de figuras
-\listoftables % lista de tabelas
+%\listoftables % lista de tabelas
 
 %\chapter{Prefácio}
 % Escreva a introdução do trabalho aqui.

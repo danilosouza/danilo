@@ -13,15 +13,20 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Caso onde ocorre a dilata\c c\~ao}}}{13}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Resultado final de s$A \ominus B$}}}{13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo de marca\c c\~ao de uma figura complexa. A Figura \ref {fig:fundo_imagem_nao_informe} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:objeto1_imagem_nao_informe} mostra um dos objetos de interesse e a Figura \ref {fig:objeto2_imagem_nao_informe} mostra o outro objeto de interesse.\relax }}{19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem}}}{19}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Objeto 1}}}{19}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Objeto 2}}}{19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo de marca\c c\~ao de uma figura complexa. A Figura \ref {fig:fundo_imagem_nao_informe} mostra a marca\c c\~ao do fundo da imagem, a Figura \ref {fig:objeto1_imagem_nao_informe} mostra um dos objetos de interesse e a Figura \ref {fig:objeto2_imagem_nao_informe} mostra o outro objeto de interesse.\relax }}{20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Fundo da Imagem}}}{20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Objeto 1}}}{20}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Objeto 2}}}{20}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces FDP's de uma imagem com duas regi\~oes estimadas a partir dos \textit {pixels} marcados.\relax }}{21}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Histograma da rela\c c\~ao $ \frac {T_{distancia}}{T_{total}} $, para as 24 imagens de sa\IeC {\'\i }da\relax }}{24}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Histograma da rela\c c\~ao $ \frac {T_{distancia}}{T_{total}} $, para as 24 imagens de sa\IeC {\'\i }da\relax }}{25}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Exemplo de re-amostragem com taxas de $50\ \%$, $10\ \%$ e $1\ \%$.\relax }}{26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sem re-amostragem.}}}{26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Re-amostragem a $50\%$.}}}{26}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Re-amostragem a $10\%$.}}}{26}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Re-amostragem a $1\%$.}}}{26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Hierarquia das fun\c c\~oes criadas.\relax }}{28}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Fluxo do algoritmo.\relax }}{29}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Hierarquia das fun\c c\~oes criadas.\relax }}{29}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Fluxo do algoritmo.\relax }}{30}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Imagens utilizadas. A Figura \ref {fig:imagem1} mostra Imagem 1, a Figura \ref {fig:imagem2} mostra a Imagem 2, a Figura \ref {fig:imagem3} mostra a Imagem 3, a Figura \ref {fig:imagem4} mostra a Imagem 4, a Figura \ref {fig:imagem5} mostra a Imagem 5 e a Figura \ref {fig:imagem6} mostra a Imagem 6.\relax }}{32}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagem 1}}}{32}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagem 2}}}{32}

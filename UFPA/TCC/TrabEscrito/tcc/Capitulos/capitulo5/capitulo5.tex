@@ -3,12 +3,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
  
-\chapter{Considerações finais e Trabalhos futuros}
+\chapter{Considerações finais e trabalhos futuros}
 \label{cap:cons_finais_trab_futuros}
 
-Os resultados pontuados na seção \ref{sec:resultados} mostram que as modificações realizadas apresentaram resultados positivos e as segmentações obtidas (exceto as com taxa de re-amostragem de $1\%$) são visualmente satisfatórias, no sentido de que os erros são quase imperceptíveis ao olho humano. Entretanto para que se chegue à uma conclusão mais precisa, é necessário fazer uma avaliação com mais tipos de imagens (i.e, imagens com diversos cenários, com mais objetos de interesse e imagens de tamanhos mais variados) e em quantidade maior para que se possa ter um bom nível de confiança.
+As modificações realizadas apresentaram resultados positivos e as segmentações obtidas (exceto as com taxa de re-amostragem de $1\%$) são visualmente satisfatórias, no sentido que as diferenças em relação à situação em que não há re-amostragem são quase imperceptíveis ao olho humano.
 
-Este trabalho mostrou que é possível reduzir  o tempo de execução do algoritmo e mostrou também que o caminho para isso está em otimizar o cálculo da distância (conforme o gráfico da Figura \ref{fig:histograma_tempo}) dos pontos da imagem para os pontos das regiões marcadas, ou seja, encontrar formas de reduzir o número de cálculos realizados para encontrar a menor distância entre um \textit{pixel} e as regiões marcadas. De acordo com Sapiro et. al. \cite{Protiere2007}, o algoritmo usado para o cálculo da distância possui complexidade \textit{O(n)} (linear), isto é, o número de operações é diretamente proporcional ao número de \textit{pixels} na entrada, dessa forma não é possível tornar o algoritmo mais eficiente. Isso volta o foco para o que foi mencionado anteriormente, reduzir o tempo de execução através de formas mais rápidas de encontrar a menor distância.
+Os gráficos das Figuras \ref{fig:grafico_erro_classificacao}, \ref{fig:grafico_tempo_absoluto} e \ref{fig:grafico_tempo_relativo} comprovam que a redução de tempo proposta implicou em um erro de classificação menor que $1\%$ para taxas de re-amostragem de $50\%$ e $10\%$, entretanto para que se chegue a uma conclusão mais precisa, é necessário fazer uma avaliação com imagens mais complexas, de tamanhos mais variados e em quantidade maior para alcançar um bom nível de confiança. Utilizando também outras taxas no intervalo de $10\%$ a $50\%$, que foram as taxas que apresentaram melhor custo benefício entre redução de tempo e erro de classificação, em conjunto com técnicas não-uniformes de re-amostragem.
+
+Este trabalho mostrou que é possível reduzir o tempo de execução do algoritmo, mostrando também que um possível caminho para isso está em otimizar o cálculo da distância (conforme o gráfico da Figura \ref{fig:histograma_tempo}) dos pontos da imagem para os pontos das regiões marcadas, em outras palavras, encontrar formas de reduzir o número de cálculos realizados para encontrar a menor distância entre um \textit{pixel} e as regiões marcadas. 
+
+De acordo com Sapiro et. al. \cite{Protiere2007}, o algoritmo usado para etapa do cálculo da distância possui complexidade \textit{O(n)}, isto é, o número de operações é diretamente proporcional ao número de \textit{pixels} na entrada. Tendo em vista que esta é a etapa mais demorada, é válido concentrar os esforços futuros em encontrar alternativas para reduzir o tempo do cálculo da distância a fim de melhorar o desempenho geral do algoritmo.
+
 
 
 %

@@ -40,8 +40,10 @@
 %diretÃ³rio das figuras
 \graphicspath{./figuras}
 
-\title[Extreme Chock]{%
-\textcolor{red}{TITULO A DEFINIR}%
+\title[Redução de tempo]{%
+Redução do tempo de execução em técnica de
+segmentação de imagens, por re-amostragem dos
+pontos de referência.%
 }
 
 \author[Souza]{
@@ -56,7 +58,7 @@
   Orientador: Professor Ronaldo de Freitas Zampolo
   }
 \date[Belém 2015]{
-  25 de novembro de 2015
+  27 de novembro de 2015
   }
 
 \begin{document}
@@ -127,7 +129,7 @@
 
 \begin{frame}{Segmentação de Imagens - Definição}
 
-	\begin{variableblock}{Definição (Gonzales et. al)}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
+	\begin{variableblock}{Definição (Gonzáles et. al)}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
   		Consiste em dividir uma imagem em sub-imagens formadas pelos objetos/regiões da imagem original. A divisão não deve ser realizada além do necessário para detectar os objetos e/ou regiões relevantes para a aplicação.
 	\end{variableblock}	
 
@@ -205,7 +207,7 @@
 		\label{fig:fluxo_codigo}
 	\end{figure}
 
-	\begin{variableblock}{Definição (Gonzales et. al)}{bg=red!15,fg=black}{bg=red!70,fg=white}
+	\begin{variableblock}{Desvantagem}{bg=red!15,fg=black}{bg=red!70,fg=white}
   		Não funciona bem para regiões não-uniformes.
 	\end{variableblock}	
 
@@ -293,25 +295,6 @@
 
 \end{frame}
 
-\begin{frame}{O algoritmo}
-\begin{multicols}{2}
-	\begin{enumerate}
-		\item Marcar as regiões de interesse.
-		\item Guardar valores e posição destes pontos e calcular as FDP's de cada região.
-		\item Calcular os canais.
-		\item Repetir o passo 2 para cada canal.
-		\item Calcular o peso de cada canal (adaptativo).
-		\item Calcular o peso da distância Geodésica.
-		\item Se $T_{re-amostragem} < 1$, então 8. Se $T_{re-amostragem} = 1$, então 9.  
-		\item Re-amostrar os \textit{pixels} das regiões de interesse.
-		\item Calcular a menor distância de cada \textit{pixel} para todas as sub-regiões.
-		\item Calcular a probabilidade de cada \textit{pixel} para todas as sub-regiões.
-	\end{enumerate}
-\end{multicols}
-\end{frame}
-
-
-
 \section{Metodologia utilizada}
 
 
@@ -387,26 +370,6 @@
 
 \section{Resultados}
 
-\begin{frame}{Resultados de tempo}
-
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf}
-		\caption{Resultados de tempo relativo.}
-		\label{fig:tempo_relativo}
-	\end{figure}
-\end{frame}
-
-\begin{frame}{Resultados de erro}
-
-	\begin{figure}[!h]
-		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf}
-		\caption{Erro de classificação relativo.}
-		\label{fig:grafico_erro_classificacao}
-	\end{figure}
-
-\end{frame}
-
 \begin{frame}{Imagens escolhidas}
 
 	\begin{figure}[!h]
@@ -442,6 +405,29 @@
 	\end{figure}
 
 \end{frame}
+
+
+\begin{frame}{Resultados de tempo}
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_reducao_tempo_relativo-eps-converted-to.pdf}
+		\caption{Resultados de tempo relativo.}
+		\label{fig:tempo_relativo}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Resultados de erro}
+
+	\begin{figure}[!h]
+		\includegraphics[scale=0.55]{./figuras/capitulo_4/grafico_erro_classificacao-eps-converted-to.pdf}
+		\caption{Erro de classificação relativo.}
+		\label{fig:grafico_erro_classificacao}
+	\end{figure}
+
+\end{frame}
+
+
 
 \begin{frame}{Imagens resultantes (Imagem 1 - marcações)}
 
@@ -742,7 +728,7 @@
 	\end{variableblock}	
 
 	\begin{variableblock}{Avaliações futuras}{bg=blue!15,fg=black}{bg=blue!70,fg=white}
-  		É necessária uma análise com mais imagens (qualitativo e quantitativo).
+  		É necessária uma análise com mais imagens (qualitativo e quantitativo) e também o impacto da quantidade de \textit{pixels} nas marcações.
 	\end{variableblock}	
 
 
