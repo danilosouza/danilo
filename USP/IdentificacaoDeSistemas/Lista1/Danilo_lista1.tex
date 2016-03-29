@@ -3,13 +3,19 @@
 
 \title{Solução da Lista 1 de Identificação de Sistemas}
 \author{Danilo Henrique Costa Souza}
-\date{04 de Abril de 2016}
+\date{11 de Abril de 2016}
 
 \usepackage{natbib}
 \usepackage{graphicx}
-\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
 \usepackage{float}
+%\usepackage{subfigure}
+\usepackage{subfig}
 \begin{document}
+
+
+\renewcommand{\figurename}{Figura}
+\renewcommand{\chaptername}{Capítulo}
 
 \maketitle
 
@@ -47,14 +53,14 @@ As Figuras \ref{fig:item_b_continuo} e \ref{fig:item_b_discreto} mostram, respec
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.4]{./grafico_lista1_questao2_continuo.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
+		\caption{Saída do sistema contínuo com ruído}
 		\label{fig:item_b_continuo}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.4]{./grafico_lista1_questao2_discreto.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
+		\caption{Saída do sistema discreto com ruído}
 		\label{fig:item_b_discreto}
 	\end{figure}
 
@@ -75,7 +81,7 @@ A perturbação com variância alta aumentou a amplitude do ruído em 10 vezes em re
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.45]{./grafico_lista1_questao3_pert_baixa.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
+		\caption{Perturbações de baixa intensidade}
 		\label{fig:item_c_baixa}
 	\end{figure}
 	
@@ -83,7 +89,7 @@ A perturbação com variância alta aumentou a amplitude do ruído em 10 vezes em re
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.45]{./grafico_lista1_questao3_pert_alta.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
+		\caption{Perturbações de alta intensidade}
 		\label{fig:item_c_alta}
 	\end{figure}
 
@@ -98,35 +104,40 @@ As funções de transferência discretizadas com os filtros de $1^{a}$ e $2^{a}$ or
 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.5]{./imagem_lista1_questa03_ordem1.png}
-		\caption{$H(z)$ com filtro de $1^{a} ordem$}
-		\label{fig:item_c_discreta_ordem_1}
+%		\begin{subfigure}[ht][0.5\textwidth]
+			\centering
+			\subfloat[$H(z)$ com filtro de $1^{a} ordem$]{{ \includegraphics[scale=0.9]{./imagem_lista1_questa03_ordem1.png} }\label{fig:item_c_discreta_ordem_1}}
+			%\includegraphics[scale=0.5]{./imagem_lista1_questa03_ordem1.png}
+			%\caption{$H(z)$ com filtro de $1^{a} ordem$}
+			%\label{fig:item_c_discreta_ordem_1}
+%		\end{figure}
+%		\begin{subfigure}[ht][0.5\textwidth]
+			\qquad
+			\subfloat[$H(z)$ com filtro de $2^{a} ordem$]{{ \includegraphics[scale=0.9]{./imagem_lista1_questa03_ordem2.png} }\label{fig:item_c_discreta_ordem_2}}			
+			%\centering
+			%\includegraphics[scale=0.5]{./imagem_lista1_questa03_ordem2.png}
+			\caption{$H(z)$ com filtro de $2^{a} ordem$}
+			\label{fig:item_c_discreta_ordem}%\label{fig:item_c_discreta_ordem_2}
+%		\end{figure}
 	\end{figure}
-
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[scale=0.5]{./imagem_lista1_questa03_ordem2.png}
-		\caption{$H(z)$ com filtro de $2^{a} ordem$}
-		\label{fig:item_c_discreta_ordem_2}
-	\end{figure}
-
+	
 \chapter{Item d}
 
 Para o ruído de baixa intensidade ($\lambda^{2} = 0.001$) as perturbações filtradas não alteram significativamente a saída do processo, enquanto que a perturbação direta possui um efeito maior na saída do processo, sem comprometer no entanto, a sua forma, ou seja, ainda é possível determinar o comportamento do sistema, como mostrado na Figura \ref{fig:item_d_baixa}.
 
-Para o ruído de alta intensidade ($\lambda^{2} = 0.1$) as perturbações filtradas alteram a saída do processo mas sem alterar o seu comportamento, enquanto que a perturbação direta nessa caso afeta significativamente a saída do processo, conforme mostrado na Figura \ref{fig:item_d_alta}. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_c}.
+Para o ruído de alta intensidade ($\lambda^{2} = 0.1$) as perturbações filtradas alteram a saída do processo mas sem alterar o seu comportamento, enquanto que a perturbação direta nesse caso é a que mais afeta a saída do processo, conforme mostrado na Figura \ref{fig:item_d_alta}. Com base nestes dados é possível perceber que ambos os filtros empregados na perturbação reduzem drasticamente seu efeito na saída do sistema, mesmo para altas perturbações. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_d}.
 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.45]{./grafico_lista1_questao4_pert_baixa.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
+		\includegraphics[scale=0.5]{./grafico_lista1_questao4_pert_baixa.png}
+		\caption{Comparação entre o sistema sem perturbação com as 3 perturbações de baixa intensidade}
 		\label{fig:item_d_baixa}
 	\end{figure}
 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.45]{./grafico_lista1_questao4_pert_alta.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
+		\includegraphics[scale=0.5]{./grafico_lista1_questao4_pert_alta.png}
+		\caption{Comparação entre o sistema sem perturbação com as 3 perturbações de baixa intensidade}
 		\label{fig:item_d_alta}
 	\end{figure}
 
@@ -139,14 +150,27 @@ Para o ruído de alta intensidade ($\lambda^{2} = 0.1$) as perturbações filtradas
 
 \chapter{Item e}
 
-A Figura \ref{fig:item_e} mostra que as duas perturbações simultâneas afetam significativamente a saída do processo, dificultando assim, sua identificação.
+As Figuras \ref{fig:item_e_baixa} e \ref{fig:item_e_alta} mostram, respectivamente, a saída $y(t)$, afetada por perturbações de baixa e alta intensidade, usando sementes diferentes para criação dos ruídos de tal forma que eles não são correlacionados. Nota-se que em nas duas intensidades de perturbação a saída do sistema não sofreu um desvio muito significativo de seu curso natural (saída sem perturbação). O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_e}.
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao5_pert_baixa.png}
+		\caption{Saída do processo para perturbações de baixa intensidade simultâneas}
+		\label{fig:item_e_baixa}
+	\end{figure}
 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.45]{./grafico_lista1_questao5.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
-		\label{fig:item_e}
+		\includegraphics[scale=0.45]{./grafico_lista1_questao5_pert_alta.png}
+		\caption{Saída do processo para perturbações de alta intensidade simultâneas}
+		\label{fig:item_e_alta}
 	\end{figure}
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.8]{./modelo_lista1_questao5.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item e}
+		\label{fig:modelo_item_e}
+	\end{figure}	
 
 %\bibliographystyle{plain}
 %\bibliography{references}
