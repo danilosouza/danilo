@@ -5,6 +5,17 @@ G_pert_2 = tf(2, [50 15 1]);
 G_pert_2_discreta = c2d(G_pert_2,1);
 G_pert_1 = tf(1, [5 1]);
 G_pert_1_discreta = c2d(G_pert_1,1);
+%sim('lista1_questao1')
+    
+% % % % ------------- Item b-------------- %
+%sim('lista1_questao2')
+
+% % % % ------------- Item c-------------- %
+%sim('lista1_questao3')
+
+% % % % ------------- Item c-------------- %
+%sim('lista1_questao3')
+
 % % % % ------------- Item d-------------- %
 % sim('lista1_questao4')
 % subplot(2,2,1);plot(y_continuo_sem_perturbacao,'k');hold;plot(y_continuo_com_perturbacao_direta_alta,'k:');
@@ -92,18 +103,79 @@ G_pert_1_discreta = c2d(G_pert_1,1);
 % legend('Resposta ao impulso do processo livre de perturbação','Resposta ao impulso do processo com baixa perturbação','Resposta ao impulso do processo com alta perturbação'); grid minor;
 
 % %------------- Item h-------------- %
-T = 1; % Tempo de amostragem
+% T = 1; % Tempo de amostragem
+% sim('lista1_questao7')
+% sim('lista1_questao8')
+% t = 0:length(degrau_entrada)-1;
+% t_conv = 1:length(y_pulso)+length(y_degrau)-1;
+% y_conv = conv(y_pulso*T,degrau_entrada);
+% y_conv = y_conv(1:length(t));
+% y_conv_baixa = conv(y_pulso_baixa*T,degrau_entrada);
+% y_conv_baixa = y_conv_baixa(1:length(t));
+% y_conv_alta = conv(y_pulso_alta*T,degrau_entrada);
+% y_conv_alta = y_conv_alta(1:length(t));
+% plot(t,y_conv,'k',t,y_conv_baixa,'k:',t,y_conv_alta,'k--'); grid minor;
+% legend('Convolução com o pulso sem perturbação','Convolução com o pulso de baixa perturbação','Convolução com o pulso de alta perturbação');
+% figure;
+% plot(t,y_degrau,'k',t,y_conv,'k:'); grid minor;
+% legend('Resposta ao degrau do processo sem perturbação', 'Resposta da convolução do degrau com a resposta ao pulso sem perturbação')
+% %------------- Item i-------------- %
+t_ruido = 0:1000;
+T = 1;
 sim('lista1_questao7')
 sim('lista1_questao8')
+sim('lista1_questao9')
+M = 0:92;
 t = 0:length(degrau_entrada)-1;
-y_conv = conv(y_pulso*T,y_degrau);
-y_conv_baixa = conv(y_pulso_baixa*T,y_degrau);
-y_conv_alta = conv(y_pulso_alta*T,y_degrau);
-plot(t,y_pulso_baixa,'k',t,y_pulso_alta,'k:'); grid minor;
-legend('Resposta ao degrau com baixa perturbação','Resposta ao degrau com altaperturbação');
+ir = cra([y_ruido ruido_entrada],length(M)-1,0,0);
+ir_baixa = cra([y_ruido_baixa ruido_entrada],length(M)-1,0,0);
+ir_alta = cra([y_ruido_alta ruido_entrada],length(M)-1,0,0);
+% Aplicando a fórmula da equação (7.12)
+N = length(ruido_entrada);
+var_entrada = var(ruido_entrada);
+g_k = zeros(1,length(M));
+g_k_baixa = zeros(1,length(M));
+g_k_alta = zeros(1,length(M));
+corr_cruzada_yu = zeros(1,length(M));
+corr_cruzada_yu_baixa = zeros(1,length(M));
+corr_cruzada_yu_alta = zeros(1,length(M));
+for k = 1:length(M)
+    g_k(k) = 0;
+    g_k_baixa(k) = 0;
+    g_k_alta(k) = 0;
+    for t1 = 1:N-k
+        g_k(k) = g_k(k) + y_ruido(t1+k-1)*ruido_entrada(t1);
+        g_k_baixa(k) = g_k_baixa(k) + y_ruido_baixa(t1+k-1)*ruido_entrada(t1);
+        g_k_alta(k) = g_k_alta(k) + y_ruido_alta(t1+k-1)*ruido_entrada(t1);
+    end
+    corr_cruzada_yu(k) = g_k(k)/(N-k);
+    corr_cruzada_yu_baixa(k) = g_k_baixa(k)/(N-k);
+    corr_cruzada_yu_alta(k) = g_k_alta(k)/(N-k);
+end
+g_t = corr_cruzada_yu/(var_entrada*T);
+g_t_baixa = corr_cruzada_yu_baixa/(var_entrada*T);
+g_t_alta = corr_cruzada_yu_alta/(var_entrada*T);
 figure;
-plot(t,y_degrau_baixa,'k',t,y_degrau_alta,'k:'); grid minor;
-legend('Resposta ao degrau com baixa perturbação','Resposta ao degrau com altaperturbação');
+plot(t,ir,'k',t,y_pulso,'k:');grid minor; 
+legend('Resposta impulsiva (N = 1000) sem perturbação','Resposta impulsiva do item "g" sem perturbação ')
 figure;
-plot(t,y_conv,'k',t,y_conv_baixa,'k:',y_conv_alta,'k--'); grid minor;
-legend('Convolução com o pulso sem perturbação','Convolução com o pulso de baixa perturbação','Convolução com o pulso de alta perturbação');
+plot(t,ir_baixa,'k',t,y_pulso_baixa,'k:');grid minor; 
+legend('Resposta impulsiva com baixa perturbação (N = 1000)','Resposta impulsiva do item "g" com baixa perturbação  ')
+figure;
+plot(t,ir_alta,'k',t,y_pulso_alta,'k:');grid minor; 
+legend('Resposta impulsiva com alta perturbação (N = 1000)','Resposta impulsiva do item "g" com alta perturbação  ')
+
+% %------------- Item j-------------- %
+%Encontrando a saída do processao através da convolução das respostas ao
+% impulso encontrados via análise de correlação com o degrau
+convolucao = conv(ir,degrau_entrada);
+convolucao_baixa = conv(ir_baixa,degrau_entrada);
+convolucao_alta = conv(ir_alta,degrau_entrada);
+plot(t,convolucao,'k',t,y_conv,'k:'); grid minor;
+legend('Convolução do degrau com pulso via análise de correlação (N=1000)', 'Convolução do degrau com a resposta ao pulso sem perturbação')
+figure;
+plot(t,convolucao,'k',t,y_conv,'k:'); grid minor;
+legend('Convolução do degrau com pulso via análise de correlação (N=1000) e baixa perturbação', 'Convolução do degrau com a resposta ao pulso com baixa perturbação')
+figure;
+plot(t,convolucao,'k',t,y_conv,'k:'); grid minor;
+legend('Convolução do degrau com pulso via análise de correlação (N=1000)', 'Convolução do degrau com a resposta ao pulso com alta perturbação')

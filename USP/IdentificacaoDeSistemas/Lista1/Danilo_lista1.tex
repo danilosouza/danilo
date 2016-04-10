@@ -1,25 +1,31 @@
-\documentclass{report}
+\documentclass{article}
 \usepackage[latin1]{inputenc}
 
-\title{Solução da Lista 1 de Identificação de Sistemas}
+\title{Universidade de São Paulo\\
+	Escola Politécnica da USP \\
+	Programa de Pós-Graduação em Engenharia Elétrica\\
+	Disciplina: Identificação de Sistemas\\
+	Solução da Lista 1 de Identificação de Sistemas}
 \author{Danilo Henrique Costa Souza}
 \date{11 de Abril de 2016}
 
 \usepackage{natbib}
 \usepackage{graphicx}
-\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{float}
 %\usepackage{subfigure}
+\usepackage{amstext}
+\usepackage{amsmath}
 \usepackage{subfig}
 \begin{document}
 
 
 \renewcommand{\figurename}{Figura}
-\renewcommand{\chaptername}{Capítulo}
+%\renewcommand{\sectionname}{Capítulo}
 
 \maketitle
 
-\chapter{Item a}
+\section{Item a}
 	As funções de transferência contínua e discreta para o sistema apresentado estão descritas nas equações \ref{eq:func_trans_continua} e \ref{eq:func_trans_discreta}, respectivamente. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_a}.
 	\begin{equation}
 		G(s) = \frac{2e^{-3s}}{10s + 1}
@@ -31,48 +37,48 @@
 	\label{eq:func_trans_discreta}
 	\end{equation}
 
-	A Figura \ref{fig:item_a} mostra que a saída do sistema discretizado sofre um atraso de 1 segundo (começando em 5s) em relação ao sistema contínuo (começando em 4s) devido ao atraso ocasionado pelo conversor A/D (segurador de ordem zero).
+	A Figura \ref{fig:item_a} mostra que a saída do sistema discretizado sofre um atraso de 1 segundo (começando em 4s) em relação ao sistema contínuo (começando em 3s) devido ao atraso ocasionado pelo conversor A/D (segurador de ordem zero).
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.45]{./grafico_lista1_questao1.png}
-		\caption{Saídas dos sistemas contínuo e discreto}
+		\caption{Saídas dos sistemas contínuo e discreto.}
 		\label{fig:item_a}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.45]{./modelo_lista1_questao1.png}
-		\caption{Modelo no $Simulink^{\copyright}$ do item a}
+		\caption{Modelo no $Simulink^{\copyright}$ do item a.}
 		\label{fig:modelo_item_a}
 	\end{figure}
 
-\chapter{Item b}
+\section{Item b}
 
 As Figuras \ref{fig:item_b_continuo} e \ref{fig:item_b_discreto} mostram, respectivamente, os gráficos da saída  do sistema afetado por um ruído aleatório gaussiano com média nula e $\lambda^{2} = e^{-6}$. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_b}.
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.4]{./grafico_lista1_questao2_continuo.png}
-		\caption{Saída do sistema contínuo com ruído}
+		\caption{Saída do sistema contínuo com ruído.}
 		\label{fig:item_b_continuo}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.4]{./grafico_lista1_questao2_discreto.png}
-		\caption{Saída do sistema discreto com ruído}
+		\caption{Saída do sistema discreto com ruído.}
 		\label{fig:item_b_discreto}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.45]{./modelo_lista1_questao2.png}
-		\caption{Modelo no $Simulink^{\copyright}$ do item b}
+		\caption{Modelo no $Simulink^{\copyright}$ do item b.}
 		\label{fig:modelo_item_b}
 	\end{figure}
 
 
-\chapter{Item c}
+\section{Item c}
 
 As Figuras \ref{fig:item_c_baixa} e \ref{fig:item_c_alta} mostram as respostas do sistema para as três formas de perturbação com variância baixa ($\lambda^{2} = 0.001$) e alta ($\lambda^{2} = 0.1$), respectivamente.
 A perturbação com variância alta aumentou a amplitude do ruído em 10 vezes em relação a perturbação com variância baixa. É possível perceber que para os dois valores de $\lambda^{2}$, as perturbações filtradas tiveram sua amplitude muito próxima de zero, sendo que o filtro de $2^{a}$ ordem inibiu praticamente toda a perturbação enquanto que o filtro de $1^{a}$ ordem apresenta alguma oscilação. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_c}.
@@ -81,7 +87,7 @@ A perturbação com variância alta aumentou a amplitude do ruído em 10 vezes em re
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.45]{./grafico_lista1_questao3_pert_baixa.png}
-		\caption{Perturbações de baixa intensidade}
+		\caption{Perturbações de baixa intensidade.}
 		\label{fig:item_c_baixa}
 	\end{figure}
 	
@@ -89,14 +95,14 @@ A perturbação com variância alta aumentou a amplitude do ruído em 10 vezes em re
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.45]{./grafico_lista1_questao3_pert_alta.png}
-		\caption{Perturbações de alta intensidade}
+		\caption{Perturbações de alta intensidade.}
 		\label{fig:item_c_alta}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.5]{./modelo_lista1_questao3.png}
-		\caption{Modelo no $Simulink^{\copyright}$ do item c}
+		\caption{Modelo no $Simulink^{\copyright}$ do item c.}
 		\label{fig:modelo_item_c}
 	\end{figure}	
 
@@ -116,61 +122,205 @@ As funções de transferência discretizadas com os filtros de $1^{a}$ e $2^{a}$ or
 			\subfloat[$H(z)$ com filtro de $2^{a} ordem$]{{ \includegraphics[scale=0.9]{./imagem_lista1_questa03_ordem2.png} }\label{fig:item_c_discreta_ordem_2}}			
 			%\centering
 			%\includegraphics[scale=0.5]{./imagem_lista1_questa03_ordem2.png}
-			\caption{$H(z)$ com filtro de $2^{a} ordem$}
+			\caption{$H(z)$ com filtro de $2^{a} ordem$.}
 			\label{fig:item_c_discreta_ordem}%\label{fig:item_c_discreta_ordem_2}
 %		\end{figure}
 	\end{figure}
 	
-\chapter{Item d}
+\section{Item d}
 
 Para o ruído de baixa intensidade ($\lambda^{2} = 0.001$) as perturbações filtradas não alteram significativamente a saída do processo, enquanto que a perturbação direta possui um efeito maior na saída do processo, sem comprometer no entanto, a sua forma, ou seja, ainda é possível determinar o comportamento do sistema, como mostrado na Figura \ref{fig:item_d_baixa}.
 
 Para o ruído de alta intensidade ($\lambda^{2} = 0.1$) as perturbações filtradas alteram a saída do processo mas sem alterar o seu comportamento, enquanto que a perturbação direta nesse caso é a que mais afeta a saída do processo, conforme mostrado na Figura \ref{fig:item_d_alta}. Com base nestes dados é possível perceber que ambos os filtros empregados na perturbação reduzem drasticamente seu efeito na saída do sistema, mesmo para altas perturbações. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_d}.
 
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.5]{./grafico_lista1_questao4_pert_baixa.png}
-		\caption{Comparação entre o sistema sem perturbação com as 3 perturbações de baixa intensidade}
+		\includegraphics[scale=0.448]{./grafico_lista1_questao4_pert_baixa.png}
+		\caption{Comparação entre o sistema sem perturbação com as 3 perturbações de baixa intensidade.}
 		\label{fig:item_d_baixa}
 	\end{figure}
 
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.5]{./grafico_lista1_questao4_pert_alta.png}
-		\caption{Comparação entre o sistema sem perturbação com as 3 perturbações de baixa intensidade}
+		\includegraphics[scale=0.48]{./grafico_lista1_questao4_pert_alta.png}
+		\caption{Comparação entre o sistema sem perturbação com as 3 perturbações de baixa intensidade.}
 		\label{fig:item_d_alta}
 	\end{figure}
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.45]{./modelo_lista1_questao4.png}
-		\caption{Modelo no $Simulink^{\copyright}$ do item d}
+		\caption{Modelo no $Simulink^{\copyright}$ do item d.}
 		\label{fig:modelo_item_d}
 	\end{figure}	
 
-\chapter{Item e}
+\section{Item e}
 
-As Figuras \ref{fig:item_e_baixa} e \ref{fig:item_e_alta} mostram, respectivamente, a saída $y(t)$, afetada por perturbações de baixa e alta intensidade, usando sementes diferentes para criação dos ruídos de tal forma que eles não são correlacionados. Nota-se que em nas duas intensidades de perturbação a saída do sistema não sofreu um desvio muito significativo de seu curso natural (saída sem perturbação). O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_e}.
-	\begin{figure}[ht]
+As Figuras \ref{fig:item_e_baixa} e \ref{fig:item_e_alta} mostram, respectivamente, a saída $y(t)$, afetada por perturbações de baixa e alta intensidade, usando sementes diferentes para criação dos ruídos de tal forma que eles não são correlacionados. Nota-se que nas duas intensidades de perturbação, a saída do sistema não sofreu um desvio muito significativo em relação à saída sem perturbação. O modelo implementado no $Simulink^{\copyright}$ está representado na Figura \ref{fig:modelo_item_e}.
+	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.45]{./grafico_lista1_questao5_pert_baixa.png}
-		\caption{Saída do processo para perturbações de baixa intensidade simultâneas}
+		\caption{Saída do processo para perturbações de baixa intensidade simultâneas.}
 		\label{fig:item_e_baixa}
 	\end{figure}
 
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.45]{./grafico_lista1_questao5_pert_alta.png}
-		\caption{Saída do processo para perturbações de alta intensidade simultâneas}
+		\caption{Saída do processo para perturbações de alta intensidade simultâneas.}
 		\label{fig:item_e_alta}
 	\end{figure}
 
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.8]{./modelo_lista1_questao5.png}
-		\caption{Modelo no $Simulink^{\copyright}$ do item e}
+		\includegraphics[scale=0.75]{./modelo_lista1_questao5.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item e.}
 		\label{fig:modelo_item_e}
 	\end{figure}	
+
+\section{Item f}
+
+A Figura \ref{fig:modelo_item_f} mostra o modelo implementado no $Simulinnk^{\copyright}$ para obtenção da resposta ao degrau para os sistemas sem perturbação, com baixa perturbação e com alta perturbação. Estas respostas serão usadas para estimar os parâmetros e obter os modelos estimados do processo com baixa e alta perturbação, representados, respectivamente, nas equações \ref{eq:modelo_estimado_baixa_pert} e \ref{eq:modelo_estimado_alta_pert}.
+
+A Figura \ref{fig:item_f_comparacao} mostra a comparação entra a saída do processo sem perturbação e os dois modelos aproximados, é possível perceber que os modelos aproximados possuem grande semelhança com o processo sem perturbação, apresentando apenas um pequeno aumento de ganho e um atraso em torno de 30\% maior do que o atraso original do processo, pode-se, portanto, considerar este, um método eficaz para estimativa de parâmetros, dependendo do erro admissível. O modelo do $Simulink^{\copyright}$ que simula os processos estimados é mostrado na Figura \ref{fig:modelo_item_f_comparacao}. O tempo de estabilização para o processo estimado com perturbações de baixa intensidade é: $t_{s} = 46\ segundos$.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{./modelo_lista1_questao6.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item f.}
+		\label{fig:modelo_item_f}
+	\end{figure}	
+
+	\begin{multline}
+		H_{\text{estimado (baixa perturbação)}} = \frac{2.057}{10.13s + 1}e^{(-4.59s)},
+		\ onde\ \tau = 10.13\ segundos,\ \theta = 4.59\ segundos\ e\ k = 2.057
+		\label{eq:modelo_estimado_baixa_pert}
+	\end{multline}
+	
+	\begin{multline}
+		H_{\text{estimado (alta perturbação)}} = \frac{2.057}{11.48s + 1}e^{(-4s)},
+		\ onde\ \tau = 11.48\ segundos,\ \theta = 4.\ segundos\ e\ k = 2.057
+		\label{eq:modelo_estimado_alta_pert}
+	\end{multline}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.45]{./grafico_lista1_questao6_comparacao.png}
+		\caption{Comparação dos modelos aproximados com a saída do processo sem perturbação.}
+		\label{fig:item_f_comparacao}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{./modelo_lista1_questao6_comparacao.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item f.}
+		\label{fig:modelo_item_f_comparacao}
+	\end{figure}	
+	
+\section{Item g}
+
+A Figura \ref{fig:modelo_item_g} mostra o modelo implementado no $Simulinnk^{\copyright}$ para obtenção das respostas ao pulso unitário, mostradas na Figura \ref{fig:item_g_comparacao}. A partir destas respostas, apenas para o processo sem perturbação é possível visualizar de forma clara a função peso do sistema, em ambas as respostas com perturbação não é possível identificar a função peso.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{./modelo_lista1_questao7.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item g.}
+		\label{fig:modelo_item_g}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao7_resposta_impulso_comparacao.png}
+		\caption{Resposta do processo ao pulso unitário para todos os tipos de perturbação.}
+		\label{fig:item_g_comparacao}
+	\end{figure}
+
+\section{Item h}
+
+A Figura \ref{fig:modelo_item_h} mostra o modelo implementado no $Simulinnk^{\copyright}$ para obtenção das respostas ao degrau do processo sem perturbação que será comparada com a convolução da resposta ao pulso unitário (do processo sem perturbação) com o degrau de entrada. A Figura \ref{fig:item_h_comparacao} mostra esta comparação. As saídas do processo obtidas via somatório de convolução estão representadas na Figura \ref{fig:item_h_convolucao}. Percebe-se que para o processo com perturbação de alta amplitude, não é mais possível observar o comportamento esperado da saída, enquanto que para perturbações de baixa amplitude o sistema apresenta um comportamento parecido com o esperado. A Figura \ref{fig:item_h_comparacao} mostra que convolução do pulso unitário sem perturbação com o degrau provê uma resposta praticamente igual à resposta do sistema ao degrau, sem perturbação.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{./modelo_lista1_questao8.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item h.}
+		\label{fig:modelo_item_h}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao8_comparacao_conv_sem_pert.png}
+		\caption{Comparação entre a resposta ao degrau e a resposta via convolução, do processo sem perturbação.}
+		\label{fig:item_h_comparacao}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao8_convolucao_pulso.png}
+		\caption{Saídas do processo para os diferentes tipos de perturbação, obtidas via somatório de convolução.}
+		\label{fig:item_h_convolucao}
+	\end{figure}
+
+\section{Item i}
+
+A Figura \ref{fig:modelo_item_i} mostra o modelo implementado no $Simulinnk^{\copyright}$ para obtenção das respostas do processo sem, com baixa e com alta perturbação, ao ruído para serem utilizadas na obtenção da função peso (resposta impulsiva) para cada um dos casos de perturbação. As Figuras \ref{fig:item_i_comp_sem_pert}, \ref{fig:item_i_comp_baixa_pert} e \ref{fig:item_i_comp_alta_pert} mostram a comparação, entre as respostas impulsivas obtidas no item ``g'' com as respostas obtidas via análise de correlação com $N=1000$ para o processo sem perturbação, com perturbação de baixa amplitude e com perturbação de alta amplitude, respectivamente. 
+
+Ao observar as Figuras \ref{fig:item_i_comp_sem_pert}, \ref{fig:item_i_comp_baixa_pert} e \ref{fig:item_i_comp_alta_pert} é possível notar que para os casos em que há perturbação a função-peso diverge bastante da função-peso encontrado no item ``g'' (resposta do processo ao pulso unitário), isto ocorre porque com $N=1000$ não são utilizados pontos suficientes da resposta do processo ao ruído, para o cálculo da função-peso $g(t)$, entretanto, para o caso sem perturbação percebe-se que a função-peso obtida através da análise de correlação segue um comportamento parecido com a resposta ao pulso unitário, enquanto que para o caso com perturbação de alta amplitude, a convolução com a função-peso da análise de correlação apresentou um comportamento totalmente diferente da convolução com a reposta impulsiva (do item ``g'').
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{./modelo_lista1_questao9.png}
+		\caption{Modelo no $Simulink^{\copyright}$ do item i.}
+		\label{fig:modelo_item_i}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao9_comparacao_sem_pert.png}
+		\caption{Comparação do processo sem perturbação entre as respostas impulsivas do item ``g'' e via análise de correlação.}
+		\label{fig:item_i_comp_sem_pert}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao9_comparacao_baixa_pert.png}
+		\caption{Comparação do processo com baixa perturbação entre as respostas impulsivas do item ``g'' e via análise de correlação.}
+		\label{fig:item_i_comp_baixa_pert}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao9_comparacao_alta_pert.png}
+		\caption{Comparação do processo alta perturbação entre as respostas impulsivas do item ``g'' e via análise de correlação.}
+		\label{fig:item_i_comp_alta_pert}
+	\end{figure}
+
+
+\section{Item j}
+
+O modelo utilizado no $Simulinnk^{\copyright}$ para este item é o mesmo da Figura \ref{fig:modelo_item_h}, pois o degrau de entrada utilizado para fazer a convolução é o mesmo do referido item. As Figuras \ref{fig:item_j_comp_sem_pert}, \ref{fig:item_j_comp_baixa_pert} e \ref{fig:item_j_comp_alta_pert} mostram , respectivamente, para o processo sem perturbação, com baixa e com alta perturbação, a comparação entre as saídas do processo resultando da convolução do degrau com a resposta ao pulso unitário e da convolução do degrau com a função-peso obtida via análise de correlação. É possível notar que para os processos sem perturbação e com baixa perturbação, as saídas do processo possuem o mesmo comportamento, apesar de apresentarem um desvio em relação ao ganho (a convolução com a função-peso obtida via análise de correlação apresentou maior ganho). 
+
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao10_comparacao_sem_pert.png}
+		\caption{Comparação do processo sem perturbação entre a convolução do degrau com as as respostas impulsivas do item ``g'' e com a função-peso obtida via análise de correlação.}
+		\label{fig:item_j_comp_sem_pert}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao10_comparacao_baixa_pert.png}
+		\caption{Comparação do processo com baixa perturbação entre a convolução do degrau com as as respostas impulsivas do item ``g'' e com a função-peso obtida via análise de correlação.}
+		\label{fig:item_j_comp_baixa_pert}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./grafico_lista1_questao10_comparacao_alta_pert.png}
+		\caption{Comparação do processo com alta perturbação entre a convolução do degrau com as as respostas impulsivas do item ``g'' e com a função-peso obtida via análise de correlação.}
+		\label{fig:item_j_comp_alta_pert}
+	\end{figure}
 
 %\bibliographystyle{plain}
 %\bibliography{references}
