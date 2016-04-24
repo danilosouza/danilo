@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  10 APR 2016 20:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  11 APR 2016 08:30
 entering extended mode
 **Danilo_lista1.tex
 
@@ -576,7 +576,7 @@ ilo_lista1.aux) )
 Here is how much of TeX's memory you used:
  4061 strings out of 493921
  63069 string characters out of 3147279
- 125178 words of memory out of 3000000
+ 125149 words of memory out of 3000000
  7303 multiletter control sequences out of 15000+200000
  8408 words of font info for 31 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -590,7 +590,7 @@ mr12.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MikTex2.9/f
 onts/type1/public/amsfonts/cm/cmr7.pfb><C:/MikTex2.9/fonts/type1/public/amsfont
 s/cm/cmr8.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MikTe
 x2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Danilo_lista1.pdf (16 pages, 1219001 bytes).
+Output written on Danilo_lista1.pdf (16 pages, 1219012 bytes).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

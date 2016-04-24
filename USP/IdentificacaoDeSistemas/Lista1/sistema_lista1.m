@@ -48,32 +48,32 @@ G_pert_1_discreta = c2d(G_pert_1,1);
 % title('Y afetado por duas perturbações simultâneas e por um ruído de medição');
 
 %------------- Item f-------------- %
-% sim('lista1_questao6')
-% t = 0:length(y_deg)-1;
-% delta_y = max(y_deg_baixa) - min(y_deg_baixa);
-% delta_x = max(u_entrada) - min(u_entrada);
-% % O código a seguir estima os parâmetros para o sistema afetado por uma
-% % perturbação de baixa amplitude com base da resposta ao degrau
-% y2_baixa = delta_y*0.853;
-% y1_baixa = delta_y*0.353;
-% f2_baixa = max(y_deg_baixa) - y2_baixa;
-% f1_baixa = max(y_deg_baixa) - y1_baixa;
-% f_baixa = f1_baixa/f2_baixa;
-% % Encontrando o tempo mais próximo dos valores de y1 e y2
-% [~,index_y1_baixa] = min(abs(y_deg_baixa-y1_baixa));
-% [~,index_y2_baixa] = min(abs(y_deg_baixa-y2_baixa));
-% t1_baixa = t(index_y1_baixa);
-% t2_baixa = t(index_y2_baixa);
-% tau_baixa = 0.675*(t2_baixa - t1_baixa);
-% theta_baixa = 1.294*t1_baixa - 0.294*t2_baixa;
-% k = delta_y/delta_x;
-% % Gerando o modelo com base nos valores estimados para perturbação de 
-% H_est_baixa = tf(k,[tau_baixa 1],'InputDelay',theta_baixa);
-% % Calculando o tempo de acomodação, considerando ts o tempo para que a
-% % resposta alcence 99% de delta_y
-% y1_baixa_acomodacao = delta_y*0.99;
-% [~,index_y1_baixa_acomodacao] = min(abs(y_deg_baixa-y1_baixa_acomodacao));
-% ts = t(index_y1_baixa_acomodacao); % ts = 46 segundos.
+sim('lista1_questao6')
+t = 0:length(y_deg)-1;
+delta_y = max(y_deg_baixa) - min(y_deg_baixa);
+delta_x = max(u_entrada) - min(u_entrada);
+% O código a seguir estima os parâmetros para o sistema afetado por uma
+% perturbação de baixa amplitude com base da resposta ao degrau
+y2_baixa = delta_y*0.853;
+y1_baixa = delta_y*0.353;
+f2_baixa = max(y_deg_baixa) - y2_baixa;
+f1_baixa = max(y_deg_baixa) - y1_baixa;
+f_baixa = f1_baixa/f2_baixa;
+% Encontrando o tempo mais próximo dos valores de y1 e y2
+[~,index_y1_baixa] = min(abs(y_deg_baixa-y1_baixa));
+[~,index_y2_baixa] = min(abs(y_deg_baixa-y2_baixa));
+t1_baixa = t(index_y1_baixa);
+t2_baixa = t(index_y2_baixa);
+tau_baixa = 0.675*(t2_baixa - t1_baixa);
+theta_baixa = 1.294*t1_baixa - 0.294*t2_baixa;
+k = delta_y/delta_x;
+% Gerando o modelo com base nos valores estimados para perturbação de 
+H_est_baixa = tf(k,[tau_baixa 1],'InputDelay',theta_baixa);
+% Calculando o tempo de acomodação, considerando ts o tempo para que a
+% resposta alcence 99% de delta_y
+y1_baixa_acomodacao = delta_y*0.99;
+[~,index_y1_baixa_acomodacao] = min(abs(y_deg_baixa-y1_baixa_acomodacao));
+ts = t(index_y1_baixa_acomodacao); % ts = 46 segundos.
 % 
 % % O código a seguir estima os parâmetros para o sistema afetado por uma
 % % perturbação de alta amplitude com base da resposta ao degrau
@@ -120,41 +120,41 @@ G_pert_1_discreta = c2d(G_pert_1,1);
 % plot(t,y_degrau,'k',t,y_conv,'k:'); grid minor;
 % legend('Resposta ao degrau do processo sem perturbação', 'Resposta da convolução do degrau com a resposta ao pulso sem perturbação')
 % %------------- Item i-------------- %
-t_ruido = 0:1000;
-T = 1;
-sim('lista1_questao7')
-sim('lista1_questao8')
-sim('lista1_questao9')
-M = 0:92;
-t = 0:length(degrau_entrada)-1;
-ir = cra([y_ruido ruido_entrada],length(M)-1,0,0);
-ir_baixa = cra([y_ruido_baixa ruido_entrada],length(M)-1,0,0);
-ir_alta = cra([y_ruido_alta ruido_entrada],length(M)-1,0,0);
-% Aplicando a fórmula da equação (7.12)
-N = length(ruido_entrada);
-var_entrada = var(ruido_entrada);
-g_k = zeros(1,length(M));
-g_k_baixa = zeros(1,length(M));
-g_k_alta = zeros(1,length(M));
-corr_cruzada_yu = zeros(1,length(M));
-corr_cruzada_yu_baixa = zeros(1,length(M));
-corr_cruzada_yu_alta = zeros(1,length(M));
-for k = 1:length(M)
-    g_k(k) = 0;
-    g_k_baixa(k) = 0;
-    g_k_alta(k) = 0;
-    for t1 = 1:N-k
-        g_k(k) = g_k(k) + y_ruido(t1+k-1)*ruido_entrada(t1);
-        g_k_baixa(k) = g_k_baixa(k) + y_ruido_baixa(t1+k-1)*ruido_entrada(t1);
-        g_k_alta(k) = g_k_alta(k) + y_ruido_alta(t1+k-1)*ruido_entrada(t1);
-    end
-    corr_cruzada_yu(k) = g_k(k)/(N-k);
-    corr_cruzada_yu_baixa(k) = g_k_baixa(k)/(N-k);
-    corr_cruzada_yu_alta(k) = g_k_alta(k)/(N-k);
-end
-g_t = corr_cruzada_yu/(var_entrada*T);
-g_t_baixa = corr_cruzada_yu_baixa/(var_entrada*T);
-g_t_alta = corr_cruzada_yu_alta/(var_entrada*T);
+% t_ruido = 0:1000;
+% T = 1;
+% sim('lista1_questao7')
+% sim('lista1_questao8')
+% sim('lista1_questao9')
+% M = 0:92;
+% t = 0:length(degrau_entrada)-1;
+% ir = cra([y_ruido ruido_entrada],length(M)-1,0,0);
+% ir_baixa = cra([y_ruido_baixa ruido_entrada],length(M)-1,0,0);
+% ir_alta = cra([y_ruido_alta ruido_entrada],length(M)-1,0,0);
+% % Aplicando a fórmula da equação (7.12)
+% N = length(ruido_entrada);
+% var_entrada = var(ruido_entrada);
+% g_k = zeros(1,length(M));
+% g_k_baixa = zeros(1,length(M));
+% g_k_alta = zeros(1,length(M));
+% corr_cruzada_yu = zeros(1,length(M));
+% corr_cruzada_yu_baixa = zeros(1,length(M));
+% corr_cruzada_yu_alta = zeros(1,length(M));
+% for k = 1:length(M)
+%     g_k(k) = 0;
+%     g_k_baixa(k) = 0;
+%     g_k_alta(k) = 0;
+%     for t1 = 1:N-k
+%         g_k(k) = g_k(k) + y_ruido(t1+k-1)*ruido_entrada(t1);
+%         g_k_baixa(k) = g_k_baixa(k) + y_ruido_baixa(t1+k-1)*ruido_entrada(t1);
+%         g_k_alta(k) = g_k_alta(k) + y_ruido_alta(t1+k-1)*ruido_entrada(t1);
+%     end
+%     corr_cruzada_yu(k) = g_k(k)/(N-k);
+%     corr_cruzada_yu_baixa(k) = g_k_baixa(k)/(N-k);
+%     corr_cruzada_yu_alta(k) = g_k_alta(k)/(N-k);
+% end
+% g_t = corr_cruzada_yu/(var_entrada*T);
+% g_t_baixa = corr_cruzada_yu_baixa/(var_entrada*T);
+% g_t_alta = corr_cruzada_yu_alta/(var_entrada*T);
 % plot(t,ir,'k',t,y_pulso,'k:');grid minor; 
 % legend('Resposta impulsiva (N = 1000) sem perturbação','Resposta impulsiva do item "g" sem perturbação ')
 % figure;
@@ -167,17 +167,17 @@ g_t_alta = corr_cruzada_yu_alta/(var_entrada*T);
 % %------------- Item j-------------- %
 %Encontrando a saída do processao através da convolução das respostas ao
 % impulso, obtidas via análise de correlação, com o degrau
-convolucao = conv(ir,degrau_entrada);
-convolucao  =convolucao(1:length(t));
-convolucao_baixa = conv(ir_baixa,degrau_entrada);
-convolucao_baixa = convolucao_baixa(1:length(t));
-convolucao_alta = conv(ir_alta,degrau_entrada);
-convolucao_alta = convolucao_alta(1:length(t));
-plot(t,convolucao,'k',t,y_conv,'k:'); grid minor;
-legend('Convolução com (N=1000) sem perturbação', 'Convolução sem perturbação (item "g")')
-figure;
-plot(t,convolucao_baixa,'k',t,y_conv_baixa,'k:'); grid minor;
-legend('Convolução com(N=1000) e baixa perturbação', 'Convolução com baixa perturbação (item "g")')
-figure;
-plot(t,convolucao_alta,'k',t,y_conv_alta,'k:'); grid minor;
-legend('Convolução com (N=1000) e alta perturbação', 'Convolução com alta perturbação (item "g")')
+% convolucao = conv(ir,degrau_entrada);
+% convolucao  =convolucao(1:length(t));
+% convolucao_baixa = conv(ir_baixa,degrau_entrada);
+% convolucao_baixa = convolucao_baixa(1:length(t));
+% convolucao_alta = conv(ir_alta,degrau_entrada);
+% convolucao_alta = convolucao_alta(1:length(t));
+% plot(t,convolucao,'k',t,y_conv,'k:'); grid minor;
+% legend('Convolução com (N=1000) sem perturbação', 'Convolução sem perturbação (item "g")')
+% figure;
+% plot(t,convolucao_baixa,'k',t,y_conv_baixa,'k:'); grid minor;
+% legend('Convolução com(N=1000) e baixa perturbação', 'Convolução com baixa perturbação (item "g")')
+% figure;
+% plot(t,convolucao_alta,'k',t,y_conv_alta,'k:'); grid minor;
+% legend('Convolução com (N=1000) e alta perturbação', 'Convolução com alta perturbação (item "g")')
