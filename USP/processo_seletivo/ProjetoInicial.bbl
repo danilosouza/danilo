@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{robotmodeling}
+M.W. Spong, S.~Hutchinson, and M.~Vidyasagar.
+\newblock {\em Robot Modeling and Control}.
+\newblock Wiley, 2012.
+
+\bibitem{energymotionplanning}
+Yongguo Mei, Yung-Hsiang Lu, Y.~C. Hu, and C.~S.~G. Lee.
+\newblock Energy-efficient motion planning for mobile robots.
+\newblock In {\em Robotics and Automation, 2004. Proceedings. ICRA '04. 2004
+  IEEE International Conference on}, volume~5, pages 4344--4349 Vol.5, April
+  2004.
+
+\bibitem{de2012energy}
+Anibal de~Almeida, Paolo Bertoldi, and Werner Leonhard.
+\newblock {\em Energy efficiency improvements in electric motors and drives}.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{designoptimazation}
+W.~Roozing, Z.~Li, D.~G. Caldwell, and N.~G. Tsagarakis.
+\newblock Design optimisation and control of compliant actuation arrangements
+  in articulated robots for improved energy efficiency.
+\newblock {\em IEEE Robotics and Automation Letters}, 1(2):1110--1117, July
+  2016.
+
+\end{thebibliography}

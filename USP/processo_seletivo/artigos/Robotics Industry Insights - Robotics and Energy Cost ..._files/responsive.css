@@ -1,0 +1,1050 @@
+
+@media (min-width:1048px) {
+	#FeaturedProduct {
+    height: 403px;
+}
+.FP .fphead {
+	font-size: 20px;
+	line-height: 1.4 !important;
+}
+.FP .fpcopy {
+font-size: 14px;}
+
+
+.FP .btn {
+    font-size: 15px !important;
+    padding: 9px 10px !important;
+}
+#FeaturedProduct .head {
+    font-size: 18px;
+}
+
+}
+
+
+
+
+/*global responsive----------*/
+.small-screen-only,table.small-screen-only{
+		display:none;
+}
+.big-screen-only{
+		display:block;
+}
+table.big-screen-only{
+		display:table;
+}
+
+
+@media (max-width : 640px) {
+	.small-screen-only{
+		display:block;
+	}
+	table.small-screen-only{
+		display:table;
+	}
+	.big-screen-only,table.big-screen-only{
+		display:none;
+	}
+}
+
+/*end global responsive----------*/
+@media (min-width : 1024px) {
+	
+/*.MainContent {
+	float: left;
+	width: 82.72357%;
+	position: relative;
+}*/
+
+.SideAds {
+
+min-width:150px;
+}
+
+}
+
+@media (max-width:984px) {
+#nav ul {
+	font-size: 11px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-align: center;
+}
+#nav ul li {
+	float: none;
+	display: inline-block;
+}
+.RFQItem {
+	width: 47.41602%; /*367/774*/
+}
+.Ask.FormGroup .content-left-half, .Ask.FormGroup .content-right-half {
+	width: 100%;
+	float: none;
+}
+}
+
+@media (max-width:900px) {
+#footerbar .left, #footerbar .right {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+}
+#footerbar {
+	margin-bottom: 20px;
+}
+#footer .content-left, #footer .content-right {
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+.VisitAssociations {
+margin-top:20px !important;
+padding: 10px 0;
+border-top: 1px solid #CCC;border-bottom: 1px solid #CCC;
+background-color: #d8e6eb;
+margin-bottom:10px !important;
+}
+.Associations {
+	/*margin: 0;*/
+}
+.footerlinks {
+	margin: 10px 0;
+	text-align: center;
+}
+.footerlinks li {
+	float: none;
+	display: inline-block;
+}
+.FormGroup.split label {
+	width: 100%;
+	float: none;
+	margin-bottom: 5px;
+}
+.FormGroup.split .FormInput {
+	width: 100%;
+	float: none;
+}
+.SocialLinks {
+	display: none;
+}
+.CoProTopLinks .SocialLinks {
+	display: block;
+}
+
+.SignInFields{
+	display:block;
+}
+.StoreSignIn p{
+	display:block;
+	margin-bottom: 8px !important;
+}
+}
+
+@media (max-width:840px) {
+	
+		.join-mca-left{
+	display:none;
+}
+.join-mca-right {
+float: none;
+width: auto;
+}
+
+
+#nav ul {
+	font-size: 10px;
+}
+#nav ul li a {
+	padding: 0 7px;
+}
+.Box {
+	width: 46.31449%; /*377/814*/
+	margin: 0 1.84275% 10px;
+}
+.BeginnersGuide.Boxes {
+	margin: 0;
+}
+.BeginnersGuide .Box {
+	width: 100%;
+	min-height: 0;
+	margin: 0 0 10px;
+}
+#MoreArticles {
+margin: 35px 0 0;
+}
+#MoreArticles .Box{
+float:none;
+width:100%;
+margin: 0 0 20px;
+}
+
+.EDUList div{
+	width:auto;
+}
+.EDUList a{
+	width:auto;
+	margin-left:10px;
+	max-width:70%;
+}
+}
+
+@media (max-width:800px) {
+#SearchBar input[type=submit], a.BrowseBy {
+	font-size: 11px;
+}
+#MoreArticles .content-left, #MoreArticles .content-right, #MoreArticles .content-left-half, #MoreArticles .content-right-half {
+	float: none;
+	width: 100%;
+}
+
+/*#MoreArticles .Box{
+float:none;
+width:100%;
+}*/
+}
+
+@media (min-width : 768px) and (max-width : 950px) {
+#FeaturedProduct {
+	padding-top: 0;
+}
+#FeaturedProduct img {
+	max-width: 45%;
+}
+#FeaturedProduct .head {
+	position: relative;
+	margin-bottom: 0;
+	text-align: center;
+}
+#FPNav {
+	margin: 0 auto 5px;
+	position: relative;
+}
+}
+
+@media (min-width : 768px) and (max-width : 860px) {
+/*Sponsor Ad*/
+.SponsorAd {
+	width: 58.96805%;/*480/814*/
+	padding: 2.457%; /*20/814*/
+}
+}
+
+@media (max-width:767px) {
+/*Sponsor Ad*/
+.SponsorAd {
+	width: 100%;
+	padding: 20px;
+	float: none;
+	margin: 10px 0;
+}
+.ad-banner {
+	margin-left: 1px;
+	margin-right: 1px;
+	background-size: contain;
+}
+.ad-banner img {
+	max-width: 97%;
+	height:auto;
+}
+.SideAds, .MainContent {
+	float: none;
+	width: 100%;
+}
+.SideAds {
+	display: none;
+}
+.SideAds img {
+}
+#SearchBar input[type=submit] {
+	background-image: url(../images/ria/search.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-indent: -9999px;
+}
+#SearchBar input[type=submit].browse {
+	background-image: none;
+	text-indent: 0px;
+	font-size: 12px;
+}
+.content-left, .content-right, .content-left-half, .content-right-half {
+	float: none;
+	width: 100%;
+}
+.FormGroup .content-left-half, .FormGroup .content-right-half {
+	width: 100%;
+	float: none;
+}
+.BookDetails .content-left, .BookDetails .content-right {
+	float: none;
+	width: 100%;
+}
+.BookDetails .content-left {
+	margin-bottom: 20px;
+}
+.BookDetails .content-left:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.BookImage {
+/*	float:left;
+	width:48%;*/
+}
+.BookPricing {
+/*float:right;
+	width:48%;
+	margin:0;*/
+}
+.BookPricing ul {
+	text-align: center;
+}
+.BookPricing ul li {
+	float: none;
+	display: inline-block;
+	margin: 0 20px;
+}
+#HomeSide {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0;
+}
+#HomeSide:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+#FeaturedProduct {
+	float: none;
+	min-height: 0px;
+	
+	height:auto;
+}
+#SideAds {
+	float: none;
+	text-align: center;
+}
+#SlideShow {
+	text-align: center;
+}
+.LogIn {
+	border: none;
+	padding: 0px;
+}
+.LogIn .content-right-half {
+/*margin-top:20px;*/
+}
+#ForgotPassword {
+	margin-left: 0;
+	float: none;
+	margin-top: 20px;
+}
+.RFQSummary ul {
+	display: block;
+}
+.RFQItemsWrap {
+	display: none;
+}
+}
+
+@media (min-width : 741px) and (max-width : 900px) {
+.BrowseByDDBox label {
+	display: block;
+	margin-bottom: 10px;
+}
+}
+
+@media (min-width : 741px) and (max-width : 800px) {
+.BrowseByDD ul li {
+	margin-right: 9px;
+}
+}
+
+@media (min-width : 741px) and (max-width : 940px) {
+a.BrowseBy {
+	text-align: left;
+	padding-left: 10px;
+}
+}
+
+@media (min-width : 741px) and (max-width : 776px) {
+	.SearchWrap {
+width: 160px;
+}
+}
+@media (max-width:740px) {
+/*Hide NAv
+	#nav ul li{
+		float:none;
+		display:block;
+		text-align:left;
+		border:none !important;
+	}
+	#nav ul li a{
+		border:none !important;
+		
+	}
+	
+	#nav .SubNav{
+	position:relative;
+	}*/
+	
+#nav {
+	display: none;
+}
+.footerlinks {
+	display: none;
+}
+#logo {
+	float: none;
+	max-width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.desktop-logo{
+	display:none;
+}
+.mobile-logo{
+display:block;
+}
+
+.HeaderLinks {
+	padding: 3px;
+	float: none;
+	margin-bottom: 0;
+	background-color: #074158;
+	margin: 0 -10px;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+}
+#SearchBar input[type=submit] {
+	font-size: 11px;
+}
+a.BrowseBy {
+/*font-size: 14px;*/
+}
+#header .inner {
+	padding: 40px 10px 0;
+}
+#SearchBar {
+	float: none;
+	/*width: 100%;*/
+	width: 625px;
+	min-width: 0;
+	margin: 0 auto;
+	padding-top: 0;
+}
+.SearchWrap {
+
+	width: 250px;
+}
+.SearchBarAll {
+	float: none;
+	margin: 0 auto;
+	/*display:inline-block;*/
+	margin-left: 95px;
+}
+a.BrowseBy {
+	float: none;
+	display: inline-block;
+	right: 100px;
+	/*position: relative;*/
+	border: 1px solid #CCC;
+}
+.BrowseByDD {
+	right: 45px;
+	top: 30px;
+}
+/*.SocialLinks {
+	display: none;
+}*/
+.CoProTopLinks .SocialLinks {
+	display: block;
+}
+.ToggleMenu {
+	display: block;
+}
+.SignIn li a,.SignIn li span {
+	color: #FFF;
+	line-height: 40px;
+}
+.SignIn li {
+border-left: 1px solid #fff;
+}
+
+#category ul li:first-child{
+float:none;
+}
+}
+
+@media (max-width:670px) {
+.footerlinks {
+	font-size: 10px;
+	font-family: 'Open Sans', Arial;
+	font-weight: normal;
+}
+.footerlinks li {
+	border: none;
+}
+/*	#logo{float:none;}.HeaderLinks{float:none;}*/
+	
+
+	
+}
+
+@media (max-width:640px) {
+img.floatRight, img.floatLeft {
+	float: none;
+	display: block;
+	margin: 20px auto;
+}
+.ToggleSearch {
+	display: block;
+}
+/*.SignIn li.registerlink {
+	display: none;
+}*/
+.SignIn li.hello {
+	display: none;
+}
+.SignIn li.dashboard{
+	border:none;
+}
+.SignIn li a,.SignIn li span {
+	line-height: 20px;
+}
+.SignIn {
+	float: none;
+}
+.SignIn ul {
+	text-align: center;
+	padding-top:10px;
+}
+.SignIn li {
+	float: none;
+	display: inline-block;
+	color: #FFF;
+}
+.SignIn li a {
+	display: inline;
+}
+#SearchBar {
+	display: none;
+}
+.nivo-controlNav .nivo-control {
+	padding: 5px 0 !important;
+	font-size: 11px;
+}
+.nivo-directionNav {
+/*display: block !important;*/
+
+}
+.nivo-controlNav {
+/*display:none;*/
+}
+.nivo-controlNav .nivo-control p {
+	display: none;
+}
+.nivo-controlNav .nivo-control span {
+	display: block !important;
+}
+.FormGroup label {
+	width: 100%;
+	float: none;
+	margin-bottom: 5px;
+}
+.FormInput, .FormGroup.split .FormInput {
+	float: none;
+	width: 100%;
+}
+.filtercontent {
+	float: none;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 6px;
+	padding-bottom: 10px;
+}
+.CategoryTitle .BreadCrumb, .CategoryTitle .CatTitle {
+	float: none;
+}
+/*.FilterOptions{float:right;}*/
+.Filters {
+	width: 300px;
+}
+.Filters ul {
+	float: none;
+}
+.ProductInfo .CompanyLogo {
+	float: none;
+	margin: 0 0 10px 0 !important;
+}
+.Browse .ProductInfo .CompanyLogo {
+	display: none;
+}
+.rfq1 {
+	display: none;
+}
+.rfq2 {
+	display: block;
+}
+.rfqtop {
+	display: none;
+}
+
+.RFQCheck{
+	background-color:transparent;
+	border:none;
+}
+.RFQCheck label{
+	min-height: 0;
+	
+}
+.RFQCheck label span{
+	display:none;
+}
+
+
+/*Ask the Experts-----------------*/
+.AskTheExperts .left, .AskTheExperts .right {
+	float: none;
+	width: 100%;
+}
+.AskMobileNav {
+	display: block;
+}
+.AskQuestion.Full{
+	display: none;
+}
+.AskTheExperts .left {
+	display: none;
+}
+.pageTitle.asktitle {
+	margin: 0 !important;
+}
+.Question {
+	padding: 10px 0;
+	background-image: none;
+}
+/*Form Steps*/
+.FormSteps li span {
+	display: none;
+}
+/*Join Form TD*/
+table.CheckBoxes td {
+	width: 100% !important;
+	display: block;
+}
+/*Events-------------------------------*/
+.Event{
+	float:none;
+	width:100%;
+	min-height:0;
+}
+.SignInFields .Fields:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.SignInFields .Fields{
+	display:block;
+	margin-bottom:10px;
+	width:100%;
+}
+.SignInFields .Fields label{
+	/*width:40%;
+	float:left;
+	text-align:right;*/
+	display:block;
+}
+.SignInFields .Fields input[type=text],.SignInFields .Fields input[type=password]{
+	/*width:55%;
+	float:right;*/
+	width:100%;
+}
+.SignInFields input.btn{
+	display:block;
+	margin-top:10px;
+	width:50%;
+	margin:auto;
+}
+
+/*Cart-----------------*/
+.bookstoreCart tr.headers{
+	display:none;}
+	
+.bookstoreCart tr{
+display:block;
+width:100%;
+border-top:1px solid #CCC;
+padding:5px;position: relative;
+}
+
+.bookstoreCart tr:after{
+content: "";
+display: table;
+clear: both;
+}
+.bookstoreCart td{
+	display:block;float:left;
+	padding:0 2px;
+}
+
+.bookstoreCart td.cartthumb{
+	display:none;}
+	
+	.bookstoreCart td.itemquantity{
+		position:absolute;
+		right:5px;
+		top:5px;
+	}
+	.bookstoreCart td.itemname{
+		width:75%;font-weight:bold;
+	}
+	.bookstoreCart.Review td.itemname{
+		width:100%;
+	}
+	.bookstoreCart td.removeitem{
+		width:8%;padding-top:2px;	}
+
+.bookstoreCart tr.bookstoreCart-Total{
+	text-align:right;
+
+}
+.bookstoreCart tr.bookstoreCart-Total td {
+	display:inline-block;
+}
+.bookstoreCart td.itemprice,.bookstoreCart td.totalprice{
+margin-left:8%;clear:left; margin-right:10px;margin-top:5px;
+}
+.bookstoreCart.Review td.itemprice,.bookstoreCart.Review td.totalprice{
+margin-left:0;
+}
+.bookstoreCart td.totalprice:before{
+	content:"Total: ";
+}
+.bookstoreCart td.itemprice:before{
+	content:"Item Price: ";
+}
+.CartButtons, a.ContinueShopping{
+float:none;
+}
+.CartButtons{
+	margin-bottom:10px;
+}
+
+/*sitemap--------*/
+.sitemaptable{
+}
+.sitemaptable td{
+	display:block;width:100%;
+}
+
+}
+
+@media (max-width:540px) {
+#footerbar {
+	padding-top: 10px;
+}
+#footerbar .left p {
+	line-height: 1.4;
+}
+#footerbar .left span {
+	display: block;
+}
+.SignUp label {
+	display: block;
+	line-height: 1.2;
+	margin-top: 10px;
+}
+.Box img {
+	float: none;
+}
+.FontResize {
+	float: none;
+	margin-bottom: 5px;
+}
+.FontResize ul li {
+	margin-left: 8px;
+}
+.CatNav ul li {
+	float: none;
+}
+/*Company Profile-----*/
+img.CoLogo{
+	display:block;
+	/*margin:0 auto 10px;
+	float:none;*/max-width:50%;margin:0 0 10px 10px;
+}
+.CoName,.CoAddress{
+/*text-align:center;*/
+}
+.CoName{
+	font-size:16px;
+}
+.ClickContact{
+	text-align:center;
+display:block;margin: 10px auto !important;
+clear: both;
+}
+
+ul.contact-links{
+float:none;}
+ul.contact-links li{
+display:block;margin:0 auto 10px !important;
+}
+
+
+.CoProLogos {
+float: none;
+margin: 10px auto 10px;
+overflow:hidden;
+border-bottom: 1px solid #CCC;
+}
+.CoProLogos img{
+	float:none;
+}
+.CoAddress li {
+display: block;
+margin-right: 5px;
+}
+.CoProTopLinks {
+	padding-bottom: 0px;
+	border:none;
+}
+
+.CoProTopLinks .SocialLinks {
+padding-right: 0;
+margin-right: 0;
+width: 100%;
+text-align: center;
+/*border-bottom: 1px solid #CCC;*/
+}
+.CoProTopLinks .SocialLinks li {
+float: none;
+margin:0 5px;
+display: inline-block;
+}
+.CoProTopLinks .SocialLinks a {
+width: 28px;
+height: 28px;
+background-size: 24px;
+}
+
+.CoProArrowList.small-screen{
+display:block;
+border-bottom:1px solid #CCC;
+width:100%;float:none;text-align:center;margin-bottom:10px;padding-bottom:10px;
+}
+.CoProArrowList.small-screen li{
+	float:none;
+	display:inline-block;
+}
+.CoProArrowList.large-screen{
+display:none;
+}
+
+/*Event Details*/
+.EventInfo img {
+display: block;
+float: none;
+margin: 10px auto;
+}
+
+/*.EventInfo img.mobile{
+	display:block !important;
+}*/
+
+.BrowseCheckboxes label {
+margin-right: 10px;
+display: block;
+}
+.CatNav .SelectCoType input.btn {
+padding: 5px 15px;
+margin: 20px 0;
+clear: left;
+display: block;
+float: left;
+}
+}
+@media (max-width:480px) {
+.SearchWrap {
+	background-image: none;
+}
+.SearchCats {
+	width: 50%;
+	background-color: #e8e8e8;
+}
+#SearchBar input[type=text] {
+	width: 50%;
+}
+.SearchDD {
+	padding: 45px 5px 20px;
+}
+.FeaturedBox img {
+	float: none;
+	margin: 0 0 20px 0;
+	max-width: 100%;
+	width: 100%;
+}
+#logo img {
+	/*max-width: 70%;*/
+}
+.Box, .BoxHead {
+	float: none;
+	width: 100%;
+	min-height: 0;
+	margin: 0 0 20px;
+}
+.location.Box {
+	margin: 0 0 5px;
+}
+.Box img {
+	float: left;
+}
+.NewMembers .Box .ArrowLink {
+	clear: none;
+	display: inline;
+}
+.ArticleWrap img {
+	display: block;
+	float: none;
+	margin: 10px auto;
+}
+.CMSContentWrap img {
+	display: block;
+	float: none;
+	margin: 10px auto;
+}
+.BookThumb {
+	float: right;
+	margin-right: 0;
+	margin-left: 15px;
+}
+.BookInfo{
+margin-left:0;
+}
+.AddBook {
+	width: 100%;
+}
+/*.AddBook label{display:block;
+}*/
+.AddBook input[type=text] {
+	width: 40px;
+}
+.filtercontent label.first {
+	display: block;
+}
+.BoxContent {
+	display: none;
+	margin-top: 10px;
+}
+.InfoCenter .Box {
+	margin-bottom: 0 !important;
+	/*height: 2.6666666em !important;32/12*/
+	height: auto !important;
+	overflow: hidden;
+}
+.InfoCenter .Box .title {
+	margin: 0 !important;
+}
+.Box .title a.ToggleList {
+	display: block;
+}
+.ArticleThumb, .CompanyLogo, .ProductThumb,.SpecialThumb {
+	/* width: 100px; float: none !important;*/
+	float: right !important;
+	clear: both;
+	/*margin: 0 auto 10px !important;*/
+	margin: 0 0 10px 10px !important;
+}
+.ArticleThumb img {
+	max-width: 100%;
+}
+.ProductInfo .CompanyLogo {
+	float: left;
+	margin: 0 auto 10px 0 !important;
+}
+.CoTitle,.CoLocation{
+padding-left:0;
+}
+
+.ServiceInfo .RecentTitle,.ServiceInfo .ServiceType,.ServiceInfo .ServiceCo {
+	padding-left:0px;
+}
+
+.ViewResultsBy {
+	float: none;
+	margin-bottom: 5px;
+}
+.ShowResults {
+	float: none;
+	margin-left: 0;
+}
+.ResultsFound {
+	float: right;
+	margin: 0 !important;
+	font-size: 1em;
+	padding: 3px 0;
+}
+.ResultsFound.left {
+	float: left;
+	font-size: 1.1666666em;
+}
+.FilterOptions {
+/*margin-left: 0;
+margin-top: 5px;
+clear: left;*/
+}
+.Filters {
+/*left: -75px;*/
+}
+.AnswerSummary ul, .AnswerSummary p {
+	float: none;
+}
+.AnswerSummary ul li {
+	margin-right: 10px;
+	margin-left: 0;
+}
+
+.ProfileInfo span{
+	display:block;
+}
+.saveprofile{
+float:left;}
+.cancelchanges{
+margin-left:0;
+margin-top:10px;
+float:left;
+display:block;
+clear:both;
+}
+#category ul{
+text-align:center;
+}
+#category ul li.main{
+margin: 0;
+width: 40%;display:inline-block;float:none;
+}
+#category ul li ul{
+width:100%;
+}
+
+.WhosWho .Boxes {
+	margin:0;
+}
+
+table.mobile-fullrow td{
+	display:block;
+	width:100%;
+}
+}
+
+@media (max-width:320px) {
+	
+.CoProArrowList.small-screen{
+text-align:left;
+margin-bottom:10px;padding-bottom:10px;
+}
+
+}

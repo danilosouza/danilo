@@ -1,0 +1,193 @@
+
+.gridrow{
+	margin-left:-2.03252%;
+	margin-right:-2.03252%;
+	
+	/*background-color:#333;*/
+}
+.gridrow.padded{/*for outside margins*/
+	margin-left:0;
+	margin-right:0;
+}
+
+/*Grid after only works with IE8+
+*/
+.gridrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/**/
+
+
+
+.lt-ie8 .gridrow{ overflow : hidden; _height : 1%; }
+
+/*.lt-ie8 .gridrow {  overflow: auto; 
+    zoom: 1; 
+	}*/
+
+
+.gridcol{
+	margin: 0 2.03252% 10px; /*20*/
+	float:left;
+	overflow:hidden;
+	box-sizing:border-box;
+}
+
+.gridrow .gridrow .gridcol{
+	/*background-color:#fff;*/
+}
+.one.gridcol{
+	width:4.26829%; /*42*/
+}
+.two.gridcol{
+	width:12.60162%; /*124*/
+}
+.three.gridcol{
+	width:20.93495%; /*206*/
+}
+.four.gridcol{
+	width:29.26829%; /*288*/
+}
+.five.gridcol{
+	width:37.60162%; /*370*/
+}
+.six.gridcol{
+	width:45.93495%; /*452*/
+}
+.seven.gridcol{
+	width:54.26825%; /*534*/
+}
+.eight.gridcol{
+	width:62.60162%; /*616*/
+}
+.nine.gridcol{
+	width:70.93495%; /*698*/
+}
+.ten.gridcol{
+	width:79.26829%; /*780*/
+}
+.eleven.gridcol{
+	width:87.60162%; /*862/984*/
+}
+.twelve.gridcol{
+	width:95.93495%; /*944/984*/
+}
+
+
+.gridrow.two-up .gridcol{
+	width:45.93495%; /*452*/
+}
+.gridrow.three-up .gridcol{
+	width:29.26829%; /*288*/
+}
+.gridrow.four-up .gridcol{
+	width:20.93495%; /*206*/
+}
+
+
+
+
+
+/*20px (10,10) Margin-------------------------------------------------------------*/
+.gridrow.smallmargin{
+	margin-left:-1.01626%;
+	margin-right:-1.01626%;
+	
+}
+
+.gridrow.smallmargin .gridcol{
+	margin: 0 1.01626% 10px;
+}
+
+.gridrow.smallmargin .one.gridcol{
+	width:6.30081%;
+}
+.gridrow.smallmargin .two.gridcol{
+	width:14.63414%;
+}
+.gridrow.smallmargin .three.gridcol{
+	width:22.96747%;
+}
+.gridrow.smallmargin .four.gridcol{
+	width:31.30081%;
+}
+.gridrow.smallmargin .five.gridcol{
+	width:39.63414%;
+}
+.gridrow.smallmargin .six.gridcol{
+	width:47.96747%;
+}
+.gridrow.smallmargin .seven.gridcol{
+	width:56.30081%;
+}
+.gridrow.smallmargin .eight.gridcol{
+	width:64.63414%;
+}
+.gridrow.smallmargin .nine.gridcol{
+	width:72.96747%;
+}
+.gridrow.smallmargin .ten.gridcol{
+	width:81.30081%;
+}
+.gridrow.smallmargin .eleven.gridcol{
+	width:89.63414%;
+}
+.gridrow.smallmargin .twelve.gridcol{
+	width:97.96747%;
+}
+
+
+.gridrow.smallmargin.two-up .gridcol{
+	width:47.96747%;
+}
+.gridrow.smallmargin.three-up .gridcol{
+	width:31.30081%;
+}
+.gridrow.smallmargin.four-up .gridcol{
+	width:22.96747%;
+}
+
+
+
+
+
+/*END Margin-------------------------------------------------------------*/
+
+
+
+.gridcol.right{
+float:right;
+}
+.gridcol img{
+	max-width:100%;
+}
+.gridcol.center{
+	text-align:center;
+}
+
+.gridcol.imagefull img{
+	width:100%;
+}
+
+.push-six.gridcol{margin-left:48.98373% !important; /*six plu the margin ercent*/
+}
+
+
+	
+@media (max-width : 800px) {
+	.tabletview.gridrow .gridcol{
+	width:100% !important;
+	float:none;
+	}
+	
+}
+@media (max-width : 640px) {
+	.gridcol{
+	width:100% !important;
+	float:none;
+	}
+	.gridcol.Box{
+	min-height:0;}
+}

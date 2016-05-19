@@ -1,0 +1,632 @@
+a                       {color:#000099; text-decoration:underline}
+a:hover                 {color:#990000; text-decoration:none}
+
+body                    { margin: 0pt 0pt 0pt 0pt; }
+
+#sideNav                { position: absolute; z-index: 0; width: 20px;  left: 0px;  top: 7px;  visibility: visible; }
+
+#menuMain               { position: absolute; z-index: 2; width: 76px;  left: 20px; top: 9px;  visibility: hidden; }
+#menuMainInfoVoor       { position: absolute; z-index: 3; width: 94px;  left: 96px; top: 10px; visibility: hidden; }
+#menuMainInfoOver       { position: absolute; z-index: 3; width: 94px;  left: 96px; top: 25px; visibility: hidden; }
+#menuMainNieuws         { position: absolute; z-index: 3; width: 94px;  left: 96px; top: 40px; visibility: hidden; }
+#menuMainVacatures      { position: absolute; z-index: 3; width: 94px;  left: 96px; top: 55px; visibility: hidden; }
+
+.onzichtbaar            { display: none; }
+
+h1                      { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 138%; font-weight: bold; color: #ffffff; margin: 0pt; }
+div.headingplacer       { padding: 15px 0px 0px 40px;}
+div.smallheadingplacer  { height:54px; padding-left: 40px;}
+h2                      { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 113%; font-weight: bold; color: #000099; margin: 0pt ; }
+.hometitle              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 150%; font-weight: bold; color: #000066; margin: 10px 0px 10px 0px; }
+
+
+td.pathbar              { background-color: #000090; }
+td.path                 { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; font-weight: bold; color: #ffffff; text-decoration: none; }
+a.path                  { font-family: Verdana, Helvetica, Arial, sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; }
+a.path:hover            { color: #ffffff; text-decoration: underline; }
+
+.menulink               { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #888888; text-decoration: none; }
+.menulink:hover         { text-decoration: none;color: #000099; }
+.menulink img           { vertical-align: text-bottom;}
+
+td.brothers             { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: normal; color: #666666; text-decoration: none; }
+a.brothers              { font-family: Verdana, Helvetica, Arial, sans-serif; font-weight: normal; color: #666666; text-decoration: none; }
+a.brothers:hover        { text-decoration: none; color: #000099; }
+a.currentbrother        { font-family: Verdana, Helvetica, Arial, sans-serif; font-weight: normal; color: #000099; text-decoration: none;}
+
+.linktitel              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 75%; font-weight: bold; color: #ff6600; text-decoration: none; }
+.linktitel:hover        { text-decoration: underline; }
+
+.link                   { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%;  color: #666666; text-decoration: none; }
+.link:hover             { text-decoration: underline;color: #ff6600; }
+.teksttitel             { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 113%; font-weight: bold; color: #ff6600; }
+.tekstkop               { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 88%; font-weight: bold; color: #ff6600; }
+.tekst                  { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 75%; color: #000000; }
+
+.tekstgrijs             { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; color: #666666; text-decoration: none; }
+
+.indexomschrijving      { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; color: #000000; }
+.indexfile              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; font-weight: bold; color: #10109D;  text-decoration: none; }
+.indexfile:hover        {text-decoration: underline; }
+.indexfolder            { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; color: #000000; text-decoration: none;}
+.indexfolder:hover      {text-decoration: underline; }
+
+.bannertxt              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #E9E9E9; text-decoration: none; }
+.bannertxt:hover        { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #E9E9E9; text-decoration: underline; }
+.intranet               { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #FFFFFF; }
+.doculink               { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; color: #000000; text-decoration: none; }
+.doculink:hover         { text-decoration: underline; }
+.intranetintro          { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; font-weight: bold; color: #333333; }
+.intranettekst          { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; color: #000000; }
+.intranetkop            { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; font-weight: bold; color: #FF6600; }
+.nwslink                { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 69%; font-weight: bold; color: #000099; text-decoration: none; }
+.nwslink:hover          { text-decoration: underline; }
+.navactive              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #FF6600; text-decoration: underline; }
+.navlink                { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #9C9C9C; text-decoration: none; }
+.navlink:hover          { text-decoration: underline; color: #FF6600; }
+
+.sitemapentry           { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; color: #000000; text-decoration: none; padding:0px 0px 0px 0px}
+.sitemapentry:hover     { text-decoration: underline; }
+
+.zoeklink               { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%;  font-weight: bold; color: #ff6600; text-decoration: none; }
+.zoeklink:hover         { text-decoration: underline; }
+.zoekonderdeel          { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%;  color: #000000; }
+.zoektekst              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%;  color: #000000; }
+
+.pagetoc                { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; color: #000000; text-decoration: none; }
+
+.homekop                { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #FF6600; text-decoration: none; }
+.hometekst              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; color: #000000; text-decoration: none; }
+
+div.indexitem           { padding: 0px 0px 0px 15px; text-indent: -15px; }
+
+div.homenews            { padding: 7px 4px 2px 18px; text-indent: -15px; }
+div.homenews img        { vertical-align: text-bottom; }
+div.homenews2           { padding: 0px 4px 4px 18px; margin:0; text-indent: -15px;}
+div.homenews2 img       { margin:0; padding: 0;  }
+
+a.homenews              { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #000066; text-decoration: none}
+a.homenews:hover        { text-decoration: underline; color:#000066; }
+
+.homenwslink            { font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 63%; font-weight: bold; color: #000066; text-decoration: none}
+.homenwslink:hover      { text-decoration: underline; color:#000066; }
+
+input { font-size: 80%; }
+select { font-size: 100%; }
+
+.logintekst {font-family:Arial,Helvetica,sans-serif;font-size:56%;color:#666666;}
+.loginvak {font-family:Arial,Helvetica,sans-serif;font-size:63%;border-style:solid;border-width:1px;border-color:#999999;padding-left:2px;}
+
+a.legenda {font-size: 65%;font-family: Verdana, Helvetica, Arial, sans-serif; font-weight: bold; color: #000099; text-decoration: none;}
+
+a.allnewsitems {font-size: 65%;font-family: Verdana, Helvetica, Arial, sans-serif; font-weight: normal; color: #000000; text-decoration: none; margin-left: 93px;}
+.selected {text-decoration: underline;}
+
+/* Tollium classes */
+.tollium-pulldown
+{
+  font-size: 85%;
+}
+
+
+/* The standard webpack CSS. This CSS is shared by all webpacks and
+   modifying it allows you to easily adapt all webpack types to your
+   site design. We recommend that you remove this CSS from the individual
+   webpack demos, and instead move it to your site's central CSS files */
+
+/* Global tag, containing the complete webpack item */
+.whwp
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 69%;
+}
+/* Webpack item title */
+.whwp .whwp-title
+{
+  font-weight: bold;
+}
+/* All links */
+.whwp a
+{
+  color: #000066;
+  text-decoration: none;
+}
+
+.whwp a:hover
+{
+  color: #000066;
+  text-decoration: underline;
+}
+
+/* Characteristics shared between input and button style links */
+.whwp .whwp-button, .whwp .whwp-button:hover, .cwi-forum .whwp-button, .cwi-forum .whwp-button:hover
+{
+  width: 100px;
+  background-color: #EEEDED;
+  text-align: center;
+  color: #FF6302;
+  border: 1px #999999 solid ;
+  font-weight: bold;
+  margin: 3px 3px 3px 0px;
+}
+
+.blogbutton
+{
+  cursor: pointer;
+  cursor: hand;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  width: 80px;
+  background-color: #EEEDED;
+  text-align: center;
+  color: #FF6302;
+  font-size: 69%;
+  border: 1px #999999 solid ;
+  font-weight: bold;
+  margin: 3px 3px 3px 0px;
+}
+
+/* Links with an input button appearance */
+.whwp a.whwp-button, .whwp a.whwp-button:hover
+{
+  display: inline;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 2px 5px;
+}
+.whwp input.whwp-button, .cwi-forum input.whwp-button
+{
+  /* IE/FF work around: first pointer, then hand */
+  cursor: pointer;
+  cursor: hand;
+  font-family: Verdana, Helvetica, Arial, sans-serif; /* Ensure that the font-family is inherited */
+  font-size: 100%; /* Ensure that the font-size is inherited */
+}
+.whwp .whwp-questiongroup
+{
+  border: 1px #999999 solid;
+  padding: 10px;
+  margin: 20px 0px;
+}
+/* Individual questions */
+.whwp .whwp-questiongroup .whwp-question
+{
+  margin: 10px 0px;
+}
+/* Individual question labels */
+.whwp .whwp-questiongroup .whwp-question label, .whwp .whwp-questiongroup .whwp-question
+{
+  font-style: italic;
+  margin: 10px 0px 4px 0px;
+}
+
+
+.whwp .whwp-questiongroup .whwp-question input, .whwp .whwp-questiongroup .whwp-question textarea,
+.whwp .whwp-questiongroup .whwp-question option, .whwp label input, .whwp label textarea,
+.whwp .whwp-questiongroup .whwp-question .whwp-formgroup label
+{
+  font-size: 100%;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.whwp .whwp-entry
+{
+  border: 1px solid #999999;
+  margin: 10px 0px;
+}
+.whwp .whwp-entry .whwp-header
+{
+  background-color: #EBEBEB;
+  font-weight: bold;
+  padding: 4px;
+}
+.whwp .whwp-entry .whwp-message
+{
+  padding: 4px;
+}
+.whwp .whwp-entry .whwp-message blockquote
+{
+  margin-left: 1pt;
+  border-left: 1pt solid #000000;
+  padding-left: 5pt;
+}
+.whwp .whwp-entry .whwp-footer
+{
+  padding: 5px;
+}
+.whwp table.whwp-table
+{
+  border: solid 1px #999999;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 100%; /* Ensure IE picks up the inherited font-size for this table */
+}
+.whwp table.whwp-table th
+{
+  text-align: left;
+  padding: 2px 5px;
+  background-color: #EBEBEB;
+  vertical-align: top;
+  white-space: nowrap;
+  color: #FF6302;
+}
+
+.whwp table.whwp-table td
+{
+  text-align: left;
+  padding: 2px 5px;
+  vertical-align: top;
+}
+.whwp .whwp-odd
+{
+  background-color: #F2F2F2;
+}
+.whwp .whwp-even
+{
+  background-color: #FFFFFF;
+}
+.whwp .whwp-errors
+{
+  color: #FF0000;
+}
+.whwp table.whwp-attachments
+{
+  font-size: 100%;
+}
+
+fieldset legend
+{
+  color: black;
+}
+
+/* End of the standard webpack CSS definitions */
+
+/*
+** Forum
+*/
+
+/* New CSS for the IW forum */
+div.cwi-forum
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 76%;
+}
+
+div.cwi-forum table
+{
+  border-collapse: collapse;
+  border-style: none;
+  width: 527px;
+  font-size: 100%; /* Must inherit the font-size */
+}
+
+div.cwi-forum table td
+{
+  margin: 0;
+  padding: 0;
+}
+
+div.cwi-forum table td.cwi-postinguser
+{
+  vertical-align: top;
+  width: 150px;
+}
+
+div.cwi-forum table td.cwi-postinguser div
+{
+  border-top: 1px solid #999999;
+  font-size: 80%;
+  padding: 2px 0px;
+  margin: 0px;
+  color: #FF6302;
+  font-weight: bold;
+}
+
+
+div.cwi-forum table td.cwi-postingcontent
+{
+  width: 377px;
+  vertical-align: top;
+}
+
+div.cwi-forum table td.cwi-postingcontent div.cwi-postingheader
+{
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  font-size: 80%;
+  padding: 2px 0px;
+  margin: 0px 0px 0px 0px;
+  color: #FF6302;
+  font-weight: bold;
+}
+
+div.cwi-forum table td.cwi-postingcontent div.cwi-postingcontent
+{
+  padding: 7px 0px 8px 0px;
+  margin: 0px 0px 25px 0px;
+}
+
+div.cwi-forum table td.cwi-postingcontent div.cwi-postingcontent blockquote
+{
+  margin: 5px 10px 10px 20px;
+  padding: 7px 5px;
+  border-top: 1px solid #FF6302;
+  border-bottom: 1px solid #FF6302;
+  background-color: #EEEDED;
+}
+
+
+div.cwi-forum table td.cwi-postinguser div
+{
+  padding-left: 5px;
+}
+
+div.cwi-forum th
+{
+  text-align:left;
+}
+
+div.cwi-forum th.cwi-forum-topic
+{
+  width:80%;
+}
+
+div.cwi-forum td div.cwi-forum-topic
+{
+  color: blue;
+}
+
+div.cwi-forum td
+{
+  text-align:left;
+}
+
+tr.cwi-postingeven
+{
+  background-color:#FFFFFF;
+}
+
+tr.cwi-postingodd
+{
+  background-color:#ffffff;
+}
+div.cwi-postingcontent
+{
+ padding-bottom:30px;
+}
+.cwi-input-subject input
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  width:270px;
+  font-weight: normal;
+  border: 1px solid #999999;
+}
+.cwi-input-message textarea
+{
+  width:270px;
+  height:125px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  border: 1px solid #999999;
+}
+
+.cwi-input-subject, .cwi-input-message
+{
+  font-weight: bold;
+  color: #FF6302;
+}
+
+div.cwi-formbuttons
+{
+  padding-top: 10px;
+}
+
+div.cwi-formbuttons a
+{
+  cursor: pointer;
+  cursor: hand;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  background-color: #EEEDED;
+  text-align: center;
+  color: #FF6302;
+  font-size: 100%;
+  text-decoration: none;
+  padding: 2px 5px;
+  border: 1px #999999 solid;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 30px;
+}
+
+div.cwi-formbuttons a:hover
+{
+  border: 1px #FF6302 solid;
+}
+
+p.cwi-header
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 69%;
+  color: #000000;
+}
+
+div.cwi-forum th, div.cwi-forum-numpostings, div.cwi-forum-creationtime, div.cwi-forum-lastaddtime
+{
+  padding: 5px 10px 5px 0px;
+  white-space: nowrap;
+}
+
+div.cwi-forum-subject
+{
+  width: 300px;
+}
+
+
+
+
+
+
+
+
+/* OLD CWI (new webpack) CSS
+   Test new CSS, then remove this old CSS * /
+
+
+div.cwi-forum
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 76%;
+}
+
+div.cwi-forum table
+{
+  border-collapse: collapse;
+  border-style: none;
+  width: 527px;
+  font-size: 100%; /* Must inherit the font-size * /
+}
+
+div.cwi-forum table td
+{
+  margin: 0;
+  padding: 0;
+}
+
+div.cwi-forum table td.cwi-postinguser
+{
+  vertical-align: top;
+  width: 150px;
+}
+
+div.cwi-forum table td.cwi-postinguser div
+{
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  font-size: 80%;
+  padding: 2px 0px;
+  margin: 0px;
+  color: #FF6302;
+  font-weight: bold;
+}
+
+
+div.cwi-forum table td.cwi-postingcontent
+{
+  width: 377px;
+}
+
+div.cwi-forum table td.cwi-postingcontent div.cwi-postingheader
+{
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  font-size: 80%;
+  padding: 2px 0px;
+  margin: 0px 0px 0px 0px;
+  color: #FF6302;
+  font-weight: bold;
+}
+
+div.cwi-forum table td.cwi-postingcontent div.cwi-postingcontent
+{
+  padding: 7px 0px 8px 0px;
+  margin: 0px 0px 25px 0px;
+  border-bottom: 1px solid #999999;
+}
+
+div.cwi-forum table td.cwi-postingcontent div.cwi-postingcontent blockquote
+{
+  margin: 5px 10px 10px 20px;
+  padding: 7px 5px;
+  border-top: 1px solid #FF6302;
+  border-bottom: 1px solid #FF6302;
+  background-color: #EEEDED;
+}
+
+
+div.cwi-forum table td.cwi-postinguser div
+{
+  padding-left: 5px;
+}
+
+div.cwi-forum th
+{
+  text-align:left;
+}
+
+div.cwi-forum th.cwi-forum-topic
+{
+  width:80%;
+}
+
+div.cwi-forum td div.cwi-forum-topic
+{
+  color: blue;
+}
+
+div.cwi-forum td
+{
+  text-align:left;
+}
+
+tr.cwi-postingeven
+{
+  background-color:#FFFFFF;
+}
+
+tr.cwi-postingodd
+{
+  background-color:#ffffff;
+}
+div.cwi-postingcontent
+{
+ padding-bottom:30px;
+}
+.cwi-input-subject input
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  width:270px;
+  font-weight: normal;
+  border: 1px solid #999999;
+}
+.cwi-input-message textarea
+{
+  width:270px;
+  height:125px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  border: 1px solid #999999;
+}
+
+.cwi-input-subject, .cwi-input-message
+{
+  font-weight: bold;
+  color: #FF6302;
+}
+
+div.cwi-formbuttons
+{
+  padding-top: 10px;
+}
+
+div.cwi-formbuttons a
+{
+  cursor: pointer;
+  cursor: hand;
+  display: block;
+  width: 100px;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  background-color: #EEEDED;
+  text-align: center;
+  color: #FF6302;
+  font-size: 100%;
+  text-decoration: none;
+  padding: 2px 5px;
+  border: 1px #999999 solid;
+  font-weight: bold;
+  white-space: nowrap;
+}*/

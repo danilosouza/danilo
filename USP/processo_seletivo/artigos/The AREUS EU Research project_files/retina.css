@@ -1,0 +1,233 @@
+/**
+ * @package WordPress
+ * @subpackage Industrial
+ * @since Industrial 1.0.2
+ * 
+ * High Resolution (Retina) Displays CSS Rules
+ * Created by CMSMasters
+ * 
+ */
+
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), 
+	only screen and (-moz-min-device-pixel-ratio: 1.5), 
+	only screen and (-o-min-device-pixel-ratio: 3/2), 
+	only screen and (min-device-pixel-ratio: 1.5) {
+	
+	#header .search_line input[type="submit"] {
+		background-image:url(../img/retina/search_header@2x.png);
+		background-size:40px 40px;
+	}
+	
+	.search_but {
+		background-image:url(../img/retina/search_button@2x.png);
+		background-size:40px 40px;
+	}
+
+	.social_but {
+		background-image:url(../img/retina/social_button@2x.png);
+		background-size:40px 40px;
+	}
+
+	.social_but.close_but, 
+	.search_but.close_but {
+		background-image:url(../img/retina/close@2x.png);
+		background-size:40px 40px;
+	}
+	
+	#navigation ul li.dropdown > a:before {
+		background-image:url(../img/retina/arrow_main_nav@2x.png);
+		background-size:25px 9px;
+	}
+	
+	#slide_top {	
+		background-image:url(../img/retina/slide_up@2x.png);
+		background-size:50px 50px;
+	}
+	
+	.acc .tog:after, 
+	.togg .tog:after {
+		background-image:url(../img/retina/arrow_tour@2x.png);
+		background-size:19px 19px;
+	}
+	
+	.box.error_box tr td:first-child {
+		background-image:url(../img/retina/error@2x.png);
+		background-size:32px 32px;
+	}
+
+	.box.success_box tr td:first-child {
+		background-image:url(../img/retina/success@2x.png);
+		background-size:32px 32px;
+	}
+
+	.box.notice_box tr td:first-child {
+		background-image:url(../img/retina/notice@2x.png);
+		background-size:32px 32px;
+	}
+
+	.box.warning_box tr td:first-child {
+		background-image:url(../img/retina/warning@2x.png);
+		background-size:32px 32px;
+	}
+
+	.box.download_box tr td:first-child {
+		background-image:url(../img/retina/download@2x.png);
+		background-size:32px 32px;
+	}
+	
+	.icon_banner {
+		background-image:url(../img/retina/icon_banner@2x.png);
+		background-size:40px 160px;
+	}
+	
+	.percent_item_colored {
+		background-image:url(../img/retina/stats_bg@2x.png);
+		background-size:52px 40px;
+	}
+	
+	div.jp-playlist li:before, 
+	.list li:before, 
+	.widget_links ul li:before, 
+	.widget.widget_archive ul li:before, 
+	.widget.widget_categories ul li:before, 
+	.widget.widget_meta ul li:before, 
+	.widget.widget_recent_comments ul li:before, 
+	.widget.widget_recent_entries ul li:before, 
+	.widget.widget_pages ul li:before, 
+	.widget.widget_nav_menu ul li:before, 
+	.content_wrap div[data-folder="text"] ul li:before, 
+	.cmsms_share:before, 
+	.commentlist li div.comment-content ul li:before, 
+	.rev_slider > ul > li a.more_but:before {
+		background-image:url(../img/retina/arrow_list@2x.png);
+		background-size:3px 5px;
+	}
+	
+	.widget_custom_twitter_entries .published, 
+	.tweet_time {
+		background-image:url(../img/retina/twitter_icon@2x.png);
+		background-size:30px 20px;
+	}
+
+	#bottom .tweet_time {
+		background-image:url(../img/retina/twitter_icon_bottom@2x.png);
+		background-size:30px 20px;
+	}
+	
+	.search_line input[type="submit"] {
+		background-image:url(../img/retina/icon_search@2x.png);
+		background-size:17px 17px;
+	}
+	
+	.widget .cmsms_content_prev_slide span,
+	.widget .cmsms_content_next_slide span {
+		background-image:url(../img/retina/arrow_widget@2x.png);
+		background-size:42px 40px;
+	}
+	
+	.blog .post {
+		background-image:url(../img/retina/blog_line@2x.png);
+		background-size:6px 6px;
+	}
+	
+	.cmsms_post_format_img {
+		background-image:url(../img/retina/post_format@2x.png);
+		background-size:35px 280px;
+	}
+	
+	ul.page-numbers a.next,
+	ul.page-numbers a.prev {
+		background-image:url(../img/retina/arrow_paginator@2x.png);
+		background-size:25px 50px;
+	}
+	
+	.project_navi a[rel="prev"]:before, 
+	.project_navi a[rel="next"]:before {
+		background-image:url(../img/retina/arrow_content_slider@2x.png);
+		background-size:51px 25px;
+	}
+	
+	.cmsmsLike {
+		background-image:url(../img/retina/heart@2x.png);
+		background-size:35px 35px;
+	}
+
+	.cmsms_wrap_latest_bottom_tweets {
+		background-image:url(../img/retina/twitter_bottom@2x.png);
+		background-size:70px 40px;
+	}
+	
+	.pj_sort a[name="pj_name"]:before, 
+	.pj_sort a[name="pj_date"]:before, 
+	a.pj_cat_filter:before, 
+	.pj_sort a[name="pj_name"]:after, 
+	.pj_sort a[name="pj_date"]:after, 
+	a.pj_cat_filter:after {
+		background-image:url(../img/retina/arrow_sort@2x.png);
+		background-size:23px 50px;
+	}
+	
+	a span.image_rollover {
+		background-image:url(../img/retina/hover_content@2x.png);
+		background-size:100px 100px;
+	}
+	
+	.jackbox span.image_rollover {
+		background-image:url(../img/retina/hover_image@2x.png);
+		background-size:100px 100px;
+	}
+
+	.format-link a span.image_rollover {
+		background-image:url(../img/retina/hover_link@2x.png);
+		background-size:100px 100px;
+	}
+
+	.format-video a span.image_rollover {
+		background-image:url(../img/retina/hover_video@2x.png);
+		background-size:100px 100px;
+	}
+	
+	.cmsms-form-builder .check_parent input[type="radio"]+label:before,
+	.wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="radio"] + span.wpcf7-list-item-label:before, 
+	.wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="radio"]:checked + span.wpcf7-list-item-label:before,
+	.cmsms-form-builder .check_parent input[type="radio"]:checked+label:before, 
+	.wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="checkbox"] + span.wpcf7-list-item-label:before,
+	.cmsms-form-builder .check_parent input[type="checkbox"]+label:before, 
+	.wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="checkbox"]:checked + span.wpcf7-list-item-label:before,
+	.cmsms-form-builder .check_parent input[type="checkbox"]:checked+label:before {
+		background-image:url(../img/retina/radio_check@2x.png);
+		background-size:19px 130px;
+	}
+
+	#bottom .cmsms-form-builder .check_parent input[type="radio"]+label:before,
+	#bottom .wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="radio"] + span.wpcf7-list-item-label:before, 
+	#bottom .wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="radio"]:checked + span.wpcf7-list-item-label:before,
+	#bottom .cmsms-form-builder .check_parent input[type="radio"]:checked+label:before, 
+	#bottom .wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="checkbox"] + span.wpcf7-list-item-label:before,
+	#bottom .cmsms-form-builder .check_parent input[type="checkbox"]+label:before, 
+	#bottom .wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="checkbox"]:checked + span.wpcf7-list-item-label:before,
+	#bottom .cmsms-form-builder .check_parent input[type="checkbox"]:checked+label:before {
+		background-image:url(../img/retina/radio_check_bottom@2x.png);
+		background-size:19px 130px;
+	}
+	
+	.cmsms_content_prev_slide span,
+	.cmsms_content_next_slide span {
+		background-image:url(../img/retina/arrow_content_slider@2x.png);
+		background-size:51px 25px;
+	}
+	
+	.cmsms_wrap_latest_bottom_tweets .cmsms_content_prev_slide span, 
+	.cmsms_wrap_latest_bottom_tweets .cmsms_content_next_slide span {
+		background-image:url(../img/retina/arrow_twitter_slider@2x.png);
+		background-size:23px 52px;
+	}
+	
+	.tparrows.default {
+		background-image:url(../img/retina/arrow_slider@2x.png) !important;
+		background-size:200px 60px;
+	}
+	
+}
+

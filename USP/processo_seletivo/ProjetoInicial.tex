@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage[latin1]{inputenc}
+
+\title{Universidade de São Paulo\\
+	Projeto de dissertação de mestrado}
+\author{Danilo Henrique Costa Souza}
+\date{20 de Maio de 2016}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\usepackage{float}
+\usepackage{color}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{subfig}
+
+\begin{document}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Bibliografia}
+\newcommand{\titledate}[2][2.5in]{%
+  \noindent%
+  \begin{table}[H]
+  \centering
+  \begin{tabular}{@{}p{#1}@{}}
+    \\ \hline \\[-.75\normalbaselineskip]
+   	#2
+  \end{tabular} \hspace{1in}
+  \end{table}
+%  \begin{tabular}{@{}p{#1}@{}}
+%    \\ \hline \\[-.75\normalbaselineskip]
+%    Data \date
+%  \end{tabular}
+}
+\maketitle
+
+\section{Título}
+
+Medição da eficiência energética de um braço robótico ao longo de diferentes trajetórias usando diferentes métodos de controle.
+
+\section{Introdução}
+
+O ramo da robótica é relativamente novo na ciência moderna, tendo sido aplicado em escala industrial após a III Revolução Industrial, na década de 70, quando os avanços computacionais permitiram sua implementação e programação. (Spong et. al) Definem em \cite{robotmodeling} um robô como sendo um manipulador reprogramável e multifuncional desenvolvido  para mover objetos, materiais, ferramentas ou dispositivos especiais através de trajetórias variáveis e programáveis para executar uma variedade de atividades.
+
+Duas formas simples de classificação de robôs são:
+	\begin{itemize}
+		\item Robôs industriais (usam alimentação direta de energia)
+		\item Robôs autônomos (utilizam baterias)
+	\end{itemize}
+	
+Ambos os tipos de robô precisam de energia, no caso de robôs autônomos a fonte de energia é finita e portanto deve ser otimizada ao máximo, uma vez que a vida útil do robô depende muito em parte da utilização ótima da bateria. Os robôs industriais possuem energia ``infinita'' (no sentido de que a energia não será interrompida abruptamente), entretanto atividades industriais usualmente requerem dispositivos mais robustos para realizarem atividades que exigem força, rigidez e precisão, logo esses robôs requerem um quantidade muito grande de energia para entrar em operação.
+
+Nos últimos anos a pesquisa na área de eficiência energética em robótica tem aumentado, devido em parte, ao avanço nas técnicas de controle possibilitando o desenvolvimento de controladores mais robustos e capazes de mover braços pesados com movimentos mais suaves. \cite{energymotionplanning} e \cite{de2012energy} Falam da necessidade de reduzir o consumo de energia em robôs, não somente pela redução de custo e otimização da produção, mas também pela redução de poluentes, que tem sido uma demanda muito forte nos últimos anos em diversos países.
+
+Entretanto, movimentos suaves (menos abruptos) não são a única forma de reduzir o consumo de energia de um braço robótico, outras formas seriam otimizar a trajetória do braço dentro do espaço de trabalho para realizar a tarefa desejada \cite{energymotionplanning} e otimizar o projeto (forma) do robô \cite{designoptimazation}. Existe um número sem fim de possibilidades (excluindo-se aquelas que levam a uma situação de singularidade) para  um braço robótico realizar uma determinada atividade, encontrar a trajetória mais eficiente depende também da capacidade do controlador (i.e, um controlador mais robusto é capaz de executar determinados movimentos sem perda de eficiência).
+
+
+\section{Objetivos}
+O objetivo do trabalho será modelar um braço robótico seriado, controlando sua trajetória por meio de diferentes tipos de controladores e analisando o consumo de energia para diferentes trajetos dentro do espaço de trabalho.	
+
+
+\section{Metodologia}
+
+A metodologia a ser utilizada no trabalho será:
+
+	\begin{enumerate}
+		\item Levantamento bibliográfico de trabalhos relacionados para definir qual a tendência de pesquisa nos últimos anos e seus principais autores, bem como esclarecer conceitos chave para o projeto.
+		\item Revisão da proposta, após análise da bibliografia existente, a fim de definir qual o melhor caminho e quais as possibilidades do tema, bem como definir os resultados esperados.
+		\item Estudo e definição das técnicas de controle que serão utilizadas.
+		\item Estudo e definição dos algoritmos para encontrar a melhor trajetória.
+		\item Frequentar disciplinas que estejam de acordo com a temática do projeto e que ajudarão a esclarecer e aprofundar os estudos para realização do mesmo.
+		\item Desenvolver aplicações ao longo do projeto que servirão de base para o resultado final.
+		\item Revisar novamente a proposta de trabalho para verificar se os resultados esperados serão atingidos dentro do cronograma.
+		\item Construção da dissertação e defesa.
+	\end{enumerate}
+
+\section{Recursos}
+
+Para realização do projeto serão utilizados os seguintes recursos:
+	\begin{enumerate}
+		\item $MatLab^{\copyright}$ (ou outra linguagem, e.g, Python, C++) para simulação dos movimentos e implementação/análise dos algoritmos.
+		\item Utilização de um software para modelagem do braço robótico (e.g, $Gazebo^{\copyright}$ ou outro software livre).
+		\item Um modelo físico em escala reduzida utilizando $RaspberryPi^{\copyright}\ e/ou\ Arduino^{\copyright}$ para acionar os motores.
+		\item Motores de passo ou servo motores com \textit{encoders} para movimentação das articulações do braço robótico.
+	\end{enumerate}
+
+\section{Cronograma}
+Cronograma inicial do projeto:
+
+% Please add the following required packages to your document preamble:
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+	\begin{table}[H]
+	\centering
+	\caption{Cronograma inicial do projeto}
+	\label{my-label}
+		\begin{tabular}{@{}|l|l|l|l|l|l|l|@{}}
+			\toprule
+			Atividade                                & \multicolumn{6}{l|}{Período} \\ \midrule
+			{\color[HTML]{656565} }                  & 1º  & 2º & 3º & 4º & 5º & 6º \\ \midrule
+			Apresentação do tema                     & X   &    &    &    &    &    \\ \midrule
+			Obtenção dos créditos                    & X   & X  & X  & X  &    &    \\ \midrule
+			Estudo dos algoritmos a serem utilizados & X   & X  &    &    &    &    \\ \midrule
+			Desenvolvimento das aplicações base      &     & X  & X  &    &    &    \\ \midrule
+			Construção do protótipo                  &     &    & X  & X  &    &    \\ \midrule
+			Estudo dos dados obtidos                 &     &    &    & X  & X  &    \\ \midrule
+			Construção da dissertação                &     &    &    &    & X  & X  \\ \midrule
+			Defesa da dissertação                    &     &    &    &    &    & X  \\ \midrule
+			Revisão bibliográfica                    & X   & X  &    &    & X  &    \\ \bottomrule
+		\end{tabular}
+	\end{table}
+
+\bibliographystyle{unsrt}
+\bibliography{ProjetoInicial}
+\nocite{energymotionplanning}
+\nocite{de2012energy}
+\nocite{designoptimazation}
+
+
+\hfill \break
+\\[70ex]
+\centering \titledate{Danilo Henrique Costa Souza}              
+
+\hfill \break
+\centering \titledate{Diego Colón}
+
+\centering \hfill \break São Paulo, 20 de Maio de 2016
+
+
+\end{document}

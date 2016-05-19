@@ -1,0 +1,162 @@
+\documentclass{article}
+\usepackage[latin1]{inputenc}
+
+\title{Universidade de São Paulo\\
+	Escola Politécnica da USP \\
+	Programa de Pós-Graduação em Engenharia Elétrica\\
+	Disciplina: Identificação de Sistemas\\
+	Solução da Lista 3}
+\author{Danilo Henrique Costa Souza}
+\date{23 de Maio de 2016}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{float}
+\usepackage{color}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfig}
+\begin{document}
+
+
+\renewcommand{\figurename}{Figura}
+%\renewcommand{\sectionname}{Capítulo}
+
+\maketitle
+
+\section{Item a}
+
+A Figura \ref{fig:item_a} mostra o sinal PRBS gerado com 601 pontos com $T_{b} = 20T$. É possível perceber o formato aleatório do sinal, pois há períodos de mais de $5T_{b}$ em que o sinal não muda de valor, e há também períodos em que o sinal muda de valores a cada $T_{b}$ segundos.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_a.png}
+		\caption{Sinal PRBS com $T_{b} = 20T$.}
+		\label{fig:item_a}
+	\end{figure}
+	
+	
+\section{Item b}
+
+As Figuras \ref{fig:item_b_sem_pert} e \ref{fig:item_b_com_pert} apresentam, respectivamente, a resposta do processo ao sinal PRBS sem e com perturbação, usando sementes diferentes das sementes usadas anteriormente.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_b_sem_pert.png}
+		\caption{Resposta do processo sem perturbação usando sinal PRBS como entrada.}
+		\label{fig:item_b_sem_pert}
+	\end{figure}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_b_com_pert.png}
+		\caption{Resposta do processo com perturbação usando sinal PRBS como entrada.}
+		\label{fig:item_b_com_pert}
+	\end{figure}
+
+
+\section{Item c}
+
+A Figura \ref{fig:item_c} mostra a comparação (usando o comando ``compare'' do $MatLab^{\copyright}$) dos modelos gerados no item `` j '' da lista 2 usando sinal PRBS do item `` a '' na entrada. Para o processo sem perturbação, os modelos ARX e ARMAX obtiveram os resultados com \textit{fit} mais baixo, vale ressaltar que no processo com perturbação o modelo ARX apresentou um \textit{fit} bem abaixo dos outros modelos, isso corre devido a falta de liberdade de se ajustar o modelo de perturbação usando estrutura ARX.
+
+Para o processo com perturbação, todos os modelos, à exceção do ARX, obtiveram resultados parecidos, com \textit{fit} em torno de $64\%-66\%$.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_c.png}
+		\caption{Comparação dos modelos do item ``j'' da lista 2 usando sinal PRBS na entrada.}
+		\label{fig:item_c}
+	\end{figure}
+
+\section{Item d}
+
+Na Figura \ref{fig:item_d} é possível perceber que o \textit{fit} para ambos os processos, com e sem perturbação, ficou abaixo dos valores da Figura \ref{fig:item_c}, isso era esperado porque com um valor de $T_{b}$ mais baixo, a energia do sinal não se concentra apenas nas baixas frequências, dificultando assim a identificação das componentes de regime estacionário do processo (i.e, ganho estacionário). É possível perceber ainda, na comparação do processo com perturbação no intervalo $300 \leqslant t \leqslant 500$ não é possível diferenciar o comportamento do processo da perturbação, dificultando ainda mais o processo de identificação.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_d.png}
+		\caption{Comparação dos modelos do item ``j'' da lista 2 usando sinal PRBS ($T_{b}=4T$) na entrada.}
+		\label{fig:item_d}
+	\end{figure}
+
+
+\section{Item e}
+
+A Figura \ref{fig:item_e} apresenta o sinal PRBS lento gerado com 1001 pontos.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_e.png}
+		\caption{Sinal PRBS lento ($T_{b}=20T$) com 1001 pontos.}
+		\label{fig:item_e}
+	\end{figure}
+
+\section{Item f}
+A Figura \ref{fig:item_f} mostra a resposta ao degrau dos modelos identificados usando estruturas ARX, ARMAX, OE, BJ e FIR. Percebe-se que o modelo ARX foi o que apresentou pior desempenho (menor ganho) em relação aos outros, conforme dito anteriormente, isso de deve ao fato da estrutura ARX não possuir liberdade para construção de um modelo  de perturbação satisfatório, se ganho foi praticamente metade do ganho estacionário do processo.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_f.png}
+		\caption{Resposta ao degrau dos modelos identificados usando como entrada um sinal PRBS lento com 1001 pontos.}
+		\label{fig:item_f}
+	\end{figure}
+
+\section{Item g} 
+A Figura \ref{fig:item_g} mostra a validação dos modelos obtidos usando os 400 pontos finais coletados (validação cruzada). Novamente o modelo ARX apresentou o pior desempenho e os outros modelos apresentaram resultados parecidos, com \textit{fit} entre $65\%-67\%$, esse resultado foi ligeiramente melhor do que a comparação feita no item `` c '' para os modelos com perturbação.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_g.png}
+		\caption{Validação dos modelos identificados usando os últimos 400 pontos coletados da saída do processo.}
+		\label{fig:item_g}
+	\end{figure}
+	
+	
+\section{Item h}
+A Figura \ref{fig:item_h} mostra a comparação dos modelos identificados no item `` f '' usando um degrau como entrada. A resposta dos modelos ao degrau obteve um \textit{fit} menor para todas as estruturas utilizadas em relação ao desempenho apresentado no item ``g '', quando os 400 pontos não utilizados para identificação foram usados na validação e o sinal de entrada foi o PRBS ao invés do degrau.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_h.png}
+		\caption{Validação dos modelos identificados com PRBS, usando degrau como entrada.}
+		\label{fig:item_h}
+	\end{figure}
+	
+\section{Item i}
+A Figura \ref{fig:item_i} mostra o ganho estacionário dos modelos identificados, usando sinal PRBS lento como entrada. Nota-se que os ganhos ficaram entre $92\%\ -\ 95\%$ do ganho estacionário do processo, com exceção do modelo com estrutura ARX, que apresentou um ganho de $54\%$ do ganho estacionário do processo.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_i.png}
+		\caption{Ganho estacionário dos modelos obtidos com PRBS lento.}
+		\label{fig:item_i}
+	\end{figure}
+
+\section{Item j}
+A Figura \ref{fig:item_j} mostra a mesma validação cruzada feita no item `` h '', mas usando um sinal PRBS rápido ($T_{b}=4T$) para obter os modelos das estruturas ARX, ARMAX, OE, BJ e FIR. O desempenho do sinal PRBS rápido foi ligeiramente menor, o que é esperado, uma vez que a energia deste sinal está espalhada por todo o espectro de frequências, ou seja, este não é um sinal ideal para obtenção das componentes estacionárias do processo (e.g, ganho de regime estacionário).
+
+Vale ressaltar que com o sinal PRBS rápido, o modelo da estrutura ARX apresentou um \textit{fit} negativo, mostrando que a combinação de um sinal PRBS com alta frequência e uma estrutura com pouco grau de liberdade para modelagem da perturbação, não apresenta um bom resultado na identificação de sistemas com perturbação.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_j.png}
+		\caption{Validação dos modelos identificados com PRBS rápido ($T_{b}=4T$), usando degrau como entrada.}
+		\label{fig:item_j}
+	\end{figure}
+
+\section{Item k}
+A Figura \ref{fig:item_k} mostra a comparação do ganho estacionário do processo com o ganho estacionário dos modelos obtidos com PRBS lento e PRBS rápido. No caso do PRBS rápido os ganhos estacionários foram menores do que os ganhos estacionários do PRBS lento, ficando entre $90\%\ -\ 92\%$, com exceção do modelo ARX, que novamente obteve o pior desempenho em comparação com as outras estruturas, apresentando um ganho estacionário de $30\%$ do ganho estacionário do processo.
+
+
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista3_item_k.png}
+		\caption{Ganho estacionário dos modelos obtidos com PRBS lento e com PRBS rápido.}
+		\label{fig:item_k}
+	\end{figure}
+
+
+\end{document}

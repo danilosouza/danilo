@@ -1,0 +1,1246 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>RIA - Robotics Online - Industrial Robot Automation</title>
+<link rel="canonical" href="http://www.robotics.org" />
+<meta name="Description" content="Robotics Online is an industrial robot and automation company powered by RIA. Find what type of robots to use in any industry application.">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0"> 
+
+<link href='//fonts.googleapis.com/css?family=Arimo:400,700|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jquery.sidr.light.css">
+<link href="css/styles.css?version=2" rel="stylesheet" type="text/css" />
+<link href="css/grid.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css?version=2" rel="stylesheet" type="text/css" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="css/print.css?version=2" rel="stylesheet" type="text/css" media="print" />
+
+<script type="text/javascript" src="Scripts/AC_RunActiveContent.js"></script>
+<script language="JavaScript" src="https://seal.networksolutions.com/siteseal/javascript/siteseal.js" type="text/javascript"></script>
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>    
+
+
+<link rel="icon" href="favicon.ico?version=2" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico?version=2" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png?version=2">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2830408-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+ 
+fbq('init', '1062188433806005');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1062188433806005&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<meta name="google-translate-customization" content="35d27e948ae4a905-3f76faf3e16b3474-gb1fd9fa59a74960b-10"></meta>
+
+
+<script language="JavaScript" src="https://seal.networksolutions.com/siteseal/javascript/siteseal.js" type="text/javascript"></script> 
+  <meta property="og:title" content="Welcome to Robotics Online!"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://www.robotics.org"/>
+  <meta property="og:image" content="http://www.robotics.org/userAssets/ogImage/RIA-Robotics-Online-1200x630.png"/>
+  <meta property="og:site_name" content="Robotics Online"/>
+  <meta property="fb:admins" content="693097971"/>
+  <meta property="og:description"
+      content="Robotics Online is the premier resource from RIA, Robotic Industries Association, for industrial robotics and automation. Call (734) 994-6088 to join RIA."/>
+  
+<link rel="stylesheet" href="nivo/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/home.css" type="text/css" />
+</head>
+<body>
+	 
+
+
+
+<a name="top" id="top"></a>
+<div id="wrapper">
+
+<div id="header">
+  <div class="inner">
+    <div class="HeaderLinks group"> <a href="#" class="ToggleMenu Open"></a>
+      <ul class="SocialLinks">
+        <li><a id="twitter" class="addthis_button_twitter_follow" addthis:userid="RIA_robotics"><img src="images/spacer.gif" alt="Follow RIA on Twitter"></a></li>
+        <li><a id="facebook" class="addthis_button_facebook_follow" addthis:userid="pages/Robotic-Industries-Association/172699179409023"><img src="images/spacer.gif" alt="Like RIA on Facebook"></a></li>
+        <li><a id="googleFollow" class="addthis_button_google_follow" addthis:userid="109332810369383257778"><img src="images/spacer.gif" alt="Follow RIA on Google+"></a></li>
+        <li><a id="youtube" class="addthis_button_youtube_follow" addthis:userid="roboticsonline"><img src="images/spacer.gif" alt="Subscribe to RIA's YouTube Channel"></a></li>
+        <li><a id="linkedin" class="addthis_button_linkedin_follow" addthis:userid="robotic-industries-association" addthis:usertype="company"><img src="images/spacer.gif" alt="Connect with RIA on LinkedIn"></a></li>
+      </ul>
+      
+      <a href="#" class="ToggleSearch Open"></a>
+      <div class="SignIn">
+      	
+        <ul>
+          <li><a href="login.cfm">Sign In</a></li>
+          <li class="registerlink"><a href="/Join-Robotics-Online">Register</a></li>
+        </ul>
+        
+      </div>
+    </div>
+    <div id="logo"><a href="/"><img class="desktop-logo" src="/images/ria/logo.png"><img class="mobile-logo" src="/images/ria/logo-lrg.png"></a></div>
+    <div id="SearchBar" class="group">
+    <div class="SearchBarAll">
+      <form action="search-results.cfm" method="post" name="searchForm" onSubmit="return checkSearch();">
+      <div class="SearchWrap">
+        <input placeholder="Search Robotics Online" name="keywords" id="keywords" type="text">
+      </div>
+      <input type="submit" value="SEARCH">
+      </form>
+      </div>
+      <a href="#" class="BrowseBy">BROWSE BY</a>
+      <div class="BrowseByDD">
+       <div class="descrip">  
+      Choose One of Three Ways to Browse:
+      </div>
+        <div class="BrowseByBox">
+          
+          <p class="head"><span>1</span>By Products:</p>
+          <div class="BrowseInput">
+          <form action="search-product-results.cfm" method="post" name="productCats">
+          <select name="cat1">
+            <option value="0">ALL</option>
+            
+            <option value="1">Cable</option>
+            
+            <option value="2">Control</option>
+            
+            <option value="3">End-of-Arm Tooling</option>
+            
+            <option value="17">Industrial Robots</option>
+            
+            <option value="30">Motors & Drive</option>
+            
+            <option value="31">Other Accessory Equipment</option>
+            
+            <option value="32">Packaging & Palletizing</option>
+            
+            <option value="35">Safety Equipment</option>
+            
+            <option value="36">Software</option>
+            
+            <option value="39">Conveyors</option>
+            
+            <option value="40">Camera</option>
+            
+            <option value="41">Mobile Robots</option>
+            
+            <option value="42">Food and Beverage</option>
+            
+            <option value="43">Pharmaceutical</option>
+            
+            <option value="44">Education</option>
+            
+            <option value="47">Robot Cable Management / Dress Components</option>
+            
+          </select>
+         
+          <input type="submit" class="browse" value="GO">
+          <input type="hidden" name="searchBy" value="product" />
+          </form>
+          </div>
+          <div class="brclear"></div>
+        </div>
+        
+        
+       <div class="BrowseByBox">
+        
+          <p class="head"><span>2</span>By Companies:</p>
+          <div class="BrowseInput">
+          <form action="search-company-results.cfm" method="post" name="companyCats" onSubmit="return checkCompanyBrowse();">
+          <div class="BrowseCheckboxes">
+          
+          <label><input type="checkbox" name="member_type_id" value="1">Supplier</label>
+			<label><input type="checkbox" name="member_type_id" value="2">Integrator</label>
+			<label><input type="checkbox" name="member_type_id" value="4">Educator</label>
+			<label><input type="checkbox" name="member_type_id" value="5">Consultant</label>
+            </div>      
+            <input type="submit" class="browse" value="GO">
+            <input type="hidden" name="searchBy" value="company" />
+            </form>
+            </div>
+                    <div class="brclear"></div>
+        </div>
+         <div class="BrowseByBox last">
+          
+          <p class="head"><span>3</span>By Services:</p>
+          <div class="BrowseInput">
+          <form action="search-service-results.cfm" method="post" name="serviceCats">
+          <select name="cat1">
+            <option value="0">ALL</option>
+            
+               <option value="26">Connectioneering</option>
+            
+               <option value="29">Conveyors</option>
+            
+               <option value="30">Deburring</option>
+            
+               <option value="32">Emergency Management</option>
+            
+               <option value="33">Food and Beverage</option>
+            
+               <option value="2">Integration Services</option>
+            
+               <option value="28">Machine Vision Systems</option>
+            
+               <option value="3">Marketing & Sales</option>
+            
+               <option value="27">Personnel Search & Recruitment</option>
+            
+               <option value="34">Pharmaceutical</option>
+            
+               <option value="31">Repair/Refurbish</option>
+            
+               <option value="21">Researchers</option>
+            
+               <option value="35">Safety</option>
+            
+               <option value="4">Trade Journals</option>
+            
+               <option value="5">Training</option>
+            
+          </select>
+          <input type="submit" class="browse" value="GO">
+          <input type="hidden" name="searchBy" value="category" />
+          </form>
+         </div>
+         <div class="brclear"></div>
+        </div>
+        
+        <a href="#" class="Close">[ CLOSE ]</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="nav">
+  <div class="inner">
+  
+    <ul>
+      <ul>
+      
+      <li><a class="toplevel" href="About-RIA">RIA & YOU</a>
+        
+        <ul class="SubNav">
+          
+          <li><a href="/About-RIA" target="_blank" >About RIA</a>
+          
+          </li>
+          
+          <li><a href="Join-Robotics-Online" >Become a Member</a>
+          
+          </li>
+          
+          <li><a href="Meet-New-Members" >Meet New Members</a>
+          
+          </li>
+          
+          <li><a href="Whos-Who" >Who's Who</a>
+          
+          </li>
+          
+          <li><a href="schools-corp-sponsors.cfm" >School and Corporate Sponsors</a>
+          
+          </li>
+          
+          <li><a href="Advertise-On-Robotics-Online" >Advertise</a>
+          
+          </li>
+          
+          <li><a href="Subscribe" >Subscribe to Our Newsletter</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="toplevel" href="Robotic-Resources">ROBOTIC RESOURCES</a>
+        
+        <ul class="SubNav">
+          
+          <li><a href="Beginners-Guide" >Beginners Guide</a>
+          
+          </li>
+          
+          <li><a href="Ask-The-Experts" >Ask The Experts</a>
+          
+          </li>
+          
+          <li><a href="/Industry-Statistics" >Industry Statistics</a>
+          
+          </li>
+          
+          <li><a href="robotic-content.cfm/Robotics/Engelberger-Awards/id/55" >Engelberger Robotics Awards</a>
+          
+          </li>
+          
+          <li><a href="Online-Store" >Online Store</a>
+          
+          </li>
+          
+          <li><a href="News" >News</a>
+          
+          <ul class="SubNav2">
+          	
+            <li><a href="News" >Industry News</a></li>
+          	
+            <li><a href="New-Product-News" >New Product News</a></li>
+          	
+            <li><a href="Industry-Statistics" >Industry Statistics</a></li>
+          	
+            <li><a href="newsletters.cfm" >Newsletter</a></li>
+          	
+          </ul>
+          
+          </li>
+          
+          <li><a href="Robotic-Resources" >Education</a>
+          
+          <ul class="SubNav2">
+          	
+            <li><a href="http://www.robotics.org/form.cfm?form_id=198" >Collaborative Robots White Paper</a></li>
+          	
+            <li><a href="http://www.robotics.org/In-House-Safety-Training" >RIA Safety Training</a></li>
+          	
+            <li><a href="RIA-Webinar-Series" >RIA Webinar Series</a></li>
+          	
+            <li><a href="Industry-Insights" >Industry Insights</a></li>
+          	
+            <li><a href="Tech-Papers" >Tech Papers</a></li>
+          	
+            <li><a href="Case-Studies" >Case Studies</a></li>
+          	
+            <li><a href="Editorials" >Editorials</a></li>
+          	
+            <li><a href="robotic-content.cfm?id=243" >Robotics STEM Education Infographic</a></li>
+          	
+            <li><a href="http://www.robotics.org/events.cfm?type=3" >Archived Webinars</a></li>
+          	
+          </ul>
+          
+          </li>
+          
+          <li><a href="Videos" >Videos</a>
+          
+          </li>
+          
+          <li><a href="Career-Center" >Career Center</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="toplevel" href="Upcoming-Events">UPCOMING EVENTS</a>
+        
+        <ul class="SubNav">
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=305" >Free Webinar: Feasibility Studies for Robotic Integration</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=306" >Robot Programming: Tools and Techniques</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=307" >Start Up Robotic Companies, Funding and Innovation Clusters</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=308" >Working in Partnerships: Tech Companies, Colleges and Universities</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=316" >National Robot Safety Conference</a>
+          
+          </li>
+          
+          <li><a href="Upcoming-Events" >View All Upcoming Events</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="toplevel" href="Safety">SAFETY</a>
+        
+        <ul class="SubNav">
+          
+          <li><a href="Robot-Safety-Standard" >Robot Safety Standard</a>
+          
+          </li>
+          
+          <li><a href="In-House-Safety-Training" >In-House Safety Training</a>
+          
+          </li>
+          
+          <li><a href="Safety" >Safety Resources</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="toplevel" href="Integrator-Certification">INTEGRATOR CERTIFICATION</a>
+        
+        <ul class="SubNav">
+          
+          <li><a href="Become-A-Certified-Integrator" onClick="ga('send', 'event', 'Certified Integrator', 'Get Certified', 'Nav', {'nonInteraction': 1});">Become Certified</a>
+          
+          </li>
+          
+          <li><a href="Meet-The-Certified-Integrators" >Meet the Certified Integrators</a>
+          
+          </li>
+          
+          <li><a href="Why-Use-Certified-Integrators" >Why Use A Certified Integrator</a>
+          
+          </li>
+          
+          <li><a href="Integrator-Certification" >About the Program</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="toplevel" href="Join-Robotics-Online">BECOME A MEMBER</a>
+        
+        <ul class="SubNav">
+          
+          
+        </ul>
+      </li>
+      
+      
+    </ul>
+  </div>
+</div>
+<div id="content">
+<div id="contentcontainer">
+
+<div class="ad-banner"><a rel="nofollow" href="http://www.robotics.org/tracking.cfm?ad_id=4905" target="_blank"><img src="http://www.robotics.org/advertisement/leaderboard/EPSON_Under12K_Banner(728x90).gif" alt="" width="728" height="90" border="0" /></a></div>
+
+
+<div class="inner">
+
+<div class="group">
+<div class="content-left">
+
+    <div id="SlideShow">
+	<div id="SliderControls">
+<ul>
+
+<li><a href="/bookstore-prod.cfm?category_id=118&product_id=432">ISO/TS 15066</a></li>
+
+<li><a href="http://www.robotics.org/events-detail.cfm?id=316">NRSC 2016</a></li>
+
+<li><a href="http://www.robotics.org/events-detail.cfm?id=322">Fall ICRW 2016</a></li>
+
+<li><a href="/events.cfm?type=2">Free Webinar Series</a></li>
+
+</ul>
+</div>
+
+<img id="SpaceHolder" src="images/ria/homebanners/preloader.gif">
+
+<div id="slider" class="nivoSlider">
+<a href="/bookstore-prod.cfm?category_id=118&product_id=432" ><img src="userAssets/stagingArea/ISO-TS-15066-Slider-Ad.png" alt="ISO/TS 15066" /></a> <a href="http://www.robotics.org/events-detail.cfm?id=316" ><img src="userAssets/stagingArea/NRSC16_slider_ad3.png" alt="NRSC 2016" /></a> <a href="http://www.robotics.org/events-detail.cfm?id=322" ><img src="userAssets/stagingArea/ICRW_staging-ad_Falll-20163.png" alt="Fall ICRW 2016" /></a> <a href="/events.cfm?type=2" ><img src="userAssets/stagingArea/webinar-series-staging-area3.png" alt="Free Webinar Series" /></a> 
+</div>
+    </div>
+    
+    
+    <div class="FeaturedBox"><p class="head">
+	The RIA Certified Robot Integrator Program</p>
+<p class="subtitle">
+	<strong>Are You RIA Certified?</strong></p>
+<p>
+	<img alt="RIA Certified Robot Integrator" src="/userAssets/riaUploads/image/cri_logo_2color_300.png" style="float: right; margin: 10px;" title="RIA Certified Robot Integrator" />Established in 2012, the <strong><a href="http://www.robotics.org/Integrator-Certification" target="_blank">RIA Certified Robot Integrator Program</a></strong> has gained recognition for providing robot integrators with a way to benchmark against industry best practices while at the same time allowing robot users to develop a baseline for evaluating robot integrators.</p>
+<p>
+	To become certified, robot integrators go through a rigorous process that includes an on-site audit, safety training, hands-on testing of key personnel, and other important criteria. <a href="https://www.youtube.com/watch?v=KsI1w5oOftc&amp;feature=youtu.be" target="_blank"><strong>Click here</strong></a> to watch our latest video on the RIA Certified Integrator Program!<br />
+	&nbsp;</p>
+</div>
+    
+
+</div>
+<div id="HomeSide" class="content-right">
+
+	<div id="FeaturedProduct">
+    <p class="head">FEATURED PRODUCT</p>
+    <div id="FPNav">
+    <a class="PrevFP" href="#"></a>
+    <a class="NextFP" href="#"></a>
+    <div class="FPCounter">(<span class="currentFP">1</span> of <span class="TotalFP">10</span>)
+    <ul>
+    
+    <li><a href="##">1</a></li>
+    
+    <li><a href="##">2</a></li>
+    
+    <li><a href="##">3</a></li>
+    
+    <li><a href="##">4</a></li>
+    
+    <li><a href="##">5</a></li>
+    
+    <li><a href="##">6</a></li>
+    
+    <li><a href="##">7</a></li>
+    
+    <li><a href="##">8</a></li>
+    
+    <li><a href="##">9</a></li>
+    
+    <li><a href="##">10</a></li>
+    
+    </ul>
+    </div>
+    </div>
+    
+    <div id="FPContent">
+    	
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/ATI_Multi_Axis_Force-Torque-Sensors.jpg" alt="Multi-Axis Force/Torque Sensors"> <a href="company-profile-detail.cfm/Supplier/ATI-Industrial-Automation/company/335"><img src="/userAssets/logo/thumbnail/ATI-logo-150x75.jpg" class="logoImg"></a>
+        <p class="fphead">Multi-Axis Force/Torque Sensors</p>
+        <p class="fpcopy"> Gives robots a tactile sense of touch by sending feedback to control the robot's positioning.</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=1777&fp=709">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/Logo1.jpg" alt="Robeye All In One (RAIO)"> <a href="company-profile-detail.cfm/Supplier/Recognition-Robotics-Inc/company/1021"><img src="/userAssets/logo/thumbnail/Recognition-Robotics-logo-150x75.png" class="logoImg"></a>
+        <p class="fphead">Robeye All In One (RAIO)</p>
+        <p class="fpcopy"> Robeye All In One is a sensor for 3D Robotic Guidance designed for high industrial reliability.</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=4010&fp=694">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/FASTSUITE-Edition-2_300x300.jpg" alt="FASTSUITE for SMART Manufacturing"> <a href="company-profile-detail.cfm/Supplier/CENIT-North-America/company/869"><img src="/userAssets/logo/thumbnail/CENIT_Logo_125x75.png" class="logoImg"></a>
+        <p class="fphead">FASTSUITE for SMART Manufacturing</p>
+        <p class="fpcopy"> Leverage product designs, while simulating, optimizing and synchronizing manufacturing processes. </p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=4452&fp=754">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/Estop-300-(1).jpg" alt="Wireless E-Stop"> <a href="company-profile-detail.cfm/Consultant/Humanistic-Robotics-Inc/company/1035"><img src="/userAssets/logo/thumbnail/RIA-logo-150x75.png" class="logoImg"></a>
+        <p class="fphead">Wireless E-Stop</p>
+        <p class="fpcopy"> Wireless E- Stop prevents accidents by allowing anyone to immediately and safely shut it down.</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=4288&fp=748">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/DENSO_Robots_300x3001.jpg" alt="World’s Most Cost-Effective Robots"> <a href="company-profile-detail.cfm/Supplier/DENSO-Robotics/company/366"><img src="/userAssets/logo/thumbnail/DENSO_Robotics_logo_150x75.jpg" class="logoImg"></a>
+        <p class="fphead">World’s Most Cost-Effective Robots</p>
+        <p class="fpcopy"> Why do DENSO robots have such a low cost of ownership? DENSO's own manufacturing needs demand it.</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=4303&fp=731">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/SAS-GRZ_group.jpg" alt="GRZ Blue Line "> <a href="company-profile-detail.cfm/Supplier/SAS-Automation-LLC/company/421"><img src="/userAssets/logo/thumbnail/SAS_Outlined_Small_3.jpg" class="logoImg"></a>
+        <p class="fphead">GRZ Blue Line </p>
+        <p class="fpcopy"> Available with standard jaws, radiused jaws, standard mounting holes, and sensor jaws.
+</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=2978&fp=687">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/preview_C8Series_015.jpg" alt="More Reach, More Payload…More EPSON"> <a href="company-profile-detail.cfm/Supplier/EPSON-Robots/company/340"><img src="/userAssets/logo/thumbnail/epson-built-to-perform_150x75.jpg" class="logoImg"></a>
+        <p class="fphead">More Reach, More Payload…More EPSON</p>
+        <p class="fpcopy"> Offering an 8 kg Payload with up to a 1400 mm Reach, with Half the Footprint of Robots in its Class </p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=4453&fp=758">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/Picture12.jpg" alt="Albany RapidProtect 300"> <a href="company-profile-detail.cfm/Supplier/ASSA-ABLOY-Entrance-Systems-High-Performance-Door-Solutions-Division/company/979"><img src="/userAssets/logo/thumbnail/ASSA_ABLOY_150x751.jpg" class="logoImg"></a>
+        <p class="fphead">Albany RapidProtect 300</p>
+        <p class="fpcopy"> The machine protection door of choice for Automotive Line Builders for decades.</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=3944&fp=693">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/Robotic-integration-150x150.jpg" alt="Robotic integration capabilities"> <a href="company-profile-detail.cfm/Integrator/Intelligrated/company/745"><img src="/userAssets/logo/thumbnail/Intelligrated_Logo.jpg" class="logoImg"></a>
+        <p class="fphead">Robotic integration capabilities</p>
+        <p class="fpcopy"> Intelligrated robotic systems offer speed, accuracy and reliability to meet strict requirements.</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=4433&fp=718">Learn More</a>
+        </div>
+        
+        <div class="FP">
+        <img class="prodImg" src="userAssets/productImage/featuredProducts/Full_CP180L_237x300.jpg" alt="High-Speed Palletizing Robots"> <a href="company-profile-detail.cfm/Supplier/Kawasaki-Robotics-USA-Inc/company/333"><img src="/userAssets/logo/thumbnail/kawasaki-Robotics-USA_HRed.jpg" class="logoImg"></a>
+        <p class="fphead">High-Speed Palletizing Robots</p>
+        <p class="fpcopy"> Kawasaki’s CP Series is capable of industry leading palletizing rates of 2,050 cycles per hour!</p>
+        <a class="btn" href="product-catalog-detail.cfm?productid=4439&fp=695">Learn More</a>
+        </div>
+        
+
+    </div>
+
+    </div>
+    
+    <div id="SideAds">
+        
+    <a href="spotlight.cfm?i=1" target="_blank"><img src="/userAssets/spotlightAds/ATI_RIA_Button_Collision_Sensor_Anim_2016.gif" alt="ATI Spotlight Ad" border="0"></a>
+    
+    </div> 
+</div>
+</div>
+
+<div id="MoreArticles" class="group">
+
+
+<div class="Box">
+<p class="subtitle2">INDUSTRY INSIGHTS</p>
+<ul class="ArticleList">
+
+<li class="group">
+<img src="/userAssets/contentImage/Apr16_Fig1_TN.png">
+<strong><a href="content-detail.cfm/Industrial-Robotics-Industry-Insights/Mexico-Land-of-Automatizaci-n-Opportunity/content_id/6041">Mexico, Land of Automatización Opportunity</a></strong><br>From automotive and aerospace, to consumer electronics and the medical device market, Mexico’s manufacturing sector is a hotbed for FDI.
+</li>
+
+<li class="group">
+<img src="/userAssets/contentImage/March16_TN.png">
+<strong><a href="content-detail.cfm/Industrial-Robotics-Industry-Insights/Robotic-Bin-Picking-The-Holy-Grail-in-Sight/content_id/6002">Robotic Bin Picking – The Holy Grail in Sight</a></strong><br>Robotic random bin picking requires accuracy in the face of chaos. A tall order, but not impossible.
+</li>
+
+<li class="group">
+<img src="/userAssets/contentImage/Feb16_Img1-Boeing777-assemblyline_TN.png">
+<strong><a href="content-detail.cfm/Industrial-Robotics-Industry-Insights/Aerospace-Manufacturing-on-Board-with-Robots/content_id/5960">Aerospace Manufacturing on Board with Robots</a></strong><br>Since the Wright Brothers’ first flight in 1903, to the SpaceX launch and land in 2015, aerospace has shot high. 
+</li>
+
+<li class="group">
+<img src="/userAssets/contentImage/ABB-YuMi_TN.jpg">
+<strong><a href="content-detail.cfm/Industrial-Robotics-Industry-Insights/2016-The-Year-of-Robot-Democratization/content_id/5908">2016 – The Year of Robot Democratization? </a></strong><br>Bold predictions for Collaboration, Connectivity and Convergence rang in 2015. One industry insider even called them prescient. 
+</li>
+
+<li class="group">
+<img src="/userAssets/contentImage/Dec15_TN.jpg">
+<strong><a href="content-detail.cfm/Industrial-Robotics-Industry-Insights/Design-Your-Product-for-Producability-Design-for-Automation/content_id/5865">Design Your Product for Producability, Design for Automation</a></strong><br>Forget naughty or nice. Consumers want what they want, when they want it. Manufacturers have to deliver...
+</li>
+
+</ul>
+<a href="/Industry-Insights" class="ViewAll">See All Industry Insights</a>
+</div>
+
+
+<div class="Box">
+<p class="subtitle2">NEWS</p>
+<ul class="ArticleList">
+
+
+<li class="group">
+<img src="/userAssets/logo/thumbnail/ria.gif">
+<strong><a href="content-detail.cfm/Industrial-Robotics-News/Robotic-Challenge-4-0-Request-for-Submittals-is-Now-Open/content_id/6065">Robotic Challenge 4.0 Request for Submittals is Now Open</a></strong><br>Application Deadline is June 6
+</li>
+
+<li class="group">
+<img src="/userAssets/logo/thumbnail/Staubli-LOGO-150x75.jpg">
+<strong><a href="content-detail.cfm/Industrial-Robotics-News/St-ubli-to-Host-Automotive-Technology-Days-2016/content_id/6064">Stäubli to Host Automotive Technology Days 2016</a></strong><br>Stäubli will be hosting Automotive Technology Days 2016 in Novi, Michigan at the Suburban Collection Showplace from May 24-25.
+</li>
+
+<li class="group">
+<img src="/userAssets/logo/thumbnail/mpm logo_225p.JPG">
+<strong><a href="content-detail.cfm/Industrial-Robotics-News/maxon-s-EPOS4-Position-Controller/content_id/6063">maxon's EPOS4 Position Controller</a></strong><br>Compact power for your motion control application. 
+</li>
+
+<li class="group">
+<img src="/userAssets/logo/thumbnail/ABB_logo_150x75.jpg">
+<strong><a href="content-detail.cfm/Industrial-Robotics-News/ABB-Robotics-to-Hold-2016-Customer-Day-Exhibition-June-8-at-the-Atlanta-Marriott-Marquis/content_id/6061">ABB Robotics to Hold 2016 Customer Day Exhibition June 8 at the Atlanta Marriott Marquis</a></strong><br>First ever Customer Day in the southeast to feature over 16 live robotic demonstrations and 20 technical training seminars. 
+</li>
+
+<li class="group">
+<img src="/userAssets/logo/thumbnail/ria.gif">
+<strong><a href="content-detail.cfm/Industrial-Robotics-News/The-Association-for-Advancing-Automation-Sets-Membership-Record/content_id/6059">The Association for Advancing Automation Sets Membership Record</a></strong><br>RIA, AIA and MCMA at Highest Levels Ever
+</li>
+
+</ul>
+<a href="/News" class="ViewAll">See All News</a>
+</div>
+
+
+
+
+<div class="Box">
+<p class="subtitle2">EDUCATION</p>
+<ul class="ArticleList">
+
+<li class="group"><strong><a href="http://www.robotics.org/bookstore-prod.cfm?category_id=118&product_id=433" >Download the Technical Specification ISO/TS 15066:2016 Robots and Robotic Devices - Collaborative Robots</a></strong><br>ISO/TS 15066:2016 Publication date:  2/15/16.  TS 15066 is a Technical Specification (TS), a document that provides supplemental and supporting information to the industrial robot safety standards ISO 10218-1 and ISO 10218-2.</li>
+
+<li class="group"><strong><a href="http://www.robotics.org/events-detail.cfm?id=305" >Free Webinar: Feasibility Studies for Robotic Integration</a></strong><br>In this webinar we look at some of the risks, strategic outcomes and steps forward and best practices for robot companies, integrators and customers.</li>
+
+<li class="group"><strong><a href="/robotic-content.cfm?id=243" >Infographic: The Growth of Robotics in STEM Education</a></strong><br>Today, the United States is faced with a growing number of jobs that require STEM education background and a limited number of candidates to fill these positions.</li>
+
+<li class="group"><strong><a href="http://www.robotics.org/form.cfm?form_id=198" >Collaborative Robots White Paper: Free Download</a></strong><br>The field of collaborative robots is currently the hottest area of interest within the robotics industry, and with good reason. </li>
+
+<li class="group"><strong><a href="/In-House-Safety-Training" >In-House Safety Training</a></strong><br>RIA's safety training can come to you! Click here for more information.</li>
+
+<li class="group"><strong><a href="/events.cfm?type=3" >Archived Webinars</a></strong><br>View any of our archived webinars today. Subjects range from robot end effectors to robotic welding.</li>
+
+<li class="group"><strong><a href="http://www.a3automate.org/" target="_blank">A3 Why I Automate Video Series and Blog</a></strong><br>View A3's video series on automation success stories, along with our blog with the latest on automation.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+ 
+ <div class="brclear"></div>
+</div>
+
+</div></div>
+ <div id="footer" class="group">
+ <div id="footerbar" class="group">
+ <div class="inner">
+     <div class="left">
+     <p>JOIN OUR MAILING LIST <span>and Get the Latest Robotics News!</span></p>
+     </div>
+     <div class="right">
+     <div class="SignUp">
+     <form action="subscribe.cfm" method="post"><label>Enter E-mail Address: </label><input type="email" name="email" required = "required"> <input type="submit" value="GO"></form>
+     </div>
+     </div>
+ </div>
+ </div>
+
+<div class="inner">
+	<div class="content-left">
+    
+    <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,it,ja,pl,ru,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-2830408-2'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+
+<div itemscope itemtype="http://schema.org/NGO">
+	<p>Copyright &copy; 2008-2016 <span itemprop="name">Robotic Industries Association</span></p>
+	<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		<span itemprop="streetAddress">900 Victors Way, Suite 140</span>, <span itemprop="addressLocality">Ann Arbor, Michigan</span>, <span itemprop="addressCountry">USA</span> <span itemprop="postalCode">48108</span>
+	</p>
+	<p>T: <span itemprop="telephone"><a href="tel:+17349946088" class="tel-link">(734) 994-6088</a></span> - F: <span itemprop="faxNumber">(734) 994-3338</span></p>
+    <span class="data-only" itemprop="logo">http://www.robotics.org/images/ria/logo.png</span>
+     <span class="data-only" itemprop="url">http://www.robotics.org</span>
+</div>
+
+<ul class="footerlinks">
+	<li><a href="/About-RIA">RIA &amp; You</a></li>
+	<li><a href="/Robotic-Resources">Resources</a></li>
+	<li><a href="/Upcoming-Events">Events</a></li>
+	<li><a href="robotic-content.cfm/Robotics/Safety-Compliance/id/23">Safety</a></li>
+	<li><a href="/Integrator-Certification">Certification</a></li>
+	<li><a href="/Join-Robotics-Online">Join</a></li>
+</ul>
+
+<p><a href="http://www.aimg.com" class="aimg" target="_blank">Website Design and Development by AIMG</a> <span class="aimg">|</span> <a href="/Sitemap" class="aimg">Site Map</a> <span class="aimg">|</span> <a href="privacy.cfm" class="aimg">Privacy Statement</a></p>
+            </div>
+            <div class="content-right">
+            <p class="VisitAssociations">Visit our other association websites</p>
+            <ul class="Associations">
+            <li><a href="http://www.a3automate.org" target="_blank"><img src="images/ria/logos/a3.png"></a></li>
+            <li><a href="http://www.visiononline.org" target="_blank"><img src="images/ria/logos/aia.png"></a></li>
+            <li><a href="http://www.motioncontrolonline.org" target="_blank"><img src="images/ria/logos/mca.png"></a></li>
+            </ul>
+  				
+             <div class="sitebadge"> 
+				  
+                <!-- SiteSeal Html Builder Code: Shows the logo at URL http://seal.networksolutions.com/images/basicrecblue.gif - Logo type is  ("NETSB")//-->
+                 <script language="JavaScript" type="text/javascript"> SiteSeal("//seal.networksolutions.com/images/basicrecblue.gif", "NETSB", "none");</script>
+             </div>
+ 
+            </div>
+            </div>
+ </div>
+     
+</div>
+<div id="pageClose"></div>
+
+<div id="leftside" class="sidr left">
+<a class="ToggleMenu Close" href="#"></a>
+
+    <ul class="SideMenu">
+    
+    
+      <li><a class="MainLink" href="About-RIA">RIA & YOU</a>
+        
+        <ul class="SubNav">
+        	<li><a href="About-RIA">RIA & YOU</a></li> 
+          <li><a href="/About-RIA" target="_blank">About RIA</a>
+          
+          </li>
+          
+          <li><a href="Join-Robotics-Online" >Become a Member</a>
+          
+          </li>
+          
+          <li><a href="Meet-New-Members" >Meet New Members</a>
+          
+          </li>
+          
+          <li><a href="Whos-Who" >Who's Who</a>
+          
+          </li>
+          
+          <li><a href="schools-corp-sponsors.cfm" >School and Corporate Sponsors</a>
+          
+          </li>
+          
+          <li><a href="Advertise-On-Robotics-Online" >Advertise</a>
+          
+          </li>
+          
+          <li><a href="Subscribe" >Subscribe to Our Newsletter</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="MainLink" href="Robotic-Resources">ROBOTIC RESOURCES</a>
+        
+        <ul class="SubNav">
+        	<li><a href="Robotic-Resources">ROBOTIC RESOURCES</a></li> 
+          <li><a href="Beginners-Guide" >Beginners Guide</a>
+          
+          </li>
+          
+          <li><a href="Ask-The-Experts" >Ask The Experts</a>
+          
+          </li>
+          
+          <li><a href="/Industry-Statistics" >Industry Statistics</a>
+          
+          </li>
+          
+          <li><a href="robotic-content.cfm/Robotics/Engelberger-Awards/id/55" >Engelberger Robotics Awards</a>
+          
+          </li>
+          
+          <li><a href="Online-Store" >Online Store</a>
+          
+          </li>
+          
+          <li><a href="News" >News</a>
+          
+          <ul class="SubNav2">
+          	
+            <li><a href="News" >Industry News</a></li>
+          	
+            <li><a href="New-Product-News" >New Product News</a></li>
+          	
+            <li><a href="Industry-Statistics" >Industry Statistics</a></li>
+          	
+            <li><a href="newsletters.cfm" >Newsletter</a></li>
+          	
+          </ul>
+          
+          </li>
+          
+          <li><a href="Robotic-Resources" >Education</a>
+          
+          <ul class="SubNav2">
+          	
+            <li><a href="http://www.robotics.org/form.cfm?form_id=198" >Collaborative Robots White Paper</a></li>
+          	
+            <li><a href="http://www.robotics.org/In-House-Safety-Training" >RIA Safety Training</a></li>
+          	
+            <li><a href="RIA-Webinar-Series" >RIA Webinar Series</a></li>
+          	
+            <li><a href="Industry-Insights" >Industry Insights</a></li>
+          	
+            <li><a href="Tech-Papers" >Tech Papers</a></li>
+          	
+            <li><a href="Case-Studies" >Case Studies</a></li>
+          	
+            <li><a href="Editorials" >Editorials</a></li>
+          	
+            <li><a href="robotic-content.cfm?id=243" >Robotics STEM Education Infographic</a></li>
+          	
+            <li><a href="http://www.robotics.org/events.cfm?type=3" >Archived Webinars</a></li>
+          	
+          </ul>
+          
+          </li>
+          
+          <li><a href="Videos" >Videos</a>
+          
+          </li>
+          
+          <li><a href="Career-Center" >Career Center</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="MainLink" href="Upcoming-Events">UPCOMING EVENTS</a>
+        
+        <ul class="SubNav">
+        	<li><a href="Upcoming-Events">UPCOMING EVENTS</a></li> 
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=305" >Free Webinar: Feasibility Studies for Robotic Integration</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=306" >Robot Programming: Tools and Techniques</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=307" >Start Up Robotic Companies, Funding and Innovation Clusters</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=308" >Working in Partnerships: Tech Companies, Colleges and Universities</a>
+          
+          </li>
+          
+          <li><a href="http://www.robotics.org/events-detail.cfm?id=316" >National Robot Safety Conference</a>
+          
+          </li>
+          
+          <li><a href="Upcoming-Events" >View All Upcoming Events</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="MainLink" href="Safety">SAFETY</a>
+        
+        <ul class="SubNav">
+        	<li><a href="Safety">SAFETY</a></li> 
+          <li><a href="Robot-Safety-Standard" >Robot Safety Standard</a>
+          
+          </li>
+          
+          <li><a href="In-House-Safety-Training" >In-House Safety Training</a>
+          
+          </li>
+          
+          <li><a href="Safety" >Safety Resources</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a class="MainLink" href="Integrator-Certification">INTEGRATOR CERTIFICATION</a>
+        
+        <ul class="SubNav">
+        	<li><a href="Integrator-Certification">INTEGRATOR CERTIFICATION</a></li> 
+          <li><a href="Become-A-Certified-Integrator" >Become Certified</a>
+          
+          </li>
+          
+          <li><a href="Meet-The-Certified-Integrators" >Meet the Certified Integrators</a>
+          
+          </li>
+          
+          <li><a href="Why-Use-Certified-Integrators" >Why Use A Certified Integrator</a>
+          
+          </li>
+          
+          <li><a href="Integrator-Certification" >About the Program</a>
+          
+          </li>
+          
+          
+        </ul>
+      </li>
+      
+      <li><a  href="Join-Robotics-Online">BECOME A MEMBER</a>
+        
+        <ul class="SubNav">
+        	<li><a href="Join-Robotics-Online">BECOME A MEMBER</a></li> 
+          
+        </ul>
+      </li>
+      
+    
+    
+      
+      
+      
+      
+      
+    </ul>
+</div>
+
+<div id="rightside" class="sidr right">
+<a class="ToggleSearch Close" href="#"></a>
+
+<div class="SideSearch">
+<form action="search-results.cfm" method="post" name="searchForm" onSubmit="return checkSearch();">
+<input placeholder="Search Robotics Online" name="keywords" type="text">
+<input type="submit" value="SEARCH">
+</form>
+<hr>
+<p class="title">Browse by Product:</p>
+
+          <form action="search-product-results.cfm" method="post" name="productCats">
+          <select name="cat1">
+            <option value="0">ALL</option>
+            
+            <option value="1">Cable</option>
+            
+            <option value="2">Control</option>
+            
+            <option value="3">End-of-Arm Tooling</option>
+            
+            <option value="17">Industrial Robots</option>
+            
+            <option value="30">Motors & Drive</option>
+            
+            <option value="31">Other Accessory Equipment</option>
+            
+            <option value="32">Packaging & Palletizing</option>
+            
+            <option value="35">Safety Equipment</option>
+            
+            <option value="36">Software</option>
+            
+            <option value="39">Conveyors</option>
+            
+            <option value="40">Camera</option>
+            
+            <option value="41">Mobile Robots</option>
+            
+            <option value="42">Food and Beverage</option>
+            
+            <option value="43">Pharmaceutical</option>
+            
+            <option value="44">Education</option>
+            
+            <option value="47">Robot Cable Management / Dress Components</option>
+            
+          </select>
+         <br>
+          <input type="submit" class="browse" value="BROWSE PRODUCTS">
+          <input type="hidden" name="searchBy" value="product" />
+          </form>
+ 
+          <hr>
+ <p class="title">Browse by Company:</p>
+          <form action="search-company-results.cfm" method="post" name="companyCats2" onSubmit="return checkCompanyBrowse2();">
+  <label><input type="checkbox" name="member_type_id" value="1">Supplier</label>
+			<label><input type="checkbox" name="member_type_id" value="2">Integrator</label>
+			<label><input type="checkbox" name="member_type_id" value="4">Educator</label>
+			<label><input type="checkbox" name="member_type_id" value="5">Consultant</label>
+               
+            <input type="submit" class="browse" value="BROWSE COMPANIES">
+            <input type="hidden" name="searchBy" value="company" />
+            </form>
+<hr>
+                    
+     <p class="title">Browse by Services:</p>
+     
+      <form action="search-service-results.cfm" method="post" name="serviceCats">
+          <select name="cat1">
+            <option value="0">ALL</option>
+            
+               <option value="26">Connectioneering</option>
+            
+               <option value="29">Conveyors</option>
+            
+               <option value="30">Deburring</option>
+            
+               <option value="32">Emergency Management</option>
+            
+               <option value="33">Food and Beverage</option>
+            
+               <option value="2">Integration Services</option>
+            
+               <option value="28">Machine Vision Systems</option>
+            
+               <option value="3">Marketing & Sales</option>
+            
+               <option value="27">Personnel Search & Recruitment</option>
+            
+               <option value="34">Pharmaceutical</option>
+            
+               <option value="31">Repair/Refurbish</option>
+            
+               <option value="21">Researchers</option>
+            
+               <option value="35">Safety</option>
+            
+               <option value="4">Trade Journals</option>
+            
+               <option value="5">Training</option>
+            
+          </select>
+          <br>
+          <input type="submit" class="browse" value="BROWSE SERVICES">
+          <input type="hidden" name="searchBy" value="category" />
+          </form>
+       
+</div>
+</div>
+
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="js/jquery.sidr.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/global.js"></script>
+<script src="js/equalheight.js"></script>
+
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0010/6936.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script> 
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5388d3604df75d8a"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'services' : 'facebook,twitter,google_plusone_share,linkedin,email',
+    },
+	'responsive' : {
+      'maxWidth' : '1024px',
+      'minWidth' : '0px'
+    },
+    'follow' : {
+      'mobile' : true,
+      'desktop' : false,
+	  'services' : [
+        {'service': 'facebook', 'id': 'pages/Robotic-Industries-Association/172699179409023'},
+        {'service': 'twitter', 'id': 'RIA_robotics'},
+        {'service': 'google_follow', 'id': '114642148688155953043'},
+        {'service': 'linkedin', 'id': 'robotic-industries-association', 'usertype': 'company'},
+        {'service': 'youtube', 'id': 'roboticsonline'}
+      ]
+    }
+  });
+</script>
+
+
+
+<!-- Google Code for Remarketing Tag -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1021061123;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1021061123/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<div id="trkBlock"></div>
+<script>var trkSiteCode="8BC0FA2B5056896"</script>
+<script src="https://www.aitracking.com/aimgTrk.js" defer></script>
+                    
+
+<script type="text/javascript" src="nivo/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+    $(window).load(function() {
+		$('#SpaceHolder').css('display','none');
+        $('#slider').nivoSlider({
+			effect:'slideInRight'
+		});
+		$('#SliderControls a').each(function(e){
+			var index = $(this).parent().index();
+			var text = $(this).html();
+			var nref= index +1;
+			//$('.nivo-control[rel="' +index+'"]').html(text);
+			var thestring = '<p>' + text + '</p><span>' + nref+ '</span>';
+			$('.nivo-control[rel="' +index+'"]').html(thestring);
+		});
+    });
+	$(document).ready(function(){
+		
+		$('#SliderControls a').click(function(e){
+			e.preventDefault();
+			var index = $(this).parent().index();
+			$('.nivo-control[rel="' +index+'"]').trigger("click");
+			
+			//alert($(this).text());
+			
+		});
+		
+	/*	$('#SliderControls a').each(function(e){
+			var index = $(this).parent().index();
+			var text = $(this).html();
+			alert($('.nivo-control[rel="' +index+'"]').html());
+			
+		});*/
+	});
+	
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Robotic Industries Association",
+  "url" : "http://www.robotics.org",
+  "logo" : "http://www.robotics.org/images/ria/logo.png",
+  "contactPoint" : [{
+    "@type" : "ContactPoint",
+    "telephone" : "+1-734-994-6088",
+    "contactType" : "customer service"
+  }],
+  "sameAs" : [
+    "https://www.facebook.com/Robotic-Industries-Association-172699179409023",
+    "https://twitter.com/RIA_robotics",
+    "https://plus.google.com/109332810369383257778",
+    "https://www.youtube.com/user/roboticsonline",
+	"https://www.linkedin.com/company/robotic-industries-association",
+	"https://en.wikipedia.org/wiki/Robotic_Industries_Association"
+  ]
+}
+</script>
+</body>
+</html>

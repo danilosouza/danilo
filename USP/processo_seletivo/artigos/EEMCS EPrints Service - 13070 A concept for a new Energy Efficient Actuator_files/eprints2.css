@@ -1,0 +1,20 @@
+a:hover {
+	color: #ff6600;
+	text-decoration: underline;
+}
+a {
+	color: #666666;
+	text-decoration: none;
+}
+.pagetitle {
+	color: white;
+	background-color: #c694d6;
+	text-align: center;
+	width: 100%;
+	border: 1px solid #a674b6;
+}
+.searchcontrol a {
+	color: white;
+	text-decoration: none;
+}
+

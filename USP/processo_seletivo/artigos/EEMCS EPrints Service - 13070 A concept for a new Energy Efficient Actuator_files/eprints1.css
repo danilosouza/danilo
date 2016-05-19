@@ -1,0 +1,334 @@
+.footer, .header {
+	border: #8080f0 1px solid;
+	background: #efefff; 
+	padding: 4px;
+	margin: 3px 1em 3px 1em;
+}
+
+.userpage_table_emph {
+	font-weight: bold;
+}
+
+.epmenu a {
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding: 1px;
+}
+
+input, select, textarea {
+	color: #000090;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+.actionbutton, .searchcontrol {
+	border: #8080f0 1px solid;
+	color: white;
+	background: #c694d6; 
+	padding: 1px;
+	margin: 2px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.example
+{
+	font-weight: bold;
+	color: #000090;
+}
+.box
+{
+	padding: 5px; 
+	margin-bottom: 10px;
+	background-color: #f0f0f0;
+}
+
+
+
+
+h1 {
+        font: bold 130% Arial,Sans-serif;
+        color: #606060;
+}
+
+h3 {
+        font: 120% Arial,Sans-serif;
+        color: #606060;
+}
+
+h4 {
+        font: 100% Arial,Sans-serif;
+        color: #606060;
+}
+
+
+
+.archivetitle {
+        font: 120% Arial,Sans-serif;
+	color: #000000;
+}
+
+.searchfieldhelp,.formfieldhelp {
+        font-size: small ;
+}
+
+
+.formfieldname, .searchfieldname {
+        padding-top: 1em;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.formfieldidname {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+
+.formfieldinput {
+        padding-bottom: 3pt;
+}
+.formfieldidinput {
+}
+
+
+.formfieldcomment {
+	font-style: italic;
+        padding-bottom: 3pt;
+}
+
+.requiredstar {
+	color: #ffffff;
+}
+
+
+.requiredlang {
+	color: #ff0000;
+}
+
+.reqstar {
+	color: #ff0000;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+.optionstar {
+	color: #ffbf00;
+    	font-weight: bold;
+	font-size: 150%;
+}
+
+.alert {
+	color: #ff0000;
+    font-weight: bold;
+}
+
+.namefieldheading {
+	text-align: left;
+	font-size: 80%;
+}
+
+.searchorder {
+        padding-top: 12pt;
+}
+
+.searchmustfulfill {
+        padding-top: 12pt;
+}
+
+.main {
+        margin: 1em;
+	margin: 1em;
+        font-family: Arial,Sans-serif;
+	font-size: 80%;
+}
+
+dt {
+	font-weight: bold;
+}
+
+.numeral {
+	font-weight: bold;
+}
+
+.ignoredword {
+	font-style: italic;
+}
+
+
+.subject_browser_opts, .subject_browser_selections, .subject_browser_search
+{
+	margin-left: 1em;
+	margin-right: 1em;
+	padding: 0.5em;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px;
+}
+.subject_browser_selections
+{
+	margin-top: 0.5em;
+	background: #ffffaa;
+}
+
+.subject_browser_selections span.subject
+{
+	font-weight: bold;
+}
+.subject_browser_opts
+{
+	margin-bottom: 0.5em;
+}
+.subject_browser_selected
+{
+	font-style: italic;
+}
+
+.row_a
+{
+	background: #efefff; 
+}
+.row_b
+{
+	background: #f8f8ff; 
+}
+
+.row_a td, .row_b td
+{
+	border-top: #8080f0 1px solid;
+	border-bottom: #8080f0 1px solid;
+}
+td.first_col 
+{
+	border-left: #8080f0 1px solid;
+}
+td.last_col 
+{
+	border-right: #8080f0 1px solid;
+}
+td.middle_col 
+{
+	border-right: #8080f0 1px solid;
+	border-left: #8080f0 1px solid;
+}
+
+
+.status_row_heading, th, .submission_buttons, .searchbuttons, .searchcontrols
+{
+        font-family: Arial,Sans-serif;
+	font-weight: bold;
+	padding: 2px;
+	border: #8080f0 1px solid;
+	background: #efefff; 
+}
+th.empty_heading, tr.header_plain th {
+	background: none;
+	border-style: none;
+}
+
+.submission_buttons, .searchbuttons, .searchcontrols
+{
+	margin-top: 8pt;
+	text-align: center;
+        padding: 4px;
+	text-decoration: none;
+}
+.searchcontrols 
+{
+	padding: 8px;
+}
+	
+.problems
+{
+	margin-top: 8pt;
+	margin-bottom: 8pt;
+        border: 4px;
+        padding: 16pt;
+        border-style: solid;
+        border-color: #ff0000 ;
+        background-color: #f8f8f8;
+	text-decoration: none;
+}
+
+.preview
+{
+	margin: 1em 0 1em 0;
+	background: #f8f8ff;
+	padding: 1em;
+	border: 2px #c0c0ff dashed;
+}
+	
+.citation
+{
+	background: #efefff;
+	padding: 5px;
+	margin: 5px;
+	margin-bottom: 0px;
+}
+
+.citation_group
+{
+	margin-bottom: 15px;
+}
+
+DONTUSE .citation .field_creators, DONTUSE .citation .field_editors { font-size: 66% }
+DONTUSE .citation .person_name { font-size: 150% }
+
+.autocomplete
+{
+	text-align: left;
+	position: absolute;
+	width: 34em;
+	background-color: #f7ed3e;
+	border: 1px solid #888;
+	margin: 0em;
+	padding: 0em;
+	z-index: 6;
+	cursor: pointer;
+	font-size: 75%;
+}
+
+.autocomplete ul {
+	list-style-type: none;
+	margin: 0em;
+	padding: 0em;
+}
+
+.autocomplete li {
+	border-bottom: 1px dashed #d0d020;
+}
+
+.autocomplete .selected {
+	background-color: #ffff70;
+}
+
+.autocomplete .more {
+	background-color: #c0ffc0;
+}
+
+.autocomplete .unknown {
+	background-color: #ffa0a0;
+}
+
+.autocomplete .notavailable {
+	background-color: #d0d0d0;
+}
+
+.no_autocomplete {
+    background-color: red;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.modalList {
+	background-color: #e0e0f0;
+	font-size: 75%;
+}
+
+.modalList tr.alt {
+	background-color: #efefff;
+}
+

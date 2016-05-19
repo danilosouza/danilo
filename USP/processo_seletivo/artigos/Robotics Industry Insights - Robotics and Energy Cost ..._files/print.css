@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+.HeaderLinks, #SearchBar, #nav, .SideAds, .ad-banner, #footerbar, .footerlinks, #footer .content-right, .FontResize, .btn
+{ display: none !important;}
+
+body#joinFormPage #tab1, body#joinFormPage #tab2, body#joinFormPage #tab3 {
+	display: block !important;
+}
+
+#wrapper, .inner, .MainContent, #content, #contentcontainer, #footer .content-left
+{ width: 100% !important;}

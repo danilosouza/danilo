@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  24 APR 2016 20:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.28)  30 APR 2016 17:07
 entering extended mode
 **Danilo_lista2.tex
 
@@ -320,7 +320,7 @@ Package pdftex.def Info: ./lista2_item_d_pert.png used on input line 68.
 File: ./lista2_item_e_comp_modelos.png Graphic file (type png)
 
 <use ./lista2_item_e_comp_modelos.png>
-Package pdftex.def Info: ./lista2_item_e_comp_modelos.png used on input line 79
+Package pdftex.def Info: ./lista2_item_e_comp_modelos.png used on input line 81
 .
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
  [2 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
@@ -331,7 +331,7 @@ SP/IdentificacaoDeSistemas/Lista2/lista2_item_d_pert.png (PNG copy)>]
 File: ./lista2_item_e_comp_pred_modelos_sem_pert.png Graphic file (type png)
  <use ./lista2_item_e_comp_pred_modelos_sem_pert.png>
 Package pdftex.def Info: ./lista2_item_e_comp_pred_modelos_sem_pert.png used on
- input line 88.
+ input line 90.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
  [3 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
 /lista2_item_e_comp_modelos.png (PNG copy)>]
@@ -339,7 +339,7 @@ Package pdftex.def Info: ./lista2_item_e_comp_pred_modelos_sem_pert.png used on
 File: ./lista2_item_e_comp_pred_modelos_pert.png Graphic file (type png)
 <use ./lista2_item_e_comp_pred_modelos_pert.png>
 Package pdftex.def Info: ./lista2_item_e_comp_pred_modelos_pert.png used on inp
-ut line 95.
+ut line 97.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
  [4 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
 /lista2_item_e_comp_pred_modelos_sem_pert.png (PNG copy)> <C:/Users/Danilo/Docu
@@ -349,22 +349,22 @@ modelos_pert.png (PNG copy)>]
 File: ./lista2_item_g_comp_imp.png Graphic file (type png)
 
 <use ./lista2_item_g_comp_imp.png>
-Package pdftex.def Info: ./lista2_item_g_comp_imp.png used on input line 108.
+Package pdftex.def Info: ./lista2_item_g_comp_imp.png used on input line 110.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 120.
 
  (C:\MikTex2.9\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 120.
 
 <./lista2_item_h_comp_modelos_pert.png, id=32, 1028.34187pt x 490.08093pt>
 File: ./lista2_item_h_comp_modelos_pert.png Graphic file (type png)
 
 <use ./lista2_item_h_comp_modelos_pert.png>
 Package pdftex.def Info: ./lista2_item_h_comp_modelos_pert.png used on input li
-ne 127.
+ne 129.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
  [5 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
 /lista2_item_g_comp_imp.png (PNG copy)>]
@@ -374,70 +374,80 @@ File: ./lista2_item_h_comp_entre_modelos_compert_sempert.png Graphic file (type
  png)
  <use ./lista2_item_h_comp_entre_modelos_compert_sempert.png>
 Package pdftex.def Info: ./lista2_item_h_comp_entre_modelos_compert_sempert.png
- used on input line 136.
+ used on input line 138.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
 
 [6 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2/
 lista2_item_h_comp_modelos_pert.png (PNG copy)> <C:/Users/Danilo/Documents/GitH
 ub/danilo/USP/IdentificacaoDeSistemas/Lista2/lista2_item_h_comp_entre_modelos_c
 ompert_sempert.png (PNG copy)>]
-<./lista2_item_j_comp_modelos_pert_2_entradas.png, id=41, 1028.34187pt x 490.08
+<./lista2_item_j_comp_modelos_sem_pert_2_entradas.png, id=41, 1028.34187pt x 49
+0.08093pt>
+File: ./lista2_item_j_comp_modelos_sem_pert_2_entradas.png Graphic file (type p
+ng)
+ <use ./lista2_item_j_comp_modelos_sem_pert_2_entradas.png>
+Package pdftex.def Info: ./lista2_item_j_comp_modelos_sem_pert_2_entradas.png u
+sed on input line 161.
+(pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
+
+<./lista2_item_j_comp_modelos_pert_2_entradas.png, id=42, 1028.34187pt x 490.08
 093pt>
 File: ./lista2_item_j_comp_modelos_pert_2_entradas.png Graphic file (type png)
  <use ./lista2_item_j_comp_modelos_pert_2_entradas.png>
 Package pdftex.def Info: ./lista2_item_j_comp_modelos_pert_2_entradas.png used 
-on input line 159.
+on input line 168.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
-
-<./lista2_item_j_comp_modelos_sem_pert.png, id=42, 1028.34187pt x 490.08093pt>
+ [7 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
+/lista2_item_j_comp_modelos_sem_pert_2_entradas.png (PNG copy)>]
+<./lista2_item_j_comp_modelos_sem_pert.png, id=47, 1028.34187pt x 490.08093pt>
 File: ./lista2_item_j_comp_modelos_sem_pert.png Graphic file (type png)
 
 <use ./lista2_item_j_comp_modelos_sem_pert.png>
 Package pdftex.def Info: ./lista2_item_j_comp_modelos_sem_pert.png used on inpu
-t line 168.
+t line 181.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
- [7 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
+ [8 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
 /lista2_item_j_comp_modelos_pert_2_entradas.png (PNG copy)>]
-<./lista2_item_j_comp_modelos_com_pert.png, id=47, 1028.34187pt x 490.08093pt>
+<./lista2_item_j_comp_modelos_com_pert.png, id=52, 1028.34187pt x 490.08093pt>
 File: ./lista2_item_j_comp_modelos_com_pert.png Graphic file (type png)
 
 <use ./lista2_item_j_comp_modelos_com_pert.png>
 Package pdftex.def Info: ./lista2_item_j_comp_modelos_com_pert.png used on inpu
-t line 175.
+t line 188.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
 
-<./lista2_item_k_comp_ganho_modelos_sem_pert.png, id=48, 1028.34187pt x 490.080
+<./lista2_item_k_comp_ganho_modelos_sem_pert.png, id=53, 1028.34187pt x 490.080
 93pt>
 File: ./lista2_item_k_comp_ganho_modelos_sem_pert.png Graphic file (type png)
  <use ./lista2_item_k_comp_ganho_modelos_sem_pert.png>
 Package pdftex.def Info: ./lista2_item_k_comp_ganho_modelos_sem_pert.png used o
-n input line 185.
+n input line 198.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
- [8 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
+ [9 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
 /lista2_item_j_comp_modelos_sem_pert.png (PNG copy)> <C:/Users/Danilo/Documents
 /GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2/lista2_item_j_comp_modelos_co
 m_pert.png (PNG copy)>]
-<./lista2_item_k_comp_ganho_modelos_com_pert.png, id=52, 1028.34187pt x 490.080
+<./lista2_item_k_comp_ganho_modelos_com_pert.png, id=57, 1028.34187pt x 490.080
 93pt>
 File: ./lista2_item_k_comp_ganho_modelos_com_pert.png Graphic file (type png)
  <use ./lista2_item_k_comp_ganho_modelos_com_pert.png>
 Package pdftex.def Info: ./lista2_item_k_comp_ganho_modelos_com_pert.png used o
-n input line 192.
+n input line 205.
 (pdftex.def)             Requested size: 493.5985pt x 235.23618pt.
- [9 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2
-/lista2_item_k_comp_ganho_modelos_sem_pert.png (PNG copy)> <C:/Users/Danilo/Doc
-uments/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2/lista2_item_k_comp_ganh
-o_modelos_com_pert.png (PNG copy)>]
+ [10 <C:/Users/Danilo/Documents/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista
+2/lista2_item_k_comp_ganho_modelos_sem_pert.png (PNG copy)> <C:/Users/Danilo/Do
+cuments/GitHub/danilo/USP/IdentificacaoDeSistemas/Lista2/lista2_item_k_comp_gan
+ho_modelos_com_pert.png (PNG copy)>]
 (C:\Users\Danilo\Documents\GitHub\danilo\USP\IdentificacaoDeSistemas\Lista2\Dan
 ilo_lista2.aux) ) 
 Here is how much of TeX's memory you used:
- 4279 strings out of 493921
- 62477 string characters out of 3147279
+ 4287 strings out of 493921
+ 62820 string characters out of 3147279
  127486 words of memory out of 3000000
- 7515 multiletter control sequences out of 15000+200000
- 10888 words of font info for 43 fonts, out of 3000000 for 9000
+ 7521 multiletter control sequences out of 15000+200000
+ 11234 words of font info for 44 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 44i,7n,42p,1473b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,7n,42p,1483b,293s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Mi
 kTex2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MikTex2.9/fonts/type1/pub
 lic/amsfonts/cm/cmmi5.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmmi7.pf
@@ -447,10 +457,11 @@ mr17.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/MikTex2.9/fo
 nts/type1/public/amsfonts/cm/cmr7.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/MikTe
 x2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MikTex2.9/fonts/type1/public/
-amsfonts/symbols/msam10.pfb>
-Output written on Danilo_lista2.pdf (9 pages, 953029 bytes).
+amsfonts/cm/cmti10.pfb><C:/MikTex2.9/fonts/type1/public/amsfonts/symbols/msam10
+.pfb>
+Output written on Danilo_lista2.pdf (10 pages, 1042582 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

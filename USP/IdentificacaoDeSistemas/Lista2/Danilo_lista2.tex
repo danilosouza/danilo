@@ -34,7 +34,7 @@ Fazendo $T = \frac{\tau}{10} = \frac{10}{10}$ e $T = \frac{t_{s}}{10} = \frac{46
 
 \section{Item c}
 
-A função de transferência $G(q)$ do processo é mostrada na equação \ref{eq:func_transf_discreta} e o modelo discreto da perturbação $v_{1}$ é mostrado na equação \ref{eq:modelo_v1_discreto}, pode-se extrair, portanto, a expressão para $y(t)$, mostrada na equação \ref{eq:saida_processo_v1}. O processo descrito nesta equação como ser classificado como BJ, as ordens dos polinômios $B(q)$, $F(q)$, $C(q)$ e $D(q)$ são, respectivamente, $4$, $1$, $1$ e $1$.
+A função de transferência $G(q)$ do processo é mostrada na equação \ref{eq:func_transf_discreta} e o modelo discreto da perturbação $v_{1}$ é mostrado na equação \ref{eq:modelo_v1_discreto}, pode-se extrair, portanto, a expressão para $y(t)$, mostrada na equação \ref{eq:saida_processo_v1}. O processo descrito nesta equação como ser classificado como BJ, as ordens dos polinômios $B(q)$, $F(q)$, $C(q)$ e $D(q)$ são, respectivamente, $1$, $1$, $1$ e $1$.
 
 	\begin{equation}
 		G(q) = \frac{0.1903 q^{-4}}{1 - 0.9048 q^{-1}}
@@ -54,7 +54,7 @@ A função de transferência $G(q)$ do processo é mostrada na equação \ref{eq:func_
 
 \section{Item d}
 
-As Figuras \ref{fig:item_d_limpa}, \ref{fig:item_d_pert} mostram, respectivamente, as saídas do processo sem perturbação e com as perturbações $v_{1}$e $v_{2}$. Analisando estas imagens, é possível perceber que para as duas intensidades de perturbação não há diferença entre o sinal puro de perturbação ($t<275$) e o sinal do processo com perturbação ($t \geqslant 275$), ou seja, não é possível identificar visualmente o comportamento do sistema. 
+As Figuras \ref{fig:item_d_limpa}, \ref{fig:item_d_pert} mostram, respectivamente, as saídas do processo sem perturbação e com as perturbações $v_{1}$e $v_{2}$. Analisando a resposta com perturbação, é possível perceber que não há diferença entre o sinal puro de perturbação ($t<275$) e o sinal do processo com perturbação ($t \geqslant 275$), ou seja, não é possível identificar visualmente o comportamento do sistema. 
 
 	\begin{figure}[H]
 		\centering
@@ -70,7 +70,9 @@ As Figuras \ref{fig:item_d_limpa}, \ref{fig:item_d_pert} mostram, respectivament
 		\label{fig:item_d_pert}
 	\end{figure}
 \section{Item e}
-Considerando a função de transferência discreta do processo na equação \ref{eq:func_transf_discreta}, apenas os parâmetros do polinômio $B(q)$ apresentaram leve divergência para a estimativa usando as estruturas ARX, ARMAX e BJ, apresentando $f_{1}=0.9049$, os outros parâmetros obtidos são iguais aos da equação \ref{eq:func_transf_discreta}.
+Para este item e para  os próximos itens da lista, foram geradas duas saídas, $y$ para o processo sem perturbação, e $y_{2}$ para o processo com perturbação, onde $y_{2}$ é o resultado da soma do processo com as perturbações $v_{1}$ e $v_{2}$ de baixa e alta amplitude.
+
+Considerando a função de transferência discreta do processo na equação \ref{eq:func_transf_discreta}, apenas os parâmetros do polinômio $B(q)$ apresentaram leve divergência para a estimativa usando as estruturas ARX, ARMAX e BJ, apresentando $a_{1}=0.9049$, os outros parâmetros obtidos são iguais aos da equação \ref{eq:func_transf_discreta}. 
 
 A Figura \ref{fig:item_e_comp_degrau} mostra a comparação da resposta do modelo ao degrau com a resposta ao degrau dos modelos estimados, apenas a reposta ao degrau do modelo FIR apresentou diferença em relação ao modelo real livre de perturbação.
 
@@ -81,7 +83,7 @@ A Figura \ref{fig:item_e_comp_degrau} mostra a comparação da resposta do modelo 
 		\label{fig:item_e_comp_degrau}
 	\end{figure}
 
-As predições para infinitos passos à frente usando os modelos estimados foram comparadas, com a saída limpa do processo e com a saída afetada por $v_{1}$e $v_{2}$, apresentadas respectivamente, nas Figuras \ref{fig:item_e_comp_limpa} e \ref{fig:item_e_comp_pert}. Para o processo com perturbação a predição não apresentou bons resultados (com exceção do FIR), apresentando um ``fit'' de $\pm6-8\%$, o que é esperado, uma vez que os modelos foram estimados usando dados coletados da saída do processo sem perturbação. O modelo FIR apresentou um ``fit'' de $27\%$ para o modelo obtido com dados afetados por perturbação em comparação com a saída do processo afetada por perturbação, em outras palavras, ao analisar a Figura \ref{fig:item_e_comp_pert} é possível perceber que o modelo FIR consegue representar exatamente a perturbação do processo até o instante $t=t_{s}=46$, que foi o número de coeficientes utilizados para estimar o modelo FIR, portanto é possível concluir que o modelo FIR é capaz de modelar as perturbações do processo para $t = n_{b}*T$ segundos, onde $n_{b}$ é o número de coeficientes estimados da função-peso do modelo FIR e $T$ é o período de amostragem, apesar de apresentar uma perda no ganho. Este comportamento do modelo FIR também se repete na Figura \ref{fig:item_e_comp_limpa} quando o modelo é comparado com a saída limpa do processo, é possível perceber que o ganho do modelo FIR cai em $t=t_{s}$.
+As predições para infinitos passos à frente usando os modelos estimados foram comparadas, com a saída limpa do processo e com a saída afetada por $v_{1}$e $v_{2}$, apresentadas respectivamente, nas Figuras \ref{fig:item_e_comp_limpa} e \ref{fig:item_e_comp_pert}. Para o processo com perturbação a predição não apresentou bons resultados (com exceção do FIR), apresentando um ``fit'' de $\pm6-8\%$, o que é esperado, uma vez que os modelos foram estimados usando dados coletados da saída do processo sem perturbação. O modelo FIR apresentou um ``fit'' de $27\%$ para o modelo obtido com dados afetados por perturbação em comparação com a saída do processo afetada por perturbação, em outras palavras, ao analisar a Figura \ref{fig:item_e_comp_pert} é possível perceber que o modelo FIR consegue representar exatamente a perturbação do processo até o instante $t=t_{s}=46$, que foi o número de coeficientes utilizados para estimar o modelo FIR, portanto é possível concluir que o modelo FIR é capaz de modelar as perturbações do processo para $t = n_{b}*T$ segundos, onde $n_{b}$ é o número de coeficientes estimados da função-peso do modelo FIR e $T$ é o período de amostragem, apesar de apresentar uma perda no ganho. Este comportamento do modelo FIR também se repete na Figura \ref{fig:item_e_comp_limpa} quando o modelo é comparado com a saída limpa do processo, é possível perceber que o ganho do modelo FIR cai em $t \geqslant t_{s}$.
 
 	\begin{figure}[H]
 		\centering
@@ -98,7 +100,7 @@ As predições para infinitos passos à frente usando os modelos estimados foram co
 	\end{figure}
 
 \section{Item f}
-	Dos modelos obtidos no item ``e'', apenas o modelo FIR apresentou um ganho estacionário diferente dos demais, entretanto essa diferença é de menos de $5\%$, os outros modelos apresentaram ganho igual ao do sistema real.
+	Dos modelos obtidos no item ``e'', apenas o modelo FIR apresentou um ganho estacionário diferente dos demais, entretanto essa diferença é de menos de $5\%$, os outros modelos apresentaram ganho igual ao do sistema sem perturbação.
 \section{Item g}
 
 A Figura \ref{fig:item_g_comp} mostra a função peso do modelo FIR obtido no item ``e'' e da resposta impulsiva do processo sem perturbação. Os primeiros 12 coeficientes (não nulos) no modelo FIR apresentaram um amortecimento, ou seja, são menores do que os da resposta impulsiva, entretanto, a partir de em torno do $12^{o}$ coeficiente, o modelo FIR apresenta valores ligeiramente maiores do que os valores da resposta ao impulso, mas o comportamento permanece o mesmo, em outras palavras, a diferença de comportamento entre o modelo FIR e a resposta impulsiva existe apenas nos primeiros coeficientes das respectivas funções-peso.
@@ -115,12 +117,12 @@ A Figura \ref{fig:item_g_comp} mostra a função peso do modelo FIR obtido no item
 
 As funções de transferência estimadas para os modelos AR, ARMAX, BJ e OR estão listadas abaixo, respectivamente:
 	\begin{itemize}
-		\item $G(q)_{AR} = \frac{1.163z^{-4}}{1-0.2404z^{-1}}$
+		\item $G(q)_{ARX} = \frac{1.163z^{-4}}{1-0.2404z^{-1}}$
 		\item $G(q)_{ARMAX} = \frac{0.2184z^{-4}}{1-0.8656z^{-1}}$
 		\item $G(q)_{OE} = \frac{0.2146z^{-4}}{1-0.8663z^{-1}}$
 		\item $G(q)_{BJ} = \frac{0.2156z^{-4}}{1-0.8676z^{-1}}$
 	\end{itemize}
-Analisando as funções de transferência acima nota-se que, embora todos os modelos estimados tenham divergido do modelo original (o que é esperado devido às perturbações), eles possuem grande semelhança entre si, com exceção do modelo AR que apresentou valores de parâmetros muito distantes dos outros 3 modelos. Essa diferença fica mais clara na Figura \ref{fig:item_h_comp_modelos_pert}, que mostra a resposta ao degrau de todos os modelos estimados com dados coletados do processo com perturbação.
+Analisando as funções de transferência acima nota-se que, embora todos os modelos estimados tenham divergido do modelo original (o que é esperado devido às perturbações), eles possuem grande semelhança entre si, com exceção do modelo AR que apresentou valores de parâmetros muito distantes dos outros 3 modelos. Essa diferença é esperada, uma vez que a estrutura ARX define que o polinômio do denominador do modelo de perturbação deve ser igual ao polinômio do denominador do modelo da perturbação e como o numerador da perturbação é unitário, não há liberdade para ajustes no modelo de perturbação, isto fica claro na Figura \ref{fig:item_h_comp_modelos_pert}, que mostra a resposta ao degrau de todos os modelos estimados com dados coletados do processo com perturbação.
 
 	\begin{figure}[H]
 		\centering
@@ -129,7 +131,7 @@ Analisando as funções de transferência acima nota-se que, embora todos os modelo
 		\label{fig:item_h_comp_modelos_pert}
 	\end{figure}
 
-Na Figura \ref{fig:item_h_comp_entre_modelos_compert_sempert} é mostrada uma comparação das respostas ao degrau de cada modelo (AR, ARMAX, OE, BJ e FIR) estimados com dados coleados com  e sem perturbação. Como esperado, todos o modelos estimados com dados coletados com perturbação obtiveram um ganho abaixo dos modelos estimados com dados coletados sem perturbação, porém, apresentaram o mesmo comportamento.A exceção foi o modelo AR, que para o modelo estimado com perturbação, apresentou um tempo de estabilização menor do que o modelo estimado sem perturbação, para este modelo a curva do processo ficou mais parecida com o próprio degrau de entrada.
+Na Figura \ref{fig:item_h_comp_entre_modelos_compert_sempert} é mostrada uma comparação das respostas ao degrau de cada modelo (AR, ARMAX, OE, BJ e FIR) estimados com dados coleados com  e sem perturbação. Como esperado, todos o modelos estimados com dados coletados com perturbação obtiveram um ganho abaixo dos modelos estimados com dados coletados sem perturbação, porém, apresentaram o mesmo comportamento.A exceção foi o modelo AR, que para o modelo estimado com perturbação, apresentou um tempo de estabilização menor do que o modelo estimado sem perturbação, para este modelo a curva do processo ficou mais parecida com o próprio degrau de entrada, isso mostra mais uma vez a falta de liberdade para ajustar o modelo de perturbação da estrutura ARX.
 
 	\begin{figure}[H]
 		\centering
@@ -143,16 +145,23 @@ Na Figura \ref{fig:item_h_comp_entre_modelos_compert_sempert} é mostrada uma com
 Na Figura \ref{fig:item_h_comp_modelos_pert} são mostrados os ganhos dos modelos estimados com perturbação e do processo limpo, percebe-se que os modelos ARMAX, OE e BJ  apresentaram ganhos muito parecidos de aproximadamente $82\%$ do ganho estacionário do processo, enquanto que os modelos AR e FIR também apresentaram ganhos parecidos, porém abaixo dos outros modelos, ficando em torno de $75\%$ do ganho estacionário do processo.
 
 \section{Item j}
-As funções de transferência estimadas para os modelos AR, ARMAX, BJ e OR (estimados com duas  entradas) estão listadas abaixo, respectivamente:
+As funções de transferência estimadas para os modelos AR, ARMAX, BJ e OR (estimados com duas entradas e com as perturbações $v_{1}$ e $v_{2}$) estão listadas abaixo, respectivamente:
 	\begin{itemize}
-		\item $G(q)_{AR} = \frac{1.189z^{-4}}{1-0.2208z^{-1}}$
-		\item $G(q)_{ARMAX} = \frac{0.2361z^{-4}}{1-0.8535z^{-1}}$
-		\item $G(q)_{OE} = \frac{0.2341z^{-4}}{1-0.855^{-1}}$
-		\item $G(q)_{BJ} = \frac{0.2343z^{-4}}{1-0.8548z^{-1}}$
+		\item $G(q)_{ARX} = \frac{0.2429z^{-4}}{1-0.7795z^{-1}}$
+		\item $G(q)_{ARMAX} = \frac{0.2072z^{-4}}{1-0.8798z^{-1}}$
+		\item $G(q)_{OE} = \frac{0.179z^{-4}}{1-0.8957z^{-1}}$
+		\item $G(q)_{BJ} = \frac{0.01573z^{-4}}{1-0.8939z^{-1}}$
 	\end{itemize}
-As funções de transferência  acima apresentadas permitem chegar à mesma conclusão já apresentada no item h, para o processo com duas entradas (degrau mais o ruído de medição $e_{1}$).
+As funções de transferência  acima apresentadas mostram que todos os modelos apresentam parâmetros parecidos, com exceção do .
 
-A Figura \ref{fig:item_j_comp_modelos_pert_2_entradas} mostra a resposta ao degrau dos modelos estimados com perturbação para as duas entradas (degrau mais $e_{1}$). As análises feitas no item anterior também são válidas para o caso com duas entradas, com exceção de que no caso apresentado neste item, o ganho estacionário para todos os modelos foi ligeiramente menor.
+As Figuras \ref{fig:item_j_comp_modelos_sem_pert_2_entradas} e \ref{fig:item_j_comp_modelos_pert_2_entradas} mostram, respectivamente, a resposta ao degrau dos modelos estimados sem perturbação e com perturbação para as duas entradas (degrau mais $e_{1}$). Na primeira imagem é possível perceber que a adição do ruído $e_{1}$ na estrada do processo acarretou em uma variação na resposta dos modelos ARX e FIR, tendo este último apresentado um ganho $30\%$ menor que o ganho estacionário do processo, enquanto que os outros modelos apresentaram ganhos ligeiramente maiores (de $2\%$ a $4\%$ )que o ganho estacionário do processo. Enquanto que na segunda imagem, para o processo com perturbação, os modelos apresentaram comportamentos distintos, os modelos OE e ARMAX apresentaram melhor desempenho, enquanto que os modelos ARX e BJ apresentaram ganho bem abaixo do ganho do processo, especialmente o modelo BJ, por fim, o modelo FIR foi fortemente afetado pela ruído de medição $e_{1}$.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.48]{./lista2_item_j_comp_modelos_sem_pert_2_entradas.png}
+		\caption{Resposta ao degrau do processo limpo e dos modelos estimados com dados coletados sem perturbação (para duas entradas).}
+		\label{fig:item_j_comp_modelos_sem_pert_2_entradas}
+	\end{figure}
 
 	\begin{figure}[H]
 		\centering
@@ -161,7 +170,11 @@ A Figura \ref{fig:item_j_comp_modelos_pert_2_entradas} mostra a resposta ao degr
 		\label{fig:item_j_comp_modelos_pert_2_entradas}
 	\end{figure}
 
-As Figuras \ref{fig:item_j_comp_modelos_sem_pert} e \ref{fig:item_j_comp_modelos_com_pert} mostram, respectivamente, a comparação do processo sem e com perturbação, com os modelos gerados para uma e para as duas entradas (degrau mais $e_{1}$). Analisando o ``fit'' das comparações percebe-se que os modelos obtidos com apenas uma entrada foram ligeiramente superiores aos modelos obtidos com duas entradas, isto se deve à presença do ruído de medição $e_{1}$, que ocasiona uma variação do degrau de entrada, afetando assim os valores de saída do processo. Neste experimento o ruído de medição possui variância de baixa amplitude ($\sigma^{2}=e^{-6}$), mas se essa variância tiver um amplitude significativa em relação ao sinal de entrada, o ruído afetaria o modelo de tal forma que o ``fit'' estaria abaixo do desejado, uma solução para contornar este problema seria utilizar o máximo valor de entrada possível que ocasione em uma perda mínima de materiais e/ou produtos na hora da coleta de dados na planta.
+As Figuras \ref{fig:item_j_comp_modelos_sem_pert} e \ref{fig:item_j_comp_modelos_com_pert} mostram, respectivamente, a comparação do processo sem e com perturbação, com os modelos gerados para uma e para as duas entradas (degrau mais $e_{1}$). Analisando o ``fit'' das comparações percebe-se que os modelos obtidos com apenas uma entrada foram ligeiramente superiores aos modelos obtidos com duas entradas, isto se deve à presença do ruído de medição $e_{1}$, que ocasiona uma variação do degrau de entrada, ou seja, a entra não é mais um degrau limpo e sim um degrau ruidoso. 
+
+Vale ressaltar que para o modelo ARX obtido com dados da planta com perturbação, a diferença entre o desempenho do modelo com uma entrada e com duas entradas é muito grande, variando de $14.04\%$ a $-19.37\%$, respectivamente
+
+Neste experimento os modelos obtidos com apenas um entrada apresentaram melhor desempenho do que os modelos obtidos com duas entradas. O ruído de medição $e_{1}$ usado como entrada do processo possui variância de baixa amplitude, $\sigma^{2}=e^{-6}$, mas se essa variância tiver um amplitude significativa em relação ao sinal de entrada, o ruído afetaria o modelo de tal forma que o ``fit'' seria muito prejudicado, uma solução para contornar este problema seria utilizar um degrau de máxima amplitude possível, que ocasione em uma perda mínima de materiais e/ou produtos na hora da coleta de dados na planta, e que resulte em uma boa relação sinal-ruído (\textit{SNR}).
 
 	\begin{figure}[H]
 		\centering
@@ -178,7 +191,7 @@ As Figuras \ref{fig:item_j_comp_modelos_sem_pert} e \ref{fig:item_j_comp_modelos
 	\end{figure}
 
 \section{Item k}
-As Figuras \ref{fig:item_k_comp_ganho_modelos_sem_pert} e \ref{fig:item_k_comp_ganho_modelos_com_pert} mostram, respectivamente, a comparação dos ganhos dos modelos obtidos sem perturbação e com perturbação. O  ganho dos modelos obtidos sem perturbação ficou praticamente igual ao ganho do processo, a maior perda foi no modelo FIR que apresentou um ganho de $97\%$ do ganho original. Para os modelos obtidos com perturbação, o ganho variou entre aproximadamente $76\%$ e $81\%$ do ganho original.
+As Figuras \ref{fig:item_k_comp_ganho_modelos_sem_pert} e \ref{fig:item_k_comp_ganho_modelos_com_pert} mostram, respectivamente, a comparação dos ganhos dos modelos obtidos sem perturbação e com perturbação. O  ganho dos modelos obtidos sem perturbação ficou praticamente igual ao ganho do processo, tendo o modelo FIR apresentado o menor desempenho com um ganho de $97\%$ do ganho original. Para os modelos obtidos com dados do processo com perturbação, o ganho variou entre aproximadamente $76\%$ e $81\%$ do ganho original, com os modelos FIR e ARX apresentando menor desempenho em relação ao ganho estacionário do processo.
 
 	\begin{figure}[H]
 		\centering
